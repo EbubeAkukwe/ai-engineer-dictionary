@@ -15,9 +15,9 @@ reconstruction with the input provides a training signal.
 
 ## Technical explanation
 
-An autoencoder contains an encoder \(z = f(x)\) and a decoder
-\(\hat{x} = g(z)\). Training minimizes a reconstruction loss between \(x\)
-and \(\hat{x}\). Bottlenecks, noise, sparsity, or other constraints can
+An autoencoder contains an encoder $z = f(x)$ and a decoder
+$\hat{x} = g(z)$. Training minimizes a reconstruction loss between $x$
+and $\hat{x}$. Bottlenecks, noise, sparsity, or other constraints can
 encourage useful representations, but the learned representation depends
 on the data and objective.
 

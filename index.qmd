@@ -27,7 +27,7 @@ examples, experiments, visualizations, and mathematical demonstrations.
 [Explore notebooks](/notebooks/index.html)
 
 ## Built by the community
-
+AI Engineer Dictionary is being actively developed by [Ebube Akukwe](https://www.linkedin.com/in/ebube-akukwe-3690a3336/)
 Anyone can suggest a term, improve an explanation, add a reference, or
 contribute a notebook.
 
@@ -40,3 +40,5 @@ contribute a notebook.
 - **Depth:** Include mathematics, code, and implementation details when useful.
 - **Reproducibility:** Notebooks should be runnable and explain their dependencies.
 - **Openness:** Contributions are reviewed in public through GitHub pull requests.
+
+This Project is built entirely with [Quarto](https://quarto.org/docs/get-started/) and [Jupyter Notebooks](https://docs.jupyter.org/)

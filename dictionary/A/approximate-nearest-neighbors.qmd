@@ -18,7 +18,7 @@ accuracy for speed or lower resource use.
 ANN indexes organize vectors so queries examine only a subset of the
 collection. Techniques include graph-based indexes, partitioning and
 quantization. Performance is described using measures such as recall at
-\(k\), query latency, memory use, and indexing cost. The appropriate
+$\(k\)$, query latency, memory use, and indexing cost. The appropriate
 trade-off depends on the application and its data.
 
 ## Why it matters in AI engineering

@@ -21,10 +21,11 @@ and practitioners.
 1. Open an issue to propose a new term or substantial change.
 2. Fork the repository and create a branch.
 3. Add or edit the relevant `.qmd` entry.
-4. If adding a new term also update the _quarto.yml to include your entry
-5. Add a notebook only when runnable code materially improves the explanation.
-6. Run the validation checks locally.
-7. Open a pull request describing the change and its sources.
+4. If adding a new term also update the `_quarto.yml` to include your entry
+5. If editing an existing term also make sure to include your name and social profile(Github Preferably) to the Contribute section in the `index.qmd` for the term you're contributing to.
+6. Add a notebook only when runnable code materially improves the explanation.
+7. Run the validation checks locally.
+8. Open a pull request describing the change and its sources.
 
 ## Entry requirements
 

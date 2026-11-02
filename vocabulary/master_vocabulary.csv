@@ -17,7 +17,7 @@ Autoencoder,A,Deep Learning,Intermediate,Essential,,Proposed
 Autonomous Systems,A,Robotics,Intermediate,Recommended,,Proposed
 Autoregressive Model,A,Generative AI,Intermediate,Recommended,,Proposed
 Backpropagation,B,Deep Learning,Intermediate,Essential,,Proposed
- Bayesian Optimization,B,Machine Learning,Advanced,Recommended,,Proposed
+Bayesian Optimization,B,Machine Learning,Advanced,Recommended,,Proposed
 Batch,B,Deep Learning,Beginner,Optional,,Proposed
 Batch Normalization,B,Deep Learning,Intermediate,Essential,,Proposed
 Batch Size,B,Deep Learning,Beginner,Optional,,Proposed
@@ -295,6 +295,8 @@ Training,T,AI Systems,Beginner,Optional,,Proposed
 Transfer Learning,T,Machine Learning,Intermediate,Essential,,Proposed
 Transformer,T,Deep Learning,Intermediate,Essential,,Proposed
 Trajectory Optimization,T,Robotics,Advanced,Recommended,,Proposed
+True Positive,T,Model Evaluation,Beginner,Optional,,Proposed
+True Negative,T,Model Evaluation,Beginner,Optional,,Proposed
 Tool Calling,T,AI Agents,Intermediate,Recommended,,Proposed
 Tree Search,T,Algorithms,Intermediate,Recommended,,Proposed
 Underfitting,U,Machine Learning,Beginner,Essential,,Proposed

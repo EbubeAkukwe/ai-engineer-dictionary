@@ -27,9 +27,9 @@ the final layer's activation can determine how predictions are represented.
 
 ## How it works
 
-For a pre-activation value \(z = w^\top x + b\), the neuron outputs
-\(a = f(z)\). For example, ReLU is \(f(z) = \max(0,z)\), while sigmoid maps
-real values to the interval \((0,1)\). A sigmoid output can represent a
+For a pre-activation value $z = w^\top x + b$, the neuron outputs
+$a = f(z)$. For example, ReLU is $f(z) = \max(0,z)$, while sigmoid maps
+real values to the interval $(0,1)$. A sigmoid output can represent a
 binary probability when used with an appropriate loss and training setup.
 
 ## Practical example

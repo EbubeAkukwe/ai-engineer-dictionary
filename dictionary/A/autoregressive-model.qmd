@@ -14,9 +14,11 @@ time. Each new prediction uses the preceding elements as context.
 
 ## Technical explanation
 
-For a sequence \(x_1,\ldots,x_T\), an autoregressive model factorizes the
+For a sequence $x_1,\ldots,x_T$, an autoregressive model factorizes the
 joint distribution as
-\(p(x_1,\ldots,x_T)=\prod_{t=1}^{T}p(x_t\mid x_1,\ldots,x_{t-1})\).
+$$
+p(x_1,\ldots,x_T)=\prod_{t=1}^{T}p(x_t\mid x_1,\ldots,x_{t-1}) 
+$$
 In a language model, the elements are usually tokens. Training commonly
 uses next-token prediction, while generation repeatedly samples or selects
 a next token conditioned on the prefix.

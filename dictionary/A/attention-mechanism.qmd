@@ -20,12 +20,10 @@ some words than others to interpret a particular word.
 
 In the Transformer formulation, scaled dot-product attention uses queries
 (Q), keys (K), and values (V):
-
-\[
+$$
 \operatorname{Attention}(Q,K,V)
 = \operatorname{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\]
-
+$$
 The query-key dot products produce compatibility scores. Scaling helps
 control their magnitude, softmax converts them into weights, and those
 weights combine the value vectors.
@@ -49,7 +47,7 @@ allowing the model to learn different relationships.
 
 ## Practical example
 
-The accompanying notebook demonstrates scaled dot-product attention using
+The accompanying notebook [attention-mechanism.ipynb](/notebooks/A/attention-mechanism.ipynb) demonstrates scaled dot-product attention using
 small NumPy arrays. It is intended to make the tensor operations visible,
 not to train a language model.
 

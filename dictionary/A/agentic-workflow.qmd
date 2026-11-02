@@ -59,7 +59,8 @@ calls, and require citations in its final response.
 
 - [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) — describes agentic patterns and the value of keeping designs simple.
 - [OpenAI: A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — discusses orchestration, guardrails, and operational considerations.
-
+- [Mercor: Introduction to Agents](https://work.mercor.com/learn/introduction-to-agents) - beginner friendly lesson that covers the basics for building AI Agents.
+  
 ## Contribution notes
 
 - **Last reviewed:** 2026-11-02
