@@ -60,7 +60,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) or the website's
 [contribution guide](contribute.qmd). New terms should use
 [`dictionary/TEMPLATE.qmd`](dictionary/TEMPLATE.qmd).
 
-## Roadmap
+## Project Progress
 
 - [x] Establish project scope and editorial format
 - [x] Create initial Quarto website scaffold
