@@ -1,0 +1,65 @@
+---
+title: "Adapter"
+description: "A small trainable module added to a pretrained model to adapt it to a task."
+term: "Adapter"
+letter: "A"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An adapter is a small set of trainable components placed inside or alongside
+a pretrained model. Instead of changing every model weight for a new task,
+training updates the adapter while the main model stays fixed.
+
+## Technical explanation
+
+In parameter-efficient fine-tuning, adapter modules add a relatively small
+number of parameters to a frozen backbone. A common design uses a
+down-projection, a non-linearity, and an up-projection, with a residual
+connection. Adapter designs vary, and the term can also refer more broadly
+to modules that connect components with different interfaces.
+
+## Why it matters in AI engineering
+
+Adapters can reduce the trainable parameter count and make it practical to
+maintain task- or domain-specific model variants. They still require
+evaluation, compatibility management, and inference resources.
+
+## How it works
+
+The pretrained model computes its usual representation. An adapter
+transforms that representation, and its result is combined with the original
+through a residual path. During training, gradients update adapter
+parameters while the backbone weights are frozen.
+
+## Practical example
+
+A team can keep one frozen language model and train separate adapters for
+distinct internal text-classification tasks, selecting the matching adapter
+at inference time.
+
+## Common misconceptions
+
+- Adapters do not eliminate the cost of storing or running the base model.
+- Adapter weights are generally tied to a compatible base-model
+  configuration.
+- Adapters are one parameter-efficient tuning approach, not a synonym for all
+  fine-tuning.
+
+## Related terms
+
+- [Artificial Neural Network](artificial-neural-network.qmd)
+- [Autoregressive Model](autoregressive-model.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [Parameter-Efficient Transfer Learning for NLP](https://arxiv.org/abs/1902.00751) — introduces adapter-based transfer learning for NLP.
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) — a related parameter-efficient adaptation method.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

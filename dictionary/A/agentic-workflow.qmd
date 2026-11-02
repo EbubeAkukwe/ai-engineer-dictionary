@@ -1,0 +1,66 @@
+---
+title: "Agentic Workflow"
+description: "A workflow in which a model dynamically chooses steps or tools to complete a task."
+term: "Agentic Workflow"
+letter: "A"
+category: "AI Agents"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An agentic workflow lets an AI system decide some of the steps needed to
+complete a task, rather than following only a fixed sequence of operations.
+It may choose a tool, inspect the result, and decide what to do next.
+
+## Technical explanation
+
+An agentic workflow is an orchestration pattern in which a model or agent
+selects actions at runtime, often in a loop that observes tool results and
+revises its next step. Workflows range from mostly fixed pipelines with a
+few model decisions to open-ended systems with broader autonomy.
+
+## Why it matters in AI engineering
+
+Dynamic decisions can handle varied requests that are difficult to encode
+as a fixed pipeline. The trade-off is less predictable execution, so
+engineers need limits, observable traces, permissions, and task-specific
+evaluations.
+
+## How it works
+
+The workflow provides instructions, context, a set of allowed actions, and
+stopping rules. The model selects a step; orchestration code validates and
+executes it; the result is returned to the model for another decision. A
+workflow ends on a success condition, a limit, an error, or a request for
+human input.
+
+## Practical example
+
+A research assistant can search a set of approved sources, open relevant
+pages, and summarize evidence. The system can restrict domains, cap tool
+calls, and require citations in its final response.
+
+## Common misconceptions
+
+- An agentic workflow is not always better than a deterministic pipeline.
+- A longer chain of model decisions can increase latency and failure
+  opportunities.
+- Human review and explicit limits remain useful even when a model appears
+  capable.
+
+## Related terms
+
+- [Agent](agent.qmd)
+- [API](api.qmd)
+- [AI Evaluation](ai-evaluation.qmd)
+
+## Further reading
+
+- [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) — describes agentic patterns and the value of keeping designs simple.
+- [OpenAI: A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — discusses orchestration, guardrails, and operational considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

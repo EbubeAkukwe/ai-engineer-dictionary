@@ -1,0 +1,68 @@
+---
+title: "Autoregressive Model"
+description: "A model that predicts each value or token conditioned on preceding values."
+term: "Autoregressive Model"
+letter: "A"
+category: "Generative AI"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An autoregressive model generates or predicts a sequence one element at a
+time. Each new prediction uses the preceding elements as context.
+
+## Technical explanation
+
+For a sequence \(x_1,\ldots,x_T\), an autoregressive model factorizes the
+joint distribution as
+\(p(x_1,\ldots,x_T)=\prod_{t=1}^{T}p(x_t\mid x_1,\ldots,x_{t-1})\).
+In a language model, the elements are usually tokens. Training commonly
+uses next-token prediction, while generation repeatedly samples or selects
+a next token conditioned on the prefix.
+
+## Why it matters in AI engineering
+
+Many language and generative models use autoregressive generation.
+Understanding the sequential process helps engineers reason about latency,
+context limits, decoding strategies, and why generated output can diverge
+from an intended answer.
+
+## How it works
+
+The model receives a prefix and predicts a probability distribution over
+the next token. A decoding rule chooses a token, appends it to the prefix,
+and repeats until a stop condition is reached. The rule may select the
+highest-probability token or sample from a modified distribution.
+
+## Practical example
+
+Given the prompt "The capital of France is", an autoregressive language
+model predicts a distribution for the next token, emits a token, and then
+uses the extended text to predict subsequent tokens.
+
+## Common misconceptions
+
+- Autoregressive describes a factorization or generation pattern, not a
+  guarantee of factual correctness.
+- The most probable next token at each step does not always produce the
+  most desirable complete response.
+- Autoregressive generation is sequential across generated positions even
+  when the model uses parallel computation during training.
+
+## Related terms
+
+- [Adapter](adapter.qmd)
+- [Attention Mechanism](attention-mechanism.qmd)
+- [Agent](agent.qmd)
+
+## Further reading
+
+- [The Transformer: A Novel Neural Network Architecture for Language Understanding](https://blog.research.google/2017/08/transformer-novel-neural-network.html) — Google's overview of the Transformer architecture used in many autoregressive models.
+- [Language Models are Unsupervised Multitask Learners](https://openai.com/index/better-language-models/) — OpenAI's GPT-2 report discussing next-token language modeling.
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — the Transformer paper.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

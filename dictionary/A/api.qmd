@@ -55,5 +55,5 @@ fields, authentication, response structure, and error behaviour.
 
 ## Contribution notes
 
-- **Last reviewed:** 2026-10-31
-- **Contributor(s):** (https://github.com/EbubeAkukwe)
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

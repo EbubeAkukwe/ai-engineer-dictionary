@@ -1,0 +1,65 @@
+---
+title: "Anomaly Detection"
+description: "The identification of observations that differ substantially from expected patterns."
+term: "Anomaly Detection"
+letter: "A"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Anomaly detection finds observations that are unusual compared with a
+baseline or the rest of the data. An anomaly may indicate a fault, fraud,
+intrusion, data-quality problem, or simply a rare but valid event.
+
+## Technical explanation
+
+Methods include statistical thresholds, distance- or density-based
+approaches, isolation methods, and models trained on normal examples.
+Anomaly scores rank observations by how unusual they appear; a threshold
+then converts scores into alerts. Labels are often sparse, and the meaning
+of an anomaly depends on context.
+
+## Why it matters in AI engineering
+
+AI pipelines and deployed systems can use anomaly detection to surface
+unexpected inputs, operational issues, or shifts in data. False alarms and
+missed detections have different costs, so thresholds and response
+procedures need to reflect the use case.
+
+## How it works
+
+The system learns or defines expected patterns, scores new observations,
+and compares scores with a threshold or review policy. Teams validate the
+method on representative data, account for seasonality and changing
+baselines, and investigate alerts before treating them as incidents.
+
+## Practical example
+
+A service can monitor request latency and flag values far above its normal
+range. The alert is a signal for investigation, not proof that a system
+failure occurred.
+
+## Common misconceptions
+
+- An unusual point is not necessarily an error or malicious event.
+- A low-frequency event can be important even if it is valid.
+- Anomaly detection is not the same as classification when labeled classes
+  are available and appropriate.
+
+## Related terms
+
+- [Active Learning](active-learning.qmd)
+- [AI Evaluation](ai-evaluation.qmd)
+- [Algorithm](algorithm.qmd)
+
+## Further reading
+
+- [Google Cloud: Anomaly detection overview](https://cloud.google.com/architecture/anomaly-detection) — discusses anomaly-detection approaches and architecture considerations.
+- [A Survey of Outlier Detection Methodologies](https://arxiv.org/abs/1901.03533) — reviews outlier detection methods and application contexts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

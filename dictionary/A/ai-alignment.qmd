@@ -1,0 +1,66 @@
+---
+title: "AI Alignment"
+description: "The study and practice of making AI systems behave in accordance with intended goals and constraints."
+term: "AI Alignment"
+letter: "A"
+category: "AI Safety"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+AI alignment is the work of making an AI system's behaviour match what
+people intend, including its goals, constraints, and values, especially in
+situations that were not anticipated during development.
+
+## Technical explanation
+
+Alignment spans research and engineering approaches for specifying desired
+behaviour, training models toward it, evaluating failures, and controlling
+deployed systems. Methods include human feedback, preference learning,
+interpretability, robustness work, policy enforcement, and oversight. No
+single method fully solves alignment.
+
+## Why it matters in AI engineering
+
+A system can perform well on its training objective yet behave poorly in
+real use if that objective is incomplete or its operating conditions
+change. Alignment concerns help teams reason about misuse, unintended
+outputs, over-reliance, and whether a deployment's safeguards match its
+capabilities.
+
+## How it works
+
+Teams translate intended behaviour into training signals, system constraints,
+and evaluation cases. They test normal and adversarial scenarios, analyze
+failures, and refine the model or surrounding controls. Alignment is
+iterative because specifications and environments are imperfect.
+
+## Practical example
+
+A coding assistant may be trained to follow user instructions while being
+evaluated for whether it respects repository boundaries, avoids exposing
+secrets, and asks for confirmation before destructive changes.
+
+## Common misconceptions
+
+- Alignment is broader than preventing harmful text output.
+- A high benchmark score does not establish that a system is aligned.
+- Alignment is not achieved solely by adding a system prompt or a refusal
+  rule.
+
+## Related terms
+
+- [AI Evaluation](ai-evaluation.qmd)
+- [Agent](agent.qmd)
+- [Artificial Intelligence](artificial-intelligence.qmd)
+
+## Further reading
+
+- [OpenAI: Our approach to alignment research](https://openai.com/index/our-approach-to-alignment-research/) — outlines research directions for aligning advanced AI systems.
+- [Anthropic: Core Views on AI Safety](https://www.anthropic.com/news/core-views-on-ai-safety) — describes Anthropic's perspective on AI safety research and deployment.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

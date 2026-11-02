@@ -1,0 +1,65 @@
+---
+title: "Autonomous Systems"
+description: "Systems that perceive their environment and act with limited or no direct human control."
+term: "Autonomous Systems"
+letter: "A"
+category: "Robotics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An autonomous system can sense or receive information about its environment
+and take actions toward an objective without requiring a person to choose
+every individual action.
+
+## Technical explanation
+
+Autonomous systems combine sensing, state estimation, planning or
+decision-making, and control. Their autonomy is a matter of degree: a
+system may operate independently in routine situations but request human
+supervision or intervention when uncertainty or risk is high.
+
+## Why it matters in AI engineering
+
+Autonomy appears in robotics, vehicles, industrial control, and software
+agents. Such systems interact with changing environments and can cause
+real-world effects, making safety constraints, observability, fallback
+behaviour, and human oversight important engineering concerns.
+
+## How it works
+
+Sensors or external inputs provide observations. The system estimates its
+state, chooses an action according to its objective and constraints, and
+executes that action through an actuator or software interface. It then
+uses new observations to update its state and continue or stop.
+
+## Practical example
+
+A warehouse robot can navigate to a requested shelf using maps and sensor
+data, slow down when people are nearby, and stop or request assistance if
+its route is blocked.
+
+## Common misconceptions
+
+- Autonomy does not mean unlimited capability or absence of human oversight.
+- An autonomous system can still depend on remote services, operators, and
+  carefully defined operating conditions.
+- A system that performs actions automatically is not necessarily
+  intelligent or safe.
+
+## Related terms
+
+- [Agent](agent.qmd)
+- [AI Alignment](ai-alignment.qmd)
+- [Artificial Intelligence](artificial-intelligence.qmd)
+
+## Further reading
+
+- [NIST: Autonomy Levels for Unmanned Systems (ALFUS)](https://www.nist.gov/publications/autonomy-levels-unmanned-systems-alfus-framework-volume-i-terminology) — presents a framework and terminology for describing autonomy.
+- [A Survey of Autonomous Driving: Common Practices and Emerging Technologies](https://arxiv.org/abs/1911.01549) — surveys autonomy concepts in the specific domain of driving systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

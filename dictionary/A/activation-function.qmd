@@ -1,0 +1,62 @@
+---
+title: "Activation Function"
+description: "A function applied to a neural network unit's output to introduce non-linearity."
+term: "Activation Function"
+letter: "A"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An activation function transforms a neuron's input into its output. It lets a
+neural network represent more than simple linear relationships.
+
+## Technical explanation
+
+A neuron first combines its inputs, usually as a weighted sum plus a bias,
+then applies an activation function. Common choices include ReLU, sigmoid,
+tanh, and GELU. The choice affects the network's output range, gradient
+behaviour, and computational properties.
+
+## Why it matters in AI engineering
+
+Activation functions are part of a model's architecture. Their behaviour
+affects training stability, gradient flow, and suitability for a task, while
+the final layer's activation can determine how predictions are represented.
+
+## How it works
+
+For a pre-activation value \(z = w^\top x + b\), the neuron outputs
+\(a = f(z)\). For example, ReLU is \(f(z) = \max(0,z)\), while sigmoid maps
+real values to the interval \((0,1)\). A sigmoid output can represent a
+binary probability when used with an appropriate loss and training setup.
+
+## Practical example
+
+A hidden layer might apply ReLU to each weighted sum. Negative values become
+zero and positive values pass through, adding non-linearity before the next
+layer.
+
+## Common misconceptions
+
+- A neural network can be reduced to a linear model if all its layers are
+  linear, regardless of how many such layers it contains.
+- No single activation function is best for every layer and task.
+- A sigmoid output is not automatically a calibrated probability.
+
+## Related terms
+
+- [Artificial Neural Network](artificial-neural-network.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Loss Function](../L/loss-function.qmd)
+
+## Further reading
+
+- [PyTorch: Non-linear activation functions](https://pytorch.org/docs/stable/nn.functional.html#non-linear-activation-functions) — reference documentation for common activation operations.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — course material covering neural networks and their practical components.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

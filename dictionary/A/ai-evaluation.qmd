@@ -1,0 +1,64 @@
+---
+title: "AI Evaluation"
+description: "The systematic measurement of an AI system's quality, reliability, and risks."
+term: "AI Evaluation"
+letter: "A"
+category: "AI Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+AI evaluation is the process of checking whether an AI model or application
+does what it is supposed to do, how well it does it, and where it fails.
+
+## Technical explanation
+
+Evaluation uses defined tasks, datasets or scenarios, metrics, and
+interpretation criteria to assess a model or end-to-end system. It can
+include automated measurements, human judgments, adversarial tests, and
+production monitoring. Evaluations should account for the intended use and
+the limitations of each metric.
+
+## Why it matters in AI engineering
+
+Models can change behaviour across versions, prompts, data, and deployment
+conditions. Repeatable evaluations help compare changes, detect regressions,
+and provide evidence about whether a system is appropriate for its intended
+use.
+
+## How it works
+
+1. Define intended capabilities, constraints, and failure costs.
+2. Build representative test cases and select suitable metrics or rubrics.
+3. Run the model or application under controlled conditions.
+4. Inspect both aggregate results and individual failures.
+5. Repeat after relevant changes and monitor real-world behaviour.
+
+## Practical example
+
+A retrieval-augmented question-answering system can be evaluated separately
+for retrieval relevance, answer correctness, citation support, and
+latency. A single overall score would hide which component needs improvement.
+
+## Common misconceptions
+
+- A benchmark score is not a complete measure of real-world quality.
+- An LLM judge can be useful but may have its own biases and errors.
+- Testing only successful examples says little about failure behaviour.
+
+## Related terms
+
+- [Active Learning](active-learning.qmd)
+- [AI Alignment](ai-alignment.qmd)
+- [Agent](agent.qmd)
+
+## Further reading
+
+- [OpenAI: Evals guide](https://platform.openai.com/docs/guides/evals) — describes evaluation workflows for model-powered applications.
+- [Anthropic: Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — discusses building evaluations for agentic systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,64 @@
+---
+title: "Algorithm"
+description: "A finite, well-defined procedure for solving a problem or performing a computation."
+term: "Algorithm"
+letter: "A"
+category: "Foundations"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An algorithm is a precise sequence of steps that transforms inputs into an
+output or solves a problem. Algorithms can be carried out by a computer,
+person, or other process.
+
+## Technical explanation
+
+An algorithm specifies a computational procedure, including its inputs,
+operations, and termination behaviour. Engineers analyze algorithms for
+correctness and resource use, often describing time and memory complexity
+as functions of input size.
+
+## Why it matters in AI engineering
+
+AI systems rely on algorithms for data processing, optimization, search,
+inference, and evaluation. Choosing an appropriate algorithm affects
+correctness, cost, latency, and the scale of problems a system can handle.
+
+## How it works
+
+An algorithm defines a sequence of operations and control flow, such as
+conditions, loops, or recursion. It should specify how it handles relevant
+inputs and when it stops. Its implementation can then be tested against
+expected results and analyzed for efficiency.
+
+## Practical example
+
+Binary search finds a target in a sorted list by repeatedly comparing it
+with the middle element and discarding the half that cannot contain it.
+Sorting is a precondition for this method.
+
+## Common misconceptions
+
+- An algorithm is the method; a program is one implementation of it.
+- The fastest asymptotic complexity does not always mean the fastest
+  implementation for small inputs.
+- Machine learning models use algorithms, but not every algorithm is a
+  learning algorithm.
+
+## Related terms
+
+- [Active Learning](active-learning.qmd)
+- [Artificial Intelligence](artificial-intelligence.qmd)
+- [Approximate Nearest Neighbors](approximate-nearest-neighbors.qmd)
+
+## Further reading
+
+- [MIT OpenCourseWare: Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) — lecture notes and materials on algorithm design and analysis.
+- [Google for Developers: Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — introduces algorithms and concepts used in machine learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

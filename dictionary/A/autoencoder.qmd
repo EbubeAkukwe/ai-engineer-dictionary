@@ -1,0 +1,66 @@
+---
+title: "Autoencoder"
+description: "A neural network trained to encode data into a representation and reconstruct the input."
+term: "Autoencoder"
+letter: "A"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An autoencoder learns to compress an input into a representation and then
+reconstruct the original input from that representation. Comparing the
+reconstruction with the input provides a training signal.
+
+## Technical explanation
+
+An autoencoder contains an encoder \(z = f(x)\) and a decoder
+\(\hat{x} = g(z)\). Training minimizes a reconstruction loss between \(x\)
+and \(\hat{x}\). Bottlenecks, noise, sparsity, or other constraints can
+encourage useful representations, but the learned representation depends
+on the data and objective.
+
+## Why it matters in AI engineering
+
+Autoencoders are used for representation learning, dimensionality
+reduction, denoising, and sometimes anomaly detection. Their outputs and
+scores need careful validation because good reconstruction does not
+necessarily correspond to semantic understanding or anomaly relevance.
+
+## How it works
+
+The encoder maps the input to a latent representation. The decoder maps
+that representation back to the input space. The model adjusts both sets
+of parameters to reduce reconstruction error, often under constraints
+that prevent the trivial solution of simply copying every input detail.
+
+## Practical example
+
+A denoising autoencoder receives a slightly corrupted image and is trained
+to reconstruct the clean version. It can learn features that help recover
+common image structure from noise.
+
+## Common misconceptions
+
+- An autoencoder does not necessarily learn a useful or interpretable
+  representation.
+- Reconstruction error is not automatically a reliable anomaly score.
+- A compact latent space does not guarantee that all task-relevant
+  information is preserved.
+
+## Related terms
+
+- [Artificial Neural Network](artificial-neural-network.qmd)
+- [Activation Function](activation-function.qmd)
+- [Anomaly Detection](anomaly-detection.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Autoencoders](https://www.deeplearningbook.org/contents/autoencoders.html) — covers autoencoder objectives and variants.
+- [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114) — introduces variational autoencoders, a probabilistic extension.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

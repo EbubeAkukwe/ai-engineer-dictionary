@@ -1,0 +1,65 @@
+---
+title: "Agent"
+description: "A system that uses a model and other components to pursue a goal through actions."
+term: "Agent"
+letter: "A"
+category: "AI Agents"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An AI agent is a software system that can take in information, decide what
+to do, and use available actions or tools to make progress toward a goal.
+Some agents use a language model to choose those actions.
+
+## Technical explanation
+
+An agent typically combines a policy or controller with observations,
+available actions, and an execution environment. In model-based systems, a
+language model may select tools or propose steps, while application code
+handles permissions, validation, state, and execution. How much autonomy an
+agent has depends on its design.
+
+## Why it matters in AI engineering
+
+Agents can connect model capabilities to APIs, search, databases, and
+business workflows. They also introduce risks such as incorrect tool use,
+unbounded loops, and unintended side effects, so bounded permissions and
+evaluation are essential.
+
+## How it works
+
+1. Receive a goal and relevant context.
+2. Select a next step, which may be a tool call.
+3. Execute the step and observe its result.
+4. Continue, ask for clarification, or stop when the goal or stopping
+   condition is reached.
+
+## Practical example
+
+A support agent might search an approved knowledge base, draft an answer,
+and ask a human to approve it before sending. The approval step keeps the
+agent from taking an external action on its own.
+
+## Common misconceptions
+
+- A chatbot is not necessarily an agent; it may only generate text.
+- An agent is not necessarily fully autonomous.
+- Adding tools does not by itself make a system reliable or safe.
+
+## Related terms
+
+- [Agentic Workflow](agentic-workflow.qmd)
+- [API](api.qmd)
+- [AI Evaluation](ai-evaluation.qmd)
+
+## Further reading
+
+- [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) — discusses practical agent patterns and when simpler workflows are preferable.
+- [OpenAI: A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — covers agent components, orchestration, and deployment considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

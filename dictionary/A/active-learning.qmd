@@ -1,0 +1,68 @@
+---
+title: "Active Learning"
+description: "A training approach that selects the most useful unlabeled examples for labeling."
+term: "Active Learning"
+letter: "A"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Active learning is a way to train a model when labeling examples is costly.
+Instead of labeling a random sample, the system asks for labels on examples
+that are expected to help it learn the most.
+
+## Technical explanation
+
+An active-learning loop maintains a labeled training set and an unlabeled
+pool. A query strategy scores or selects pool examples, a human or another
+labeling process supplies their labels, and the model is retrained or
+updated. Strategies include uncertainty sampling, diversity-based selection,
+and expected model change.
+
+## Why it matters in AI engineering
+
+Expert review, medical annotation, and domain-specific labeling can be
+expensive. Active learning can help focus that effort, but its benefit
+depends on representative data, reliable labels, and a query strategy that
+does not systematically overlook important cases.
+
+## How it works
+
+1. Train a model on the current labeled examples.
+2. Score candidate unlabeled examples with a query strategy.
+3. Select a batch and obtain its labels.
+4. Add the labeled examples to the training set and repeat.
+
+Evaluation should use a separate held-out set; queried training examples
+should not leak into that evaluation.
+
+## Practical example
+
+A text classifier may send messages with predictions near its decision
+boundary to a reviewer. The reviewer labels those messages, and the next
+training round includes them.
+
+## Common misconceptions
+
+- Active learning does not guarantee fewer labels or better performance.
+- Model uncertainty can be poorly calibrated or confidently wrong.
+- A query strategy that selects only unusual examples can produce a biased
+  training set.
+
+## Related terms
+
+- [AI Evaluation](ai-evaluation.qmd)
+- [Anomaly Detection](anomaly-detection.qmd)
+- [Algorithm](algorithm.qmd)
+
+## Further reading
+
+- [A Survey of Active Learning Literature](https://arxiv.org/abs/1905.05686) — surveys query strategies and active-learning settings.
+- [Settles: Active Learning Literature Survey](https://minds.wisconsin.edu/handle/1793/60660) — an accessible overview of core methods and applications.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

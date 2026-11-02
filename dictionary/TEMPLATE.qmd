@@ -47,4 +47,4 @@ Clarify common mistakes or oversimplifications, if applicable.
 ## Contribution notes
 
 - **Last reviewed:** YYYY-MM-DD
-- **Contributor(s):** GitHub username(s)
+- **Contributor(s):** [Contributor(s) Username](https://example.com) - names of the contributor(s) and their links

@@ -1,0 +1,63 @@
+---
+title: "Artificial Neural Network"
+description: "A learnable computational model made of connected units arranged in layers."
+term: "Artificial Neural Network"
+letter: "A"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An artificial neural network (ANN) is a computer model made of connected
+computational units. It learns by adjusting connection weights so its
+outputs better match examples or a specified objective.
+
+## Technical explanation
+
+A neural network applies a sequence of parameterized transformations to
+input data. A common feed-forward network contains an input representation,
+one or more hidden layers, and an output layer. Training typically computes
+a loss and uses gradient-based optimization to update parameters.
+
+## Why it matters in AI engineering
+
+Neural networks underpin many modern systems for language, vision, speech,
+and structured prediction. Understanding their layers, parameters, training
+data, and evaluation helps engineers select and operate models responsibly.
+
+## How it works
+
+Each layer transforms its input using learned weights and biases, often
+followed by a non-linear activation. During training, the model compares
+predictions with target signals, computes gradients, and updates parameters
+to reduce a loss function.
+
+## Practical example
+
+A small feed-forward network can classify a tabular record by converting
+its features through hidden layers and producing scores for each class.
+The predicted class is usually selected from the output scores.
+
+## Common misconceptions
+
+- Neural networks are inspired by biological brains but are not literal
+  simulations of them.
+- A network with more layers or parameters is not automatically better.
+- A model's training performance alone does not establish generalization.
+
+## Related terms
+
+- [Activation Function](activation-function.qmd)
+- [Attention Mechanism](attention-mechanism.qmd)
+- [Autoencoder](autoencoder.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Multilayer Perceptrons](https://www.deeplearningbook.org/contents/mlp.html) — explains feed-forward neural networks and their mathematical foundations.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — practical lessons on training and using neural networks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

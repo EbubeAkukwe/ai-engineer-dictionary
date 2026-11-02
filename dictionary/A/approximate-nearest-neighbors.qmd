@@ -1,0 +1,67 @@
+---
+title: "Approximate Nearest Neighbors"
+description: "A family of methods for quickly finding vectors similar to a query without exact search."
+term: "Approximate Nearest Neighbors"
+letter: "A"
+category: "Retrieval"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Approximate nearest-neighbor (ANN) search finds items whose vectors are
+similar to a query vector, while trading a small amount of retrieval
+accuracy for speed or lower resource use.
+
+## Technical explanation
+
+ANN indexes organize vectors so queries examine only a subset of the
+collection. Techniques include graph-based indexes, partitioning and
+quantization. Performance is described using measures such as recall at
+\(k\), query latency, memory use, and indexing cost. The appropriate
+trade-off depends on the application and its data.
+
+## Why it matters in AI engineering
+
+Embedding-based search and retrieval-augmented generation often need to
+retrieve from large vector collections. ANN can make these searches
+practical at scale, but approximate results should be measured against the
+application's relevance and latency requirements.
+
+## How it works
+
+An index is built from the stored vectors. At query time, the index uses
+its structure to visit promising candidates, computes or refines distances
+for those candidates, and returns the best matches it found. Search
+parameters can trade additional work for higher recall.
+
+## Practical example
+
+A document-search service embeds a user's question and uses an ANN index to
+retrieve a short list of semantically similar document chunks for a later
+ranking or generation step.
+
+## Common misconceptions
+
+- ANN does not guarantee the mathematically exact nearest items.
+- High vector similarity does not necessarily mean a result is useful or
+  factually relevant.
+- Index choice involves build time, memory, updates, and recall, not only
+  query speed.
+
+## Related terms
+
+- [Algorithm](algorithm.qmd)
+- [Artificial Intelligence](artificial-intelligence.qmd)
+- [API](api.qmd)
+
+## Further reading
+
+- [Efficient and robust approximate nearest neighbor search using HNSW graphs](https://arxiv.org/abs/1603.09320) — describes the HNSW graph-based search method.
+- [FAISS](https://github.com/facebookresearch/faiss) — Meta's library for efficient similarity search and clustering of dense vectors.
+- [Google Cloud: Vector search overview](https://cloud.google.com/vertex-ai/docs/vector-search/overview) — explains vector search concepts and index options.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
