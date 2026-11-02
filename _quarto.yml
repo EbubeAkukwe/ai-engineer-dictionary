@@ -59,6 +59,7 @@ website:
 
 format:
   html:
+    html-math-method: mathjax
     theme:
       light: cosmo
       dark: darkly
