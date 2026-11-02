@@ -1,0 +1,50 @@
+---
+title: "TERM NAME"
+description: "One-sentence summary of the term."
+term: "Term Name"
+letter: "A"
+category: "Category"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Explain the concept in plain language. Assume the reader is intelligent but
+may be new to this topic.
+
+## Technical explanation
+
+Give a more precise explanation. Define specialist terms when they first
+appear.
+
+## Why it matters in AI engineering
+
+Explain where this concept appears in real AI engineering work and what
+problem it helps solve.
+
+## How it works
+
+Describe the mechanism, process, or mathematical idea. Use equations when
+they genuinely help.
+
+## Practical example
+
+Give a concrete example. Link to a notebook when a runnable demonstration
+adds value.
+
+## Common misconceptions
+
+Clarify common mistakes or oversimplifications, if applicable.
+
+## Related terms
+
+- [Related term](../B/related-term.qmd)
+
+## Further reading
+
+- [Authoritative source](https://example.com) — describe what the source covers.
+
+## Contribution notes
+
+- **Last reviewed:** YYYY-MM-DD
+- **Contributor(s):** GitHub username(s)

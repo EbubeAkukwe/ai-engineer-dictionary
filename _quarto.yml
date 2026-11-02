@@ -1,0 +1,60 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "AI Engineer Dictionary"
+  description: "An open-source A–Z reference for AI engineering."
+  site-url: ""
+  repo-url: ""
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Dictionary"
+        href: dictionary/index.qmd
+      - text: "Notebooks"
+        href: notebooks/index.qmd
+      - text: "Vocabulary"
+        href: vocabulary/index.qmd
+      - text: "Contribute"
+        href: contribute.qmd
+    right:
+      - icon: github
+        href: "https://github.com/EbubeAkukwe/ai-engineer-dictionary"
+        aria-label: GitHub repository
+  sidebar:
+    - title: "Dictionary"
+      style: "docked"
+      contents:
+        - dictionary/index.qmd
+        - section: "A"
+          contents:
+            - dictionary/A/index.qmd
+            - dictionary/A/artificial-intelligence.qmd
+            - dictionary/A/attention-mechanism.qmd
+            - dictionary/A/api.qmd
+        - section: "B–Z"
+          contents:
+            - dictionary/letters.qmd
+    - title: "Notebooks"
+      contents:
+        - notebooks/index.qmd
+        - notebooks/A/attention-mechanism.ipynb
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: assets/styles.css
+    toc: true
+    search: true
+    code-copy: true
+    code-overflow: wrap
+    number-sections: false
+
+execute:
+  freeze: auto
+  warning: false
+  message: false

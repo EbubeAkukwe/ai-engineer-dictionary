@@ -1,0 +1,68 @@
+---
+title: "Artificial Intelligence"
+description: "The field of building systems that perform tasks associated with intelligent behaviour."
+term: "Artificial Intelligence"
+letter: "A"
+category: "AI fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Artificial intelligence (AI) is the broad field of creating computer systems
+that can perform tasks that typically require capabilities associated with
+human intelligence, such as perception, language understanding, planning,
+learning, and decision-making.
+
+## Technical explanation
+
+AI is an interdisciplinary area spanning computer science, mathematics,
+statistics, cognitive science, and engineering. It includes many approaches,
+from rule-based symbolic systems to machine learning models that infer
+patterns from data.
+
+Machine learning is one important subfield of AI, not a synonym for all AI.
+
+## Why it matters in AI engineering
+
+AI engineering turns AI methods into useful, reliable systems. This includes
+selecting or training models, integrating them with software, evaluating
+their behaviour, deploying them, and monitoring them in real-world settings.
+
+## How it works
+
+There is no single mechanism behind all AI systems. Different systems may use:
+
+- Explicit rules and search procedures.
+- Statistical models learned from data.
+- Neural networks trained through optimization.
+- Planning, control, and decision-making algorithms.
+- Combinations of models, tools, data, and software components.
+
+## Practical example
+
+A customer-support system might classify incoming messages, retrieve relevant
+policy documents, and generate a response. Those components can use different
+AI techniques within one engineered application.
+
+## Common misconceptions
+
+- AI is not limited to generative AI or chatbots.
+- Machine learning is a subset of AI.
+- A system described as AI is not necessarily autonomous or capable of
+  general human-like reasoning.
+
+## Related terms
+
+- [API](api.qmd)
+- [Attention Mechanism](attention-mechanism.qmd)
+
+## Further reading
+
+- [Stanford Encyclopedia of Philosophy: Artificial Intelligence](https://plato.stanford.edu/entries/artificial-intelligence/)
+- [Artificial Intelligence: A Modern Approach](https://aima.cs.berkeley.edu/)
+
+## Contribution notes
+
+- **Last reviewed:** 2026-10-31
+- **Contributor(s):** (https://github.com/EbubeAkukwe)

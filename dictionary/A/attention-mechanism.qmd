@@ -1,0 +1,79 @@
+---
+title: "Attention Mechanism"
+description: "A mechanism that lets a model weight the relevance of different input elements."
+term: "Attention Mechanism"
+letter: "A"
+category: "Deep learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An attention mechanism lets a neural network give different amounts of
+importance to different parts of its input when producing a representation
+or an output.
+
+For example, when processing a sentence, a model may need to focus more on
+some words than others to interpret a particular word.
+
+## Technical explanation
+
+In the Transformer formulation, scaled dot-product attention uses queries
+(Q), keys (K), and values (V):
+
+\[
+\operatorname{Attention}(Q,K,V)
+= \operatorname{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\]
+
+The query-key dot products produce compatibility scores. Scaling helps
+control their magnitude, softmax converts them into weights, and those
+weights combine the value vectors.
+
+## Why it matters in AI engineering
+
+Attention is a central building block in Transformer models used for
+language, vision, audio, and multimodal tasks. Understanding it helps
+engineers reason about model architecture, context length, computational
+cost, and inference optimizations.
+
+## How it works
+
+1. Project input representations into queries, keys, and values.
+2. Compare queries with keys to obtain relevance scores.
+3. Scale the scores and apply softmax.
+4. Use the resulting weights to combine value vectors.
+
+Multi-head attention performs several attention operations in parallel,
+allowing the model to learn different relationships.
+
+## Practical example
+
+The accompanying notebook demonstrates scaled dot-product attention using
+small NumPy arrays. It is intended to make the tensor operations visible,
+not to train a language model.
+
+## Common misconceptions
+
+- Attention weights are not automatically faithful explanations of a
+  model's reasoning.
+- Attention is not the same thing as memory.
+- The original Transformer uses self-attention, but attention mechanisms
+  also appear in other architectures.
+
+## Related terms
+
+- [Artificial Intelligence](artificial-intelligence.qmd)
+- Transformer
+- Embedding
+- Softmax
+- Query, Key, and Value
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+## Contribution notes
+
+- **Last reviewed:** 2026-10-31
+- **Contributor(s):** (https://github.com/EbubeAkukwe)

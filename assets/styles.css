@@ -1,0 +1,25 @@
+/* AI Engineer Dictionary: restrained, readable documentation styling. */
+:root {
+  --aed-content-width: 900px;
+}
+
+#quarto-content {
+  max-width: var(--aed-content-width);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+}
+
+.callout {
+  border-radius: 0.65rem;
+}
+
+pre {
+  border-radius: 0.65rem;
+}

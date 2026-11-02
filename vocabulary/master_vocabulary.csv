@@ -1,0 +1,344 @@
+term,letter,category,difficulty,notebook_priority,prerequisites,status
+Activation Function,A,Deep Learning,Beginner,Essential,,Proposed
+Active Learning,A,Machine Learning,Intermediate,Recommended,,Proposed
+Adapter,A,LLM Engineering,Intermediate,Recommended,,Proposed
+Agent,A,AI Agents,Beginner,Recommended,,Proposed
+Agentic Workflow,A,AI Agents,Intermediate,Recommended,,Proposed
+AI Alignment,A,AI Safety,Advanced,Optional,,Proposed
+AI Evaluation,A,AI Engineering,Intermediate,Recommended,,Proposed
+Algorithm,A,Foundations,Beginner,Optional,,Proposed
+Anomaly Detection,A,Machine Learning,Intermediate,Recommended,,Proposed
+API,A,Software Engineering,Beginner,Optional,,Proposed
+Approximate Nearest Neighbors,A,Retrieval,Advanced,Recommended,,Proposed
+Artificial Intelligence,A,AI Fundamentals,Beginner,Optional,,Proposed
+Artificial Neural Network,A,Deep Learning,Beginner,Essential,,Proposed
+Attention Mechanism,A,Deep Learning,Intermediate,Essential,,Proposed
+Autoencoder,A,Deep Learning,Intermediate,Essential,,Proposed
+Autonomous Systems,A,Robotics,Intermediate,Recommended,,Proposed
+Autoregressive Model,A,Generative AI,Intermediate,Recommended,,Proposed
+Backpropagation,B,Deep Learning,Intermediate,Essential,,Proposed
+ Bayesian Optimization,B,Machine Learning,Advanced,Recommended,,Proposed
+Batch,B,Deep Learning,Beginner,Optional,,Proposed
+Batch Normalization,B,Deep Learning,Intermediate,Essential,,Proposed
+Batch Size,B,Deep Learning,Beginner,Optional,,Proposed
+Beam Search,B,NLP,Intermediate,Recommended,,Proposed
+Bias,B,Machine Learning,Beginner,Optional,,Proposed
+Bias-Variance Tradeoff,B,Machine Learning,Intermediate,Essential,,Proposed
+Bidirectional Encoder Representations from Transformers (BERT),B,LLM Engineering,Intermediate,Recommended,,Proposed
+Binary Classification,B,Machine Learning,Beginner,Recommended,,Proposed
+Black-box Model,B,AI Safety,Intermediate,Optional,,Proposed
+Bootstrap Sampling,B,Statistics,Intermediate,Recommended,,Proposed
+Bounding Box,B,Computer Vision,Beginner,Recommended,,Proposed
+Broad Learning System,B,Machine Learning,Advanced,Optional,,Proposed
+Cache,C,Systems,Beginner,Optional,,Proposed
+Caching,C,Systems,Intermediate,Recommended,,Proposed
+Calibration,C,Model Evaluation,Advanced,Recommended,,Proposed
+Causal Inference,C,Statistics,Advanced,Recommended,,Proposed
+Chain of Thought,C,LLM Engineering,Intermediate,Optional,,Proposed
+Chunking,C,Retrieval,Beginner,Recommended,,Proposed
+Classification,C,Machine Learning,Beginner,Essential,,Proposed
+Clustering,C,Machine Learning,Beginner,Essential,,Proposed
+CNN (Convolutional Neural Network),C,Deep Learning,Beginner,Essential,,Proposed
+Cold Start,C,Recommender Systems,Intermediate,Optional,,Proposed
+Computer Vision,C,AI Fundamentals,Beginner,Recommended,,Proposed
+Concept Drift,C,MLOps,Advanced,Recommended,,Proposed
+Confidence Interval,C,Statistics,Intermediate,Recommended,,Proposed
+Confusion Matrix,C,Model Evaluation,Beginner,Essential,,Proposed
+Context Engineering,C,LLM Engineering,Intermediate,Recommended,,Proposed
+Context Window,C,LLM Engineering,Beginner,Optional,,Proposed
+Continuous Integration,C,MLOps,Intermediate,Optional,,Proposed
+Convolution,C,Deep Learning,Intermediate,Essential,,Proposed
+Cosine Similarity,C,Retrieval,Intermediate,Essential,,Proposed
+CUDA,C,AI Infrastructure,Intermediate,Recommended,,Proposed
+Cross-Entropy Loss,C,Deep Learning,Intermediate,Essential,,Proposed
+Cross-Validation,C,Model Evaluation,Intermediate,Essential,,Proposed
+Data Augmentation,D,Machine Learning,Beginner,Recommended,,Proposed
+Data Drift,D,MLOps,Intermediate,Recommended,,Proposed
+Data Engineering,D,Data Systems,Beginner,Optional,,Proposed
+Data Leakage,D,Model Evaluation,Intermediate,Essential,,Proposed
+Data Pipeline,D,Data Systems,Beginner,Recommended,,Proposed
+Data Preprocessing,D,Machine Learning,Beginner,Recommended,,Proposed
+Data Validation,D,Data Systems,Intermediate,Recommended,,Proposed
+Decision Boundary,D,Machine Learning,Intermediate,Recommended,,Proposed
+Decision Tree,D,Machine Learning,Beginner,Essential,,Proposed
+Decoder,D,Deep Learning,Intermediate,Recommended,,Proposed
+Deep Learning,D,AI Fundamentals,Beginner,Essential,,Proposed
+Dense Layer,D,Deep Learning,Beginner,Essential,,Proposed
+Dimensionality Reduction,D,Machine Learning,Intermediate,Essential,,Proposed
+Distributed Training,D,AI Infrastructure,Advanced,Recommended,,Proposed
+Docker,D,MLOps,Beginner,Recommended,,Proposed
+Dropout,D,Deep Learning,Intermediate,Essential,,Proposed
+Diffusion Model,D,Generative AI,Intermediate,Essential,,Proposed
+Distillation,D,Model Optimization,Advanced,Recommended,,Proposed
+D* (D-Star),D,Robotics,Advanced,Optional,,Proposed
+Dynamic Batching,D,Inference Systems,Advanced,Recommended,,Proposed
+Early Stopping,E,Model Training,Beginner,Recommended,,Proposed
+Edge AI,E,AI Infrastructure,Intermediate,Recommended,,Proposed
+Embedding,E,LLM Engineering,Beginner,Essential,,Proposed
+Encoder,E,Deep Learning,Intermediate,Recommended,,Proposed
+Ensemble Learning,E,Machine Learning,Intermediate,Essential,,Proposed
+Epoch,E,Model Training,Beginner,Optional,,Proposed
+Error Analysis,E,Model Evaluation,Intermediate,Essential,,Proposed
+Evaluation Dataset,E,Model Evaluation,Beginner,Optional,,Proposed
+Exploding Gradients,E,Deep Learning,Intermediate,Recommended,,Proposed
+Exploration vs Exploitation,E,Reinforcement Learning,Intermediate,Recommended,,Proposed
+Expert System,E,AI Fundamentals,Beginner,Optional,,Proposed
+Explainable AI (XAI),E,AI Safety,Intermediate,Recommended,,Proposed
+Expectation-Maximization,E,Statistics,Advanced,Recommended,,Proposed
+External Tool,E,AI Agents,Beginner,Optional,,Proposed
+F1 Score,F,Model Evaluation,Beginner,Essential,,Proposed
+Feature,F,Machine Learning,Beginner,Optional,,Proposed
+Feature Engineering,F,Machine Learning,Intermediate,Essential,,Proposed
+Feature Extraction,F,Machine Learning,Intermediate,Recommended,,Proposed
+Feature Store,F,MLOps,Intermediate,Recommended,,Proposed
+Few-shot Learning,F,Machine Learning,Intermediate,Recommended,,Proposed
+Federated Learning,F,Machine Learning,Advanced,Recommended,,Proposed
+Feedforward Neural Network,F,Deep Learning,Beginner,Essential,,Proposed
+Fine-tuning,F,LLM Engineering,Intermediate,Essential,,Proposed
+Foundation Model,F,Generative AI,Beginner,Recommended,,Proposed
+Forward Pass,F,Deep Learning,Beginner,Essential,,Proposed
+Function Calling,F,LLM Engineering,Intermediate,Recommended,,Proposed
+False Positive,F,Model Evaluation,Beginner,Optional,,Proposed
+False Negative,F,Model Evaluation,Beginner,Optional,,Proposed
+GAN (Generative Adversarial Network),G,Generative AI,Intermediate,Essential,,Proposed
+Generative AI,G,AI Fundamentals,Beginner,Recommended,,Proposed
+Generative Model,G,Generative AI,Intermediate,Recommended,,Proposed
+GELU,G,Deep Learning,Intermediate,Optional,,Proposed
+Generalization,G,Machine Learning,Intermediate,Essential,,Proposed
+Git,G,Software Engineering,Beginner,Optional,,Proposed
+Gradient,G,Mathematics,Intermediate,Essential,,Proposed
+Gradient Descent,G,Machine Learning,Beginner,Essential,,Proposed
+Gradient Clipping,G,Model Training,Intermediate,Recommended,,Proposed
+Graph Neural Network,G,Deep Learning,Advanced,Essential,,Proposed
+Greedy Decoding,G,LLM Engineering,Intermediate,Recommended,,Proposed
+Grounding,G,LLM Engineering,Intermediate,Recommended,,Proposed
+GPU,G,AI Infrastructure,Beginner,Recommended,,Proposed
+Grid Search,G,Model Optimization,Beginner,Recommended,,Proposed
+Hallucination,H,LLM Engineering,Beginner,Recommended,,Proposed
+Hashing,H,Computer Science,Intermediate,Optional,,Proposed
+Heuristic,H,Algorithms,Beginner,Optional,,Proposed
+Hidden Layer,H,Deep Learning,Beginner,Essential,,Proposed
+Hierarchical Clustering,H,Machine Learning,Intermediate,Recommended,,Proposed
+Human-in-the-Loop,H,AI Engineering,Intermediate,Recommended,,Proposed
+Hyperparameter,H,Model Training,Beginner,Optional,,Proposed
+Hyperparameter Optimization,H,Model Optimization,Intermediate,Essential,,Proposed
+Hypothesis Testing,H,Statistics,Intermediate,Recommended,,Proposed
+Image Classification,I,Computer Vision,Beginner,Essential,,Proposed
+Image Segmentation,I,Computer Vision,Intermediate,Essential,,Proposed
+Imbalanced Dataset,I,Model Evaluation,Intermediate,Recommended,,Proposed
+Inference,I,AI Systems,Beginner,Essential,,Proposed
+Information Retrieval,I,Retrieval,Intermediate,Recommended,,Proposed
+Initialization,I,Deep Learning,Intermediate,Recommended,,Proposed
+Instruction Tuning,I,LLM Engineering,Intermediate,Recommended,,Proposed
+Interpretability,I,AI Safety,Intermediate,Recommended,,Proposed
+Intersection over Union (IoU),I,Computer Vision,Intermediate,Recommended,,Proposed
+In-Context Learning,I,LLM Engineering,Intermediate,Recommended,,Proposed
+Interpolation,I,Mathematics,Intermediate,Optional,,Proposed
+Inverse Kinematics,I,Robotics,Advanced,Recommended,,Proposed
+JAX,J,AI Frameworks,Intermediate,Recommended,,Proposed
+JavaScript,J,Software Engineering,Beginner,Optional,,Proposed
+Jensen-Shannon Divergence,J,Statistics,Advanced,Optional,,Proposed
+Job Scheduling,J,AI Infrastructure,Intermediate,Optional,,Proposed
+JSON,J,Software Engineering,Beginner,Optional,,Proposed
+JSON Schema,J,Software Engineering,Intermediate,Optional,,Proposed
+Jupyter Notebook,J,Developer Tools,Beginner,Optional,,Proposed
+Just-in-Time (JIT) Compilation,J,AI Infrastructure,Advanced,Recommended,,Proposed
+K-Fold Cross-Validation,K,Model Evaluation,Intermediate,Essential,,Proposed
+K-Means,K,Machine Learning,Beginner,Essential,,Proposed
+K-Nearest Neighbors (KNN),K,Machine Learning,Beginner,Essential,,Proposed
+Kalman Filter,K,Robotics,Advanced,Recommended,,Proposed
+Kernel,K,Machine Learning,Intermediate,Recommended,,Proposed
+Kernel Trick,K,Machine Learning,Advanced,Recommended,,Proposed
+Key (Attention),K,Deep Learning,Intermediate,Essential,,Proposed
+Knowledge Distillation,K,Model Optimization,Advanced,Recommended,,Proposed
+Knowledge Graph,K,Data Systems,Intermediate,Recommended,,Proposed
+Knowledge Representation,K,AI Fundamentals,Intermediate,Optional,,Proposed
+Kullback-Leibler Divergence,K,Statistics,Advanced,Recommended,,Proposed
+KV Cache,K,Inference Systems,Advanced,Recommended,,Proposed
+Label,L,Machine Learning,Beginner,Optional,,Proposed
+Large Language Model (LLM),L,LLM Engineering,Beginner,Essential,,Proposed
+Latent Space,L,Deep Learning,Intermediate,Essential,,Proposed
+Latency,L,AI Systems,Beginner,Recommended,,Proposed
+Learning Rate,L,Model Training,Beginner,Essential,,Proposed
+Learning Rate Scheduler,L,Model Training,Intermediate,Recommended,,Proposed
+Least Squares,L,Statistics,Intermediate,Recommended,,Proposed
+Linear Algebra,L,Mathematics,Beginner,Essential,,Proposed
+Linear Regression,L,Machine Learning,Beginner,Essential,,Proposed
+Log Loss,L,Model Evaluation,Intermediate,Recommended,,Proposed
+Logistic Regression,L,Machine Learning,Beginner,Essential,,Proposed
+Long Short-Term Memory (LSTM),L,Deep Learning,Intermediate,Essential,,Proposed
+LoRA,L,LLM Engineering,Intermediate,Essential,,Proposed
+Loss Function,L,Machine Learning,Beginner,Essential,,Proposed
+Low-Rank Adaptation,L,LLM Engineering,Intermediate,Recommended,,Proposed
+Machine Learning,M,AI Fundamentals,Beginner,Essential,,Proposed
+Machine Learning Operations (MLOps),M,MLOps,Intermediate,Recommended,,Proposed
+Masked Language Model,M,LLM Engineering,Intermediate,Recommended,,Proposed
+Mean Absolute Error (MAE),M,Model Evaluation,Beginner,Recommended,,Proposed
+Mean Squared Error (MSE),M,Model Evaluation,Beginner,Recommended,,Proposed
+Memory (AI Agents),M,AI Agents,Intermediate,Recommended,,Proposed
+Metadata,M,Data Systems,Beginner,Optional,,Proposed
+Metric,M,Model Evaluation,Beginner,Optional,,Proposed
+Mixture of Experts (MoE),M,LLM Engineering,Advanced,Essential,,Proposed
+Model,M,Machine Learning,Beginner,Optional,,Proposed
+Model Compression,M,Model Optimization,Intermediate,Recommended,,Proposed
+Model Evaluation,M,AI Engineering,Beginner,Essential,,Proposed
+Model Monitoring,M,MLOps,Intermediate,Recommended,,Proposed
+Model Quantization,M,Model Optimization,Advanced,Essential,,Proposed
+Model Serving,M,AI Systems,Intermediate,Recommended,,Proposed
+Monte Carlo Method,M,Statistics,Advanced,Recommended,,Proposed
+Multimodal AI,M,Generative AI,Intermediate,Recommended,,Proposed
+Multi-Head Attention,M,Deep Learning,Intermediate,Essential,,Proposed
+Multilayer Perceptron (MLP),M,Deep Learning,Beginner,Essential,,Proposed
+MCP (Model Context Protocol),M,AI Agents,Intermediate,Recommended,,Proposed
+Naive Bayes,N,Machine Learning,Beginner,Essential,,Proposed
+Named Entity Recognition (NER),N,NLP,Intermediate,Recommended,,Proposed
+Natural Language Processing (NLP),N,AI Fundamentals,Beginner,Recommended,,Proposed
+Negative Log-Likelihood,N,Statistics,Intermediate,Recommended,,Proposed
+Neural Architecture Search,N,Deep Learning,Advanced,Optional,,Proposed
+Neural Network,N,Deep Learning,Beginner,Essential,,Proposed
+Neuron,N,Deep Learning,Beginner,Essential,,Proposed
+N-gram,N,NLP,Beginner,Recommended,,Proposed
+Node (Graph),N,Computer Science,Beginner,Optional,,Proposed
+Non-Maximum Suppression (NMS),N,Computer Vision,Intermediate,Recommended,,Proposed
+Normalization,N,Deep Learning,Intermediate,Essential,,Proposed
+NumPy,N,Developer Tools,Beginner,Recommended,,Proposed
+Nucleus Sampling (Top-p),N,LLM Engineering,Intermediate,Recommended,,Proposed
+Object Detection,O,Computer Vision,Beginner,Essential,,Proposed
+Observability,O,MLOps,Intermediate,Recommended,,Proposed
+ONNX,O,AI Infrastructure,Intermediate,Recommended,,Proposed
+Open-Set Recognition,O,Machine Learning,Advanced,Optional,,Proposed
+Open Weights,O,LLM Engineering,Intermediate,Recommended,,Proposed
+Optimization,O,Mathematics,Intermediate,Essential,,Proposed
+Optimizer,O,Deep Learning,Beginner,Essential,,Proposed
+Orchestration,O,AI Systems,Intermediate,Recommended,,Proposed
+Out-of-Distribution (OOD),O,Model Evaluation,Advanced,Recommended,,Proposed
+Overfitting,O,Machine Learning,Beginner,Essential,,Proposed
+Oversampling,O,Data Engineering,Intermediate,Recommended,,Proposed
+Over-the-Air (OTA) Update,O,Robotics,Advanced,Optional,,Proposed
+Parameter,P,Deep Learning,Beginner,Optional,,Proposed
+Parameter-Efficient Fine-Tuning (PEFT),P,LLM Engineering,Intermediate,Recommended,,Proposed
+Perceptron,P,Deep Learning,Beginner,Essential,,Proposed
+Perplexity,P,NLP,Intermediate,Recommended,,Proposed
+Pipeline,P,AI Systems,Beginner,Optional,,Proposed
+Policy Gradient,P,Reinforcement Learning,Advanced,Recommended,,Proposed
+Positional Encoding,P,Deep Learning,Intermediate,Essential,,Proposed
+Precision,P,Model Evaluation,Beginner,Essential,,Proposed
+Pretraining,P,LLM Engineering,Intermediate,Recommended,,Proposed
+Principal Component Analysis (PCA),P,Machine Learning,Intermediate,Essential,,Proposed
+Prompt,P,LLM Engineering,Beginner,Optional,,Proposed
+Prompt Engineering,P,LLM Engineering,Beginner,Recommended,,Proposed
+Prompt Injection,P,AI Safety,Intermediate,Recommended,,Proposed
+Pruning,P,Model Optimization,Advanced,Recommended,,Proposed
+PyTorch,P,AI Frameworks,Beginner,Essential,,Proposed
+Python,P,Software Engineering,Beginner,Optional,,Proposed
+Pooling,P,Computer Vision,Intermediate,Recommended,,Proposed
+Probability Distribution,P,Mathematics,Intermediate,Essential,,Proposed
+Q-Learning,Q,Reinforcement Learning,Intermediate,Essential,,Proposed
+QLoRA,Q,LLM Engineering,Advanced,Recommended,,Proposed
+Q-Value,Q,Reinforcement Learning,Intermediate,Recommended,,Proposed
+Quantization,Q,Model Optimization,Intermediate,Essential,,Proposed
+Query (Attention),Q,Deep Learning,Intermediate,Essential,,Proposed
+Query Expansion,Q,Information Retrieval,Intermediate,Optional,,Proposed
+Query-Key-Value (QKV),Q,Deep Learning,Intermediate,Essential,,Proposed
+Queue,Q,Computer Science,Beginner,Optional,,Proposed
+QuickSort,Q,Algorithms,Intermediate,Optional,,Proposed
+RAG (Retrieval-Augmented Generation),R,LLM Engineering,Intermediate,Essential,,Proposed
+Random Forest,R,Machine Learning,Beginner,Essential,,Proposed
+Ranking Model,R,Machine Learning,Intermediate,Recommended,,Proposed
+Recall,R,Model Evaluation,Beginner,Essential,,Proposed
+Recurrent Neural Network (RNN),R,Deep Learning,Intermediate,Essential,,Proposed
+Regression,R,Machine Learning,Beginner,Essential,,Proposed
+Regularization,R,Machine Learning,Intermediate,Essential,,Proposed
+Reinforcement Learning,R,AI Fundamentals,Intermediate,Essential,,Proposed
+ReLU,R,Deep Learning,Beginner,Essential,,Proposed
+Representation Learning,R,Deep Learning,Intermediate,Recommended,,Proposed
+Retrieval,R,Information Retrieval,Beginner,Recommended,,Proposed
+Reranking,R,Retrieval,Intermediate,Recommended,,Proposed
+REST API,R,Software Engineering,Beginner,Optional,,Proposed
+Reward Model,R,Reinforcement Learning,Advanced,Recommended,,Proposed
+ROC Curve,R,Model Evaluation,Intermediate,Recommended,,Proposed
+Robotics,R,AI Fundamentals,Beginner,Recommended,,Proposed
+ROUGE,R,NLP Evaluation,Intermediate,Optional,,Proposed
+Runtime,R,Software Engineering,Beginner,Optional,,Proposed
+Sampling,S,Statistics,Beginner,Optional,,Proposed
+Scaling Law,S,LLM Engineering,Advanced,Recommended,,Proposed
+Self-Attention,S,Deep Learning,Intermediate,Essential,,Proposed
+Semantic Search,S,Retrieval,Intermediate,Essential,,Proposed
+Sequence-to-Sequence Model,S,Deep Learning,Intermediate,Recommended,,Proposed
+Sigmoid,S,Deep Learning,Beginner,Essential,,Proposed
+Similarity Search,S,Retrieval,Intermediate,Recommended,,Proposed
+Softmax,S,Deep Learning,Beginner,Essential,,Proposed
+Sparse Attention,S,LLM Engineering,Advanced,Recommended,,Proposed
+Sparse Matrix,S,Mathematics,Intermediate,Optional,,Proposed
+Stochastic Gradient Descent (SGD),S,Model Training,Intermediate,Essential,,Proposed
+Supervised Learning,S,Machine Learning,Beginner,Essential,,Proposed
+Support Vector Machine (SVM),S,Machine Learning,Intermediate,Essential,,Proposed
+Synthetic Data,S,Data Engineering,Intermediate,Recommended,,Proposed
+System Prompt,S,LLM Engineering,Beginner,Optional,,Proposed
+System Design,S,Software Engineering,Intermediate,Recommended,,Proposed
+Safety Evaluation,S,AI Safety,Advanced,Recommended,,Proposed
+SLAM,S,Robotics,Advanced,Essential,,Proposed
+Structured Output,S,LLM Engineering,Intermediate,Recommended,,Proposed
+Temperature,T,LLM Engineering,Beginner,Recommended,,Proposed
+Tensor,T,Mathematics,Beginner,Essential,,Proposed
+Tensor Core,T,AI Infrastructure,Intermediate,Optional,,Proposed
+TensorFlow,T,AI Frameworks,Beginner,Recommended,,Proposed
+Test Set,T,Model Evaluation,Beginner,Optional,,Proposed
+Text Classification,T,NLP,Beginner,Recommended,,Proposed
+Token,T,LLM Engineering,Beginner,Essential,,Proposed
+Tokenization,T,LLM Engineering,Beginner,Essential,,Proposed
+Token Embedding,T,LLM Engineering,Intermediate,Recommended,,Proposed
+Top-k Sampling,T,LLM Engineering,Intermediate,Recommended,,Proposed
+Top-p Sampling,T,LLM Engineering,Intermediate,Recommended,,Proposed
+Tracking (Experiment),T,MLOps,Intermediate,Optional,,Proposed
+Training,T,AI Systems,Beginner,Optional,,Proposed
+Transfer Learning,T,Machine Learning,Intermediate,Essential,,Proposed
+Transformer,T,Deep Learning,Intermediate,Essential,,Proposed
+Trajectory Optimization,T,Robotics,Advanced,Recommended,,Proposed
+Tool Calling,T,AI Agents,Intermediate,Recommended,,Proposed
+Tree Search,T,Algorithms,Intermediate,Recommended,,Proposed
+Underfitting,U,Machine Learning,Beginner,Essential,,Proposed
+Under-sampling,U,Data Engineering,Intermediate,Recommended,,Proposed
+Uncertainty Estimation,U,Model Evaluation,Advanced,Recommended,,Proposed
+Unimodal Learning,U,Machine Learning,Intermediate,Optional,,Proposed
+Universal Approximation Theorem,U,Mathematics,Advanced,Optional,,Proposed
+Unsupervised Learning,U,Machine Learning,Beginner,Essential,,Proposed
+U-Net,U,Computer Vision,Intermediate,Essential,,Proposed
+Unit Testing,U,Software Engineering,Beginner,Optional,,Proposed
+Uplift Modeling,U,Machine Learning,Advanced,Optional,,Proposed
+User Simulation,U,AI Agents,Advanced,Optional,,Proposed
+Validation Set,V,Model Evaluation,Beginner,Optional,,Proposed
+Variational Autoencoder (VAE),V,Deep Learning,Advanced,Essential,,Proposed
+Vector,V,Mathematics,Beginner,Essential,,Proposed
+Vector Database,V,Retrieval,Intermediate,Essential,,Proposed
+Vector Embedding,V,Retrieval,Beginner,Essential,,Proposed
+Vector Quantization,V,Model Optimization,Advanced,Recommended,,Proposed
+Version Control,V,Software Engineering,Beginner,Optional,,Proposed
+Vision Transformer (ViT),V,Computer Vision,Intermediate,Essential,,Proposed
+Visual SLAM,V,Robotics,Advanced,Recommended,,Proposed
+vLLM,V,Inference Systems,Advanced,Recommended,,Proposed
+Volumetric Rendering,V,Computer Vision,Advanced,Optional,,Proposed
+W&B (Weights & Biases),W,MLOps,Beginner,Optional,,Proposed
+Warmup,W,Model Training,Intermediate,Recommended,,Proposed
+Web API,W,Software Engineering,Beginner,Optional,,Proposed
+Webhook,W,Software Engineering,Beginner,Optional,,Proposed
+Weight,W,Deep Learning,Beginner,Optional,,Proposed
+Weight Decay,W,Model Training,Intermediate,Recommended,,Proposed
+Weighted Average,W,Mathematics,Beginner,Optional,,Proposed
+Word Embedding,W,NLP,Beginner,Essential,,Proposed
+Workflow Orchestration,W,AI Systems,Intermediate,Recommended,,Proposed
+World Model,W,AI Agents,Advanced,Recommended,,Proposed
+Wasserstein Distance,W,Mathematics,Advanced,Optional,,Proposed
+XAI (Explainable Artificial Intelligence),X,AI Safety,Intermediate,Recommended,,Proposed
+XGBoost,X,Machine Learning,Intermediate,Essential,,Proposed
+Xavier Initialization,X,Deep Learning,Intermediate,Recommended,,Proposed
+XML,X,Software Engineering,Beginner,Optional,,Proposed
+XOR (Exclusive OR),X,Computer Science,Beginner,Optional,,Proposed
+YAML,Y,Software Engineering,Beginner,Optional,,Proposed
+YOLO (You Only Look Once),Y,Computer Vision,Intermediate,Essential,,Proposed
+Yottabyte,Y,Computer Systems,Beginner,Optional,,Proposed
+Zero-shot Classification,Z,Machine Learning,Intermediate,Recommended,,Proposed
+Zero-shot Learning,Z,Machine Learning,Intermediate,Recommended,,Proposed
+Zero Trust,Z,AI Security,Intermediate,Optional,,Proposed
+Z-Score Normalization,Z,Statistics,Beginner,Recommended,,Proposed
+ZeRO Optimization,Z,AI Infrastructure,Advanced,Recommended,,Proposed

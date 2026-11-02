@@ -1,0 +1,26 @@
+name: Suggest a dictionary term
+description: Propose a term that should be added to the AI Engineer Dictionary.
+title: "[New term]: "
+labels: ["new-term"]
+body:
+  - type: input
+    id: term
+    attributes:
+      label: Proposed term
+      placeholder: e.g. Speculative decoding
+    validations:
+      required: true
+  - type: textarea
+    id: meaning
+    attributes:
+      label: What does it mean?
+      description: Give a short explanation and why it belongs in the dictionary.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Suggested references
+      description: Link to reliable documentation, papers, or books. Essential but not required.
+    validations:
+      required: false

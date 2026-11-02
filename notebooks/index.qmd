@@ -1,0 +1,9 @@
+---
+title: "Practical Notebooks"
+---
+
+Notebooks complement dictionary entries with runnable code, experiments,
+visualizations, and mathematical demonstrations.
+
+A notebook should teach one focused idea. Keep dependencies modest, explain
+each important step, and include expected outputs or observations.

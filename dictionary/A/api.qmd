@@ -1,0 +1,59 @@
+---
+title: "API"
+description: "A defined interface through which software components communicate."
+term: "API"
+letter: "A"
+category: "Software engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An application programming interface (API) is a defined way for one software
+component to request data or functionality from another component.
+
+## Technical explanation
+
+An API specifies the operations available to a caller and the rules for
+using them. A web API commonly exposes resources or operations over HTTP,
+often exchanging data in formats such as JSON.
+
+## Why it matters in AI engineering
+
+AI applications commonly call model-serving endpoints, embedding services,
+vector databases, data platforms, and external tools through APIs.
+
+## How it works
+
+A client sends a request to an endpoint. The server validates and processes
+the request, then returns a response, often with a status code and structured
+data.
+
+## Practical example
+
+A Python application might send text to a model inference endpoint and
+receive a generated response. The endpoint contract defines required input
+fields, authentication, response structure, and error behaviour.
+
+## Common misconceptions
+
+- An API is not necessarily a web API.
+- An API is an interface, not the implementation behind that interface.
+- An API key is a credential, not the API itself.
+
+## Related terms
+
+- HTTP
+- REST
+- JSON
+- Inference
+- Model serving
+
+## Further reading
+
+- [MDN: Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+
+## Contribution notes
+
+- **Last reviewed:** 2026-10-31
+- **Contributor(s):** (https://github.com/EbubeAkukwe)

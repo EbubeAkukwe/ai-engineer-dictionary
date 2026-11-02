@@ -1,0 +1,15 @@
+---
+title: "Master Vocabulary"
+---
+
+# Master A–Z Vocabulary
+
+The vocabulary is the proposed scope for the first release. It is reviewed
+before entries are written and may change as the project develops.
+
+- [Read the full vocabulary](MASTER_VOCABULARY.md)
+- [Download the CSV](master_vocabulary.csv)
+
+Each proposed term has a category, difficulty level, and suggested notebook
+priority. These classifications are editorial starting points, not immutable
+facts.

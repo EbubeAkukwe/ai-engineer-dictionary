@@ -1,0 +1,61 @@
+---
+title: "Contribute"
+---
+
+# Help build the dictionary
+
+Hello AI Engineers 👋, contributions are welcome from students, researchers, engineers, educators,
+and practitioners.
+
+## Ways to contribute
+
+- Add a missing term.
+- Improve an existing definition.
+- Correct a technical error.
+- Add a practical example or notebook.
+- Add authoritative references.
+- Improve accessibility, navigation, or the website itself.
+
+## Contribution workflow
+
+1. Open an issue to propose a new term or substantial change.
+2. Fork the repository and create a branch.
+3. Add or edit the relevant `.qmd` entry.
+4. Add a notebook only when runnable code materially improves the explanation.
+5. Run the validation checks locally.
+6. Open a pull request describing the change and its sources.
+
+## Entry requirements
+
+Every entry should include:
+
+- A plain-language explanation.
+- A technically accurate explanation.
+- Why the concept matters in AI engineering.
+- How it works.
+- A practical example or a reason one is not applicable.
+- Related terms.
+- Further reading or authoritative references.
+
+Use `dictionary/TEMPLATE.qmd` as the starting point.
+
+## Notebook requirements
+
+- Use Python 3 unless there is a strong reason not to.
+- Keep dependencies minimal.
+- Do not include API keys, passwords, personal data, or other secrets.
+- Explain the purpose of each important code cell.
+- Make notebooks deterministic where practical.
+- Avoid downloading large datasets or model weights by default.
+
+## Quality standards
+
+Submissions should be respectful, original, technically grounded, and
+understandable. Cite sources for non-obvious factual claims. Do not copy
+copyrighted textbook or documentation passages.
+
+## Licensing
+
+- Source code and project tooling: MIT License.
+- Original dictionary text and educational content: Creative Commons
+  Attribution 4.0 International (CC BY 4.0), unless a file states otherwise.
