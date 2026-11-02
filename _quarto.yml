@@ -31,9 +31,24 @@ website:
         - section: "A"
           contents:
             - dictionary/A/index.qmd
-            - dictionary/A/artificial-intelligence.qmd
-            - dictionary/A/attention-mechanism.qmd
+            - dictionary/A/activation-function.qmd
+            - dictionary/A/active-learning.qmd
+            - dictionary/A/adapter.qmd
+            - dictionary/A/agent.qmd
+            - dictionary/A/agentic-workflow.qmd
+            - dictionary/A/ai-alignment.qmd
+            - dictionary/A/ai-evaluation.qmd
+            - dictionary/A/algorithm.qmd
+            - dictionary/A/anomaly-detection.qmd
             - dictionary/A/api.qmd
+            - dictionary/A/approximate-nearest-neighbors.qmd
+            - dictionary/A/artificial-intelligence.qmd
+            - dictionary/A/artificial-neural-network.qmd
+            - dictionary/A/attention-mechanism.qmd
+            - dictionary/A/autoencoder.qmd
+            - dictionary/A/autonomous-systems.qmd
+            - dictionary/A/autoregressive-model.qmd
+
         - section: "B–Z"
           contents:
             - dictionary/letters.qmd
