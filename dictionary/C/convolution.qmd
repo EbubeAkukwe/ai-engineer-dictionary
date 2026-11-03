@@ -1,0 +1,67 @@
+---
+title: "Convolution"
+description: "An operation that combines an input with a kernel to detect or transform local patterns."
+term: "Convolution"
+letter: "C"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Convolution applies a small pattern of weights, called a kernel or filter,
+across an input. In image models, it can detect local patterns such as
+edges or textures.
+
+## Technical explanation
+
+A discrete convolution-like operation combines nearby input values with
+kernel weights as the kernel shifts across spatial positions. In deep
+learning libraries, the operation commonly called convolution is often
+technically cross-correlation, but the learned-filter usage is conventionally
+called convolution. Stride, padding, dilation, and kernel size control its
+shape and receptive field.
+
+## Why it matters in AI engineering
+
+Convolution provides local connectivity and weight sharing, making it a
+core operation in many vision models and some audio or sequence systems.
+Its configuration affects compute, output dimensions, and which input
+regions can influence a feature.
+
+## How it works
+
+At each position, the kernel's weights are multiplied by a local patch of
+the input and summed to produce an output value. The kernel moves according
+to the stride; padding may be added at boundaries. Multiple kernels
+produce multiple output feature maps.
+
+## Practical example
+
+A CNN can apply learned convolutional filters to an image to produce
+feature maps. During training, backpropagation adjusts the filter weights
+to help the network solve its task.
+
+## Common misconceptions
+
+- A learned convolutional filter is not necessarily a hand-designed edge
+  detector.
+- Padding and stride change the output dimensions and spatial sampling.
+- Convolution in a neural network is usually a multi-channel tensor
+  operation, not only a two-dimensional image operation.
+
+## Related terms
+
+- [CNN (Convolutional Neural Network)](cnn-convolutional-neural-network.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Convolutional Networks](https://www.deeplearningbook.org/contents/convnets.html) — explains convolutional operations and architectures.
+- [PyTorch: Conv2d](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html) — documents a standard two-dimensional convolution layer.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

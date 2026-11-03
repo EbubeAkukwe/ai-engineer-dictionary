@@ -1,0 +1,65 @@
+---
+title: "CNN (Convolutional Neural Network)"
+description: "A neural network architecture that uses convolutional layers to process structured spatial data."
+term: "CNN (Convolutional Neural Network)"
+letter: "C"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A convolutional neural network (CNN) is a neural network that uses
+convolution operations to detect local patterns in data such as images.
+Early layers may detect simple patterns, while later layers combine them
+into more complex features.
+
+## Technical explanation
+
+CNNs commonly combine convolutional layers, nonlinear activations, and
+downsampling or pooling. A convolution applies a shared kernel across
+positions, producing feature maps. Modern architectures may also include
+normalization, residual connections, and attention.
+
+## Why it matters in AI engineering
+
+CNNs have been widely used for image classification, object detection,
+medical imaging, and other spatial tasks. Their local connectivity and
+weight sharing can make them effective for images, although architecture
+choice depends on data, accuracy, latency, and deployment constraints.
+
+## How it works
+
+A filter slides over an input and computes a weighted combination of local
+values. Multiple filters produce feature maps. Nonlinearities and
+subsequent layers combine those features into representations used for
+prediction.
+
+## Practical example
+
+A pretrained CNN can be fine-tuned to classify images as penguins or
+ostriches. The [binary-classification notebook](../../notebooks/B/binary-classification.ipynb)
+provides a code-free fast.ai scaffold for building that classifier.
+
+## Common misconceptions
+
+- A convolutional network does not automatically understand image meaning.
+- CNNs are not restricted to images, although image processing is a common
+  application.
+- More layers do not guarantee better performance on a particular dataset.
+
+## Related terms
+
+- [Convolution](convolution.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Activation Function](../A/activation-function.qmd)
+
+## Further reading
+
+- [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html) — influential work demonstrating deep CNNs for image classification.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — practical lessons on image models and transfer learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

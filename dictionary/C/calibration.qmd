@@ -1,0 +1,66 @@
+---
+title: "Calibration"
+description: "The agreement between a model's predicted confidence and observed outcome frequencies."
+term: "Calibration"
+letter: "C"
+category: "Model Evaluation"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A model is calibrated when predictions made with a particular confidence
+are correct about as often as that confidence suggests. For example, among
+many predictions assigned confidence 0.8, roughly 80% should be correct
+for that event.
+
+## Technical explanation
+
+For a probabilistic classifier, calibration compares predicted
+probabilities with empirical frequencies. A model can rank examples well
+but be poorly calibrated. Reliability diagrams, the Brier score, and
+expected calibration error are among the tools used to assess calibration,
+each with limitations and sensitivity to binning or dataset size.
+
+## Why it matters in AI engineering
+
+Confidence estimates may guide human review, triage, or automated
+thresholds. Poor calibration can make downstream decisions unreliable,
+even when classification accuracy is strong.
+
+## How it works
+
+Collect predictions and outcomes on data representative of the intended
+use. Group predictions by confidence and compare each group's average
+confidence with its observed accuracy. Calibration methods such as
+temperature scaling can adjust probability estimates using held-out
+calibration data.
+
+## Practical example
+
+If a classifier marks 100 validation examples as having an 80% chance of
+belonging to a class, a calibrated model should be correct on approximately
+80 of them over repeated comparable cases.
+
+## Common misconceptions
+
+- High accuracy does not imply good calibration.
+- Calibration on one dataset or population may not transfer to another.
+- A confidence score from a generative model is not automatically a
+  calibrated probability of factual correctness.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Binary Classification](../B/binary-classification.qmd)
+- [Confidence Interval](confidence-interval.qmd)
+
+## Further reading
+
+- [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599) — studies calibration in contemporary neural networks and temperature scaling.
+- [Scikit-learn: Probability calibration](https://scikit-learn.org/stable/modules/calibration.html) — describes calibration curves and calibration methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

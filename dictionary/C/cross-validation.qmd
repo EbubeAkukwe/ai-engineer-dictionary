@@ -1,0 +1,67 @@
+---
+title: "Cross-Validation"
+description: "A resampling procedure for estimating model performance across multiple data splits."
+term: "Cross-Validation"
+letter: "C"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Cross-validation evaluates a model repeatedly on different held-out parts
+of a dataset. It provides a more robust view of performance than relying
+on one train-validation split.
+
+## Technical explanation
+
+In k-fold cross-validation, data is divided into $k$ folds. The model is
+trained on $k-1$ folds and evaluated on the remaining fold, repeating
+until each fold has served as validation data. The results are aggregated.
+Variants such as stratified, grouped, and time-series cross-validation
+respect different data structures.
+
+## Why it matters in AI engineering
+
+Performance estimates can vary with the particular split, especially when
+data is limited. Cross-validation can support model comparison and
+hyperparameter selection, but must be designed to avoid leakage and match
+the intended deployment setting.
+
+## How it works
+
+Choose a splitting strategy suited to the data, fit a fresh model on each
+training fold, and compute the chosen metric on its held-out fold. Aggregate
+the fold-level results, while considering their variability and the fact
+that folds may not be statistically independent.
+
+## Practical example
+
+A small image dataset can be evaluated across several stratified folds so
+each fold contains examples from both classes. If multiple images come
+from the same animal or photo session, a grouped split may be more
+appropriate to prevent leakage.
+
+## Common misconceptions
+
+- Cross-validation does not eliminate bias from unrepresentative data.
+- Reusing cross-validation results for extensive model selection can
+  overfit the selection process.
+- Random folds are not appropriate for every dataset, especially
+  time-dependent or grouped observations.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Confidence Interval](confidence-interval.qmd)
+- [Bootstrap Sampling](../B/bootstrap-sampling.qmd)
+
+## Further reading
+
+- [Scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — explains common cross-validation strategies and their use.
+- [An Introduction to Statistical Learning](https://www.statlearning.com/) — covers validation and model selection methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

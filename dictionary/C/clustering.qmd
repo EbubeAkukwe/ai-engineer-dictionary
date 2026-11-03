@@ -1,0 +1,66 @@
+---
+title: "Clustering"
+description: "An unsupervised learning task that groups examples according to similarity."
+term: "Clustering"
+letter: "C"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Clustering groups data points that appear similar, without requiring a
+known label for every point. The groups can help explore structure in
+data, but their meaning often requires human interpretation.
+
+## Technical explanation
+
+Clustering algorithms define similarity or density and produce group
+assignments, sometimes with a noise or outlier category. Methods include
+k-means, hierarchical clustering, and density-based algorithms. Results
+depend on feature representation, scaling, distance measure, and algorithm
+assumptions.
+
+## Why it matters in AI engineering
+
+Clustering can support exploration, segmentation, deduplication, and
+organization of embeddings. Since there may be no ground-truth labels,
+engineers should inspect cluster quality, stability, and usefulness for
+the intended downstream task.
+
+## How it works
+
+An algorithm compares examples using a distance, density, or other
+similarity notion and assigns or organizes them into groups. Some methods
+require a chosen number of clusters; others infer groups from local
+density. Feature preprocessing can substantially change the result.
+
+## Practical example
+
+A team can cluster text embeddings of support tickets to discover common
+themes. Human reviewers can inspect representative tickets to determine
+whether the clusters correspond to meaningful categories.
+
+## Common misconceptions
+
+- Clusters discovered by an algorithm are not automatically real or
+  meaningful categories.
+- Different algorithms or feature scaling can produce different groupings.
+- Clustering does not replace classification when reliable labels and a
+  prediction task are available.
+
+## Related terms
+
+- [Classification](classification.qmd)
+- [Cosine Similarity](cosine-similarity.qmd)
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+
+## Further reading
+
+- [Scikit-learn: Clustering](https://scikit-learn.org/stable/modules/clustering.html) — overview of clustering algorithms and their assumptions.
+- [Google for Developers: Clustering](https://developers.google.com/machine-learning/clustering/overview) — an introduction to clustering concepts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

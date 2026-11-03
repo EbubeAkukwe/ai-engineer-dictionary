@@ -1,0 +1,66 @@
+---
+title: "CUDA"
+description: "NVIDIA's parallel computing platform and programming model for GPUs."
+term: "CUDA"
+letter: "C"
+category: "AI Infrastructure"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+CUDA is a platform and programming model that lets software run
+parallel computations on NVIDIA graphics processing units (GPUs). Many
+machine-learning frameworks use it to accelerate supported operations.
+
+## Technical explanation
+
+CUDA includes programming interfaces, compilers, runtime components, and
+libraries for executing workloads on compatible NVIDIA GPUs. Machine
+learning frameworks often dispatch tensor operations to GPU libraries,
+while also requiring compatible drivers, runtime components, framework
+builds, and hardware.
+
+## Why it matters in AI engineering
+
+GPU acceleration enables many model-training and inference workloads to
+run faster. CUDA compatibility and GPU memory capacity influence
+environment setup, performance, portability, and deployment choices.
+
+## How it works
+
+A host program launches parallel kernels on a GPU. Data is transferred or
+made available to device memory, computations run across many threads,
+and results are returned or used by subsequent GPU operations. Frameworks
+often manage these details behind higher-level tensor APIs.
+
+## Practical example
+
+A deep-learning framework can place model parameters and image batches on
+a CUDA-capable GPU, then execute supported matrix and convolution
+operations there rather than on the CPU.
+
+## Common misconceptions
+
+- CUDA is specific to NVIDIA GPUs and is not the name for all GPU
+  computing.
+- Installing a CUDA toolkit alone does not guarantee that a framework can
+  use the available GPU.
+- GPU execution is not automatically faster for small workloads or
+  workloads dominated by data transfer.
+
+## Related terms
+
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Convolution](convolution.qmd)
+- [Continuous Integration](continuous-integration.qmd)
+
+## Further reading
+
+- [NVIDIA CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/) — official guide to CUDA programming concepts.
+- [PyTorch: Start Locally](https://pytorch.org/get-started/locally/) — explains selecting a PyTorch installation compatible with a system.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

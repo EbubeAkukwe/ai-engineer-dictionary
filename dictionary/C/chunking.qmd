@@ -1,0 +1,66 @@
+---
+title: "Chunking"
+description: "The process of dividing content into smaller units for storage, processing, or retrieval."
+term: "Chunking"
+letter: "C"
+category: "Retrieval"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Chunking divides a larger document or input into smaller pieces. In
+retrieval systems, these pieces can be indexed and selected independently
+instead of searching or sending an entire collection at once.
+
+## Technical explanation
+
+A chunking strategy defines boundaries and sizes, often using tokens,
+sentences, paragraphs, or document structure. Choices include fixed-size
+windows, semantic boundaries, and overlapping chunks. Chunk size and
+overlap affect retrieval precision, context completeness, index size, and
+the amount of text passed to a model.
+
+## Why it matters in AI engineering
+
+Retrieval-augmented systems rely on useful units of text to index and
+retrieve. Poor chunk boundaries can separate a claim from its context,
+produce irrelevant matches, or exceed the model's context budget.
+
+## How it works
+
+The source is parsed, divided according to a chosen strategy, and each
+chunk may retain metadata such as document identity, section, and
+position. Chunks are then indexed or supplied to downstream components.
+The strategy should be evaluated on the actual retrieval task.
+
+## Practical example
+
+A handbook can be split by headings and paragraphs, with a small overlap
+between adjacent chunks when a section boundary might separate related
+sentences. Retrieved passages can then be traced back to the original
+section.
+
+## Common misconceptions
+
+- Smaller chunks are not always better; they may lose necessary context.
+- Overlap can preserve continuity but also increase duplicate retrieval
+  and storage.
+- Chunking does not itself make source content accurate or retrieval
+  relevant.
+
+## Related terms
+
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+- [Context Window](context-window.qmd)
+- [Cosine Similarity](cosine-similarity.qmd)
+
+## Further reading
+
+- [Anthropic: Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval) — discusses retrieval improvements including contextualizing chunks.
+- [LlamaIndex: Node parsing and chunking](https://docs.llamaindex.ai/en/stable/module_guides/loading/node_parsers/) — describes document parsing and chunking strategies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,66 @@
+---
+title: "Concept Drift"
+description: "A change over time in the relationship between model inputs and target outcomes."
+term: "Concept Drift"
+letter: "C"
+category: "MLOps"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Concept drift occurs when the patterns connecting inputs to outcomes
+change over time. A model that worked well on historical data may become
+less useful as people, systems, or conditions change.
+
+## Technical explanation
+
+Let $P_t(Y\mid X)$ denote the conditional relationship between target $Y$
+and features $X$ at time $t$. Concept drift describes changes in this
+relationship. It differs from covariate shift, where the input distribution
+$P(X)$ changes while $P(Y\mid X)$ remains stable.
+
+## Why it matters in AI engineering
+
+Deployed models can degrade as user behaviour, products, adversaries, or
+data collection changes. Monitoring and retraining decisions should
+distinguish changes in input distribution from changes in the target
+relationship and account for delayed or noisy labels.
+
+## How it works
+
+Systems monitor input statistics, prediction behaviour, and—when outcomes
+become available—model performance over time. Detection methods identify
+possible shifts; teams investigate their causes and decide whether to
+recalibrate, retrain, change thresholds, or keep monitoring.
+
+## Practical example
+
+A fraud detector trained on older transaction patterns may miss new fraud
+strategies. A rise in false negatives after reliable labels arrive can
+signal that the relationship between transaction features and fraud has
+changed.
+
+## Common misconceptions
+
+- A change in input distribution alone does not prove concept drift.
+- A drift alert is evidence to investigate, not an automatic instruction
+  to retrain.
+- Retraining on recent data can make results worse if labels are noisy or
+  the new sample is unrepresentative.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Anomaly Detection](../A/anomaly-detection.qmd)
+- [Calibration](calibration.qmd)
+
+## Further reading
+
+- [Learning under Concept Drift: A Review](https://arxiv.org/abs/2004.05785) — reviews drift types and adaptation methods.
+- [Google Cloud: Monitor feature skew and drift](https://cloud.google.com/vertex-ai/docs/model-monitoring/overview) — describes monitoring for changes in deployed model inputs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

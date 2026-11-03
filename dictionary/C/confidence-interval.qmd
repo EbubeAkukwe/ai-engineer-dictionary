@@ -1,0 +1,68 @@
+---
+title: "Confidence Interval"
+description: "A range produced by a procedure designed to cover a population quantity at a specified rate."
+term: "Confidence Interval"
+letter: "C"
+category: "Statistics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A confidence interval gives a range of values produced by a statistical
+procedure to express uncertainty about an estimate. A 95% confidence
+procedure is designed so that, under its assumptions, intervals from
+repeated samples contain the true quantity about 95% of the time.
+
+## Technical explanation
+
+A confidence interval is constructed from data using a method with a
+specified long-run coverage property under a model or sampling design.
+Its width depends on factors such as sample size, variability, and
+confidence level. Different interval methods have different assumptions
+and behaviour.
+
+## Why it matters in AI engineering
+
+Metrics estimated on finite data are uncertain. Intervals can help compare
+models and communicate how much evidence supports an observed difference,
+provided the sampling unit and evaluation design are appropriate.
+
+## How it works
+
+A statistic is calculated from a sample, and a procedure uses the
+statistic's sampling variability to form lower and upper bounds. The
+interpretation is about the procedure over repeated samples, not a
+probability statement about a fixed parameter after observing one
+particular interval.
+
+## Practical example
+
+A team estimates a classifier's accuracy on a held-out sample and
+calculates an interval. A wide interval signals that the estimate is
+uncertain, perhaps because the test set is small.
+
+## Common misconceptions
+
+- A 95% confidence interval does not mean there is a 95% probability that
+  the fixed parameter lies in this already-computed interval in the
+  frequentist interpretation.
+- An interval does not correct a biased or unrepresentative sample.
+- Overlapping intervals alone are not a complete test of whether two
+  model performances differ.
+
+## Related terms
+
+- [Bootstrap Sampling](../B/bootstrap-sampling.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Causal Inference](causal-inference.qmd)
+
+## Further reading
+
+- [NIST/SEMATECH e-Handbook: Confidence intervals](https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm) — introduces interval estimates and their interpretation.
+- [An Introduction to Statistical Learning](https://www.statlearning.com/) — textbook treatment of statistical uncertainty and model assessment.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

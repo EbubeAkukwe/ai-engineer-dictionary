@@ -45,7 +45,28 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## C {#c}
 
-Terms beginning with C will appear here as the dictionary grows.
+- [Cache](/dictionary/C/cache.qmd)
+- [Caching](/dictionary/C/caching.qmd)
+- [Calibration](/dictionary/C/calibration.qmd)
+- [Causal Inference](/dictionary/C/causal-inference.qmd)
+- [Chain of Thought](/dictionary/C/chain-of-thought.qmd)
+- [Chunking](/dictionary/C/chunking.qmd)
+- [Classification](/dictionary/C/classification.qmd)
+- [Clustering](/dictionary/C/clustering.qmd)
+- [CNN (Convolutional Neural Network)](/dictionary/C/cnn-convolutional-neural-network.qmd)
+- [Cold Start](/dictionary/C/cold-start.qmd)
+- [Computer Vision](/dictionary/C/computer-vision.qmd)
+- [Concept Drift](/dictionary/C/concept-drift.qmd)
+- [Confidence Interval](/dictionary/C/confidence-interval.qmd)
+- [Confusion Matrix](/dictionary/C/confusion-matrix.qmd)
+- [Context Engineering](/dictionary/C/context-engineering.qmd)
+- [Context Window](/dictionary/C/context-window.qmd)
+- [Continuous Integration](/dictionary/C/continuous-integration.qmd)
+- [Convolution](/dictionary/C/convolution.qmd)
+- [Cosine Similarity](/dictionary/C/cosine-similarity.qmd)
+- [CUDA](/dictionary/C/cuda.qmd)
+- [Cross-Entropy Loss](/dictionary/C/cross-entropy-loss.qmd)
+- [Cross-Validation](/dictionary/C/cross-validation.qmd)
 
 ## D {#d}
 

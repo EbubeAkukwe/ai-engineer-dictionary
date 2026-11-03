@@ -1,0 +1,66 @@
+---
+title: "Context Window"
+description: "The maximum amount of input and generated content a model can process in one interaction."
+term: "Context Window"
+letter: "C"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A context window is the amount of text or other content a model can
+consider during one request and response. Its size is usually measured in
+tokens, not words or characters.
+
+## Technical explanation
+
+The context window bounds the sequence length processed by a model,
+including applicable system instructions, conversation history, retrieved
+content, tool results, and generated output. Limits and accounting rules
+vary between models and providers.
+
+## Why it matters in AI engineering
+
+Context limits influence prompt design, retrieval, conversation memory,
+latency, and cost. Sending more material than the model can accept may
+cause truncation or request errors, while excessive context can add cost
+without improving the result.
+
+## How it works
+
+Text and other supported inputs are represented as tokens or model-specific
+units. The application assembles the request and must keep input plus
+reserved output within the model's supported limits. Long content may
+need to be selected, chunked, summarized, or retrieved in stages.
+
+## Practical example
+
+A document-question-answering application may retrieve a few relevant
+passages rather than placing an entire large archive into every request.
+The retrieved passages, instructions, and user question all consume
+context.
+
+## Common misconceptions
+
+- A context window measured in tokens is not the same as a word count.
+- A larger context window does not guarantee that every detail will be
+  used correctly.
+- The maximum context capacity may include output tokens as well as input,
+  depending on the model interface.
+
+## Related terms
+
+- [Context Engineering](context-engineering.qmd)
+- [Chunking](chunking.qmd)
+- [Caching](caching.qmd)
+
+## Further reading
+
+- [OpenAI: Models](https://platform.openai.com/docs/models) — lists model capabilities and context limits.
+- [Anthropic: Context windows](https://docs.anthropic.com/en/docs/build-with-claude/context-windows) — explains context usage and window management.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Computer Vision"
+description: "The field of building systems that interpret or act on visual data."
+term: "Computer Vision"
+letter: "C"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Computer vision is the field of enabling computers to process and make
+use of images or video. Tasks include recognizing objects, locating them,
+segmenting regions, and estimating motion.
+
+## Technical explanation
+
+Computer-vision systems transform pixel data into representations and
+predictions. They may use classical image-processing methods, machine
+learning, deep neural networks, or combinations of these. Inputs,
+annotations, image transformations, and evaluation metrics depend on the
+task.
+
+## Why it matters in AI engineering
+
+Visual models are used in robotics, manufacturing, accessibility,
+healthcare, content organization, and many other areas. Engineers must
+consider image quality, distribution shift, privacy, annotation quality,
+and consequences of errors in the deployment context.
+
+## How it works
+
+An image or video is decoded and preprocessed, then a vision model extracts
+features and produces task-specific outputs. These may be class labels,
+bounding boxes, segmentation masks, or other measurements. Evaluation
+compares outputs with suitable reference data and operational requirements.
+
+## Practical example
+
+A beginner project can train an image classifier to distinguish penguin
+photos from ostrich photos using transfer learning with fastai.
+
+## Common misconceptions
+
+- A vision model may rely on background or image-source cues instead of
+  the intended object.
+- High performance on a benchmark does not guarantee reliability on
+  different cameras, environments, or populations.
+- Computer vision includes more than image classification.
+
+## Related terms
+
+- [CNN (Convolutional Neural Network)](cnn-convolutional-neural-network.qmd)
+- [Bounding Box](../B/bounding-box.qmd)
+- [Classification](classification.qmd)
+
+## Further reading
+
+- [Stanford CS231n: Convolutional Neural Networks for Visual Recognition](https://cs231n.stanford.edu/) — course materials on computer vision and neural networks.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — hands-on computer-vision lessons.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

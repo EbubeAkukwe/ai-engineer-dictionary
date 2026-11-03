@@ -1,0 +1,69 @@
+---
+title: "Chain of Thought"
+description: "A sequence of intermediate reasoning steps used or requested while solving a problem."
+term: "Chain of Thought"
+letter: "C"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A chain of thought is a sequence of intermediate steps that can help a
+language model solve a multi-step problem before producing a final answer.
+A prompt may ask for a concise explanation or structured working, but
+generated reasoning text should not be assumed to reveal the model's
+internal computation.
+
+## Technical explanation
+
+In language-model research, chain-of-thought prompting encourages a model
+to generate intermediate tokens before its answer. Such prompting can
+improve performance on some tasks and models, but the effect depends on
+the task, prompt, and model. The generated rationale may be incomplete,
+post-hoc, or inconsistent with the factors that actually caused the
+answer.
+
+## Why it matters in AI engineering
+
+Intermediate steps can make some workflows easier to inspect or structure,
+but relying on them as proof of correctness is unsafe. Systems should
+validate outcomes with external checks where possible and avoid exposing
+private or policy-sensitive reasoning traces unnecessarily.
+
+## How it works
+
+A prompt can request intermediate reasoning, or a system can use a
+structured multi-step procedure. The model generates intermediate text
+conditioned on the input and then produces a result. The text is an output
+of the model, not a guaranteed faithful trace of its internal computation.
+
+## Practical example
+
+A math tutor can ask a model to show a short derivation and then verify the
+numeric answer with a calculator. The calculator provides an independent
+check rather than treating the explanation alone as evidence.
+
+## Common misconceptions
+
+- A fluent rationale is not necessarily a faithful explanation of why the
+  model produced its answer.
+- Asking for more reasoning text does not guarantee correct reasoning.
+- Chain-of-thought prompting is not required for every task; a direct
+  answer or explicit tool workflow may be more reliable.
+
+## Related terms
+
+- [Agentic Workflow](../A/agentic-workflow.qmd)
+- [Context Engineering](context-engineering.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903) — studies chain-of-thought prompting on reasoning tasks.
+- [Language Models Don't Always Say What They Think](https://arxiv.org/abs/2305.04388) — examines limitations of treating model explanations as faithful reasoning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,73 @@
+---
+title: "Cosine Similarity"
+description: "A measure of the angle-based similarity between two nonzero vectors."
+term: "Cosine Similarity"
+letter: "C"
+category: "Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Cosine similarity compares the directions of two vectors. It is often
+used to compare text or image embeddings, where a higher value indicates
+that the vectors point in more similar directions.
+
+## Technical explanation
+
+For nonzero vectors $a$ and $b$, cosine similarity is
+$\frac{a \cdot b}{\|a\|\|b\|}$. It ranges from -1 to 1 in general,
+though nonnegative embedding spaces often produce values in a narrower
+range. Implementations need to handle zero vectors and may normalize
+vectors before comparison.
+
+## Why it matters in AI engineering
+
+Cosine similarity is used in semantic search, clustering, deduplication,
+and recommendation. Its usefulness depends on the embedding model,
+normalization, and application-specific evaluation; similarity alone
+does not establish semantic equivalence.
+
+## How it works
+
+The dot product measures both direction and magnitude, so cosine
+similarity divides it by the product of vector lengths:
+
+$$
+\operatorname{cosine}(a,b) =
+\frac{a \cdot b}{\|a\|\|b\|}
+$$
+
+This normalization makes the measure depend on the angle between the
+vectors rather than their magnitudes.
+
+## Practical example
+
+A search system can embed a question and candidate document passages,
+calculate cosine similarity, and rank passages by score before applying
+additional relevance checks.
+
+## Common misconceptions
+
+- A high cosine similarity is not proof that two texts have the same
+  meaning or are factually consistent.
+- Cosine similarity is undefined for a zero-length vector without a
+  special handling rule.
+- It is not always the best metric; the embedding model and task determine
+  which distance measure is appropriate.
+
+## Related terms
+
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+- [Chunking](chunking.qmd)
+- [Clustering](clustering.qmd)
+
+## Further reading
+
+- [Scikit-learn: Cosine similarity](https://scikit-learn.org/stable/modules/metrics.html#cosine-similarity) — documents the measure and its use with vector data.
+- [Sentence-BERT](https://arxiv.org/abs/1908.10084) — describes sentence embeddings designed for similarity comparison.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

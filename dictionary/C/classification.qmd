@@ -1,0 +1,63 @@
+---
+title: "Classification"
+description: "A supervised learning task that assigns inputs to one or more discrete categories."
+term: "Classification"
+letter: "C"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Classification predicts a category for an input, such as identifying the
+objects in an image or deciding whether a message is spam.
+
+## Technical explanation
+
+A classification model maps features to class scores or probabilities.
+Tasks may be binary, multiclass, or multilabel. Training usually uses
+labeled examples and a loss function; predictions may use an argmax rule
+or application-specific thresholds.
+
+## Why it matters in AI engineering
+
+Classification is used for routing, detection, moderation, diagnosis
+support, and many other tasks. Class imbalance, differing error costs,
+calibration, and changing input distributions all affect how a classifier
+should be evaluated and deployed.
+
+## How it works
+
+The model learns a mapping from input features to target labels using a
+training objective. At inference, it produces class scores and a decision
+rule converts those scores into labels. Evaluation compares predictions
+with held-out labeled examples using suitable metrics.
+
+## Practical example
+
+A photo classifier can assign each image to one of two classes, penguin
+or ostrich. The accompanying [fast.ai notebook](../../notebooks/B/binary-classification.ipynb)
+scaffolds this beginner-friendly binary classification task.
+
+## Common misconceptions
+
+- Classification predicts discrete labels; regression predicts continuous
+  values, though some systems combine both.
+- A class score is not necessarily a calibrated probability.
+- Accuracy alone may hide poor performance on rare classes.
+
+## Related terms
+
+- [Binary Classification](../B/binary-classification.qmd)
+- [Confusion Matrix](confusion-matrix.qmd)
+- [Cross-Entropy Loss](cross-entropy-loss.qmd)
+
+## Further reading
+
+- [Google for Developers: Classification](https://developers.google.com/machine-learning/crash-course/classification) — introduces classification and common evaluation concepts.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — demonstrates practical image classification workflows.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

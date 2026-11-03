@@ -1,0 +1,68 @@
+---
+title: "Context Engineering"
+description: "The design and assembly of the information supplied to a model for a task."
+term: "Context Engineering"
+letter: "C"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Context engineering is the work of deciding what information an AI model
+receives, how it is organized, and when it is provided. Useful context may
+include instructions, user input, retrieved documents, conversation
+history, and tool results.
+
+## Technical explanation
+
+Context engineering encompasses context selection, retrieval, ordering,
+compression, formatting, and lifecycle management. It aims to provide
+relevant and reliable information within a model's context constraints.
+The term is used broadly in practice and does not refer to one standardized
+algorithm.
+
+## Why it matters in AI engineering
+
+Model output depends on the information and instructions available at
+inference time. Poorly selected or stale context can reduce relevance,
+increase cost, confuse instructions, or expose data beyond its intended
+scope.
+
+## How it works
+
+An application assembles context from trusted instructions, the current
+request, relevant memory or retrieved content, and available tool results.
+It filters and orders that material, checks access permissions, and
+truncates or summarizes where needed before passing it to the model.
+
+## Practical example
+
+A support assistant can retrieve policy sections relevant to a question,
+include their source identifiers, and provide only the permitted excerpts
+to the model along with instructions to answer from those sources.
+
+## Common misconceptions
+
+- More context is not always better; irrelevant material can distract or
+  exceed limits.
+- Context engineering cannot guarantee that a model will follow
+  instructions or use evidence correctly.
+- Retrieved context should still be checked for relevance, freshness, and
+  permissions.
+
+## Related terms
+
+- [Context Window](context-window.qmd)
+- [Chunking](chunking.qmd)
+- [Agentic Workflow](../A/agentic-workflow.qmd)
+
+## Further reading
+
+- [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — discusses constructing useful context for agents.
+- [Anthropic: Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval) — describes methods for improving retrieved context.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

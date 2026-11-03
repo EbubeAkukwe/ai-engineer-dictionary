@@ -1,0 +1,63 @@
+---
+title: "Continuous Integration"
+description: "A development practice that frequently integrates changes and automatically checks them."
+term: "Continuous Integration"
+letter: "C"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Continuous integration (CI) is a practice where developers integrate
+changes into a shared codebase regularly, and automated checks run to
+detect problems early.
+
+## Technical explanation
+
+A CI pipeline is triggered by events such as a push or pull request. It
+may install dependencies, run tests, check formatting and types, build
+artifacts, and publish results. CI validates code changes; it is distinct
+from continuous delivery or deployment, which automate release steps.
+
+## Why it matters in AI engineering
+
+AI applications combine software, data pipelines, prompts, model
+configurations, and evaluation logic. Automated checks help detect
+regressions and make changes more reproducible, though tests must be
+designed to account for nondeterminism, data access, and model costs.
+
+## How it works
+
+The repository defines a workflow that runs in a controlled environment
+when changes are proposed. Each job reports success or failure, and
+teams can require passing checks before merging. Workflows should avoid
+exposing secrets to untrusted code.
+
+## Practical example
+
+A pull request can trigger unit tests, static checks, dictionary-entry
+validation, and a Quarto site build. The results help reviewers catch
+broken links or malformed content before merging.
+
+## Common misconceptions
+
+- CI does not guarantee that software is bug-free.
+- Continuous integration is not the same as continuous deployment.
+- A passing test suite is only as useful as its test coverage and quality.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [GitHub Actions: Understanding GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) — explains automated workflows in GitHub repositories.
+- [Martin Fowler: Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) — describes CI practices and their benefits.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

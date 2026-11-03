@@ -1,0 +1,66 @@
+---
+title: "Causal Inference"
+description: "Methods for estimating cause-and-effect relationships from data and assumptions."
+term: "Causal Inference"
+letter: "C"
+category: "Statistics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Causal inference asks what would happen if an intervention changed
+something, rather than only asking which variables tend to occur together.
+It uses data together with assumptions or study designs to estimate
+cause-and-effect relationships.
+
+## Technical explanation
+
+Causal methods define treatments or interventions, outcomes, and a causal
+structure. Approaches include randomized experiments, matching,
+instrumental variables, regression discontinuity, and causal graphs.
+Observational estimates depend on assumptions such as no unmeasured
+confounding for a given adjustment set.
+
+## Why it matters in AI engineering
+
+Predictive correlations do not necessarily explain the effect of a product
+change, policy, or intervention. Causal reasoning helps teams evaluate
+changes, avoid misleading conclusions, and distinguish prediction from
+decision support.
+
+## How it works
+
+First define the causal question and target population. Then choose a
+design or identification strategy and state its assumptions. Estimate the
+effect using appropriate data and methods, and assess sensitivity to
+assumption violations and alternative explanations.
+
+## Practical example
+
+To estimate whether a new recommendation layout increases purchases, a
+randomized experiment can assign eligible users to the old or new layout
+and compare outcomes, while accounting for the experimental design.
+
+## Common misconceptions
+
+- Correlation alone does not establish causation.
+- A complex model cannot compensate for a study design that does not
+  identify the effect of interest.
+- Causal conclusions rely on assumptions that should be made explicit.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Active Learning](../A/active-learning.qmd)
+- [Confidence Interval](confidence-interval.qmd)
+
+## Further reading
+
+- [The Book of Why](http://bayes.cs.ucla.edu/WHY/) — an introduction to causal reasoning and causal diagrams.
+- [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/) — a free textbook on causal inference methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,64 @@
+---
+title: "Caching"
+description: "The practice of storing and reusing data or results to reduce repeated work."
+term: "Caching"
+letter: "C"
+category: "Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Caching is the practice of keeping a reusable copy of data or a result so
+that a later request can be served without repeating the original work.
+
+## Technical explanation
+
+A caching system defines what is cached, how entries are keyed, where they
+are stored, and when they expire or are invalidated. Common strategies
+include time-to-live expiration, least-recently-used eviction, and
+write-through or cache-aside access patterns.
+
+## Why it matters in AI engineering
+
+Inference, embedding generation, retrieval, and data preparation can be
+expensive. Caching repeated work may improve latency and reduce compute
+cost, but requires careful handling of freshness, personalization,
+permissions, and changing model or prompt versions.
+
+## How it works
+
+The application constructs a key from inputs and relevant configuration.
+It checks for a matching entry; on a hit, it returns the cached value. On a
+miss, it performs the underlying operation and may store the result with
+an expiration or version marker.
+
+## Practical example
+
+A retrieval application can cache embeddings for documents using a key
+that includes both document content and the embedding-model version. If
+either changes, the old cached embedding should not be reused as though it
+were current.
+
+## Common misconceptions
+
+- Caching is not a substitute for correctness or data invalidation.
+- A poorly designed key can return a result for the wrong user or input.
+- A cache can increase system complexity and storage cost even when it
+  reduces request latency.
+
+## Related terms
+
+- [Cache](cache.qmd)
+- [API](../A/api.qmd)
+- [Context Engineering](context-engineering.qmd)
+
+## Further reading
+
+- [Google Cloud: Caching overview](https://cloud.google.com/architecture/framework/performance/caching) — reviews caching approaches and their trade-offs.
+- [AWS: Caching best practices](https://docs.aws.amazon.com/wellarchitected/latest/performance-efficiency-pillar/caching.html) — covers caching as a performance design practice.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

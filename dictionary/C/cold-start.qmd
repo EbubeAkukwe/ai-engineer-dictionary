@@ -1,0 +1,64 @@
+---
+title: "Cold Start"
+description: "The challenge of making useful predictions when little data or interaction history is available."
+term: "Cold Start"
+letter: "C"
+category: "Recommender Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+The cold-start problem occurs when a system has too little information
+about a new user, item, or environment to make reliable personalized
+predictions.
+
+## Technical explanation
+
+In recommender systems, cold start commonly refers to new users with no
+interaction history, new items with few interactions, or a new system with
+limited data overall. Strategies include onboarding questions, content
+features, popularity priors, metadata, and exploration.
+
+## Why it matters in AI engineering
+
+A recommender that depends only on historical interactions may fail for
+new users or products. Cold-start handling affects user experience,
+coverage, fairness, and the ability to surface new items.
+
+## How it works
+
+The system combines available signals with fallback methods. For a new
+item, metadata or content embeddings may support recommendations before
+interactions accumulate. For a new user, explicit preferences or
+contextual signals can provide an initial estimate. The system can update
+personalization as feedback arrives.
+
+## Practical example
+
+A book recommender can use genre and description embeddings to suggest a
+newly added book before it has ratings, then incorporate user interactions
+as they become available.
+
+## Common misconceptions
+
+- Cold start is not the same as concept drift or a sudden model failure.
+- Popularity-based recommendations can provide a fallback but may reduce
+  discovery or reinforce existing exposure patterns.
+- More user data does not automatically remove all recommendation bias.
+
+## Related terms
+
+- [Active Learning](../A/active-learning.qmd)
+- [Clustering](clustering.qmd)
+- [Classification](classification.qmd)
+
+## Further reading
+
+- [Google Developers: Recommendation systems](https://developers.google.com/machine-learning/recommendation) — covers recommendation approaches and data considerations.
+- [A Survey on Recommender System](https://arxiv.org/abs/1902.07243) — surveys recommendation methods and challenges, including cold start.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

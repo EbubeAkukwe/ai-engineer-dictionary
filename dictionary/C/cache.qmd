@@ -1,0 +1,64 @@
+---
+title: "Cache"
+description: "A temporary store that keeps reusable data closer to where it is needed."
+term: "Cache"
+letter: "C"
+category: "Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A cache stores copies of data that may be needed again, so later requests
+can retrieve it faster or avoid repeating expensive work.
+
+## Technical explanation
+
+A cache is a storage layer between a data consumer and a slower or more
+expensive source. It may keep database query results, computed values,
+model outputs, or files. Cache design includes a key, an expiration or
+invalidation policy, and a strategy for misses and concurrent updates.
+
+## Why it matters in AI engineering
+
+AI applications may cache embeddings, retrieval results, model responses,
+or frequently used data to reduce latency and cost. Cached values can
+become stale or expose data across users if keys and access boundaries are
+not designed carefully.
+
+## How it works
+
+When a value is requested, the application checks the cache. A hit returns
+the stored value; a miss fetches or computes the value from its source and
+may store it for later. Expiration, invalidation, or eviction controls how
+long entries remain available.
+
+## Practical example
+
+A service can cache a public configuration document after its first fetch.
+Subsequent requests reuse the cached copy until it expires or the source
+signals that it has changed.
+
+## Common misconceptions
+
+- A cache is not the authoritative source of data.
+- Caching does not guarantee faster performance if the hit rate is low or
+  cache access is costly.
+- Cached AI responses must not be shared across users or contexts unless
+  the cache key and privacy rules make that safe.
+
+## Related terms
+
+- [Caching](caching.qmd)
+- [API](../A/api.qmd)
+- [Context Window](context-window.qmd)
+
+## Further reading
+
+- [Google Cloud: Caching overview](https://cloud.google.com/architecture/framework/performance/caching) — explains caching patterns and performance considerations.
+- [AWS: Caching best practices](https://docs.aws.amazon.com/wellarchitected/latest/performance-efficiency-pillar/caching.html) — discusses cache use in system design.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

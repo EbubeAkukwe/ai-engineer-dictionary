@@ -1,0 +1,65 @@
+---
+title: "Confusion Matrix"
+description: "A table that compares predicted classes with actual classes."
+term: "Confusion Matrix"
+letter: "C"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A confusion matrix shows how often a classifier predicts each class
+compared with the known labels. It makes types of classification errors
+visible instead of summarizing them in a single score.
+
+## Technical explanation
+
+For binary classification, the matrix contains true positives, false
+positives, true negatives, and false negatives. These counts can be used
+to calculate precision, recall, specificity, and accuracy. In multiclass
+tasks, a matrix records counts for each actual and predicted class.
+
+## Why it matters in AI engineering
+
+Different mistakes can have different consequences. A confusion matrix
+helps engineers understand which classes are confused and whether the
+model's errors are acceptable for a particular application.
+
+## How it works
+
+For each labeled example, compare the predicted label with its reference
+label and increment the corresponding cell. Always check the axis order:
+libraries may display actual labels in rows and predictions in columns,
+or the reverse.
+
+## Practical example
+
+For a penguin-versus-ostrich classifier, the matrix can show how many
+penguin images were predicted as ostrich and how many ostrich images were
+predicted as penguin. The [binary-classification notebook](../../notebooks/B/binary-classification.ipynb)
+includes a prompt to inspect these errors.
+
+## Common misconceptions
+
+- A confusion matrix does not explain why a prediction was wrong.
+- A matrix of counts can obscure class imbalance; also inspect normalized
+  rates when useful.
+- A high diagonal count can coexist with poor performance on a small but
+  important class.
+
+## Related terms
+
+- [Classification](classification.qmd)
+- [Binary Classification](../B/binary-classification.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [Scikit-learn: Confusion matrix](https://scikit-learn.org/stable/modules/model_evaluation.html#confusion-matrix) — documentation on constructing and interpreting confusion matrices.
+- [Google for Developers: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — explains common metrics derived from classification outcomes.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

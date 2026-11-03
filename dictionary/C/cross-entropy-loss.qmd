@@ -1,0 +1,65 @@
+---
+title: "Cross-Entropy Loss"
+description: "A loss function that measures the difference between target and predicted probability distributions."
+term: "Cross-Entropy Loss"
+letter: "C"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Cross-entropy loss penalizes a model when it assigns low probability to
+the correct class. It is widely used to train classification models.
+
+## Technical explanation
+
+For a target distribution $y$ and predicted distribution $p$, cross-entropy
+is $-\sum_i y_i \log p_i$. For a one-hot target, this reduces to the
+negative log probability assigned to the correct class. Implementations
+often combine log-softmax and negative log-likelihood for numerical
+stability.
+
+## Why it matters in AI engineering
+
+The loss function shapes the gradients used to train a classifier. Correctly
+matching the loss to the model output and target format is essential;
+confusing logits with probabilities or using incompatible label encoding
+can cause errors or degraded training.
+
+## How it works
+
+The model produces scores, often called logits. A probability distribution
+can be derived from the logits using softmax, and the loss measures the
+negative log probability assigned to the target. For a correct class with
+probability $p_y$, the loss is $-\log p_y$.
+
+## Practical example
+
+A penguin-versus-ostrich classifier can produce two logits for an image.
+Cross-entropy compares those predictions with the known class and gives a
+larger penalty when the correct class receives a smaller predicted
+probability.
+
+## Common misconceptions
+
+- Cross-entropy is a training objective, not an evaluation metric that
+  alone establishes model usefulness.
+- Many framework APIs expect raw logits rather than probabilities.
+- A low cross-entropy score does not guarantee calibrated probabilities.
+
+## Related terms
+
+- [Classification](classification.qmd)
+- [Binary Classification](../B/binary-classification.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Logistic Regression](https://www.deeplearningbook.org/contents/prob.html) — develops probabilistic classification and likelihood objectives.
+- [PyTorch: CrossEntropyLoss](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html) — documents the loss and its expected input and target formats.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
