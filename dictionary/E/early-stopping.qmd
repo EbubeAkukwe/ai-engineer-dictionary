@@ -1,0 +1,86 @@
+---
+title: "Early Stopping"
+description: "A training strategy that stops optimization when held-out performance stops improving."
+term: "Early Stopping"
+letter: "E"
+category: "Model Training"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Early stopping ends model training when performance on a validation set
+stops improving. It can help avoid spending time on updates that make the
+model fit its training data more closely without improving generalization.
+
+## Technical explanation
+
+Training metrics and validation metrics are monitored at regular
+intervals. A stopping rule tracks a chosen validation metric, often with
+a patience period that allows small fluctuations. The model checkpoint
+with the best validation result may be restored after stopping.
+
+## Why it matters in AI engineering
+
+Training for too long can overfit and wastes compute. Early stopping is
+a practical form of regularization and resource control, but depends on
+a representative validation set and an appropriate metric.
+
+## How it works
+
+At each epoch or evaluation step, calculate the selected metric on
+validation data. Save a checkpoint when it improves. Stop if it fails to
+improve for the configured patience, and select the best checkpoint
+rather than assuming the final one is best.
+
+<figure>
+<svg viewBox="0 0 640 360" role="img" aria-labelledby="es-title es-desc" style="max-width: 100%; height: auto;">
+<title id="es-title">Training and validation loss across epochs</title>
+<desc id="es-desc">Training loss steadily decreases. Validation loss decreases at first, reaches a minimum, then rises. A vertical dashed line marks the best validation checkpoint and suggested early stopping point.</desc>
+<rect x="70" y="35" width="510" height="245" fill="#f8fafc" stroke="#cbd5e1"/>
+<path d="M70 280 H590 M70 280 V30" stroke="#334155" stroke-width="2"/>
+<path d="M70 90 H580 M70 150 H580 M70 215 H580 M170 35 V280 M270 35 V280 M370 35 V280 M470 35 V280" stroke="#94a3b8" stroke-opacity=".25"/>
+<polyline points="80,75 130,120 180,155 230,184 280,205 330,224 380,238 430,249 480,258 530,265 570,270" fill="none" stroke="#2563eb" stroke-width="4"/>
+<polyline points="80,70 130,112 180,151 230,181 280,202 330,214 380,218 430,210 480,193 530,165 570,134" fill="none" stroke="#c2410c" stroke-width="4"/>
+<path d="M380 35 V280" stroke="#475569" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="380" cy="218" r="7" fill="#c2410c" stroke="white" stroke-width="2"/>
+<text x="390" y="56" font-size="14" fill="#334155">best validation checkpoint</text>
+<text x="85" y="58" font-size="14" fill="#1d4ed8">training loss</text>
+<text x="85" y="102" font-size="14" fill="#9a3412">validation loss</text>
+<text x="325" y="320" font-size="16" text-anchor="middle" fill="#0f172a">Training epoch</text>
+<text x="25" y="160" font-size="16" text-anchor="middle" fill="#0f172a" transform="rotate(-90 25 160)">Loss</text>
+</svg>
+<figcaption>Illustrative learning curves: training loss continues downward while validation loss eventually rises. The minimum validation loss marks a candidate checkpoint; real curves are noisier and the appropriate stopping rule depends on the task.</figcaption>
+</figure>
+
+## Practical example
+
+A vision model can be evaluated after every epoch. If validation loss
+stops improving for several epochs while training loss keeps falling,
+the training run can stop and restore the checkpoint with the lowest
+validation loss.
+
+## Common misconceptions
+
+- Early stopping does not guarantee that the selected model generalizes
+  to every deployment setting.
+- Repeatedly tuning choices against the same validation set can overfit
+  the model-selection process to that set.
+- Stopping at the first small fluctuation can be premature; patience and
+  metric noise should be considered.
+
+## Related terms
+
+- [Epoch](epoch.qmd)
+- [Data Leakage](../D/data-leakage.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Early stopping](https://www.deeplearningbook.org/contents/regularization.html) — discusses early stopping as a regularization method.
+- [fast.ai: Learner callbacks](https://docs.fast.ai/callback.core.html) — documents callback mechanisms used in training workflows.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

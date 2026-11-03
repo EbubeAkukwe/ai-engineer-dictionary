@@ -1,0 +1,67 @@
+---
+title: "Exploding Gradients"
+description: "A training problem where gradient magnitudes grow excessively during backpropagation."
+term: "Exploding Gradients"
+letter: "E"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Exploding gradients occur when the gradients used to update model
+parameters become extremely large. Training may become unstable, with
+loss values or parameter updates growing rapidly.
+
+## Technical explanation
+
+In deep or recurrent computation graphs, repeated derivative
+multiplications can amplify gradient magnitude. If the gradient norm
+$\|g\|$ becomes large, an update such as
+$\theta \leftarrow \theta-\eta g$ may produce an excessively large
+parameter change.
+
+## Why it matters in AI engineering
+
+Exploding gradients can prevent convergence, produce non-finite values,
+and waste training compute. Diagnosing them helps teams choose suitable
+initialization, optimization, architecture, and numerical-stability
+strategies.
+
+## How it works
+
+During backpropagation, gradients flow through successive operations.
+When their magnitudes are repeatedly amplified, the gradient reaching
+earlier layers can become very large. Gradient clipping limits the norm
+or values of gradients before the optimizer applies an update.
+
+## Practical example
+
+A training run may show a sudden jump in loss followed by `NaN`
+parameters. Logging gradient norms and applying a justified clipping
+threshold can help diagnose and mitigate the instability.
+
+## Common misconceptions
+
+- Gradient clipping can limit updates but does not explain or fix every
+  underlying cause.
+- Large gradients are not always evidence of an error; scale depends on
+  the loss, data, and model.
+- Exploding gradients and vanishing gradients are distinct problems,
+  though both involve gradient propagation.
+
+## Related terms
+
+- [Backpropagation](../B/backpropagation.qmd)
+- [Deep Learning](../D/deep-learning.qmd)
+- [Dropout](../D/dropout.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — discusses numerical challenges in training, including gradient instability.
+- [Pascanu, Mikolov, and Bengio: On the difficulty of training recurrent neural networks](https://arxiv.org/abs/1211.5063) — analyzes exploding and vanishing gradients and gradient clipping.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

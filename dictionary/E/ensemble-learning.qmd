@@ -1,0 +1,65 @@
+---
+title: "Ensemble Learning"
+description: "A method that combines predictions from multiple models to form a joint prediction."
+term: "Ensemble Learning"
+letter: "E"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Ensemble learning combines multiple models so that their collective
+prediction may be more accurate or robust than an individual model.
+Common examples include random forests and boosting methods.
+
+## Technical explanation
+
+Ensembles combine model outputs through averaging, voting, weighted
+combination, or sequential correction. Bagging trains models on
+resampled data to reduce variance; boosting fits learners in sequence to
+address errors; stacking trains a meta-model on base-model predictions.
+Benefits depend on model quality and diversity.
+
+## Why it matters in AI engineering
+
+Ensembles can improve performance or stability, especially when component
+models make different errors. They also add inference cost, complexity,
+and monitoring requirements.
+
+## How it works
+
+Train multiple models using different data samples, features,
+initializations, or objectives. Combine their predictions with a
+predefined rule or learned meta-model. Evaluate the full ensemble against
+the same held-out data and operational constraints as individual models.
+
+## Practical example
+
+A random forest combines predictions from many decision trees trained
+with varied samples and feature choices. Their aggregate can be less
+sensitive to the quirks of one tree.
+
+## Common misconceptions
+
+- An ensemble is not guaranteed to outperform its best component model.
+- Identical models making identical errors provide little ensemble
+  benefit.
+- Better benchmark performance may not justify increased latency or
+  operational complexity.
+
+## Related terms
+
+- [Decision Tree](../D/decision-tree.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+
+## Further reading
+
+- [Scikit-learn: Ensemble methods](https://scikit-learn.org/stable/modules/ensemble.html) — explains bagging, forests, boosting, and voting.
+- [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/) — textbook chapters discuss ensemble methods and their statistical properties.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

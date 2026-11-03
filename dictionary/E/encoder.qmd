@@ -1,0 +1,65 @@
+---
+title: "Encoder"
+description: "A model component that transforms input data into a representation for later processing."
+term: "Encoder"
+letter: "E"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An encoder transforms input into a representation that another component
+can use. It may convert text, images, or other data into features,
+compressed codes, or contextual vectors.
+
+## Technical explanation
+
+An encoder is a learned function mapping input $x$ to representation
+$z=f(x)$. In encoder-decoder architectures, the encoder produces features
+that condition a decoder. Encoder-only models produce representations
+directly, while some architectures combine encoded states with
+autoregressive generation.
+
+## Why it matters in AI engineering
+
+Encoders are used for classification, retrieval, feature extraction, and
+conditional generation. Their representations determine what information
+is available to downstream components and may impose bottlenecks or
+domain-specific assumptions.
+
+## How it works
+
+The input is tokenized, normalized, or otherwise represented and passed
+through layers that transform it into one or more feature vectors. The
+architecture and training objective determine whether those vectors
+capture local patterns, global context, or task-specific information.
+
+## Practical example
+
+A text encoder can convert a sentence into a vector used to compare it
+with other sentences in a semantic search system.
+
+## Common misconceptions
+
+- An encoder does not necessarily compress its input to a smaller
+  representation.
+- The representation is not automatically interpretable.
+- Encoder and decoder are architectural roles; a model may contain one,
+  both, or neither as separate components.
+
+## Related terms
+
+- [Decoder](../D/decoder.qmd)
+- [Embedding](embedding.qmd)
+- [Autoencoder](../A/autoencoder.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — describes the Transformer encoder and decoder.
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) — presents a Transformer encoder language model.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

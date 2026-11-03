@@ -1,0 +1,66 @@
+---
+title: "External Tool"
+description: "A function or service outside a model that an AI application can invoke to perform a defined operation."
+term: "External Tool"
+letter: "E"
+category: "AI Agents"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An external tool lets an AI application perform an operation beyond
+generating text, such as searching a database, calculating a value, or
+calling an API.
+
+## Technical explanation
+
+A tool is typically exposed through a name, description, input schema,
+and execution function or service. A model may request a tool call, while
+application code validates the request, checks authorization, executes
+the operation, and returns a result. The application—not the model
+alone—controls access and side effects.
+
+## Why it matters in AI engineering
+
+Tools connect models to current information and real system capabilities.
+They also create security, reliability, and privacy considerations:
+arguments need validation, permissions should be scoped, and consequential
+actions may require confirmation.
+
+## How it works
+
+The application provides a set of allowed tools and their descriptions.
+The model may select a tool and propose structured arguments. The
+application validates and executes the call, then returns the result to
+the model or user. Errors and authorization failures should be handled
+explicitly.
+
+## Practical example
+
+An assistant can call a read-only product-search API to find matching
+items, then summarize the returned results. A separate confirmation step
+would be appropriate before placing an order.
+
+## Common misconceptions
+
+- A model's tool-call proposal is not itself execution; application code
+  must perform and authorize the operation.
+- Tool descriptions and schemas do not replace runtime validation.
+- Giving an agent a tool does not guarantee that it will use it correctly.
+
+## Related terms
+
+- [Agent](../A/agent.qmd)
+- [Agentic Workflow](../A/agentic-workflow.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [Anthropic: Tool use](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview) — explains tool definitions and tool-use flows.
+- [OpenAI: Function calling](https://platform.openai.com/docs/guides/function-calling) — describes connecting models to application functions.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -115,7 +115,24 @@ website:
             - dictionary/D/d-star.qmd
             - dictionary/D/dynamic-batching.qmd
             - dictionary/D/decoupling.qmd
-        - section: "E–I"
+        - section: "E"
+          contents:
+            - dictionary/E/index.qmd
+            - dictionary/E/early-stopping.qmd
+            - dictionary/E/edge-ai.qmd
+            - dictionary/E/embedding.qmd
+            - dictionary/E/encoder.qmd
+            - dictionary/E/ensemble-learning.qmd
+            - dictionary/E/epoch.qmd
+            - dictionary/E/error-analysis.qmd
+            - dictionary/E/evaluation-dataset.qmd
+            - dictionary/E/exploding-gradients.qmd
+            - dictionary/E/exploration-vs-exploitation.qmd
+            - dictionary/E/expert-system.qmd
+            - dictionary/E/explainable-ai-xai.qmd
+            - dictionary/E/expectation-maximization.qmd
+            - dictionary/E/external-tool.qmd
+        - section: "F–I"
           contents:
             - dictionary/letters.qmd
         - section: "J"

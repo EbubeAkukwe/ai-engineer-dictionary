@@ -1,0 +1,67 @@
+---
+title: "Embedding"
+description: "A learned vector representation of an item, such as a word, image, or document."
+term: "Embedding"
+letter: "E"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An embedding represents an item as a list of numbers, or vector. A model
+can learn these vectors so that useful relationships between items are
+reflected in their positions in a mathematical space.
+
+## Technical explanation
+
+An embedding function maps an input, token, or identifier to a vector in
+$\mathbb{R}^d$. Embeddings may be learned as model parameters or generated
+by an encoder. Similarity measures such as dot product or cosine
+similarity are often used for retrieval, but the geometry depends on the
+training objective and data.
+
+## Why it matters in AI engineering
+
+Embeddings support semantic search, recommendation, clustering, and
+similarity-based retrieval. Their quality depends on the model, domain,
+and task, and embedding versions must be managed when indexes or
+downstream systems rely on them.
+
+## How it works
+
+An embedding model processes an input and returns a fixed-size vector.
+Training objectives shape vector representations so that task-relevant
+relationships are encoded. Applications store and compare vectors, often
+using an index for large collections.
+
+## Practical example
+
+A document-search system can embed each passage and a user's query, then
+retrieve passages with nearby vectors. Retrieved text still needs
+relevance checks and may be passed to a language model as context.
+
+## Common misconceptions
+
+- Similar vectors do not necessarily imply that two items are equivalent
+  or factually consistent.
+- Embedding dimensions do not correspond to simple human-readable
+  concepts by default.
+- Vectors from different embedding models or versions may not be
+  comparable.
+
+## Related terms
+
+- [Cosine Similarity](../C/cosine-similarity.qmd)
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+- [Chunking](../C/chunking.qmd)
+
+## Further reading
+
+- [Google for Developers: Embeddings](https://developers.google.com/machine-learning/crash-course/embeddings) — introduces embedding vectors and their use in machine learning.
+- [Sentence-BERT](https://arxiv.org/abs/1908.10084) — describes sentence embeddings designed for semantic similarity tasks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

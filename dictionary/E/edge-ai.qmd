@@ -1,0 +1,65 @@
+---
+title: "Edge AI"
+description: "The deployment or execution of AI workloads on devices near where data is collected or used."
+term: "Edge AI"
+letter: "E"
+category: "AI Infrastructure"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Edge AI runs some or all AI processing on a local device or nearby
+gateway instead of sending every input to a distant cloud service.
+Examples include cameras, phones, vehicles, and industrial equipment.
+
+## Technical explanation
+
+Edge deployments operate under constraints such as limited compute,
+memory, power, connectivity, and thermal capacity. Models may be
+compressed, quantized, compiled, or specialized for available hardware.
+A system can combine local inference with cloud-based training,
+management, or fallback processing.
+
+## Why it matters in AI engineering
+
+Local inference can reduce network latency, limit data transfer, and
+support operation with intermittent connectivity. It also creates
+challenges in model updates, device diversity, monitoring, security, and
+resource budgeting.
+
+## How it works
+
+A trained model and its runtime are packaged for a target device.
+Inputs are processed locally, and predictions or selected telemetry may
+be sent to other systems. Deployment pipelines manage compatibility,
+updates, observability, and fallback behaviour.
+
+## Practical example
+
+A camera can run a compact object detector locally to flag possible
+equipment issues, sending only selected events to a central service
+instead of streaming every frame.
+
+## Common misconceptions
+
+- Edge AI does not mean that a model never communicates with cloud
+  services.
+- Local processing does not automatically guarantee privacy or security.
+- A model that runs on a developer's laptop may not meet the latency,
+  power, or memory constraints of the target device.
+
+## Related terms
+
+- [Distributed Training](../D/distributed-training.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+
+## Further reading
+
+- [NVIDIA: What is edge AI?](https://www.nvidia.com/en-us/glossary/edge-ai/) — introduces edge AI and deployment use cases.
+- [Google AI Edge](https://ai.google.dev/edge) — resources for deploying machine-learning models on edge devices.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

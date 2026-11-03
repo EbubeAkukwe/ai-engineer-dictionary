@@ -1,0 +1,64 @@
+---
+title: "Error Analysis"
+description: "The systematic study of model failures to identify their causes and guide improvements."
+term: "Error Analysis"
+letter: "E"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Error analysis means looking closely at a model's mistakes to understand
+what kinds of examples it handles poorly and why. It helps turn an
+aggregate score into actionable next steps.
+
+## Technical explanation
+
+Error analysis examines false positives, false negatives, residuals,
+subgroups, data quality, and failure conditions. It may combine
+quantitative slices with human review of individual examples. Findings
+should be checked against representative data rather than inferred from
+hand-picked cases.
+
+## Why it matters in AI engineering
+
+Two models with similar headline metrics can fail in very different
+ways. Understanding error patterns helps prioritize data collection,
+feature changes, threshold adjustments, model changes, or safeguards.
+
+## How it works
+
+Collect predictions and trustworthy labels on held-out examples. Categorize
+errors by relevant factors, inspect representative cases, and estimate
+how frequent and costly each failure type is. Use the results to form
+testable improvement hypotheses.
+
+## Practical example
+
+For a penguin-versus-ostrich image classifier, review false predictions
+and check whether errors correlate with distant animals, unusual poses,
+backgrounds, or mislabeled images.
+
+## Common misconceptions
+
+- A few memorable failures do not establish that a failure mode is common.
+- Improving one error category can worsen another or reduce overall
+  performance.
+- Error analysis does not replace a representative evaluation set.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+- [Evaluation Dataset](evaluation-dataset.qmd)
+
+## Further reading
+
+- [Google for Developers: Error analysis](https://developers.google.com/machine-learning/testing-debugging/error-analysis) — describes ways to inspect model errors systematically.
+- [The ML Test Score](https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/) — presents a rubric for testing production machine-learning systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,67 @@
+---
+title: "Explainable AI (XAI)"
+description: "Methods and practices for making AI system behaviour more understandable to people."
+term: "Explainable AI (XAI)"
+letter: "E"
+category: "AI Safety"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Explainable AI (XAI) is a broad area of methods and practices that help
+people understand aspects of how an AI system behaves or why it produced
+a result.
+
+## Technical explanation
+
+Explanations can be intrinsic to a model, such as a small decision tree,
+or post-hoc, such as feature attribution or a surrogate model. Different
+methods explain different properties—global patterns, local predictions,
+or input sensitivity—and can be incomplete or misleading if their
+assumptions are not met.
+
+## Why it matters in AI engineering
+
+Understanding model behaviour can support debugging, review, governance,
+and appropriate use. An explanation should match the user's question and
+be evaluated for faithfulness and usefulness rather than treated as
+proof that a model is correct or fair.
+
+## How it works
+
+An explanation method analyzes a model, its inputs, or its outputs to
+produce a human-readable account, visualization, or simplified model.
+Teams should identify what the explanation represents, test it on
+relevant cases, and communicate its limitations.
+
+## Practical example
+
+A team can use feature-attribution tools to investigate whether a
+classifier's predictions are strongly influenced by image backgrounds.
+That investigation should be followed by controlled tests rather than
+assuming the attribution alone establishes causality.
+
+## Common misconceptions
+
+- A plausible explanation is not necessarily a faithful account of the
+  model's internal computation.
+- Explainability does not guarantee fairness, safety, or correctness.
+- A complex model's output explanation is not always a complete
+  description of its behaviour.
+
+## Related terms
+
+- [Black-box Model](../B/black-box-model.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [AI Alignment](../A/ai-alignment.qmd)
+
+## Further reading
+
+- [NIST: Four Principles of Explainable Artificial Intelligence](https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence) — presents principles for explainable systems.
+- [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/) — an open book on interpretable methods and their limitations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

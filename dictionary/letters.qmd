@@ -94,7 +94,20 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## E {#e}
 
-Terms beginning with E will appear here as the dictionary grows.
+- [Early Stopping](/dictionary/E/early-stopping.qmd)
+- [Edge AI](/dictionary/E/edge-ai.qmd)
+- [Embedding](/dictionary/E/embedding.qmd)
+- [Encoder](/dictionary/E/encoder.qmd)
+- [Ensemble Learning](/dictionary/E/ensemble-learning.qmd)
+- [Epoch](/dictionary/E/epoch.qmd)
+- [Error Analysis](/dictionary/E/error-analysis.qmd)
+- [Evaluation Dataset](/dictionary/E/evaluation-dataset.qmd)
+- [Exploding Gradients](/dictionary/E/exploding-gradients.qmd)
+- [Exploration vs Exploitation](/dictionary/E/exploration-vs-exploitation.qmd)
+- [Expert System](/dictionary/E/expert-system.qmd)
+- [Explainable AI (XAI)](/dictionary/E/explainable-ai-xai.qmd)
+- [Expectation-Maximization](/dictionary/E/expectation-maximization.qmd)
+- [External Tool](/dictionary/E/external-tool.qmd)
 
 ## F {#f}
 

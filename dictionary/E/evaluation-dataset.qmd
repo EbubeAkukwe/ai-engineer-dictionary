@@ -1,0 +1,65 @@
+---
+title: "Evaluation Dataset"
+description: "A dataset reserved for measuring a model's performance against defined tasks or outcomes."
+term: "Evaluation Dataset"
+letter: "E"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An evaluation dataset contains examples used to measure how well a model
+performs. It should represent the cases and conditions relevant to the
+model's intended use.
+
+## Technical explanation
+
+Evaluation data may be divided into validation data for model selection
+and a test set reserved for final assessment. Examples require reliable
+labels or evaluation criteria, suitable sampling, and controls against
+data leakage. For generative systems, a dataset may include prompts,
+reference answers, rubrics, or human judgments.
+
+## Why it matters in AI engineering
+
+Evaluation results guide model comparison, release decisions, and
+monitoring. A biased, contaminated, or outdated dataset can give a
+misleading picture of system quality.
+
+## How it works
+
+Define the target population and tasks, collect or select representative
+examples, label them consistently, and keep evaluation examples separate
+from training. Reuse an untouched test set sparingly, and version datasets
+so comparisons remain interpretable.
+
+## Practical example
+
+A classifier's evaluation dataset can contain held-out penguin and
+ostrich images from sources not used during training, with labels checked
+for accuracy and a split that avoids near-duplicate leakage.
+
+## Common misconceptions
+
+- A large dataset is not automatically representative.
+- A test set repeatedly used to tune a model gradually becomes part of
+  the development process.
+- Evaluation data does not eliminate uncertainty or future distribution
+  shift.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Cross-Validation](../C/cross-validation.qmd)
+- [Data Leakage](../D/data-leakage.qmd)
+
+## Further reading
+
+- [Google for Developers: Data splitting](https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets) — explains training, validation, and test datasets.
+- [Hugging Face: Evaluate](https://huggingface.co/docs/evaluate/index) — tools and concepts for evaluating machine-learning models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

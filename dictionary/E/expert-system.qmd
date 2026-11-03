@@ -1,0 +1,65 @@
+---
+title: "Expert System"
+description: "A program that applies encoded domain knowledge and rules to make recommendations or conclusions."
+term: "Expert System"
+letter: "E"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An expert system uses explicit knowledge and rules to solve problems in
+a specific domain. It can apply those rules to facts and provide a
+recommendation or conclusion.
+
+## Technical explanation
+
+Traditional expert systems commonly separate a knowledge base, such as
+facts and rules, from an inference engine that applies those rules.
+Systems may use forward chaining, backward chaining, or other reasoning
+strategies. Their conclusions depend on the coverage and quality of the
+encoded knowledge.
+
+## Why it matters in AI engineering
+
+Expert systems illustrate a symbolic approach to AI and remain useful
+when rules need to be explicit, auditable, and stable. They can also be
+combined with statistical models, though rule maintenance and knowledge
+coverage require ongoing work.
+
+## How it works
+
+The system receives facts, matches them against rules, and applies
+inference steps to derive conclusions or recommendations. It may explain
+which rules fired, depending on its implementation.
+
+## Practical example
+
+A troubleshooting system can apply rules such as “if the device will not
+start and the indicator is off, check the power supply” to guide a user
+through a known diagnostic process.
+
+## Common misconceptions
+
+- Expert systems do not necessarily learn from data.
+- Rule-based does not mean error-free; rules may be incomplete,
+  contradictory, or outdated.
+- An expert system is not the same as a modern language model, though
+  applications can combine them.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [Artificial Intelligence](../A/artificial-intelligence.qmd)
+- [Decision Tree](../D/decision-tree.qmd)
+
+## Further reading
+
+- [Stanford Encyclopedia of Philosophy: Artificial Intelligence](https://plato.stanford.edu/entries/artificial-intelligence/) — discusses symbolic and other approaches to AI.
+- [A Survey of Expert Systems](https://doi.org/10.1016/0167-9236(93)90004-C) — reviews expert-system concepts and applications.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

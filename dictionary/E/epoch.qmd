@@ -1,0 +1,65 @@
+---
+title: "Epoch"
+description: "One complete pass through the training examples by a learning algorithm."
+term: "Epoch"
+letter: "E"
+category: "Model Training"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An epoch is one complete pass through the training dataset. Training
+usually takes multiple epochs, with the model parameters updated many
+times during each pass.
+
+## Technical explanation
+
+When training uses mini-batches, an epoch consists of processing each
+training example once, subject to the data loader's sampling and
+drop-last rules. The number of optimizer steps per epoch is approximately
+$\lceil N/B\rceil$ for $N$ examples and batch size $B$ when the final
+partial batch is retained.
+
+## Why it matters in AI engineering
+
+Epoch counts help describe training duration, but are not comparable
+across different dataset sizes, batch sizes, sampling strategies, or
+distributed setups. Validation frequency and compute budget are often
+more useful operational measures.
+
+## How it works
+
+The training pipeline iterates over batches drawn from the training set.
+After the final batch is processed, one epoch is complete. Data may be
+reshuffled before the next epoch, and training can stop based on a fixed
+budget or validation behaviour.
+
+## Practical example
+
+If a dataset has 1,000 examples and the batch size is 100, a full epoch
+has 10 batches when all examples are used. Training for five epochs
+processes five passes through those examples.
+
+## Common misconceptions
+
+- One epoch is not one parameter update; it usually contains many updates.
+- More epochs do not always improve generalization.
+- An epoch count alone does not specify how much training compute was
+  used.
+
+## Related terms
+
+- [Batch](../B/batch.qmd)
+- [Batch Size](../B/batch-size.qmd)
+- [Early Stopping](early-stopping.qmd)
+
+## Further reading
+
+- [fast.ai: Training loop](https://docs.fast.ai/learner.html) — documents learner training and epoch-based workflows.
+- [Deep Learning Book: Optimization for Deep Learning](https://www.deeplearningbook.org/contents/optimization.html) — discusses mini-batch optimization and training iterations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

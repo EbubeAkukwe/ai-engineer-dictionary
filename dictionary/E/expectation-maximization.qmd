@@ -1,0 +1,67 @@
+---
+title: "Expectation-Maximization"
+description: "An iterative algorithm for estimating model parameters when data includes latent variables."
+term: "Expectation-Maximization"
+letter: "E"
+category: "Statistics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Expectation-maximization (EM) is an iterative method for estimating
+parameters when a model includes hidden or missing variables. It
+alternates between estimating those hidden variables and updating the
+model parameters.
+
+## Technical explanation
+
+For observed data $X$, latent variables $Z$, and parameters $\theta$,
+the E-step computes an expectation of the complete-data log-likelihood
+under the current parameter estimate. The M-step chooses updated
+parameters that maximize this expected quantity. Under standard
+conditions, each iteration does not decrease the observed-data
+likelihood, but it may converge to a local optimum.
+
+## Why it matters in AI engineering
+
+EM provides a principled way to fit latent-variable models and handle
+incomplete data. It appears in mixture models and other statistical
+methods, though its convergence and computational cost depend on the
+model.
+
+## How it works
+
+Initialize parameters. In the E-step, estimate a distribution over latent
+variables using the current parameters. In the M-step, update parameters
+using those estimates. Repeat until a convergence criterion or iteration
+limit is reached.
+
+## Practical example
+
+In a Gaussian mixture model, the E-step estimates each data point's
+probability of belonging to each cluster. The M-step updates each
+Gaussian's weights, means, and variances using those soft assignments.
+
+## Common misconceptions
+
+- EM does not generally guarantee a global optimum.
+- The E-step estimates a distribution over latent variables; it does not
+  necessarily assign each point to one cluster.
+- Convergence of the objective does not guarantee that the fitted model
+  is appropriate for the data.
+
+## Related terms
+
+- [Clustering](../C/clustering.qmd)
+- [Algorithm](../A/algorithm.qmd)
+
+## Further reading
+
+- [Dempster, Laird, and Rubin: Maximum Likelihood from Incomplete Data via the EM Algorithm](https://doi.org/10.1111/j.2517-6161.1977.tb01600.x) — foundational paper on the EM algorithm.
+- [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/) — textbook treatment of EM and latent-variable models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
