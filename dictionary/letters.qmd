@@ -28,7 +28,20 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## B {#b}
 
-Terms beginning with B will appear here as the dictionary grows.
+- [Backpropagation](/dictionary/B/backpropagation.qmd)
+- [Bayesian Optimization](/dictionary/B/bayesian-optimization.qmd)
+- [Batch](/dictionary/B/batch.qmd)
+- [Batch Normalization](/dictionary/B/batch-normalization.qmd)
+- [Batch Size](/dictionary/B/batch-size.qmd)
+- [Beam Search](/dictionary/B/beam-search.qmd)
+- [Bias](/dictionary/B/bias.qmd)
+- [Bias-Variance Tradeoff](/dictionary/B/bias-variance-tradeoff.qmd)
+- [Bidirectional Encoder Representations from Transformers (BERT)](/dictionary/B/bert.qmd)
+- [Binary Classification](/dictionary/B/binary-classification.qmd)
+- [Black-box Model](/dictionary/B/black-box-model.qmd)
+- [Bootstrap Sampling](/dictionary/B/bootstrap-sampling.qmd)
+- [Bounding Box](/dictionary/B/bounding-box.qmd)
+- [Broad Learning System](/dictionary/B/broad-learning-system.qmd)
 
 ## C {#c}
 
@@ -60,7 +73,15 @@ Terms beginning with I will appear here as the dictionary grows.
 
 ## J {#j}
 
-Terms beginning with J will appear here as the dictionary grows.
+- [Jacobian](/dictionary/J/jacobian.qmd)
+- [JAX](/dictionary/J/jax.qmd)
+- [JavaScript](/dictionary/J/javascript.qmd)
+- [Jensen-Shannon Divergence](/dictionary/J/jensen-shannon-divergence.qmd)
+- [Job Scheduling](/dictionary/J/job-scheduling.qmd)
+- [JSON](/dictionary/J/json.qmd)
+- [JSON Schema](/dictionary/J/json-schema.qmd)
+- [Jupyter Notebook](/dictionary/J/jupyter-notebook.qmd)
+- [Just-in-Time (JIT) Compilation](/dictionary/J/just-in-time-compilation.qmd)
 
 ## K {#k}
 

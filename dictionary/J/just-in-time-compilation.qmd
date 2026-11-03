@@ -1,0 +1,71 @@
+---
+title: "Just-in-Time (JIT) Compilation"
+description: "Compiling program code during execution so it can be optimized for the current workload or hardware."
+term: "Just-in-Time (JIT) Compilation"
+letter: "J"
+category: "AI Infrastructure"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Just-in-time (JIT) compilation translates code into a form that can run more
+efficiently while a program is running. It can reduce repeated interpretation
+or optimize operations for the workload and hardware in use.
+
+## Technical explanation
+
+A JIT compiler typically observes or traces code at runtime, compiles selected
+operations to machine code or an intermediate representation, and reuses the
+compiled result. Some systems specialize compiled code based on input shapes,
+types, or device configuration.
+
+## Why it matters in AI engineering
+
+JIT compilation can speed up numerical workloads and reduce execution overhead
+when operations are repeated. Frameworks may use it to fuse operations,
+optimize device execution, or generate kernels for a particular model and
+input shape.
+
+## How it works
+
+The runtime identifies code suitable for compilation, builds an optimized
+version, and executes that version on subsequent calls. Compilation has a
+startup cost, and changes in shapes or execution conditions can require
+additional compilations or fall back to less-specialized paths.
+
+## Practical example
+
+In JAX, a function can be wrapped with `jax.jit` to request compilation:
+
+```python
+import jax
+
+compiled_function = jax.jit(my_function)
+result = compiled_function(inputs)
+```
+
+The initial call may include compilation time, while repeated compatible calls
+can reuse compiled code.
+
+## Common misconceptions
+
+- JIT does not guarantee that every function will run faster; compilation cost
+  can outweigh runtime savings for small or one-off workloads.
+- JIT compilation is distinct from ahead-of-time compilation, which occurs
+  before program execution.
+- Different input shapes or settings may trigger separate compiled versions.
+
+## Related terms
+
+- [JAX](jax.qmd)
+- [Jacobian](jacobian.qmd)
+
+## Further reading
+
+- [JAX: Just-in-time compilation](https://docs.jax.dev/en/latest/jit-compilation.html) — explains `jit`, tracing, and compilation behavior.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

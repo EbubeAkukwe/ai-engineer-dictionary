@@ -1,0 +1,68 @@
+---
+title: "Bidirectional Encoder Representations from Transformers (BERT)"
+description: "A Transformer encoder model pretrained to build contextual representations from text."
+term: "Bidirectional Encoder Representations from Transformers (BERT)"
+letter: "B"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+BERT is a language model that reads text using context from both directions.
+Its pretrained representations can be adapted to tasks such as
+classification and question answering.
+
+## Technical explanation
+
+BERT uses a stack of Transformer encoder layers. Its original pretraining
+included masked language modeling, where selected tokens are hidden and
+predicted from surrounding context, and next-sentence prediction. Unlike a
+causal language model, a BERT encoder can attend to tokens on both sides
+when constructing contextual representations.
+
+## Why it matters in AI engineering
+
+BERT established a widely used approach to pretraining bidirectional
+representations and adapting them to language tasks. It is useful to
+understand encoder models when selecting architectures for classification,
+ranking, extraction, and other tasks that do not require left-to-right
+generation.
+
+## How it works
+
+Text is tokenized into subword units and augmented with position and
+segment information. The encoder layers contextualize the tokens through
+self-attention. A task-specific head can then use token or pooled
+representations to make predictions.
+
+## Practical example
+
+For sentiment classification, a BERT encoder processes the review text and
+a classification head maps a sequence representation to sentiment scores.
+The model can be fine-tuned using labeled examples.
+
+## Common misconceptions
+
+- BERT is an encoder model, not a standard left-to-right text generator.
+- "Bidirectional" describes how context is used by the encoder; it does not
+  mean BERT sees future information unavailable in every downstream task.
+- Pretraining does not guarantee good performance without suitable
+  fine-tuning or evaluation.
+
+## Related terms
+
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Beam Search](beam-search.qmd)
+
+## Further reading
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) — the original BERT paper.
+- [Google Research: BERT](https://research.google/blog/open-sourcing-bert-state-of-the-art-pre-training-for-natural-language-processing/) — Google's overview of the BERT release and pretraining approach.
+- [Hugging Face: BERT documentation](https://huggingface.co/docs/transformers/model_doc/bert) — model and usage reference.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

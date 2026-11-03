@@ -1,0 +1,68 @@
+---
+title: "Batch Normalization"
+description: "A neural-network operation that normalizes activations using statistics from a mini-batch."
+term: "Batch Normalization"
+letter: "B"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Batch normalization rescales and shifts layer activations using statistics
+computed from training batches. It can make neural-network training more
+stable or faster in some settings.
+
+## Technical explanation
+
+For a batch of activations, batch normalization computes a batch mean and
+variance, normalizes values, then applies learned scale and shift parameters.
+For an activation $x$, a simplified form is
+$\hat{x} = \frac{x-\mu_B}{\sqrt{\sigma_B^2+\epsilon}}$ and
+$y = \gamma\hat{x}+\beta$. At inference, implementations typically use
+running estimates of training statistics.
+
+## Why it matters in AI engineering
+
+Normalization layers can affect optimization, model behaviour, and
+inference configuration. Engineers need to account for the difference
+between training and inference modes and for settings where batch
+statistics are unreliable, such as very small or non-independent batches.
+
+## How it works
+
+The layer computes mean $\mu_B$ and variance $\sigma_B^2$ over specified
+batch dimensions, normalizes activations, and applies learned $\gamma$ and
+$\beta$. A small $\epsilon$ helps numerical stability. During training,
+running statistics are updated; during inference, those statistics are
+used instead of current-batch values.
+
+## Practical example
+
+A convolutional image classifier may apply batch normalization after a
+convolution and before an activation. During training, the layer uses
+statistics from each mini-batch and accumulates estimates for inference.
+
+## Common misconceptions
+
+- Batch normalization does not guarantee that internal activations follow
+  a standard normal distribution after the learned scale and shift.
+- Its behaviour depends on training or inference mode.
+- It is not interchangeable with layer normalization in every architecture
+  or batch configuration.
+
+## Related terms
+
+- [Batch](batch.qmd)
+- [Batch Size](batch-size.qmd)
+- [Activation Function](../A/activation-function.qmd)
+
+## Further reading
+
+- [Batch Normalization: Accelerating Deep Network Training](https://arxiv.org/abs/1502.03167) — the original batch-normalization paper.
+- [PyTorch: BatchNorm2d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html) — describes a widely used implementation and its running-statistics behaviour.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

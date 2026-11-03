@@ -7,3 +7,12 @@ visualizations, and mathematical demonstrations.
 
 A notebook should teach one focused idea. Keep dependencies modest, explain
 each important step, and include expected outputs or observations.
+
+## A
+
+- [Scaled Dot-Product Attention](A/attention-mechanism.ipynb)
+
+## B
+
+- [Penguin or Ostrich? Image Binary Classification](B/binary-classification.ipynb) — Markdown-only fast.ai scaffold; add the code as you build the classifier.
+- [Backpropagation with a Tiny Network](B/backpropagation.ipynb) — a small Python example that calculates gradients by applying the chain rule.

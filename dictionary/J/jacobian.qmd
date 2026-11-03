@@ -1,0 +1,109 @@
+---
+title: "Jacobian"
+description: "A matrix of first-order partial derivatives that describes how a vector-valued function changes with its inputs."
+term: "Jacobian"
+letter: "J"
+category: "Mathematics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A Jacobian is a table of derivatives for a function with multiple inputs and
+multiple outputs. Each entry tells how much one output changes when one input
+changes. It is the multivariable counterpart of a derivative and captures local
+scaling, rotation, and distortion caused by a transformation.
+
+## Technical explanation
+
+For a differentiable function
+$\mathbf{f}:\mathbb{R}^n\rightarrow\mathbb{R}^m$ with outputs
+$\mathbf{y}=\mathbf{f}(\mathbf{x})$, its Jacobian is the $m \times n$ matrix
+of first-order partial derivatives:
+
+$$
+J_{\mathbf{f}}(\mathbf{x}) =
+\begin{pmatrix}
+\frac{\partial y_1}{\partial x_1} & \cdots & \frac{\partial y_1}{\partial x_n} \\
+\vdots & \ddots & \vdots \\
+\frac{\partial y_m}{\partial x_1} & \cdots & \frac{\partial y_m}{\partial x_n}
+\end{pmatrix}.
+$$
+
+For a small input change $\Delta \mathbf{x}$, the corresponding output change
+is approximately $J_{\mathbf{f}}(\mathbf{x})\Delta \mathbf{x}$. If $m=n$,
+the determinant of the Jacobian describes the local signed change in volume;
+its absolute value is used when transforming probability densities.
+
+## Why it matters in AI engineering
+
+Automatic differentiation uses Jacobian-vector or vector-Jacobian products to
+propagate gradients through vector-valued operations during neural-network
+training. Normalizing flows use the log absolute determinant of a Jacobian to
+correct probability densities after an invertible transformation. Jacobians
+also help analyze model sensitivity and gradient behavior.
+
+## How it works
+
+For a vector transformation $\mathbf{y}=\mathbf{f}(\mathbf{x})$, the chain
+rule composes Jacobians. With row-vector gradients, if a loss $\mathcal{L}$
+depends on $\mathbf{y}$, then
+
+$$
+\frac{\partial \mathcal{L}}{\partial \mathbf{x}}
+=
+\frac{\partial \mathcal{L}}{\partial \mathbf{y}}
+J_{\mathbf{f}}(\mathbf{x}).
+$$
+
+For an invertible transformation $\mathbf{y}=g(\mathbf{x})$ between spaces
+of equal dimension, the change-of-variables formula is
+
+$$
+p_Y(\mathbf{y}) =
+p_X(g^{-1}(\mathbf{y}))
+\left|\det J_{g^{-1}}(\mathbf{y})\right|.
+$$
+
+In practice, frameworks often compute Jacobian products rather than materialize
+the full matrix, since a full Jacobian can be prohibitively large.
+
+## Practical example
+
+Consider $\mathbf{f}(x_1,x_2)=(x_1^2+x_2,\;x_1x_2)$. Its Jacobian is
+
+$$
+J_{\mathbf{f}}(x_1,x_2)=
+\begin{pmatrix}
+2x_1 & 1 \\
+x_2 & x_1
+\end{pmatrix}.
+$$
+
+At a particular input, multiplying this matrix by a small input perturbation
+estimates how both outputs change. Automatic-differentiation tools can compute
+the same derivatives and their products for much larger models.
+
+## Common misconceptions
+
+- A Jacobian is a matrix of partial derivatives, not a single scalar
+  derivative or the same thing as a gradient.
+- A determinant is defined for a square matrix, so the usual volume-change
+  interpretation requires equal input and output dimensions.
+- Deep-learning libraries often avoid constructing the entire Jacobian; they
+  compute only the products needed for a gradient calculation.
+
+## Related terms
+
+- [Backpropagation](../B/backpropagation.qmd)
+- [JAX](jax.qmd)
+
+## Further reading
+
+- [PyTorch: Jacobian and Hessian](https://pytorch.org/tutorials/intermediate/jacobians_hessians.html) — demonstrates Jacobian computation and Jacobian-vector products with automatic differentiation.
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — introduces derivatives and gradients used in deep learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

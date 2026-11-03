@@ -1,0 +1,68 @@
+---
+title: "JSON"
+description: "A text-based data format for representing structured values and exchanging data between systems."
+term: "JSON"
+letter: "J"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+JSON (JavaScript Object Notation) is a readable text format for data. It is
+widely used to send requests and responses between applications, including
+applications that use AI services.
+
+## Technical explanation
+
+JSON represents objects as key-value pairs, arrays as ordered lists, and values
+as strings, numbers, booleans, null, objects, or arrays. The format is
+language-independent, although each programming language has its own parser and
+data types.
+
+## Why it matters in AI engineering
+
+Model-serving APIs commonly accept JSON inputs and return JSON outputs. JSON is
+also used for configuration, metadata, evaluation results, and tool-call
+arguments, so engineers need to validate its structure and handle parsing
+errors.
+
+## How it works
+
+An application serializes in-memory data into JSON text before sending or
+storing it. A receiving application parses that text and can validate the
+resulting structure before using the values.
+
+## Practical example
+
+```json
+{
+  "model": "text-classifier",
+  "input": "The package arrived on time.",
+  "labels": ["positive", "neutral", "negative"]
+}
+```
+
+An inference endpoint could use these fields to select a model, process an
+input, and constrain the allowed output labels.
+
+## Common misconceptions
+
+- JSON is a data format, not a database or programming language.
+- Valid JSON does not guarantee that the data has the fields or value types an
+  application expects.
+- JSON does not support comments or trailing commas in its standard syntax.
+
+## Related terms
+
+- [API](../A/api.qmd)
+- [JSON Schema](json-schema.qmd)
+
+## Further reading
+
+- [JSON specification](https://www.json.org/json-en.html) — describes JSON's value types and syntax.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

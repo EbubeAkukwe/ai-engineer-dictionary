@@ -1,0 +1,67 @@
+---
+title: "Beam Search"
+description: "A decoding algorithm that keeps several high-scoring partial sequences while generating output."
+term: "Beam Search"
+letter: "B"
+category: "NLP"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Beam search generates a sequence by keeping several promising partial
+answers at once. At each step, it expands those candidates and keeps the
+best-scoring ones instead of committing to only one next token.
+
+## Technical explanation
+
+For a beam width $k$, the decoder retains up to $k$ partial sequences,
+scores expansions using model probabilities or a related objective, and
+prunes candidates to keep the beam bounded. Length normalization and
+constraints may be used because raw sequence log-probabilities tend to
+favour shorter outputs.
+
+## Why it matters in AI engineering
+
+Beam search is used in sequence-generation tasks such as translation and
+speech recognition. It trades additional computation for broader search,
+but a larger beam does not necessarily yield more useful or human-preferred
+output.
+
+## How it works
+
+The decoder initializes a beam with a start token, expands each candidate
+with possible next tokens, scores the resulting sequences, and keeps the
+top $k$. It repeats until candidates finish or a stopping condition is
+met.
+
+## Practical example
+
+A translation model can keep several possible partial translations after
+each generated token. If one early choice leads to a poor continuation,
+another candidate may still produce a better complete translation.
+
+## Common misconceptions
+
+- Beam search is not the same as exhaustive search over every possible
+  sequence.
+- A higher-scoring sequence under the model is not necessarily the most
+  accurate or natural output.
+- Beam width alone does not determine output quality; scoring and stopping
+  rules also matter.
+
+## Related terms
+
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Algorithm](../A/algorithm.qmd)
+
+## Further reading
+
+- [Google Developers: Neural Machine Translation](https://research.google/pubs/pub45610/) — describes Google's neural machine translation system and beam-search decoding.
+- [Hugging Face: Generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — documents beam search and other text-generation strategies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

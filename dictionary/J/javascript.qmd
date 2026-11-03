@@ -1,0 +1,72 @@
+---
+title: "JavaScript"
+description: "A programming language commonly used to build interactive web applications and browser-based AI experiences."
+term: "JavaScript"
+letter: "J"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+JavaScript is a programming language that runs in web browsers and on servers.
+It is often used to build the interfaces through which people interact with
+AI-powered products.
+
+## Technical explanation
+
+JavaScript is a dynamic, high-level language with first-class functions and an
+event loop that supports asynchronous operations. Browser APIs and server
+runtimes provide access to networking, user interfaces, and other platform
+capabilities.
+
+## Why it matters in AI engineering
+
+AI engineers use JavaScript to connect user interfaces to model-serving APIs,
+build interactive demos, and implement applications that run in browsers or
+Node.js. JavaScript and TypeScript SDKs also make model services accessible
+from web applications.
+
+## How it works
+
+In a browser, a JavaScript engine executes scripts alongside the document
+object model. In Node.js and other server runtimes, the language can handle
+network requests and application logic. Promises and `async`/`await` help
+coordinate operations such as API calls without blocking the interface.
+
+## Practical example
+
+```javascript
+const response = await fetch("/api/predictions", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ text: "Classify this sentence" }),
+});
+
+const prediction = await response.json();
+```
+
+This example sends input to an application endpoint and parses the JSON
+prediction returned by the service.
+
+## Common misconceptions
+
+- JavaScript and Java are separate languages despite their similar names.
+- Code running in a browser should not contain private API credentials; secrets
+  belong on a trusted server.
+- JavaScript can call model APIs, but it does not by itself provide a model or
+  guarantee that inference runs locally.
+
+## Related terms
+
+- [API](../A/api.qmd)
+- [JSON](json.qmd)
+
+## Further reading
+
+- [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) — language concepts and browser usage.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

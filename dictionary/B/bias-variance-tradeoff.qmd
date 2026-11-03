@@ -1,0 +1,74 @@
+---
+title: "Bias-Variance Tradeoff"
+description: "The balance between systematic model error and sensitivity to training data."
+term: "Bias-Variance Tradeoff"
+letter: "B"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+The bias-variance tradeoff describes two ways a model can fail to
+generalize. A model with too much bias may be too simple to capture useful
+patterns; a model with too much variance may fit its training data too
+closely and change substantially with new samples.
+
+## Technical explanation
+
+Under common assumptions for squared-error regression, expected prediction
+error can be decomposed into squared bias, variance, and irreducible noise:
+
+$$
+\mathbb{E}\left[(y-\hat{f}(x))^2\right]
+= \operatorname{Bias}[\hat{f}(x)]^2
++ \operatorname{Var}[\hat{f}(x)]
++ \sigma^2
+$$
+
+This decomposition is illustrative and does not apply unchanged to every
+loss function or learning setting.
+
+## Why it matters in AI engineering
+
+The concept helps interpret underfitting and overfitting and guides
+decisions about model capacity, regularization, and data collection.
+Practical evaluation on held-out data remains necessary; the tradeoff is
+not a direct tuning formula.
+
+## How it works
+
+Increasing model flexibility can reduce systematic error but may make the
+fitted model more sensitive to the particular training sample. More data,
+regularization, and suitable model selection can change this balance.
+Validation performance helps estimate how well a chosen model generalizes.
+
+## Practical example
+
+A straight-line model may underfit a strongly curved relationship, showing
+high bias. A very high-degree polynomial can fit training noise and perform
+poorly on new points, showing high variance.
+
+## Common misconceptions
+
+- The tradeoff is not a rule that every reduction in bias must increase
+  variance by a fixed amount.
+- Training error alone cannot reveal generalization performance.
+- The decomposition depends on assumptions and should not be treated as an
+  exact account of every modern model's behaviour.
+
+## Related terms
+
+- [Bias](bias.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Active Learning](../A/active-learning.qmd)
+
+## Further reading
+
+- [Deep Learning Book: The Challenge of Generalization](https://www.deeplearningbook.org/contents/generalization.html) — discusses generalization, underfitting, overfitting, bias, and variance.
+- [An Introduction to Statistical Learning](https://www.statlearning.com/) — textbook chapters introduce model assessment and the bias-variance tradeoff.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

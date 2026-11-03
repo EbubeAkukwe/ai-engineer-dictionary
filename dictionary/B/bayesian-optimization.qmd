@@ -1,0 +1,69 @@
+---
+title: "Bayesian Optimization"
+description: "A method for optimizing an expensive-to-evaluate objective using a probabilistic model."
+term: "Bayesian Optimization"
+letter: "B"
+category: "Machine Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Bayesian optimization helps find a good setting when testing each candidate
+is slow or expensive. It uses results from earlier trials to choose
+promising settings to try next.
+
+## Technical explanation
+
+The method builds a probabilistic surrogate model of an objective function
+and uses an acquisition function to select the next evaluation. The
+surrogate estimates both likely performance and uncertainty. Common
+surrogates include Gaussian processes and tree-based models; common
+acquisition functions include expected improvement and upper confidence
+bound.
+
+## Why it matters in AI engineering
+
+Training a model or running a simulation for one hyperparameter setting can
+consume substantial time or compute. Bayesian optimization can allocate a
+limited trial budget more efficiently than uninformed search, although
+performance depends on the search space and optimization setup.
+
+## How it works
+
+1. Evaluate the objective at an initial set of candidates.
+2. Fit or update a probabilistic surrogate using the observed results.
+3. Use an acquisition function to select a candidate balancing expected
+   improvement and uncertainty.
+4. Evaluate that candidate and repeat until the budget or stopping
+   condition is reached.
+
+## Practical example
+
+A team tuning a model's learning rate and regularization strength can use
+validation performance as the objective. Each completed training run
+updates the surrogate, which suggests the next pair of settings.
+
+## Common misconceptions
+
+- Bayesian optimization does not guarantee the global optimum.
+- The surrogate is an approximation and can be misleading with a poor
+  search space or noisy observations.
+- It is not always preferable to random search, especially for cheap
+  objectives or very high-dimensional spaces.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Batch Size](batch-size.qmd)
+
+## Further reading
+
+- [Practical Bayesian Optimization of Machine Learning Algorithms](https://arxiv.org/abs/1206.2944) — describes Gaussian-process-based Bayesian optimization and acquisition functions.
+- [Scikit-learn: Gaussian processes](https://scikit-learn.org/stable/modules/gaussian_process.html) — documentation on Gaussian-process models that can serve as surrogates.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

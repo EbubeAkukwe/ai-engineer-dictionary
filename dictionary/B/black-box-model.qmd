@@ -1,0 +1,67 @@
+---
+title: "Black-box Model"
+description: "A model whose internal decision process is difficult to inspect or interpret."
+term: "Black-box Model"
+letter: "B"
+category: "AI Safety"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A black-box model is one whose internal reasoning or decision process is
+not readily understandable to a user or engineer. People can observe its
+inputs and outputs without having a clear account of how it reached a
+particular result.
+
+## Technical explanation
+
+The term can refer to models with complex internal representations,
+proprietary systems with limited access, or systems whose behaviour is
+difficult to explain using available methods. Interpretability tools can
+provide partial evidence about model behaviour, but they do not necessarily
+reveal a complete or faithful causal explanation.
+
+## Why it matters in AI engineering
+
+Limited interpretability can complicate debugging, auditing, incident
+response, and decisions in high-impact settings. Teams may need additional
+testing, documentation, monitoring, human review, and explicit limits on
+use.
+
+## How it works
+
+A black-box system is assessed by observing its behaviour across inputs
+and conditions. Engineers can use controlled tests, feature attribution,
+probes, or surrogate explanations to investigate patterns, while checking
+that these methods are appropriate and not overstating what they establish.
+
+## Practical example
+
+A team using a vendor-hosted model may receive outputs and confidence-like
+scores but lack access to model weights or training data. The team can
+still evaluate outputs on representative and adversarial examples, but
+cannot directly inspect all internal mechanisms.
+
+## Common misconceptions
+
+- "Black box" does not mean the model is random or impossible to test.
+- An explanation generated after a prediction is not automatically a
+  faithful account of the model's computation.
+- Access to model weights alone does not guarantee interpretability.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [AI Alignment](../A/ai-alignment.qmd)
+- [Artificial Intelligence](../A/artificial-intelligence.qmd)
+
+## Further reading
+
+- [NIST: Explainable Artificial Intelligence (XAI)](https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence) — presents principles for explainable AI.
+- [Anthropic: Towards Monosemanticity](https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning) — describes research investigating internal representations in language models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

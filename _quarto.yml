@@ -49,13 +49,49 @@ website:
             - dictionary/A/autonomous-systems.qmd
             - dictionary/A/autoregressive-model.qmd
 
-        - section: "B–Z"
+        - section: "B"
+          contents:
+            - dictionary/B/index.qmd
+            - dictionary/B/backpropagation.qmd
+            - dictionary/B/bayesian-optimization.qmd
+            - dictionary/B/batch.qmd
+            - dictionary/B/batch-normalization.qmd
+            - dictionary/B/batch-size.qmd
+            - dictionary/B/beam-search.qmd
+            - dictionary/B/bias.qmd
+            - dictionary/B/bias-variance-tradeoff.qmd
+            - dictionary/B/bert.qmd
+            - dictionary/B/binary-classification.qmd
+            - dictionary/B/black-box-model.qmd
+            - dictionary/B/bootstrap-sampling.qmd
+            - dictionary/B/bounding-box.qmd
+            - dictionary/B/broad-learning-system.qmd
+        - section: "C–I"
+          contents:
+            - dictionary/letters.qmd
+        - section: "J"
+          contents:
+            - dictionary/J/index.qmd
+            - dictionary/J/jacobian.qmd
+            - dictionary/J/jax.qmd
+            - dictionary/J/javascript.qmd
+            - dictionary/J/jensen-shannon-divergence.qmd
+            - dictionary/J/job-scheduling.qmd
+            - dictionary/J/json.qmd
+            - dictionary/J/json-schema.qmd
+            - dictionary/J/jupyter-notebook.qmd
+            - dictionary/J/just-in-time-compilation.qmd
+        - section: "K–Z"
           contents:
             - dictionary/letters.qmd
     - title: "Notebooks"
       contents:
         - notebooks/index.qmd
         - notebooks/A/attention-mechanism.ipynb
+        - section: "B"
+          contents:
+            - notebooks/B/binary-classification.ipynb
+            - notebooks/B/backpropagation.ipynb
 
 format:
   html:

@@ -1,0 +1,68 @@
+---
+title: "Backpropagation"
+description: "An algorithm for computing how a neural network's loss changes with its parameters."
+term: "Backpropagation"
+letter: "B"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Backpropagation is how a neural network works out which parameters
+contributed to its prediction error and by how much. An optimizer uses
+those calculations to adjust the parameters during training.
+
+## Technical explanation
+
+Backpropagation applies the chain rule to compute derivatives of a loss
+with respect to parameters throughout a computational graph. It evaluates
+these derivatives efficiently by propagating gradients from the output
+toward earlier operations.
+
+## Why it matters in AI engineering
+
+Most neural-network training depends on gradients computed by
+backpropagation. Understanding its role helps engineers diagnose training
+instability, excessive memory use, and issues such as vanishing or exploding
+gradients.
+
+## How it works
+
+First, a forward pass computes predictions and a loss. Then the chain rule
+propagates derivatives through the operations that produced the loss. For a
+parameter $w$, an optimizer can use the resulting gradient in an update such
+as $w \leftarrow w - \eta \frac{\partial L}{\partial w}$, where $\eta$ is
+the learning rate.
+
+## Practical example
+
+For a network trained to classify images, the forward pass produces class
+scores. Backpropagation computes how each weight affected the classification
+loss, and gradient descent adjusts those weights to reduce that loss.
+The [backpropagation notebook](../../notebooks/B/backpropagation.ipynb)
+works through the chain rule on a tiny network using Python.
+
+## Common misconceptions
+
+- Backpropagation computes gradients; it is not itself the parameter-update
+  rule.
+- It does not guarantee that training finds a global optimum.
+- It is not limited to fully connected networks; it applies to
+  differentiable computational graphs more generally.
+
+## Related terms
+
+- [Activation Function](../A/activation-function.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Batch](batch.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — explains gradient-based learning and backpropagation.
+- [PyTorch: Automatic differentiation](https://pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html) — demonstrates how automatic differentiation computes gradients.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

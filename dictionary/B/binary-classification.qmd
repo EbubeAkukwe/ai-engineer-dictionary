@@ -1,0 +1,64 @@
+---
+title: "Binary Classification"
+description: "A supervised learning task that assigns an input to one of two classes."
+term: "Binary Classification"
+letter: "B"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Binary classification predicts which of two categories applies to an
+example, such as whether an email is spam or not spam.
+
+## Technical explanation
+
+A binary classifier produces a score or probability for one class, then
+uses a decision threshold to assign a label. Models may be trained with
+losses such as binary cross-entropy. The threshold and class definitions
+should reflect the costs of false positives and false negatives.
+
+## Why it matters in AI engineering
+
+Binary classification appears in fraud detection, moderation, medical
+screening, and quality checks. Accuracy alone can be misleading when class
+frequencies or error costs are unequal, so evaluation should also consider
+precision, recall, calibration, and the operating threshold.
+
+## How it works
+
+The model maps input features to a score, often transformed into a
+probability $p$. A threshold $\tau$ determines the predicted class:
+predict the positive class when $p \geq \tau$. During training, the model's
+parameters are adjusted to reduce a classification loss.
+
+## Practical example
+
+A simple image classifier can predict whether a photo shows a penguin or an
+ostrich. The accompanying [fast.ai notebook](../../notebooks/B/binary-classification.ipynb)
+is a beginner-friendly scaffold for building and evaluating this model.
+It contains Markdown instructions only; fill in the code as you work
+through the exercise.
+
+## Common misconceptions
+
+- A score is not necessarily a calibrated probability.
+- A threshold of 0.5 is not always appropriate.
+- High accuracy can hide poor performance on a rare class.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Bias](bias.qmd)
+- [Anomaly Detection](../A/anomaly-detection.qmd)
+
+## Further reading
+
+- [Google for Developers: Classification](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — explains classification evaluation with precision and recall.
+- [Scikit-learn: Classification metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics) — reference for common classification metrics.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

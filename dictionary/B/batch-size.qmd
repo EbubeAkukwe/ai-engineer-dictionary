@@ -1,0 +1,66 @@
+---
+title: "Batch Size"
+description: "The number of examples processed together in one training or inference batch."
+term: "Batch Size"
+letter: "B"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Batch size is how many examples a system processes together in one batch.
+For training, it influences how often the model updates its parameters and
+how much memory each update uses.
+
+## Technical explanation
+
+If a dataset has $N$ examples and each batch contains $B$ examples, an epoch
+usually consists of approximately $\lceil N/B \rceil$ updates when the last
+partial batch is retained. The gradient from each batch estimates the
+gradient over the full dataset, with variability depending on the data and
+sampling.
+
+## Why it matters in AI engineering
+
+Batch size affects memory requirements, hardware utilization, throughput,
+optimization dynamics, and training duration. For inference, batching
+requests can increase throughput but may add queueing delay.
+
+## How it works
+
+The training pipeline groups examples into batches of the selected size.
+The model processes each batch, computes a loss and gradient, and the
+optimizer updates parameters. A batch that is too large may exceed device
+memory; a very small batch may underutilize hardware or produce noisier
+gradient estimates.
+
+## Practical example
+
+With 1,000 training examples and a batch size of 100, a complete pass
+through the data has 10 batches if the examples divide evenly. Each batch
+normally contributes one optimizer update.
+
+## Common misconceptions
+
+- Increasing batch size does not simply make training proportionally faster.
+- Batch size and learning rate interact, so changing one may require
+  retuning the other.
+- The best training batch size may differ from the best inference batch
+  size.
+
+## Related terms
+
+- [Batch](batch.qmd)
+- [Batch Normalization](batch-normalization.qmd)
+- [Backpropagation](backpropagation.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Optimization for Deep Learning](https://www.deeplearningbook.org/contents/optimization.html) — discusses mini-batch size and stochastic optimization.
+- [PyTorch: Tuning guide](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html) — includes practical performance guidance for training workloads.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

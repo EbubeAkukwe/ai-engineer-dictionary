@@ -1,0 +1,63 @@
+---
+title: "Job Scheduling"
+description: "The process of assigning computational jobs to resources and deciding when they should run."
+term: "Job Scheduling"
+letter: "J"
+category: "AI Infrastructure"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Job scheduling decides which computational task should run, when it should
+start, and which machine or accelerator should run it. It helps teams share
+limited resources such as GPUs and cluster nodes.
+
+## Technical explanation
+
+A scheduler manages jobs with requirements and constraints, such as CPU or GPU
+capacity, memory, priority, dependencies, deadlines, and retry policies. It
+places jobs onto available resources while trying to meet goals such as
+throughput, fairness, and utilization.
+
+## Why it matters in AI engineering
+
+Training and evaluation jobs can consume large amounts of accelerator time.
+Effective scheduling reduces idle resources, coordinates concurrent
+experiments, and makes long-running workloads more reliable and predictable.
+
+## How it works
+
+A job is submitted with its resource requests and execution instructions. The
+scheduler checks those requirements against available capacity, queues the job
+if resources are unavailable, and assigns it when suitable resources become
+available. It can also monitor execution, retry failures, and release resources
+when the job completes.
+
+## Practical example
+
+A team submits several model-training runs that each require one GPU. A cluster
+scheduler queues runs until GPUs are free, starts them on eligible machines,
+and records their completion status for the experiment-tracking system.
+
+## Common misconceptions
+
+- Scheduling is not the same as orchestration: orchestration coordinates
+  broader workflows, while a scheduler makes placement and timing decisions.
+- A job waiting in a queue is not necessarily stuck; requested resources or
+  scheduling constraints may not currently be satisfied.
+- High utilization alone does not guarantee fairness or short job wait times.
+
+## Related terms
+
+- [JAX](jax.qmd)
+- [Just-in-Time (JIT) Compilation](just-in-time-compilation.qmd)
+
+## Further reading
+
+- [Kubernetes: Scheduling, Preemption and Eviction](https://kubernetes.io/docs/concepts/scheduling-eviction/) — explains how Kubernetes places workloads on cluster nodes.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

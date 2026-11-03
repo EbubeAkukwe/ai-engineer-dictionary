@@ -1,0 +1,69 @@
+---
+title: "Bootstrap Sampling"
+description: "A resampling method that draws repeated samples with replacement from observed data."
+term: "Bootstrap Sampling"
+letter: "B"
+category: "Statistics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Bootstrap sampling creates many resampled datasets by drawing examples
+from the observed data with replacement. It helps estimate how uncertain
+a statistic or model result may be.
+
+## Technical explanation
+
+Given a dataset of $n$ observations, a bootstrap replicate typically draws
+$n$ observations with replacement. A statistic is computed for each
+replicate, and the distribution of replicate statistics can be used to
+estimate standard errors or confidence intervals under suitable
+assumptions.
+
+## Why it matters in AI engineering
+
+Bootstrap methods can help quantify uncertainty in evaluation metrics,
+compare model performance, and assess stability when analytical
+uncertainty estimates are difficult. They do not repair biased or
+unrepresentative data.
+
+## How it works
+
+Repeat the following process: sample observations with replacement from
+the available dataset, compute the statistic of interest, and store the
+result. The empirical distribution of stored values approximates the
+sampling distribution. For clustered or time-dependent data, resampling
+must preserve relevant structure.
+
+## Practical example
+
+To estimate uncertainty in a model's accuracy, a team can repeatedly
+resample evaluation examples, compute accuracy on each replicate, and
+inspect a percentile interval. The interpretation depends on whether the
+examples are independent and representative.
+
+## Common misconceptions
+
+- Bootstrap samples are not independent new observations from the real
+  population.
+- An interval does not account for every source of uncertainty, such as
+  dataset shift or labeling errors.
+- Sampling individual rows can be inappropriate for grouped or sequential
+  data.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Active Learning](../A/active-learning.qmd)
+- [Algorithm](../A/algorithm.qmd)
+
+## Further reading
+
+- [An Introduction to the Bootstrap](https://doi.org/10.1201/9780429246593) — Efron's foundational book introducing bootstrap methods.
+- [Scikit-learn: Cross-validation and resampling](https://scikit-learn.org/stable/modules/cross_validation.html) — documentation on resampling approaches for model assessment.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

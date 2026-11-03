@@ -1,0 +1,72 @@
+---
+title: "JAX"
+description: "A Python library for high-performance numerical computing, automatic differentiation, and compilation."
+term: "JAX"
+letter: "J"
+category: "AI Frameworks"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+JAX is a Python library for writing numerical programs that can run efficiently
+on CPUs, GPUs, and other accelerators. It can automatically differentiate
+functions and compile them for faster execution.
+
+## Technical explanation
+
+JAX provides a NumPy-compatible API and composable transformations such as
+automatic differentiation (`grad`), just-in-time compilation (`jit`), and
+vectorization (`vmap`). These transformations operate on functions and can be
+combined to build optimized numerical and machine-learning workloads.
+
+## Why it matters in AI engineering
+
+JAX is used for research and production workloads that benefit from accelerator
+execution, explicit functional programming, and scalable transformations.
+It supports model training, simulation, and scientific computing.
+
+## How it works
+
+Programs express computations as functions over arrays. JAX traces those
+functions when applying transformations, then can compile the resulting
+computation for a selected device. Its random-number API uses explicit keys,
+making random state visible in function inputs and outputs.
+
+## Practical example
+
+```python
+import jax
+import jax.numpy as jnp
+
+def loss(weights, x, y):
+    return jnp.mean((x @ weights - y) ** 2)
+
+gradient = jax.grad(loss)
+```
+
+Calling `gradient(weights, x, y)` computes the derivative of the loss with
+respect to `weights`.
+
+## Common misconceptions
+
+- JAX is not a neural-network architecture; it is a numerical computing and
+  transformation library.
+- `jit` compilation can add overhead for small or frequently changing
+  computations, so it is not automatically faster in every case.
+- JAX's functional random-number handling differs from libraries that hide a
+  mutable global random state.
+
+## Related terms
+
+- [Just-in-Time (JIT) Compilation](just-in-time-compilation.qmd)
+- [Jacobian](jacobian.qmd)
+
+## Further reading
+
+- [JAX documentation](https://docs.jax.dev/en/latest/) — reference and guides for JAX transformations, arrays, and devices.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,63 @@
+---
+title: "Jupyter Notebook"
+description: "An interactive document that combines executable code, results, visualizations, and narrative text."
+term: "Jupyter Notebook"
+letter: "J"
+category: "Developer Tools"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A Jupyter Notebook is an interactive document where users can write and run
+code in small sections called cells. Code, output, charts, and explanatory text
+can live together in one file.
+
+## Technical explanation
+
+Notebook documents store an ordered collection of code, Markdown, and raw-text
+cells along with outputs and metadata. A language kernel executes code cells
+and returns results to the notebook interface. The standard `.ipynb` format is
+JSON-based.
+
+## Why it matters in AI engineering
+
+Notebooks are useful for exploratory data analysis, visualization,
+prototyping, and teaching machine-learning concepts. They make it easy to
+inspect intermediate results, but production workflows often need to move
+stable logic into tested modules or pipelines.
+
+## How it works
+
+The notebook interface sends code cells to a running kernel. The kernel
+executes them in a persistent session and returns outputs such as text, tables,
+or plots. Since the session retains variables, the order in which cells are
+executed can differ from their displayed order.
+
+## Practical example
+
+A data scientist can load a dataset in one cell, inspect missing values in the
+next, train a baseline model in another, and visualize evaluation metrics
+alongside the code and notes explaining each decision.
+
+## Common misconceptions
+
+- Cell order in the file does not guarantee execution order in a live session.
+- A notebook that works in one environment may fail elsewhere if dependencies,
+  data files, or random seeds are not documented.
+- Notebooks are useful for exploration, but they do not automatically provide
+  production-grade testing or deployment.
+
+## Related terms
+
+- [JAX](jax.qmd)
+- [JavaScript](javascript.qmd)
+
+## Further reading
+
+- [Jupyter documentation](https://docs.jupyter.org/en/latest/) — explains notebook documents, kernels, and the Jupyter ecosystem.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

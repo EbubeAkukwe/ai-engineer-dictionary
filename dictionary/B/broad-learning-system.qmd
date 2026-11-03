@@ -1,0 +1,67 @@
+---
+title: "Broad Learning System"
+description: "A neural learning architecture that expands feature and enhancement nodes without deepening hidden layers."
+term: "Broad Learning System"
+letter: "B"
+category: "Machine Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A Broad Learning System (BLS) is a learning architecture that adds groups
+of feature and enhancement nodes side by side, rather than building a
+deeper stack of layers. Some versions can update the output solution
+incrementally when nodes are added.
+
+## Technical explanation
+
+The original BLS constructs mapped feature nodes and nonlinear enhancement
+nodes, combines their outputs, and solves for output weights using a
+closed-form or incremental method. The method is associated with
+randomized mappings and ridge-regression-style solutions; implementation
+details vary across adaptations.
+
+## Why it matters in AI engineering
+
+BLS is an alternative architecture for settings where incremental
+expansion or fast retraining is useful. Engineers should compare its
+accuracy, memory use, stability, and update cost with established
+architectures on the target data rather than assuming it is universally
+faster or more accurate.
+
+## How it works
+
+Input data is transformed into feature nodes, which are then combined with
+enhancement nodes. The resulting design matrix is used to calculate output
+weights. Additional nodes may be incorporated and the output solution
+updated without training a conventional deep stack from scratch.
+
+## Practical example
+
+A researcher can test a BLS on a tabular classification task by mapping
+input features into node groups, fitting an output layer, and measuring
+held-out performance against simpler baselines.
+
+## Common misconceptions
+
+- "Broad" does not mean the model has no hidden computations or parameters.
+- Incremental updates do not remove the need for validation and resource
+  measurement.
+- BLS is not the same architecture as a conventional deep neural network.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Bias-Variance Tradeoff](bias-variance-tradeoff.qmd)
+
+## Further reading
+
+- [Broad Learning System: An Effective and Efficient Incremental Learning System Without the Need for Deep Architecture](https://ieeexplore.ieee.org/document/6815112) — introduces the Broad Learning System.
+- [A Survey on Broad Learning System: Theory, Algorithms, and Applications](https://arxiv.org/abs/1910.00213) — reviews BLS theory and applications.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

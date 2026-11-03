@@ -1,0 +1,74 @@
+---
+title: "Jensen-Shannon Divergence"
+description: "A symmetric, finite measure of how different two probability distributions are."
+term: "Jensen-Shannon Divergence"
+letter: "J"
+category: "Statistics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Jensen-Shannon divergence measures how different two probability distributions
+are. It compares each distribution with their average, producing a symmetric
+score that stays finite even when one distribution assigns zero probability to
+an event.
+
+## Technical explanation
+
+For distributions $P$ and $Q$, let $M=(P+Q)/2$. The Jensen-Shannon divergence
+is
+
+$$
+\operatorname{JSD}(P\|Q)
+= \frac{1}{2}D_{\mathrm{KL}}(P\|M)
++ \frac{1}{2}D_{\mathrm{KL}}(Q\|M),
+$$
+
+where $D_{\mathrm{KL}}$ is Kullback-Leibler divergence. With logarithm base 2,
+the divergence lies between 0 and 1; with natural logarithms, it lies between
+0 and $\ln 2$.
+
+## Why it matters in AI engineering
+
+Jensen-Shannon divergence can compare generated and reference distributions,
+measure disagreement between models, and define objectives in generative
+modeling. Its symmetry and boundedness can make it more convenient than
+Kullback-Leibler divergence for certain comparisons.
+
+## How it works
+
+The method first forms the mixture distribution $M$, then measures the
+Kullback-Leibler divergence from each input distribution to that mixture. It
+averages the two results. Because the mixture includes probability mass from
+both distributions, it avoids the infinite divergence that can occur when one
+distribution has zero probability where the other does not.
+
+## Practical example
+
+Suppose two language models assign different probabilities to the next-token
+choices. Treat each model's normalized scores as a distribution, compute their
+mixture, and use the Jensen-Shannon divergence to quantify how much their
+predictions differ.
+
+## Common misconceptions
+
+- Jensen-Shannon divergence is symmetric, while Kullback-Leibler divergence
+  generally is not.
+- The numerical range depends on the logarithm base.
+- The square root of Jensen-Shannon divergence is a metric; the divergence
+  itself is not usually referred to as a metric.
+
+## Related terms
+
+- [Jacobian](jacobian.qmd)
+- [JSON](json.qmd)
+
+## Further reading
+
+- [SciPy: Jensen-Shannon distance](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.jensenshannon.html) — definition and implementation, including the square-root distance.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,20 @@
+---
+title: "B"
+---
+
+# B
+
+- [Backpropagation](backpropagation.qmd)
+- [Bayesian Optimization](bayesian-optimization.qmd)
+- [Batch](batch.qmd)
+- [Batch Normalization](batch-normalization.qmd)
+- [Batch Size](batch-size.qmd)
+- [Beam Search](beam-search.qmd)
+- [Bias](bias.qmd)
+- [Bias-Variance Tradeoff](bias-variance-tradeoff.qmd)
+- [Bidirectional Encoder Representations from Transformers (BERT)](bert.qmd)
+- [Binary Classification](binary-classification.qmd)
+- [Black-box Model](black-box-model.qmd)
+- [Bootstrap Sampling](bootstrap-sampling.qmd)
+- [Bounding Box](bounding-box.qmd)
+- [Broad Learning System](broad-learning-system.qmd)

@@ -1,0 +1,72 @@
+---
+title: "Bounding Box"
+description: "A rectangular region used to locate an object or area in an image."
+term: "Bounding Box"
+letter: "B"
+category: "Computer Vision"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A bounding box is a rectangle drawn around an object or region of interest
+in an image. Object-detection systems use boxes to indicate what they
+found and where it appears.
+
+## Technical explanation
+
+A box can be represented by coordinates such as $(x_{\min}, y_{\min},
+x_{\max}, y_{\max})$ or by center coordinates, width, and height. The
+coordinate convention may be normalized or measured in pixels. Detection
+systems predict boxes along with class scores, and evaluation commonly
+compares predictions with labeled boxes using intersection over union.
+
+## Why it matters in AI engineering
+
+Bounding boxes are a common annotation and output format in object
+detection. Consistent coordinate conventions and annotation quality are
+essential for training, evaluation, and integration with downstream
+systems.
+
+## How it works
+
+An annotation tool or model specifies a rectangle using the chosen
+coordinate format. To compare a prediction and a reference box, intersection
+over union (IoU) is often calculated:
+
+$$
+\operatorname{IoU}(A,B) =
+\frac{\operatorname{area}(A \cap B)}
+{\operatorname{area}(A \cup B)}
+$$
+
+## Practical example
+
+A traffic-camera detector can return a bounding box around each detected
+vehicle along with a class label and score. A downstream tracker can use
+the box coordinates to associate detections across video frames.
+
+## Common misconceptions
+
+- A bounding box marks an approximate rectangle, not the exact object
+  outline.
+- Box coordinates are meaningless without their coordinate convention and
+  image dimensions.
+- High overlap does not by itself establish that the object class is
+  correct.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Binary Classification](binary-classification.qmd)
+
+## Further reading
+
+- [COCO: Common Objects in Context](https://cocodataset.org/#detection-eval) — describes object detection annotations and evaluation.
+- [Ultralytics: Object detection](https://docs.ultralytics.com/tasks/detect/) — practical reference for bounding-box object detection.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

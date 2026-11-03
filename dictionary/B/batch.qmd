@@ -1,0 +1,69 @@
+---
+title: "Batch"
+description: "A group of examples processed together during a model or data-processing operation."
+term: "Batch"
+letter: "B"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A batch is a group of examples handled together. For model training, a batch
+lets the system calculate predictions and learning signals for several
+examples in one operation.
+
+## Technical explanation
+
+In mini-batch training, the training set is divided into batches. The model
+computes a loss over a batch and uses its gradient to update parameters.
+Batching can also refer to grouping requests in an inference service or
+grouping records in a data-processing pipeline.
+
+## Why it matters in AI engineering
+
+Batching can improve hardware utilization and throughput, but it affects
+memory use, latency, and sometimes the statistical properties of training.
+Its meaning should be clear from context: training batches and inference
+request batches serve different operational purposes.
+
+## How it works
+
+The system collects a set of examples, combines or vectorizes their
+operations, and processes them together. For a training batch $B$, a common
+objective is the mean loss:
+
+$$
+L_B = \frac{1}{|B|}\sum_{i \in B} \ell_i
+$$
+
+The optimizer updates model parameters using the gradient of $L_B$.
+
+## Practical example
+
+Instead of sending one image at a time through a classifier during
+training, a data loader can provide a batch of 32 images, provided that
+the model and available device memory support that size.
+
+## Common misconceptions
+
+- A batch is not necessarily the entire dataset.
+- A larger batch does not automatically produce a better model.
+- In inference systems, batching can increase throughput while increasing
+  the wait time for an individual request.
+
+## Related terms
+
+- [Batch Size](batch-size.qmd)
+- [Batch Normalization](batch-normalization.qmd)
+- [Backpropagation](backpropagation.qmd)
+
+## Further reading
+
+- [PyTorch: Data loading and processing](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html) — explains how data loaders provide batches for training.
+- [Deep Learning Book: Optimization for Deep Learning](https://www.deeplearningbook.org/contents/optimization.html) — discusses mini-batch optimization.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

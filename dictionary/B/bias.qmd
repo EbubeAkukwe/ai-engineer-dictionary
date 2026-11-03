@@ -1,0 +1,66 @@
+---
+title: "Bias"
+description: "A systematic offset or tendency in data, a model, or an estimate."
+term: "Bias"
+letter: "B"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+In machine learning, bias can mean a systematic tendency for a model or
+measurement to be wrong in a particular direction. The word also describes
+a learnable offset parameter in many models, so context matters.
+
+## Technical explanation
+
+In a linear model, a bias term is an intercept added to a weighted input,
+such as $y = w^\top x + b$. In statistical learning, bias can describe
+systematic error caused by assumptions or model limitations. In data and
+fairness discussions, bias may refer to sampling, measurement, or social
+patterns that produce unequal or distorted outcomes.
+
+## Why it matters in AI engineering
+
+The different meanings affect model design, error analysis, and fairness
+assessment. Engineers should identify whether they mean a model parameter,
+statistical bias, or bias in data and decisions before proposing a remedy.
+
+## How it works
+
+A learnable intercept shifts a model's output independently of the input
+features. Systematic statistical or data bias arises when the assumptions,
+measurement process, or sample systematically differs from the target
+population or desired outcome.
+
+## Practical example
+
+A linear classifier's bias parameter lets its decision boundary move away
+from the origin. Separately, if a hiring dataset underrepresents a group,
+the data may fail to reflect the population the model is intended to serve.
+
+## Common misconceptions
+
+- The bias parameter in a neural network is not the same concept as social
+  bias.
+- Removing an intercept does not by itself remove systematic data or
+  decision bias.
+- A model can have high accuracy while still performing unevenly across
+  groups or conditions.
+
+## Related terms
+
+- [Bias-Variance Tradeoff](bias-variance-tradeoff.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [NIST: Towards a Standard for Identifying and Managing Bias in Artificial Intelligence](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf) — discusses sources of bias and approaches to managing them.
+- [Deep Learning Book: The Challenge of Generalization](https://www.deeplearningbook.org/contents/generalization.html) — explains statistical learning concepts including bias and variance.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-02
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
