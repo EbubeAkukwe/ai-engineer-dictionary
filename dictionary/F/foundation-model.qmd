@@ -1,0 +1,65 @@
+---
+title: "Foundation Model"
+description: "A broadly pretrained model that can be adapted to many downstream tasks."
+term: "Foundation Model"
+letter: "F"
+category: "Generative AI"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A foundation model is a model trained on broad data that can serve as a
+starting point for many applications. It may be used directly, prompted,
+fine-tuned, or combined with tools and external data.
+
+## Technical explanation
+
+Foundation models are typically large models pretrained with self-
+supervised or other broad objectives on diverse data. Their capabilities
+and limitations depend on training data, architecture, post-training, and
+evaluation. The term describes a role and training approach, not one
+specific model architecture.
+
+## Why it matters in AI engineering
+
+Starting from a foundation model can reduce the need to train from
+scratch and support many tasks. Engineers must still assess task fit,
+licensing, data governance, cost, latency, safety, and whether adaptation
+is needed.
+
+## How it works
+
+A model is pretrained on broad data to learn general representations or
+generation behaviour. Downstream applications use it through prompting,
+additional training, retrieval, or integration with other components.
+Each deployment should be evaluated for its own task and users.
+
+## Practical example
+
+A pretrained vision model can be adapted to identify a specialized set
+of manufacturing defects using a smaller task-specific dataset.
+
+## Common misconceptions
+
+- A foundation model is not automatically general-purpose, reliable, or
+  safe for every task.
+- Pretraining data and model capabilities may be incompletely documented.
+- Using a foundation model does not remove the need for application-level
+  evaluation and safeguards.
+
+## Related terms
+
+- [Fine-tuning](fine-tuning.qmd)
+- [Few-shot Learning](few-shot-learning.qmd)
+- [Artificial Intelligence](../A/artificial-intelligence.qmd)
+
+## Further reading
+
+- [On the Opportunities and Risks of Foundation Models](https://arxiv.org/abs/2108.07258) — surveys foundation models and their societal and technical implications.
+- [Stanford CRFM: Foundation Models](https://crfm.stanford.edu/) — research and resources on foundation models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

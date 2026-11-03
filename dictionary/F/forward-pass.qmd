@@ -1,0 +1,64 @@
+---
+title: "Forward Pass"
+description: "The computation that carries input data through a model to produce predictions or outputs."
+term: "Forward Pass"
+letter: "F"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A forward pass is the process of sending input through a model to
+calculate its output. During training, the output is often compared with
+a target to calculate a loss.
+
+## Technical explanation
+
+For a feedforward model composed of functions
+$f_1,\ldots,f_L$, the forward pass computes
+$h_L=f_L(f_{L-1}(\ldots f_1(x)))$. It evaluates operations using current
+parameters and may retain intermediate values needed for gradient
+calculation during training.
+
+## Why it matters in AI engineering
+
+The forward pass is used both in training and inference. Understanding
+it helps distinguish prediction computation from backpropagation,
+which calculates derivatives for parameter updates.
+
+## How it works
+
+The input is transformed layer by layer according to model operations
+and parameters. The final result may be a class score, probability,
+generated token distribution, or another task output. In training, a
+loss can then be computed from that result and a target.
+
+## Practical example
+
+A penguin-or-ostrich classifier performs a forward pass on an image and
+returns scores for the two classes. Training then compares those scores
+with the known label.
+
+## Common misconceptions
+
+- A forward pass does not itself update model parameters.
+- Backpropagation uses the computation graph in the reverse direction
+  to calculate gradients; it is a separate step.
+- Inference may use a forward pass without computing gradients or loss.
+
+## Related terms
+
+- [Feedforward Neural Network](feedforward-neural-network.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Dense Layer](../D/dense-layer.qmd)
+
+## Further reading
+
+- [PyTorch: Autograd mechanics](https://pytorch.org/docs/stable/notes/autograd.html) — explains graph construction during forward computation and gradient calculation.
+- [fast.ai: Learner](https://docs.fast.ai/learner.html) — documents model training and inference workflows.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

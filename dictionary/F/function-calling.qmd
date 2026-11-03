@@ -1,0 +1,68 @@
+---
+title: "Function Calling"
+description: "A mechanism for a model to request that an application execute a declared function with structured arguments."
+term: "Function Calling"
+letter: "F"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Function calling lets a language model indicate that an application
+should run a particular function, such as looking up a record or
+calculating a value. The application executes the function and can
+return its result to the model.
+
+## Technical explanation
+
+An application declares available functions and input schemas. The model
+generates a structured call request, but the application remains
+responsible for validating arguments, authorizing the operation,
+executing it, and handling errors. Tool or function-calling formats vary
+between model providers.
+
+## Why it matters in AI engineering
+
+Function calling connects model outputs to existing software and data
+systems. It can make workflows more capable, but introduces risks from
+invalid arguments, excessive permissions, side effects, and untrusted
+input.
+
+## How it works
+
+The application sends the model a user request and function
+specifications. The model may return a structured call. Application code
+validates and executes that call, then optionally sends the result back
+to the model to produce a final response.
+
+## Practical example
+
+A travel assistant can request an availability lookup using a declared
+search function. The application validates dates and destination,
+executes a read-only query, and returns matching options for the model
+to summarize.
+
+## Common misconceptions
+
+- The model proposes a function call; application code decides whether
+  and how to execute it.
+- A JSON schema does not replace authorization or server-side validation.
+- Function calling is not the same as the model directly executing
+  arbitrary code.
+
+## Related terms
+
+- [External Tool](../E/external-tool.qmd)
+- [Agent](../A/agent.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [OpenAI: Function calling](https://platform.openai.com/docs/guides/function-calling) — explains structured function calls in model-powered applications.
+- [Anthropic: Tool use](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview) — describes tool-use requests and application execution.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

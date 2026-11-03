@@ -111,7 +111,20 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## F {#f}
 
-Terms beginning with F will appear here as the dictionary grows.
+- [F1 Score](/dictionary/F/f1-score.qmd)
+- [Feature](/dictionary/F/feature.qmd)
+- [Feature Engineering](/dictionary/F/feature-engineering.qmd)
+- [Feature Extraction](/dictionary/F/feature-extraction.qmd)
+- [Feature Store](/dictionary/F/feature-store.qmd)
+- [Few-shot Learning](/dictionary/F/few-shot-learning.qmd)
+- [Federated Learning](/dictionary/F/federated-learning.qmd)
+- [Feedforward Neural Network](/dictionary/F/feedforward-neural-network.qmd)
+- [Fine-tuning](/dictionary/F/fine-tuning.qmd)
+- [Foundation Model](/dictionary/F/foundation-model.qmd)
+- [Forward Pass](/dictionary/F/forward-pass.qmd)
+- [Function Calling](/dictionary/F/function-calling.qmd)
+- [False Positive](/dictionary/F/false-positive.qmd)
+- [False Negative](/dictionary/F/false-negative.qmd)
 
 ## G {#g}
 

@@ -1,0 +1,62 @@
+---
+title: "False Negative"
+description: "A positive example incorrectly predicted as negative by a classifier."
+term: "False Negative"
+letter: "F"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A false negative occurs when a model fails to detect a condition that is
+actually present. For example, a screening model may classify a
+condition-positive case as negative.
+
+## Technical explanation
+
+In binary classification, a false negative (FN) is an instance with a
+positive actual label and a negative predicted label. The false-negative
+rate is $FN/(FN+TP)$, while recall is $TP/(TP+FN)$. These metrics
+depend on the class definition, labels, and decision threshold.
+
+## Why it matters in AI engineering
+
+False negatives can allow fraud, defects, or safety issues to go
+undetected. Their consequences may differ substantially from false
+positives, so threshold selection should reflect the use case and its
+error costs.
+
+## How it works
+
+The model produces a score and a decision rule assigns a positive label
+only when that score meets a threshold. A positive example below the
+threshold becomes a false negative. Lowering the threshold may reduce
+false negatives while increasing false positives.
+
+## Practical example
+
+For a penguin-versus-ostrich classifier where ostrich is the positive
+class, an ostrich image predicted as penguin is a false negative.
+
+## Common misconceptions
+
+- A false negative is not the same as a false-positive error.
+- Reducing false negatives may increase false positives.
+- The term depends on which class is designated positive.
+
+## Related terms
+
+- [False Positive](false-positive.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+- [F1 Score](f1-score.qmd)
+
+## Further reading
+
+- [Google for Developers: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — explains false negatives, recall, and related measures.
+- [Scikit-learn: Confusion matrix](https://scikit-learn.org/stable/modules/model_evaluation.html#confusion-matrix) — documents classification outcome counts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

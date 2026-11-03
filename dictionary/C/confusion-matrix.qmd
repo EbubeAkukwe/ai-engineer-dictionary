@@ -83,9 +83,9 @@ includes a prompt to inspect these errors.
 - [Classification](classification.qmd)
 - [Binary Classification](../B/binary-classification.qmd)
 - [AI Evaluation](../A/ai-evaluation.qmd)
+- [False Positive](../F/false-positive.qmd) — an actual negative example predicted as positive.
+- [False Negative](../F/false-negative.qmd) — an actual positive example predicted as negative.
 - **True Positive (TP)** — an actual positive example predicted as positive.
-- **False Positive (FP)** — an actual negative example predicted as positive.
-- **False Negative (FN)** — an actual positive example predicted as negative.
 - **True Negative (TN)** — an actual negative example predicted as negative.
 
 ## Further reading

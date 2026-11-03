@@ -1,0 +1,64 @@
+---
+title: "Feature Extraction"
+description: "The transformation of raw inputs into a set of informative representations or measurements."
+term: "Feature Extraction"
+letter: "F"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Feature extraction converts raw inputs into a smaller or more useful set
+of measurements that a model can process. The features may be designed
+by people or learned by another model.
+
+## Technical explanation
+
+An extraction function maps input data $x$ to features $z=f(x)$. Classical
+methods may compute explicit descriptors, while deep-learning encoders
+learn representations from examples. Extractors can be fixed or trained
+jointly with a downstream model.
+
+## Why it matters in AI engineering
+
+Raw data may be high-dimensional, noisy, or difficult for a downstream
+model to use directly. Feature extraction can improve efficiency and
+expose task-relevant structure, but may discard information needed for
+other tasks.
+
+## How it works
+
+A transformation analyzes an input and produces measurements or
+representations. These outputs are passed to a classifier, retrieval
+system, or other downstream component. If the extractor is learned, its
+training data and version must be tracked.
+
+## Practical example
+
+A pretrained image encoder can turn each photo into a vector. A smaller
+classifier can use these vectors to distinguish categories without
+training the entire image model from scratch.
+
+## Common misconceptions
+
+- Feature extraction and feature selection are different: extraction
+  transforms data, while selection chooses among existing features.
+- Extracted features are not automatically interpretable or useful.
+- Fitting an extractor using evaluation data can leak information.
+
+## Related terms
+
+- [Feature](feature.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Dimensionality Reduction](../D/dimensionality-reduction.qmd)
+
+## Further reading
+
+- [Scikit-learn: Feature extraction](https://scikit-learn.org/stable/modules/feature_extraction.html) — documents extracting features from text and images.
+- [Deep Learning Book: Representation Learning](https://www.deeplearningbook.org/) — discusses learned representations in deep learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

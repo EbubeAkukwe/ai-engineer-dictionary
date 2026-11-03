@@ -132,7 +132,24 @@ website:
             - dictionary/E/explainable-ai-xai.qmd
             - dictionary/E/expectation-maximization.qmd
             - dictionary/E/external-tool.qmd
-        - section: "F–I"
+        - section: "F"
+          contents:
+            - dictionary/F/index.qmd
+            - dictionary/F/f1-score.qmd
+            - dictionary/F/feature.qmd
+            - dictionary/F/feature-engineering.qmd
+            - dictionary/F/feature-extraction.qmd
+            - dictionary/F/feature-store.qmd
+            - dictionary/F/few-shot-learning.qmd
+            - dictionary/F/federated-learning.qmd
+            - dictionary/F/feedforward-neural-network.qmd
+            - dictionary/F/fine-tuning.qmd
+            - dictionary/F/foundation-model.qmd
+            - dictionary/F/forward-pass.qmd
+            - dictionary/F/function-calling.qmd
+            - dictionary/F/false-positive.qmd
+            - dictionary/F/false-negative.qmd
+        - section: "G–I"
           contents:
             - dictionary/letters.qmd
         - section: "J"

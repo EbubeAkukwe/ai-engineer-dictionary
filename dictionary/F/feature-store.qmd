@@ -1,0 +1,65 @@
+---
+title: "Feature Store"
+description: "A system for managing, serving, and sharing features for machine-learning workflows."
+term: "Feature Store"
+letter: "F"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A feature store helps teams define, manage, and serve model features
+consistently. It can provide shared feature definitions for training and
+for predictions in production.
+
+## Technical explanation
+
+Feature stores commonly support offline storage for historical training
+data and online storage for low-latency serving. They may manage feature
+transformations, metadata, lineage, freshness, and point-in-time retrieval.
+Capabilities and architectures vary between products.
+
+## Why it matters in AI engineering
+
+Feature stores can reduce duplicated feature logic and help avoid
+training-serving skew. They introduce infrastructure and governance
+requirements, so they are most useful when shared features and operational
+needs justify the added system.
+
+## How it works
+
+Feature definitions are registered and computed from source data. The
+system stores historical values for training and may publish recent
+values to an online store for inference. Point-in-time joins help ensure
+training examples use only values available at the prediction time.
+
+## Practical example
+
+A fraud model can use a customer's transaction count over the previous
+24 hours. An offline store provides historical values for training,
+while an online store serves the current count to production predictions.
+
+## Common misconceptions
+
+- A feature store does not guarantee that feature definitions are
+  correct or free from leakage.
+- It is not necessarily required for a small project or a single model.
+- Offline and online feature values can differ unless transformations
+  and freshness are managed carefully.
+
+## Related terms
+
+- [Feature Engineering](feature-engineering.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Data Validation](../D/data-validation.qmd)
+
+## Further reading
+
+- [Feast documentation](https://docs.feast.dev/) — describes an open-source feature store and its online and offline stores.
+- [Google Cloud: Feature Store](https://cloud.google.com/vertex-ai/docs/featurestore/latest/overview) — overview of managed feature-store concepts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

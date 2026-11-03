@@ -1,0 +1,63 @@
+---
+title: "False Positive"
+description: "A negative example incorrectly predicted as positive by a classifier."
+term: "False Positive"
+letter: "F"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A false positive occurs when a model predicts that a condition is present
+even though it is actually absent. For example, an email filter may label
+a legitimate message as spam.
+
+## Technical explanation
+
+In binary classification, a false positive (FP) is an instance with a
+negative actual label and a positive predicted label. The false-positive
+rate is $FP/(FP+TN)$, while precision is $TP/(TP+FP)$. These metrics
+answer different questions and depend on the chosen decision threshold.
+
+## Why it matters in AI engineering
+
+False positives can create unnecessary reviews, block legitimate users,
+or cause harmful interventions. Their acceptable rate depends on the
+application and must be considered alongside false negatives.
+
+## How it works
+
+The model produces a score and a decision rule assigns the positive
+label when the score meets a threshold. A negative example above that
+threshold becomes a false positive. Changing the threshold can alter
+the balance between false positives and false negatives.
+
+## Practical example
+
+For a penguin-versus-ostrich classifier where ostrich is the positive
+class, a penguin image predicted as ostrich is a false positive.
+
+## Common misconceptions
+
+- A false positive is not the same as a false-negative error.
+- A lower false-positive rate may come at the cost of more false
+  negatives.
+- The term only has meaning relative to a defined positive class and
+  reference label.
+
+## Related terms
+
+- [False Negative](false-negative.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+- [F1 Score](f1-score.qmd)
+
+## Further reading
+
+- [Google for Developers: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — explains false positives, false negatives, precision, and recall.
+- [Scikit-learn: Confusion matrix](https://scikit-learn.org/stable/modules/model_evaluation.html#confusion-matrix) — documents classification outcome counts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

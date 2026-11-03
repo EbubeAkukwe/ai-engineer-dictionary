@@ -1,0 +1,64 @@
+---
+title: "Feature Engineering"
+description: "The design and transformation of input variables to make them more useful for a model."
+term: "Feature Engineering"
+letter: "F"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Feature engineering is the process of turning raw data into inputs that
+help a model solve a task. It may involve combining, transforming, or
+selecting variables.
+
+## Technical explanation
+
+Feature engineering includes domain-informed transformations such as
+normalization, date decomposition, categorical encoding, interaction
+terms, and aggregation. Transformations should be fitted without leaking
+held-out information and applied consistently in training and serving.
+
+## Why it matters in AI engineering
+
+Good features can expose useful structure to a model, reduce noise, and
+improve performance. Feature pipelines also create maintenance and
+consistency obligations when data distributions or product logic change.
+
+## How it works
+
+Understand the task and available data, create candidate transformations,
+evaluate them with a leakage-safe validation strategy, and package useful
+transformations into a reproducible pipeline. Monitor feature availability
+and distributions after deployment.
+
+## Practical example
+
+A transaction timestamp can be transformed into hour of day and day of
+week. These features may help a fraud model capture temporal patterns,
+provided the information is available at prediction time.
+
+## Common misconceptions
+
+- Feature engineering is not always manual; models can learn
+  representations from raw data.
+- A feature that correlates with the target may be a leakage signal rather
+  than a valid predictor.
+- Adding many engineered features can increase complexity and overfitting.
+
+## Related terms
+
+- [Feature](feature.qmd)
+- [Feature Extraction](feature-extraction.qmd)
+- [Data Preprocessing](../D/data-preprocessing.qmd)
+
+## Further reading
+
+- [Google for Developers: Feature crosses](https://developers.google.com/machine-learning/crash-course/feature-crosses) — introduces feature combinations for representing interactions.
+- [Scikit-learn: Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html) — documents common feature transformations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

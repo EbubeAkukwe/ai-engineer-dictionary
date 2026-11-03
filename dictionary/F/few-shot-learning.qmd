@@ -1,0 +1,68 @@
+---
+title: "Few-shot Learning"
+description: "A learning setting where a model must generalize to a task or class from only a small number of examples."
+term: "Few-shot Learning"
+letter: "F"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Few-shot learning aims to make useful predictions for a new task or class
+after seeing only a few labeled examples. It is especially relevant when
+collecting labels is expensive.
+
+## Technical explanation
+
+Few-shot methods use prior training across tasks, pretrained
+representations, metric learning, meta-learning, or in-context examples
+to adapt from limited supervision. The term covers multiple problem
+setups, and evaluation must separate classes or tasks appropriately to
+measure genuine transfer.
+
+## Why it matters in AI engineering
+
+Many domains have scarce labels for rare or emerging categories. Few-shot
+approaches can reduce annotation needs, but performance may vary sharply
+with example selection, domain shift, and the similarity between training
+and target tasks.
+
+## How it works
+
+The system first acquires transferable knowledge from data or pretraining.
+For a new task, it uses a small support set to adapt parameters, compare
+examples in a learned space, or condition predictions on examples
+provided at inference time.
+
+## Practical example
+
+A pretrained image model may be given a few labeled examples of a newly
+observed product defect and use their feature similarities to classify
+additional images. Results should be checked on separate examples from
+the target setting.
+
+## Common misconceptions
+
+- Few-shot learning is not zero-shot learning; it uses a small number of
+  examples.
+- A few examples do not guarantee reliable coverage of a class's
+  variation.
+- Prompting a language model with examples is one few-shot technique,
+  not the only meaning of the term.
+
+## Related terms
+
+- [Fine-tuning](fine-tuning.qmd)
+- [Foundation Model](foundation-model.qmd)
+- [Active Learning](../A/active-learning.qmd)
+
+## Further reading
+
+- [Matching Networks for One Shot Learning](https://arxiv.org/abs/1606.04080) — presents a metric-based approach for learning from very few examples.
+- [Learning to Learn by Gradient Descent by Gradient Descent](https://arxiv.org/abs/1606.04474) — explores meta-learning for rapid adaptation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

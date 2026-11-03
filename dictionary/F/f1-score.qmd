@@ -1,0 +1,73 @@
+---
+title: "F1 Score"
+description: "The harmonic mean of precision and recall for a classification model."
+term: "F1 Score"
+letter: "F"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+The F1 score combines precision and recall into one number. It is useful
+when both false positives and false negatives matter, especially when
+classes are imbalanced.
+
+## Technical explanation
+
+For positive-class precision $P$ and recall $R$, the F1 score is
+$F_1 = 2\frac{PR}{P+R}$. Equivalently, using true positives (TP), false
+positives (FP), and false negatives (FN):
+
+$$
+F_1 = \frac{2TP}{2TP+FP+FN}
+$$
+
+The score ranges from 0 to 1 when defined. Macro, micro, and weighted
+averaging produce different summaries for multiclass settings.
+
+## Why it matters in AI engineering
+
+Accuracy can obscure poor positive-class detection when classes are
+imbalanced. F1 provides a single summary that penalizes low precision or
+low recall, but it does not encode every application's error costs.
+
+## How it works
+
+Compute precision as $TP/(TP+FP)$ and recall as $TP/(TP+FN)$, then take
+their harmonic mean. The harmonic mean is pulled down when either
+component is low. The decision threshold affects TP, FP, and FN, and
+therefore affects F1.
+
+## Practical example
+
+A classifier that flags potentially harmful content can be evaluated
+with F1 when both missed harmful cases and incorrectly flagged benign
+cases matter. The team should also inspect precision and recall
+separately before choosing a threshold.
+
+## Common misconceptions
+
+- A high F1 score does not guarantee good performance for every subgroup
+  or deployment setting.
+- F1 ignores true negatives, so it may be unsuitable when that count is
+  important.
+- Two systems with the same F1 can have very different precision and
+  recall.
+
+## Related terms
+
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+- [Classification](../C/classification.qmd)
+- [False Positive](false-positive.qmd)
+- [False Negative](false-negative.qmd)
+
+## Further reading
+
+- [Scikit-learn: F1 score](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score) — documents F1 and averaging options.
+- [Google for Developers: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — explains precision, recall, and related classification measures.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

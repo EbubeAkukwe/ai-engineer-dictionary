@@ -1,0 +1,62 @@
+---
+title: "Feature"
+description: "An input variable or measurable property used by a model to make predictions."
+term: "Feature"
+letter: "F"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A feature is a piece of information supplied to a model about an example.
+For a house-price model, features might include floor area, location, and
+number of bedrooms.
+
+## Technical explanation
+
+Features are represented as input variables, often organized into a
+vector or tensor $x$. Features may be raw observations, transformed
+values, learned representations, or metadata. Their definition and
+availability must be consistent across training and inference.
+
+## Why it matters in AI engineering
+
+Feature quality, correctness, and availability strongly affect model
+behaviour. Feature definitions also influence data pipelines,
+interpretability, privacy, and the risk of leakage.
+
+## How it works
+
+An application collects or derives feature values, validates them, and
+passes them to a model in the expected representation. A model uses
+learned parameters to combine features into predictions.
+
+## Practical example
+
+For image classification, the pixels or a transformed tensor of pixel
+values are model inputs. In a tabular model, age or transaction amount
+may be individual features.
+
+## Common misconceptions
+
+- A feature is not necessarily a human-interpretable concept.
+- More features do not automatically improve a model.
+- Features derived using information unavailable at prediction time can
+  cause data leakage.
+
+## Related terms
+
+- [Feature Engineering](feature-engineering.qmd)
+- [Feature Extraction](feature-extraction.qmd)
+- [Data Preprocessing](../D/data-preprocessing.qmd)
+
+## Further reading
+
+- [Google for Developers: Working with numerical data](https://developers.google.com/machine-learning/crash-course/numerical-data) — explains numerical features and their preparation.
+- [Scikit-learn: Feature selection](https://scikit-learn.org/stable/modules/feature_selection.html) — describes approaches to selecting useful features.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Federated Learning"
+description: "A training approach where participants collaboratively learn a model while keeping raw data local."
+term: "Federated Learning"
+letter: "F"
+category: "Machine Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Federated learning trains a shared model using data held by multiple
+participants without requiring them to send all raw records to one
+central location.
+
+## Technical explanation
+
+In a common cross-device setup, a server distributes model parameters,
+clients train locally, and the server aggregates updates. Variants
+include cross-silo training among organizations. Federated learning
+reduces central collection of raw data but does not by itself provide
+formal privacy guarantees.
+
+## Why it matters in AI engineering
+
+Federated approaches can support learning across devices or institutions
+with data-locality constraints. They face challenges including
+non-identical data distributions, unreliable clients, communication cost,
+poisoning risks, and privacy leakage through updates.
+
+## How it works
+
+The coordinator selects participants and sends a model. Each participant
+computes local updates on its own data and returns an update or related
+summary. The coordinator aggregates updates and repeats the process.
+Secure aggregation and differential privacy may add protections.
+
+## Practical example
+
+Several hospitals can collaboratively train a model by computing updates
+locally and sharing protected model updates rather than pooling patient
+records in one central dataset.
+
+## Common misconceptions
+
+- Keeping raw data local does not guarantee that model updates reveal
+  nothing about that data.
+- Federated learning is not the same as decentralized inference.
+- Privacy, fairness, and security require additional design and analysis.
+
+## Related terms
+
+- [Distributed Training](../D/distributed-training.qmd)
+- [Data Validation](../D/data-validation.qmd)
+- [AI Alignment](../A/ai-alignment.qmd)
+
+## Further reading
+
+- [Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629) — introduces the FedAvg approach.
+- [TensorFlow Federated](https://www.tensorflow.org/federated) — framework and learning resources for federated computation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

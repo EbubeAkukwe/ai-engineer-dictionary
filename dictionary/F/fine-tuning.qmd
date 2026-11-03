@@ -1,0 +1,65 @@
+---
+title: "Fine-tuning"
+description: "Further training a pretrained model on data or objectives for a target task or domain."
+term: "Fine-tuning"
+letter: "F"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Fine-tuning takes a model that has already been trained and continues
+training it on examples related to a particular task or domain.
+
+## Technical explanation
+
+Fine-tuning initializes from pretrained parameters and optimizes some or
+all of them using task-specific data and an objective. Methods include
+full fine-tuning and parameter-efficient approaches such as adapters or
+low-rank updates. Data quality, learning rate, and training duration
+affect retention and adaptation.
+
+## Why it matters in AI engineering
+
+Fine-tuning can adapt a model's style, task behaviour, or domain
+performance. It requires suitable data, careful evaluation, and ongoing
+model-version management; it is not always the best solution for
+knowledge that changes frequently.
+
+## How it works
+
+Prepare training and evaluation datasets, initialize the model from a
+pretrained checkpoint, and continue optimization under an appropriate
+objective. Evaluate the fine-tuned model on target tasks and regression
+tests to identify improvements and capability losses.
+
+## Practical example
+
+A pretrained text classifier can be fine-tuned on labeled support
+messages to route them into a team's categories, then evaluated on
+held-out conversations from the intended deployment setting.
+
+## Common misconceptions
+
+- Fine-tuning is not the same as prompting or retrieval-augmented
+  generation.
+- More fine-tuning data or epochs do not automatically improve results.
+- Fine-tuning can cause regressions or overfit if evaluation is
+  inadequate.
+
+## Related terms
+
+- [Adapter](../A/adapter.qmd)
+- [Foundation Model](foundation-model.qmd)
+- [Few-shot Learning](few-shot-learning.qmd)
+
+## Further reading
+
+- [Hugging Face: Fine-tuning](https://huggingface.co/docs/transformers/training) — practical guidance for fine-tuning Transformer models.
+- [OpenAI: Model optimization](https://platform.openai.com/docs/guides/model-optimization) — discusses approaches for adapting model behaviour.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

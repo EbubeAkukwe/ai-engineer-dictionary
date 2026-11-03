@@ -1,0 +1,65 @@
+---
+title: "Feedforward Neural Network"
+description: "A neural network in which information flows from inputs toward outputs without cyclic connections."
+term: "Feedforward Neural Network"
+letter: "F"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A feedforward neural network passes information from its input layers
+through hidden layers to an output. It does not send activations back
+around a cycle as part of its forward computation.
+
+## Technical explanation
+
+A feedforward network composes functions such as affine transformations
+and nonlinear activations:
+$h^{(l)}=f^{(l)}(W^{(l)}h^{(l-1)}+b^{(l)})$. A multilayer perceptron is
+a common fully connected feedforward architecture. Training can still
+use backpropagation, which propagates gradients backward through the
+computation graph.
+
+## Why it matters in AI engineering
+
+Feedforward networks are a foundational architecture and a useful
+baseline for structured prediction. The distinction between forward
+computation and backward gradient calculation helps explain how neural
+networks are trained.
+
+## How it works
+
+Each layer receives the previous layer's output, applies learned
+parameters and possibly a nonlinearity, and passes its result onward.
+The final layer produces predictions for a task.
+
+## Practical example
+
+A dense feedforward network can classify tabular records by transforming
+feature values through hidden layers and producing one score per class.
+
+## Common misconceptions
+
+- “Feedforward” describes the direction of inference, not how training
+  gradients are computed.
+- A network can be feedforward without every layer being fully connected.
+- Feedforward networks are not limited to classification; they can also
+  perform regression and other tasks.
+
+## Related terms
+
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Dense Layer](../D/dense-layer.qmd)
+- [Forward Pass](forward-pass.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Multilayer Perceptrons](https://www.deeplearningbook.org/contents/mlp.html) — explains feedforward networks and their mathematical structure.
+- [PyTorch: Neural network tutorial](https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html) — builds a basic feedforward model.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
