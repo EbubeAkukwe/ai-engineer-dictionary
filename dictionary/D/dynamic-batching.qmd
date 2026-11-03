@@ -1,0 +1,64 @@
+---
+title: "Dynamic Batching"
+description: "The grouping of incoming requests into batches at runtime to improve processing efficiency."
+term: "Dynamic Batching"
+letter: "D"
+category: "Inference Systems"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Dynamic batching groups requests that arrive around the same time and
+processes them together. It can improve hardware utilization for model
+inference without requiring clients to submit a batch themselves.
+
+## Technical explanation
+
+An inference server collects compatible requests until a maximum batch
+size, timeout, or scheduling condition is reached. The resulting batch
+is sent through the model, and outputs are separated and returned to the
+corresponding requests. Batching policy must balance throughput, queueing
+latency, memory, and request compatibility.
+
+## Why it matters in AI engineering
+
+Many accelerators process larger batches more efficiently, so dynamic
+batching can increase throughput and lower per-request compute cost.
+However, waiting to form batches can increase response latency and may
+be inappropriate for strict real-time workloads.
+
+## How it works
+
+The serving layer queues requests, groups those with compatible inputs,
+executes a model call for the group, and maps each result back to its
+request. Configuration may limit batch size and the time a request waits.
+
+## Practical example
+
+A text-embedding service can briefly queue several independent requests,
+encode them in one model call, and return each embedding to its caller.
+
+## Common misconceptions
+
+- Dynamic batching does not combine unrelated requests into one semantic
+  prompt; it batches computation while keeping request outputs separate.
+- Larger batches do not always improve end-to-end latency.
+- Batches may be constrained by input shapes, model features, or response
+  requirements.
+
+## Related terms
+
+- [Batch](../B/batch.qmd)
+- [Batch Size](../B/batch-size.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [NVIDIA Triton: Model configuration](https://github.com/triton-inference-server/server/blob/main/docs/user_guide/model_configuration.md) — documents dynamic batching configuration and trade-offs.
+- [Ray Serve: Dynamic request batching](https://docs.ray.io/en/latest/serve/advanced-guides/dyn-req-batch.html) — describes batching requests in model-serving applications.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

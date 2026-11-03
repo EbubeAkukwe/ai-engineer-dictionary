@@ -1,0 +1,65 @@
+---
+title: "Data Augmentation"
+description: "The creation of transformed training examples to improve a model's robustness or generalization."
+term: "Data Augmentation"
+letter: "D"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Data augmentation creates modified versions of training examples, such as
+cropped or flipped images, so a model encounters more variation during
+training.
+
+## Technical explanation
+
+Augmentations are transformations applied to inputs, labels, or both.
+They should preserve the target label and reflect plausible variations in
+the intended data. Techniques include image transforms, audio perturbations,
+text paraphrases, and synthetic samples. Augmentation policies are
+task- and domain-dependent.
+
+## Why it matters in AI engineering
+
+Augmentation can help reduce overfitting and improve robustness when
+training data is limited. An unrealistic transformation can instead teach
+the model incorrect invariances or alter label meaning.
+
+## How it works
+
+During training, a pipeline samples transformations and applies them to
+examples, sometimes generating a different view each epoch. Evaluation
+data should generally remain unaugmented except for consistent
+preprocessing required by the model.
+
+## Practical example
+
+For animal-image classification, small random crops and moderate lighting
+changes may help a model handle varied photos. A vertical flip might be
+inappropriate if it creates unrealistic images.
+
+## Common misconceptions
+
+- Augmentation does not create new independent information equivalent to
+  collecting more diverse data.
+- Every transformation is not label-preserving for every task.
+- Augmenting validation or test data in ways unavailable at deployment can
+  distort evaluation.
+
+## Related terms
+
+- [Computer Vision](../C/computer-vision.qmd)
+- [Classification](../C/classification.qmd)
+- [Data Preprocessing](data-preprocessing.qmd)
+
+## Further reading
+
+- [fast.ai: Data augmentation](https://docs.fast.ai/vision.augment.html) — documents image augmentation tools and approaches.
+- [Google for Developers: Data augmentation](https://developers.google.com/machine-learning/data-prep/construct/transform/augment) — discusses augmentation as a data preparation technique.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

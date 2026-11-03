@@ -1,0 +1,65 @@
+---
+title: "Data Preprocessing"
+description: "The preparation and transformation of raw data into a form suitable for analysis or modeling."
+term: "Data Preprocessing"
+letter: "D"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Data preprocessing prepares raw data for a model or analysis. It can
+include fixing formats, handling missing values, encoding categories, and
+scaling numeric values.
+
+## Technical explanation
+
+Preprocessing transforms features into representations expected by a
+learning algorithm. Common operations include parsing, filtering,
+normalization, tokenization, imputation, and feature construction. Fitted
+transformations should be learned on training data and then applied
+consistently to validation, test, and production data.
+
+## Why it matters in AI engineering
+
+Preprocessing errors can create data leakage, inconsistent training and
+serving behaviour, or inputs that models cannot use. Reproducible
+preprocessing is therefore part of the model system, not a one-off
+preparation step.
+
+## How it works
+
+Inspect the data and target task, select appropriate transformations, fit
+any data-dependent parameters using training data, and apply the resulting
+pipeline to other splits and incoming examples. Validate the transformed
+outputs and retain the transformation configuration.
+
+## Practical example
+
+A tabular model may impute missing numeric values and standardize features.
+The imputation values and scaling parameters are calculated from the
+training split, then reused for validation and production records.
+
+## Common misconceptions
+
+- Preprocessing is not always beneficial; unnecessary transformations can
+  discard useful information.
+- Preprocessing parameters must not be fit using held-out evaluation data.
+- The same transformations must be applied at training and inference time.
+
+## Related terms
+
+- [Data Leakage](data-leakage.qmd)
+- [Data Validation](data-validation.qmd)
+- [Data Augmentation](data-augmentation.qmd)
+
+## Further reading
+
+- [Scikit-learn: Preprocessing data](https://scikit-learn.org/stable/modules/preprocessing.html) — documents common preprocessing methods.
+- [Scikit-learn: Common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) — explains how preprocessing can cause leakage and inconsistent evaluation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

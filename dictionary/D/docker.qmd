@@ -1,0 +1,65 @@
+---
+title: "Docker"
+description: "A platform for packaging and running applications in isolated containers."
+term: "Docker"
+letter: "D"
+category: "MLOps"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Docker packages an application and many of its dependencies into a
+container image. The image can then be run in a more consistent
+environment across development, testing, and deployment.
+
+## Technical explanation
+
+Docker uses images as layered, read-only templates and containers as
+running instances. Containers share the host operating-system kernel but
+isolate processes and resources. They are distinct from virtual machines,
+which typically virtualize a complete operating system.
+
+## Why it matters in AI engineering
+
+Containers can make model-serving environments reproducible and simplify
+deployment. Large models and GPU workloads also require attention to
+image size, drivers, hardware access, data mounts, security, and runtime
+configuration.
+
+## How it works
+
+A Dockerfile describes how to build an image from a base image, files,
+dependencies, and startup configuration. A container runs from that image
+with configured resources, environment variables, networking, and
+volumes.
+
+## Practical example
+
+A team can package an inference API with its application dependencies in
+a Docker image, then run that image in a staging environment before
+deploying it to a container platform.
+
+## Common misconceptions
+
+- A container is not a full virtual machine.
+- An image does not automatically include model weights or data unless
+  explicitly packaged or mounted.
+- Containers improve consistency but do not by themselves guarantee
+  secure or reproducible builds.
+
+## Related terms
+
+- [Continuous Integration](../C/continuous-integration.qmd)
+- [Data Pipeline](data-pipeline.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [Docker: What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/) — introduces container and image concepts.
+- [Docker: Dockerfile reference](https://docs.docker.com/reference/dockerfile/) — documents instructions for building images.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

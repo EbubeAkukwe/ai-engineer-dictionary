@@ -1,0 +1,88 @@
+---
+title: "Decoupling"
+description: "An architectural practice of separating components so they can change and operate more independently."
+term: "Decoupling"
+letter: "D"
+category: "AI Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Decoupling means separating responsibilities that do not need to be
+bundled together. In an AI agent, it can mean keeping the agent's core
+instructions and execution logic separate from the task-specific context
+and knowledge it uses.
+
+The agent should know how to work without carrying every piece of
+information it might ever need inside its prompt.
+
+## Technical explanation
+
+An agent architecture can separate reasoning and tool execution from a
+context layer that selects information for the current task. Context may
+include user preferences, reference documents, task state, prior results,
+and external knowledge. The context layer retrieves and formats relevant
+information while the agent's core behaviour remains reusable.
+
+This is a broader architectural principle, not a specific retrieval
+algorithm. Retrieval-augmented generation (RAG) is one possible technique
+for supplying external context, but decoupling does not require RAG.
+
+## Why it matters in AI engineering
+
+Separating agent logic from context can make systems easier to reuse,
+maintain, and scale. Knowledge or preferences can change without rewriting
+the agent's core instructions; context can be retrieved selectively to
+control prompt size; and storage components can evolve independently.
+These benefits require clear ownership, permissions, and versioning for
+the external context.
+
+## How it works
+
+An agent receives a task and identifies what information is needed. A
+context layer retrieves relevant data from suitable sources, such as a
+database, document index, or task-state store. The agent uses that
+context to plan and act, while durable results are stored externally as
+appropriate.
+
+For example, an agent's reasoning and tool-execution logic can remain
+stable while a context service supplies the current project's style
+preferences, reference material, and production state for each request.
+
+## Practical example
+
+A video-production agent can keep its core instructions and available
+tools separate from each channel's preferences, reference transcripts,
+current script, and prior production decisions. For a new task, the
+application retrieves only the relevant channel and project information
+instead of embedding all channel knowledge in one ever-growing system
+prompt.
+
+## Common misconceptions
+
+- Decoupling context from an agent is not synonymous with RAG; databases,
+  configuration services, object storage, and other systems can provide
+  context.
+- Externalizing context does not automatically make it correct, secure,
+  or current.
+- An agent still needs instructions about how to use context and what to
+  do when relevant information is missing or conflicting.
+
+## Related terms
+
+- [Context Engineering](../C/context-engineering.qmd)
+- [Agent](../A/agent.qmd)
+- [Agentic Workflow](../A/agentic-workflow.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — discusses selecting and managing context for agent systems.
+- [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) — describes composable agent and workflow architectures.
+- [OpenAI: A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — covers agent components, tools, orchestration, and operational considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

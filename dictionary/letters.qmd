@@ -70,7 +70,27 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## D {#d}
 
-Terms beginning with D will appear here as the dictionary grows.
+- [Data Augmentation](/dictionary/D/data-augmentation.qmd)
+- [Data Drift](/dictionary/D/data-drift.qmd)
+- [Data Engineering](/dictionary/D/data-engineering.qmd)
+- [Data Leakage](/dictionary/D/data-leakage.qmd)
+- [Data Pipeline](/dictionary/D/data-pipeline.qmd)
+- [Data Preprocessing](/dictionary/D/data-preprocessing.qmd)
+- [Data Validation](/dictionary/D/data-validation.qmd)
+- [Decision Boundary](/dictionary/D/decision-boundary.qmd)
+- [Decision Tree](/dictionary/D/decision-tree.qmd)
+- [Decoder](/dictionary/D/decoder.qmd)
+- [Deep Learning](/dictionary/D/deep-learning.qmd)
+- [Dense Layer](/dictionary/D/dense-layer.qmd)
+- [Dimensionality Reduction](/dictionary/D/dimensionality-reduction.qmd)
+- [Distributed Training](/dictionary/D/distributed-training.qmd)
+- [Docker](/dictionary/D/docker.qmd)
+- [Dropout](/dictionary/D/dropout.qmd)
+- [Diffusion Model](/dictionary/D/diffusion-model.qmd)
+- [Distillation](/dictionary/D/distillation.qmd)
+- [D* (D-Star)](/dictionary/D/d-star.qmd)
+- [Dynamic Batching](/dictionary/D/dynamic-batching.qmd)
+- [Decoupling](/dictionary/D/decoupling.qmd)
 
 ## E {#e}
 

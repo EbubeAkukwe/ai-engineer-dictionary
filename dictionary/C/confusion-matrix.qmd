@@ -33,6 +33,36 @@ label and increment the corresponding cell. Always check the axis order:
 libraries may display actual labels in rows and predictions in columns,
 or the reverse.
 
+In the diagram below, **ostrich is the positive class**. Rows are actual
+labels and columns are predicted labels.
+
+<figure>
+<svg viewBox="0 0 640 370" role="img" aria-labelledby="cm-title cm-desc" style="max-width: 100%; height: auto;">
+<title id="cm-title">Binary confusion matrix for penguin and ostrich classification</title>
+<desc id="cm-desc">Rows show actual labels and columns show predicted labels. Actual ostrich predicted ostrich is true positive. Actual ostrich predicted penguin is false negative. Actual penguin predicted ostrich is false positive. Actual penguin predicted penguin is true negative.</desc>
+<text x="390" y="34" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a">Predicted label</text>
+<text x="274" y="67" text-anchor="middle" font-size="16" fill="#0f172a">Ostrich (+)</text>
+<text x="474" y="67" text-anchor="middle" font-size="16" fill="#0f172a">Penguin (-)</text>
+<text x="36" y="215" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a" transform="rotate(-90 36 215)">Actual label</text>
+<text x="125" y="145" text-anchor="middle" font-size="16" fill="#0f172a">Ostrich (+)</text>
+<text x="125" y="245" text-anchor="middle" font-size="16" fill="#0f172a">Penguin (-)</text>
+<rect x="174" y="82" width="200" height="100" fill="#dcfce7" stroke="#64748b" stroke-width="2"/>
+<rect x="374" y="82" width="200" height="100" fill="#fee2e2" stroke="#64748b" stroke-width="2"/>
+<rect x="174" y="182" width="200" height="100" fill="#fee2e2" stroke="#64748b" stroke-width="2"/>
+<rect x="374" y="182" width="200" height="100" fill="#dcfce7" stroke="#64748b" stroke-width="2"/>
+<text x="274" y="119" text-anchor="middle" font-size="21" font-weight="700" fill="#14532d">TP</text>
+<text x="274" y="148" text-anchor="middle" font-size="15" fill="#14532d">True Positive</text>
+<text x="474" y="119" text-anchor="middle" font-size="21" font-weight="700" fill="#7f1d1d">FN</text>
+<text x="474" y="148" text-anchor="middle" font-size="15" fill="#7f1d1d">False Negative</text>
+<text x="274" y="219" text-anchor="middle" font-size="21" font-weight="700" fill="#7f1d1d">FP</text>
+<text x="274" y="248" text-anchor="middle" font-size="15" fill="#7f1d1d">False Positive</text>
+<text x="474" y="219" text-anchor="middle" font-size="21" font-weight="700" fill="#14532d">TN</text>
+<text x="474" y="248" text-anchor="middle" font-size="15" fill="#14532d">True Negative</text>
+<text x="374" y="322" text-anchor="middle" font-size="14" fill="#475569">Positive means “ostrich”; negative means “penguin”.</text>
+</svg>
+<figcaption>Binary confusion matrix with actual labels as rows and predicted labels as columns. The color indicates correct predictions (green) and errors (red); cell counts are omitted for clarity.</figcaption>
+</figure>
+
 ## Practical example
 
 For a penguin-versus-ostrich classifier, the matrix can show how many
@@ -53,6 +83,10 @@ includes a prompt to inspect these errors.
 - [Classification](classification.qmd)
 - [Binary Classification](../B/binary-classification.qmd)
 - [AI Evaluation](../A/ai-evaluation.qmd)
+- **True Positive (TP)** — an actual positive example predicted as positive.
+- **False Positive (FP)** — an actual negative example predicted as positive.
+- **False Negative (FN)** — an actual positive example predicted as negative.
+- **True Negative (TN)** — an actual negative example predicted as negative.
 
 ## Further reading
 

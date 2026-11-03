@@ -1,0 +1,64 @@
+---
+title: "Data Drift"
+description: "A change over time in the statistical properties of data supplied to a system."
+term: "Data Drift"
+letter: "D"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Data drift is a change in the data a system receives over time. For
+example, users, devices, or environments may change so that new inputs
+differ from the examples used during development.
+
+## Technical explanation
+
+The term is often used for changes in an input distribution such as
+$P(X)$, though definitions vary across monitoring tools. Input drift can
+occur with or without a change in the relationship between inputs and
+outcomes; a change in $P(Y\mid X)$ is commonly called concept drift.
+
+## Why it matters in AI engineering
+
+Drifting data can reduce model performance or make operational assumptions
+invalid. Monitoring helps detect changes, but a statistical shift alone
+does not prove that the model is worse or that retraining is necessary.
+
+## How it works
+
+Teams compare current input summaries or distributions with a reference
+period, investigate significant changes, and use newly available outcome
+labels to assess their impact. Monitoring should account for seasonality,
+sampling noise, and changes in data collection.
+
+## Practical example
+
+A vision service can monitor image dimensions and brightness over time.
+A sudden increase in low-light images may indicate a new camera setup and
+could motivate evaluation on examples from that environment.
+
+## Common misconceptions
+
+- Data drift and concept drift are related but not identical.
+- A drift alert is a signal to investigate, not proof of quality
+  degradation.
+- Retraining without checking label quality and representativeness can
+  make a model worse.
+
+## Related terms
+
+- [Concept Drift](../C/concept-drift.qmd)
+- [Anomaly Detection](../A/anomaly-detection.qmd)
+- [Data Validation](data-validation.qmd)
+
+## Further reading
+
+- [Google Cloud: Model monitoring overview](https://cloud.google.com/vertex-ai/docs/model-monitoring/overview) — describes monitoring model inputs for skew and drift.
+- [Evidently: Data drift](https://docs.evidentlyai.com/metrics/preset_data_drift) — explains practical approaches to drift measurement.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

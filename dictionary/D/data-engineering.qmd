@@ -1,0 +1,65 @@
+---
+title: "Data Engineering"
+description: "The discipline of designing systems that collect, transform, store, and deliver data reliably."
+term: "Data Engineering"
+letter: "D"
+category: "Data Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Data engineering is the work of building and maintaining systems that make
+data available, organized, and reliable for applications, analytics, and
+machine learning.
+
+## Technical explanation
+
+Data engineering includes ingestion, transformation, storage, orchestration,
+quality checks, access control, and observability. Systems may process
+data in batches or streams and can use warehouses, lakes, databases, and
+message brokers.
+
+## Why it matters in AI engineering
+
+Machine-learning systems depend on data that is correctly collected,
+versioned, transformed, and delivered. Weak data foundations can cause
+training-serving inconsistencies, leakage, unreliable evaluation, and
+production failures.
+
+## How it works
+
+A data system ingests sources, validates and transforms records, stores
+them in suitable formats, and schedules or streams outputs to downstream
+consumers. Monitoring and lineage help teams investigate where data came
+from and how it changed.
+
+## Practical example
+
+A data pipeline can collect labeled support conversations, remove
+disallowed fields, validate schemas, create training examples, and publish
+a versioned dataset for model training.
+
+## Common misconceptions
+
+- Data engineering is not only moving data between databases.
+- A successful pipeline run does not guarantee that its data is accurate
+  or appropriate for a model.
+- Data quality and governance are engineering concerns, not optional
+  cleanup steps.
+
+## Related terms
+
+- [Data Pipeline](data-pipeline.qmd)
+- [Data Validation](data-validation.qmd)
+- [Data Preprocessing](data-preprocessing.qmd)
+
+## Further reading
+
+- [Google Cloud: What is data engineering?](https://cloud.google.com/learn/what-is-data-engineering) — introduces data engineering responsibilities and systems.
+- [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) — discusses data architecture and lifecycle practices.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

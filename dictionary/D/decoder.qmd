@@ -1,0 +1,64 @@
+---
+title: "Decoder"
+description: "A model component that transforms representations into an output or generated sequence."
+term: "Decoder"
+letter: "D"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A decoder turns an internal representation into an output. Depending on
+the architecture, it might reconstruct an image, generate text, or map a
+compressed representation into another format.
+
+## Technical explanation
+
+The term has architecture-specific meanings. In an encoder-decoder model,
+the decoder consumes an encoded representation and produces outputs.
+Transformer decoders may use causal self-attention for autoregressive
+generation, while other decoders use cross-attention to incorporate
+encoder outputs. Some models are decoder-only and generate from prior
+tokens without a separate encoder.
+
+## Why it matters in AI engineering
+
+Knowing what a model's decoder does helps engineers understand generation,
+sequence alignment, conditioning, and inference costs. The term should be
+interpreted in the context of a particular architecture.
+
+## How it works
+
+A decoder receives latent features, encoder states, previous output
+tokens, or a combination of them. Learned layers transform this context
+into the next representation or output. In autoregressive models, the
+decoder repeats next-token prediction until a stopping condition is met.
+
+## Practical example
+
+An image autoencoder uses an encoder to create a compact representation
+and a decoder to reconstruct an image from it.
+
+## Common misconceptions
+
+- A decoder does not always mean the generation component of a language
+  model.
+- Not every decoder has an encoder paired with it.
+- Decoder architecture alone does not determine output quality.
+
+## Related terms
+
+- [Autoencoder](../A/autoencoder.qmd)
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — describes encoder and decoder components in the Transformer.
+- [Deep Learning Book: Autoencoders](https://www.deeplearningbook.org/contents/autoencoders.html) — explains encoder-decoder models for representation learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

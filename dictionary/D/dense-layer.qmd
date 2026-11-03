@@ -1,0 +1,63 @@
+---
+title: "Dense Layer"
+description: "A neural-network layer in which each input unit connects to each output unit."
+term: "Dense Layer"
+letter: "D"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A dense layer, also called a fully connected layer, combines all its input
+values to calculate each output value. It is a common building block in
+neural networks.
+
+## Technical explanation
+
+For input vector $x$, weights $W$, and bias $b$, a dense layer computes
+$y = Wx+b$, often followed by an activation function. Each output unit
+has a learned weight for every input unit, so parameter count grows with
+both input and output dimensions.
+
+## Why it matters in AI engineering
+
+Dense layers can combine features into task-specific predictions, such
+as class scores. Their parameter and compute costs can become large for
+high-dimensional inputs, which motivates other structures such as
+convolutions or low-rank projections.
+
+## How it works
+
+The layer multiplies the input by a learned weight matrix, adds a learned
+bias vector, and optionally applies a nonlinearity. During training,
+backpropagation computes gradients for the weights and biases.
+
+## Practical example
+
+After an image model extracts a feature vector, a dense output layer can
+map that vector to two class scores for penguin and ostrich.
+
+## Common misconceptions
+
+- A dense layer does not necessarily mean every neuron in the whole model
+  is connected to every other neuron.
+- The layer's linear transformation alone cannot represent arbitrary
+  nonlinear relationships without nonlinearities elsewhere.
+- A larger dense layer is not automatically more capable in a useful way.
+
+## Related terms
+
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Activation Function](../A/activation-function.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+
+## Further reading
+
+- [PyTorch: Linear layer](https://pytorch.org/docs/stable/generated/torch.nn.Linear.html) — documents the fully connected linear transformation.
+- [Deep Learning Book: Multilayer Perceptrons](https://www.deeplearningbook.org/contents/mlp.html) — explains dense neural-network layers and their composition.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

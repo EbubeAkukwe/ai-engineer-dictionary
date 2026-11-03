@@ -1,0 +1,65 @@
+---
+title: "Dropout"
+description: "A regularization technique that randomly disables units during neural-network training."
+term: "Dropout"
+letter: "D"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Dropout randomly omits some neural-network units during training. This
+discourages the network from relying too heavily on a small set of
+activations and can help reduce overfitting.
+
+## Technical explanation
+
+During training, dropout samples a mask that sets selected activations
+to zero. In inverted dropout, retained activations are scaled during
+training so that their expected magnitude is consistent. At inference,
+dropout is typically disabled. The dropout rate and placement are
+architecture-dependent.
+
+## Why it matters in AI engineering
+
+Dropout can regularize some models, but its effect depends on architecture,
+data, and other regularization methods. Correct training and inference
+modes are necessary for the intended behaviour.
+
+## How it works
+
+For activation $h_i$, dropout applies a random mask $m_i$ and, with
+inverted scaling, produces $\tilde{h}_i = \frac{m_i h_i}{1-p}$ during
+training, where $p$ is the drop probability and $m_i$ is zero with
+probability $p$. At evaluation time the layer passes activations through.
+
+## Practical example
+
+A dense classifier can include dropout between hidden layers during
+training. When evaluating or serving the model, the framework switches
+to inference mode so activations are no longer randomly dropped.
+
+## Common misconceptions
+
+- Dropout does not mean permanently deleting neurons or parameters.
+- Applying dropout during evaluation can make predictions stochastic and
+  inconsistent with standard inference.
+- Dropout is not always beneficial, especially when other model or data
+  choices already control overfitting.
+
+## Related terms
+
+- [Deep Learning](deep-learning.qmd)
+- [Dense Layer](dense-layer.qmd)
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+
+## Further reading
+
+- [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://jmlr.org/papers/v15/srivastava14a.html) — the original dropout paper.
+- [PyTorch: Dropout](https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html) — documents training and evaluation behaviour.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

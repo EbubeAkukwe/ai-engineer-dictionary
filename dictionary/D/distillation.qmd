@@ -1,0 +1,66 @@
+---
+title: "Distillation"
+description: "A training approach that transfers behaviour from a larger teacher model to a smaller student model."
+term: "Distillation"
+letter: "D"
+category: "Model Optimization"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Distillation trains a smaller student model to imitate useful behaviour
+from a larger teacher model. The goal is often to reduce inference cost
+or make a model easier to deploy.
+
+## Technical explanation
+
+Knowledge distillation may train a student using teacher logits,
+probabilities, intermediate representations, or generated examples, in
+addition to or instead of ground-truth labels. A temperature parameter
+can soften probability distributions. Distillation methods differ in
+what signals they transfer and what capabilities they preserve.
+
+## Why it matters in AI engineering
+
+Smaller models can reduce latency, memory, or serving cost. Distillation
+can help retain some teacher performance, but the student may lose
+capabilities or inherit teacher errors and biases.
+
+## How it works
+
+The teacher produces targets for training examples. The student is
+optimized to match those targets, often with a distillation loss combined
+with the task's original supervised loss. The student must then be
+evaluated independently on the intended tasks and deployment conditions.
+
+## Practical example
+
+A team can use a larger text classifier to generate soft class scores,
+then train a smaller classifier to match those scores and compare its
+accuracy, calibration, and latency on held-out data.
+
+## Common misconceptions
+
+- A student does not automatically inherit every capability of its
+  teacher.
+- Distillation is not simply shrinking model weights; it involves a
+  training objective or transfer process.
+- Lower latency or size does not establish that the student is safe or
+  suitable for deployment.
+
+## Related terms
+
+- [Deep Learning](deep-learning.qmd)
+- [Adapter](../A/adapter.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) — introduces a widely used teacher-student distillation approach.
+- [DistilBERT](https://arxiv.org/abs/1910.01108) — demonstrates distillation for a smaller Transformer language model.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,63 @@
+---
+title: "Data Pipeline"
+description: "An automated sequence of steps that moves and transforms data for downstream use."
+term: "Data Pipeline"
+letter: "D"
+category: "Data Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A data pipeline is a repeatable sequence that takes data from one or more
+sources, transforms it, and delivers it to a destination or application.
+
+## Technical explanation
+
+A pipeline may include ingestion, validation, cleaning, joining,
+aggregation, feature generation, storage, and scheduling. Pipelines can
+run in batches or process streams continuously. Reliable pipelines define
+schemas, handle failures, track lineage, and make retries safe.
+
+## Why it matters in AI engineering
+
+Models depend on consistent inputs for training, evaluation, and serving.
+Pipelines help make data preparation reproducible and expose failures
+before invalid or stale data reaches a model.
+
+## How it works
+
+An orchestrator or streaming system runs pipeline stages in dependency
+order. Each stage reads inputs, performs a transformation, and writes
+outputs. Quality checks, logs, metrics, and version information help
+operators detect and diagnose problems.
+
+## Practical example
+
+A nightly pipeline can ingest labeled images, check file integrity and
+class labels, create a versioned dataset manifest, and make the result
+available for training.
+
+## Common misconceptions
+
+- A pipeline that completes successfully may still produce incorrect data.
+- Pipelines need monitoring and recovery strategies, not just scheduled
+  execution.
+- A pipeline is not necessarily a single linear script; it may be a
+  dependency graph with branching and parallel work.
+
+## Related terms
+
+- [Data Engineering](data-engineering.qmd)
+- [Data Validation](data-validation.qmd)
+- [Continuous Integration](../C/continuous-integration.qmd)
+
+## Further reading
+
+- [Google Cloud: Data pipelines](https://cloud.google.com/architecture/data-pipeline) — discusses data pipeline architecture.
+- [Apache Airflow documentation](https://airflow.apache.org/docs/) — documentation for authoring and orchestrating workflows and data pipelines.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,66 @@
+---
+title: "Data Validation"
+description: "The process of checking that data satisfies expected rules and quality requirements."
+term: "Data Validation"
+letter: "D"
+category: "Data Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Data validation checks whether data is shaped and populated as expected
+before it is used. It can catch missing fields, invalid values, and
+unexpected changes early.
+
+## Technical explanation
+
+Validation rules may cover schemas, types, ranges, uniqueness, null
+rates, relationships between fields, and distribution expectations.
+Checks can run at ingestion, during transformations, before model
+training, and at inference time. Rules should reflect the data contract
+and the consequences of invalid values.
+
+## Why it matters in AI engineering
+
+Invalid or shifted inputs can corrupt training datasets, break pipelines,
+and cause unexpected model behaviour. Automated validation makes data
+assumptions observable and can prevent bad inputs from silently
+propagating.
+
+## How it works
+
+Define expected properties, evaluate data against them, and report or
+handle violations according to a policy. Some failures block a pipeline;
+others generate warnings or route records for review. Validation results
+should be logged and monitored.
+
+## Practical example
+
+A tabular feature pipeline can require a non-null timestamp, constrain an
+age field to a plausible range, and alert if an expected category suddenly
+disappears.
+
+## Common misconceptions
+
+- Passing validation does not prove that data is representative or
+  unbiased.
+- Rules can become outdated as legitimate data changes.
+- Silently dropping all invalid records can hide important quality
+  problems.
+
+## Related terms
+
+- [Data Pipeline](data-pipeline.qmd)
+- [Data Drift](data-drift.qmd)
+- [Data Preprocessing](data-preprocessing.qmd)
+
+## Further reading
+
+- [Great Expectations: Data validation](https://docs.greatexpectations.io/docs/) — documentation for defining and running data quality checks.
+- [TensorFlow Data Validation](https://www.tensorflow.org/tfx/guide/tfdv) — describes schema and statistics validation for machine-learning data.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

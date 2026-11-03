@@ -1,0 +1,67 @@
+---
+title: "Diffusion Model"
+description: "A generative model trained to reverse a gradual process that adds noise to data."
+term: "Diffusion Model"
+letter: "D"
+category: "Generative AI"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A diffusion model learns to generate data by starting with noise and
+gradually transforming it into a sample, such as an image. It learns this
+process using examples that have been progressively noised during
+training.
+
+## Technical explanation
+
+Diffusion models define a forward noising process and train a model to
+estimate or remove noise at different steps. Generation iteratively
+applies a learned reverse process, often conditioned on text or other
+inputs. Sampling methods and step counts affect quality, diversity, and
+latency.
+
+## Why it matters in AI engineering
+
+Diffusion models have enabled high-quality image, audio, and other
+generative systems. Engineers must consider sampling cost, conditioning,
+data provenance, evaluation, and safety when building applications around
+them.
+
+## How it works
+
+Training gradually corrupts data with noise and teaches a neural network
+to predict the added noise or a related target. At inference, the model
+repeatedly denoises a noise sample according to a chosen sampler to
+produce an output.
+
+## Practical example
+
+For text-to-image generation, a model can encode a text prompt and use
+that conditioning while denoising an initial latent noise representation
+over multiple steps.
+
+## Common misconceptions
+
+- A diffusion model does not retrieve a finished image from a database
+  as its generation mechanism.
+- More sampling steps do not always improve results enough to justify
+  their cost.
+- Generated samples can still contain errors, biases, or artifacts.
+
+## Related terms
+
+- [Decoder](decoder.qmd)
+- [Deep Learning](deep-learning.qmd)
+- [Distillation](distillation.qmd)
+
+## Further reading
+
+- [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) — foundational work on probabilistic diffusion models.
+- [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752) — describes latent diffusion for efficient high-resolution image generation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

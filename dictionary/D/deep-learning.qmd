@@ -1,0 +1,63 @@
+---
+title: "Deep Learning"
+description: "A branch of machine learning that trains neural networks with multiple layers of learned representations."
+term: "Deep Learning"
+letter: "D"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Deep learning is a type of machine learning that uses neural networks with
+multiple layers to learn representations from data. It is used in areas
+such as language, vision, speech, and multimodal systems.
+
+## Technical explanation
+
+Deep-learning models are parameterized compositions of operations,
+typically trained by optimizing a loss with gradient-based methods and
+backpropagation. Their performance depends on architecture, data,
+objectives, compute, and evaluation—not depth alone.
+
+## Why it matters in AI engineering
+
+Many current AI capabilities rely on deep-learning models. Engineers need
+to understand how data, compute, training, inference, and evaluation
+interact to build systems that are useful and maintainable.
+
+## How it works
+
+The model processes inputs through layers of learned transformations. A
+training objective measures error, and an optimizer updates parameters
+using gradients computed by backpropagation. At inference, the trained
+parameters are used to produce predictions or generated outputs.
+
+## Practical example
+
+A deep-learning image classifier can use a convolutional neural network
+or a vision Transformer to predict image classes. Transfer learning can
+adapt a pretrained model to a smaller labeled dataset.
+
+## Common misconceptions
+
+- Deep learning is a subset of machine learning, not a synonym for all AI.
+- More layers or parameters do not automatically improve results.
+- A model that performs well on training data may still fail on new or
+  shifted data.
+
+## Related terms
+
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Data Augmentation](data-augmentation.qmd)
+
+## Further reading
+
+- [Deep Learning Book](https://www.deeplearningbook.org/) — a comprehensive textbook on deep-learning foundations and methods.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — a hands-on course introducing deep learning through practical projects.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

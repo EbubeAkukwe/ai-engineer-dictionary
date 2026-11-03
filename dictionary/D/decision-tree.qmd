@@ -1,0 +1,94 @@
+---
+title: "Decision Tree"
+description: "A model that predicts by following a sequence of feature-based splits arranged as a tree."
+term: "Decision Tree"
+letter: "D"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A decision tree makes a prediction by asking a series of questions about
+input features. Each answer follows a branch until the example reaches a
+leaf containing a prediction.
+
+## Technical explanation
+
+At each internal node, a tree selects a feature and split that improves a
+criterion such as impurity reduction. Leaves return class labels,
+probabilities, or numeric values. Depth limits and pruning help control
+overfitting; exact criteria differ across implementations.
+
+## Why it matters in AI engineering
+
+Decision trees are relatively easy to inspect and can model nonlinear
+relationships without requiring feature scaling. They provide useful
+baselines, though deep trees can be unstable and may generalize poorly.
+
+## How it works
+
+Training recursively partitions examples based on feature tests. The
+algorithm chooses splits that make resulting groups more homogeneous
+according to its objective. Prediction follows the learned tests from the
+root to a leaf.
+
+## Practical example
+
+A simple tree predicting whether a transaction needs review might split
+first on transaction amount, then on account age, and assign a risk class
+at each leaf.
+
+<figure>
+<svg viewBox="0 0 680 390" role="img" aria-labelledby="tree-title tree-desc" style="max-width: 100%; height: auto;">
+<title id="tree-title">Toy decision tree for transaction review</title>
+<desc id="tree-desc">A tree first checks whether the amount exceeds 100 dollars. If yes, it checks whether the account is less than seven days old and predicts review or allow. If no, it predicts allow.</desc>
+<g fill="none" stroke="#64748b" stroke-width="2">
+<path d="M340 85 V118 H195 V165 M340 118 H570 V165"/>
+<path d="M195 225 V260 H105 V300 M195 260 H325 V300"/>
+</g>
+<g font-family="sans-serif" text-anchor="middle">
+<rect x="240" y="25" width="200" height="60" rx="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+<text x="340" y="51" font-size="16" fill="#0f172a">Amount &gt; $100?</text>
+<text x="250" y="110" font-size="14" fill="#334155">Yes</text>
+<text x="495" y="110" font-size="14" fill="#334155">No</text>
+<rect x="95" y="165" width="200" height="60" rx="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+<text x="195" y="191" font-size="15" fill="#0f172a">Account age</text>
+<text x="195" y="211" font-size="15" fill="#0f172a">&lt; 7 days?</text>
+<text x="125" y="255" font-size="14" fill="#334155">Yes</text>
+<text x="265" y="255" font-size="14" fill="#334155">No</text>
+<rect x="20" y="300" width="170" height="55" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="105" y="334" font-size="16" fill="#7f1d1d">Review</text>
+<rect x="240" y="300" width="170" height="55" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="325" y="334" font-size="16" fill="#14532d">Allow</text>
+<rect x="490" y="165" width="160" height="55" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="570" y="199" font-size="16" fill="#14532d">Allow</text>
+</g>
+</svg>
+<figcaption>A small illustrative tree: each internal node tests a feature, each branch represents an answer, and each leaf gives a prediction. These example rules are for explanation only, not financial advice or a trained decision system.</figcaption>
+</figure>
+
+## Common misconceptions
+
+- A tree diagram is not necessarily a faithful or complete explanation
+  when it is very large or part of an ensemble.
+- A shallow tree is interpretable only if its features and thresholds are
+  meaningful and understood.
+- Decision trees do not automatically handle every missing value or
+  categorical feature in the same way.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Data Preprocessing](data-preprocessing.qmd)
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+
+## Further reading
+
+- [Scikit-learn: Decision Trees](https://scikit-learn.org/stable/modules/tree.html) — explains tree learning, limits, and pruning.
+- [Google for Developers: Decision forests](https://developers.google.com/machine-learning/decision-forests) — introduces decision trees and related ensemble methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

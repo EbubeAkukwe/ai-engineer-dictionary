@@ -91,7 +91,31 @@ website:
             - dictionary/C/cuda.qmd
             - dictionary/C/cross-entropy-loss.qmd
             - dictionary/C/cross-validation.qmd
-        - section: "D–I"
+        - section: "D"
+          contents:
+            - dictionary/D/index.qmd
+            - dictionary/D/data-augmentation.qmd
+            - dictionary/D/data-drift.qmd
+            - dictionary/D/data-engineering.qmd
+            - dictionary/D/data-leakage.qmd
+            - dictionary/D/data-pipeline.qmd
+            - dictionary/D/data-preprocessing.qmd
+            - dictionary/D/data-validation.qmd
+            - dictionary/D/decision-boundary.qmd
+            - dictionary/D/decision-tree.qmd
+            - dictionary/D/decoder.qmd
+            - dictionary/D/deep-learning.qmd
+            - dictionary/D/dense-layer.qmd
+            - dictionary/D/dimensionality-reduction.qmd
+            - dictionary/D/distributed-training.qmd
+            - dictionary/D/docker.qmd
+            - dictionary/D/dropout.qmd
+            - dictionary/D/diffusion-model.qmd
+            - dictionary/D/distillation.qmd
+            - dictionary/D/d-star.qmd
+            - dictionary/D/dynamic-batching.qmd
+            - dictionary/D/decoupling.qmd
+        - section: "E–I"
           contents:
             - dictionary/letters.qmd
         - section: "J"

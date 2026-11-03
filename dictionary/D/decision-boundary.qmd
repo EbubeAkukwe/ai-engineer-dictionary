@@ -1,0 +1,88 @@
+---
+title: "Decision Boundary"
+description: "The surface separating regions assigned to different classes by a classifier."
+term: "Decision Boundary"
+letter: "D"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A decision boundary is the line, curve, or higher-dimensional surface
+that separates the regions where a classifier predicts different classes.
+
+## Technical explanation
+
+For a classifier with decision function $f(x)$, a binary decision boundary
+often consists of points where class scores are equal or where
+$f(x)=0$. Its shape depends on the model, features, parameters, and
+decision threshold. In high-dimensional settings the boundary cannot
+usually be visualized directly.
+
+## Why it matters in AI engineering
+
+The boundary helps explain how a model separates classes and how
+predictions may change near uncertain regions. It can inform feature
+analysis, threshold selection, and targeted data collection.
+
+## How it works
+
+The model maps an input to scores or probabilities. A decision rule assigns
+a class according to those outputs. The set of inputs where the assigned
+class changes forms the decision boundary.
+
+## Practical example
+
+For a two-feature classifier, plotting the two features and coloring each
+region by the predicted class can reveal whether the model uses a straight
+line or a more complex boundary.
+
+<figure>
+<svg viewBox="0 0 560 340" role="img" aria-labelledby="db-title db-desc" style="max-width: 100%; height: auto;">
+<title id="db-title">Illustrative nonlinear decision boundary</title>
+<desc id="db-desc">A two-dimensional feature plot. Blue and orange points occupy different sides of a curved boundary separating two predicted class regions.</desc>
+<rect x="70" y="30" width="420" height="250" fill="#f8fafc" stroke="#64748b"/>
+<path d="M70 30 H286 C270 72 300 103 278 137 C255 173 293 203 270 235 C260 250 270 265 263 280 H70 Z" fill="#dbeafe"/>
+<path d="M286 30 H490 V280 H263 C270 265 260 250 270 235 C293 203 255 173 278 137 C300 103 270 72 286 30 Z" fill="#ffedd5"/>
+<path d="M286 30 C270 72 300 103 278 137 C255 173 293 203 270 235 C260 250 270 265 263 280" fill="none" stroke="#334155" stroke-width="3"/>
+<path d="M70 92 H490 M70 155 H490 M70 217 H490 M154 30 V280 M238 30 V280 M322 30 V280 M406 30 V280" stroke="#94a3b8" stroke-opacity=".28"/>
+<circle cx="125" cy="72" r="7" fill="#2563eb"/><circle cx="180" cy="104" r="7" fill="#2563eb"/>
+<circle cx="111" cy="174" r="7" fill="#2563eb"/><circle cx="210" cy="213" r="7" fill="#2563eb"/>
+<circle cx="226" cy="65" r="7" fill="#2563eb"/><circle cx="230" cy="160" r="7" fill="#2563eb"/>
+<circle cx="368" cy="65" r="7" fill="#c2410c"/><circle cx="427" cy="111" r="7" fill="#c2410c"/>
+<circle cx="391" cy="179" r="7" fill="#c2410c"/><circle cx="350" cy="230" r="7" fill="#c2410c"/>
+<circle cx="456" cy="226" r="7" fill="#c2410c"/><circle cx="347" cy="144" r="7" fill="#c2410c"/>
+<text x="135" y="52" font-size="15" fill="#1e3a8a">Class A region</text>
+<text x="354" y="52" font-size="15" fill="#9a3412">Class B region</text>
+<path d="M70 280 H500 M70 290 V24" stroke="#334155" stroke-width="2"/>
+<text x="276" y="320" font-size="16" text-anchor="middle" fill="#0f172a">Feature x₁</text>
+<text x="24" y="157" font-size="16" text-anchor="middle" fill="#0f172a" transform="rotate(-90 24 157)">Feature x₂</text>
+</svg>
+<figcaption>Illustration of a curved decision boundary in two features. The points and regions are schematic; a real classifier's boundary depends on its data, model, and decision rule.</figcaption>
+</figure>
+
+## Common misconceptions
+
+- A visually simple boundary in a two-dimensional plot may not describe
+  behaviour across all features.
+- A point near the boundary is not necessarily equally likely to belong to
+  either class unless the model is appropriately calibrated.
+- Changing the classification threshold can move the boundary without
+  changing the underlying model parameters.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Binary Classification](../B/binary-classification.qmd)
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+
+## Further reading
+
+- [Google for Developers: Decision boundaries](https://developers.google.com/machine-learning/crash-course/classification/decision-boundary) — illustrates classification boundaries.
+- [Scikit-learn: Classifier comparison](https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html) — visualizes decision boundaries for different classifiers.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

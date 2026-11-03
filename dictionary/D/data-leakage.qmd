@@ -1,0 +1,64 @@
+---
+title: "Data Leakage"
+description: "The unintended use of information during model development that would not be available at prediction time."
+term: "Data Leakage"
+letter: "D"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Data leakage happens when a model-development process uses information it
+would not legitimately have when making real predictions. This can make
+evaluation results look much better than actual performance.
+
+## Technical explanation
+
+Leakage can occur when target information enters features, when preprocessing
+is fitted using validation or test data, or when related examples appear
+across training and evaluation splits. Leakage may be direct or arise
+through time, entities, duplicate records, or data collection procedures.
+
+## Why it matters in AI engineering
+
+Leaked evaluation can lead teams to deploy models that fail in practice.
+Preventing leakage requires understanding how examples are generated,
+what information is available at prediction time, and how observations
+should be split.
+
+## How it works
+
+Define the prediction time and permissible information, then design splits
+and preprocessing around that boundary. Fit transformations only on
+training data and apply them to held-out data. Check for duplicates,
+shared entities, future information, and target-derived fields.
+
+## Practical example
+
+If predicting whether a customer will cancel next month, a feature recorded
+only after cancellation must not be used. Likewise, records for one
+customer may need to stay in a single split to avoid identity leakage.
+
+## Common misconceptions
+
+- High validation performance does not prove that leakage is absent.
+- Leakage is not limited to a column that directly contains the target.
+- Preprocessing on all data before splitting can leak information even if
+  labels are not included.
+
+## Related terms
+
+- [Cross-Validation](../C/cross-validation.qmd)
+- [Data Preprocessing](data-preprocessing.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [Google for Developers: Data leakage](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting) — covers data splitting considerations relevant to leakage.
+- [Scikit-learn: Common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage) — demonstrates leakage risks in preprocessing and evaluation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

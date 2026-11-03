@@ -1,0 +1,65 @@
+---
+title: "Distributed Training"
+description: "Training a model across multiple processors or machines to share computation or model state."
+term: "Distributed Training"
+letter: "D"
+category: "AI Infrastructure"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Distributed training uses multiple accelerators or computers to train a
+model. It can reduce training time or make it possible to train models
+that do not fit on one device.
+
+## Technical explanation
+
+Common strategies include data parallelism, where devices process
+different batches and synchronize gradients, and model or tensor
+parallelism, where a model's parameters or operations are partitioned.
+Communication overhead, synchronization, failure handling, and
+reproducibility affect scaling efficiency.
+
+## Why it matters in AI engineering
+
+Large datasets and models can exceed the compute or memory limits of one
+device. Distributed methods enable larger workloads but add engineering
+complexity and do not guarantee linear speedup.
+
+## How it works
+
+The training system assigns data, model components, or both across
+workers. Workers compute forward and backward passes, exchange the
+required gradients or activations, and coordinate updates. Checkpointing
+and fault recovery help preserve progress.
+
+## Practical example
+
+In data parallel training, each GPU receives part of a global batch,
+computes gradients, and synchronizes them before the optimizer applies an
+update shared across replicas.
+
+## Common misconceptions
+
+- More devices do not always make training faster; communication and
+  input pipelines can become bottlenecks.
+- Distributed training is not the same as distributed inference.
+- Reproducing a run can be harder when execution order and parallel
+  operations are nondeterministic.
+
+## Related terms
+
+- [Batch Size](../B/batch-size.qmd)
+- [CUDA](../C/cuda.qmd)
+- [Deep Learning](deep-learning.qmd)
+
+## Further reading
+
+- [PyTorch: Distributed overview](https://pytorch.org/docs/stable/distributed.html) — describes distributed communication and training primitives.
+- [Google Cloud: Distributed training](https://cloud.google.com/vertex-ai/docs/training/distributed-training) — introduces distributed training configurations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

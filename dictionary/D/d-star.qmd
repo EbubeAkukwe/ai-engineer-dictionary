@@ -1,0 +1,66 @@
+---
+title: "D* (D-Star)"
+description: "An incremental heuristic search algorithm for replanning paths when a map or costs change."
+term: "D* (D-Star)"
+letter: "D"
+category: "Robotics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+D* is a path-planning algorithm designed for situations where a robot
+discovers that its map is incomplete or changes while it is moving. It
+updates a previous route rather than planning from scratch after every
+change.
+
+## Technical explanation
+
+D* and related algorithms use heuristic search to find a low-cost path
+through a graph while incrementally repairing the plan when edge costs
+change. D* Lite is a related algorithm that simplifies the original
+approach while retaining incremental replanning properties.
+
+## Why it matters in AI engineering
+
+Robots and autonomous systems often operate with uncertain or changing
+maps. Incremental replanning can reduce repeated work and support
+navigation, though performance depends on graph structure, heuristic
+quality, and the frequency and scale of changes.
+
+## How it works
+
+The planner maintains search information associated with states and
+updates affected regions when costs change. It repairs the shortest-path
+solution toward the goal, allowing the system to choose a new route based
+on its updated map.
+
+## Practical example
+
+A mobile robot may plan a route through a warehouse, discover an aisle
+is blocked, update the affected map costs, and compute a repaired path
+around the obstruction.
+
+## Common misconceptions
+
+- D* is not a neural-network model; it is a search-based planning
+  algorithm.
+- Incremental replanning does not remove the need for accurate sensing
+  and map updates.
+- D* and D* Lite are related but distinct algorithms.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [Autonomous Systems](../A/autonomous-systems.qmd)
+- [Decision Tree](decision-tree.qmd)
+
+## Further reading
+
+- [D* Lite](https://aaai.org/papers/00476-aaai02-072-d-lite/) — presents the D* Lite incremental heuristic search algorithm.
+- [The D* Algorithm for Real-Time Planning of Optimal Traverses](https://doi.org/10.1109/2.970852) — discusses D* for planning with changing information.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-03
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
