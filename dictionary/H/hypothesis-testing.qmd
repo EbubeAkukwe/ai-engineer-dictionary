@@ -1,0 +1,66 @@
+---
+title: "Hypothesis Testing"
+description: "A statistical procedure for assessing evidence about a claim using data and explicit assumptions."
+term: "Hypothesis Testing"
+letter: "H"
+category: "Statistics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Hypothesis testing uses observed data to assess whether the evidence is
+consistent with a specified claim, called a null hypothesis, compared
+with an alternative. It does not prove a hypothesis true or false.
+
+## Technical explanation
+
+A test defines a null hypothesis $H_0$, an alternative $H_1$, a test
+statistic, and a decision rule with a significance level $\alpha$.
+A p-value is the probability, under $H_0$ and the test assumptions, of
+observing a result at least as extreme as the one measured. Multiple
+testing and practical effect size require separate consideration.
+
+## Why it matters in AI engineering
+
+Teams may use statistical tests to compare experiments or assess
+whether a measured change is distinguishable from sampling variation.
+Misuse can lead to overconfident release decisions, especially with
+small samples, repeated experimentation, or biased datasets.
+
+## How it works
+
+State the question and hypotheses before examining results where
+possible. Select a test whose assumptions match the sampling design,
+calculate the statistic and p-value, and interpret the result alongside
+effect size, uncertainty, and practical importance.
+
+## Practical example
+
+A team comparing two recommendation layouts can randomize users between
+them and estimate a defined outcome difference. The test should account
+for the experiment design and avoid treating repeated observations from
+the same user as independent.
+
+## Common misconceptions
+
+- A p-value is not the probability that the null hypothesis is true.
+- Statistical significance does not necessarily imply practical
+  importance.
+- Failing to reject the null does not prove there is no effect.
+
+## Related terms
+
+- [Confidence Interval](../C/confidence-interval.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Causal Inference](../C/causal-inference.qmd)
+
+## Further reading
+
+- [NIST/SEMATECH e-Handbook: Hypothesis testing](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35.htm) — introduces statistical testing concepts.
+- [ASA Statement on Statistical Significance and P-Values](https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf) — clarifies appropriate interpretation of p-values.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

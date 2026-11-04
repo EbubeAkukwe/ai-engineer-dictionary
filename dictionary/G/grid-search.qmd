@@ -1,0 +1,63 @@
+---
+title: "Grid Search"
+description: "A hyperparameter-search method that evaluates every combination in a predefined set of values."
+term: "Grid Search"
+letter: "G"
+category: "Model Optimization"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Grid search tries every combination of selected hyperparameter values
+and compares the resulting models using a validation procedure.
+
+## Technical explanation
+
+Given candidate sets for several hyperparameters, grid search evaluates
+the Cartesian product of those sets. The number of trials grows
+multiplicatively with the number of parameters and candidate values.
+Cross-validation may be used for each combination, increasing compute
+cost.
+
+## Why it matters in AI engineering
+
+Grid search is easy to understand and provides a systematic baseline
+for small search spaces. It becomes expensive quickly and can waste
+trials on unimportant or poorly chosen values.
+
+## How it works
+
+Specify candidate values and an evaluation metric, train a model for
+each combination, and select the best configuration according to
+validation results. Keep final test data separate from this selection
+process.
+
+## Practical example
+
+A classifier's regularization strength might be tested at three values
+and its class-weight setting at two values. Grid search evaluates all
+six combinations.
+
+## Common misconceptions
+
+- Grid search does not explore values outside the predefined grid.
+- The best validation configuration may be overfit to the validation
+  procedure.
+- More trials do not guarantee a better deployed model.
+
+## Related terms
+
+- [Bayesian Optimization](../B/bayesian-optimization.qmd)
+- [Hyperparameter Optimization](../H/hyperparameter-optimization.qmd)
+- [Cross-Validation](../C/cross-validation.qmd)
+
+## Further reading
+
+- [Scikit-learn: Exhaustive grid search](https://scikit-learn.org/stable/modules/grid_search.html#exhaustive-grid-search) — explains grid search and cross-validated parameter selection.
+- [Google for Developers: Hyperparameter tuning](https://developers.google.com/machine-learning/crash-course/overfitting/hyperparameter-tuning) — introduces hyperparameter search strategies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

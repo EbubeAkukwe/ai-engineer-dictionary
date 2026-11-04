@@ -1,0 +1,66 @@
+---
+title: "Generalization"
+description: "A model's ability to perform well on relevant examples not used during training."
+term: "Generalization"
+letter: "G"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Generalization is a model's ability to make useful predictions on new
+examples, rather than only reproducing patterns in the data it trained
+on.
+
+## Technical explanation
+
+Generalization concerns performance on a target population or data
+distribution beyond the finite training sample. It is assessed using
+held-out data and depends on sampling, model selection, data quality,
+distribution shift, and the evaluation procedure.
+
+## Why it matters in AI engineering
+
+A model is useful only if it performs adequately in its intended
+deployment setting. Training metrics alone cannot establish
+generalization, and performance may change when users, environments, or
+data collection processes differ.
+
+## How it works
+
+Training adjusts parameters to reduce an objective on training examples.
+Validation and test procedures estimate how the resulting system
+performs on unseen examples. Techniques such as regularization, more
+representative data, and careful model selection may improve
+generalization but do not guarantee it.
+
+## Practical example
+
+A vision classifier trained on daylight photos should be evaluated on
+images from different cameras, backgrounds, and lighting conditions if
+it is expected to operate in those settings.
+
+## Common misconceptions
+
+- Low training error does not imply good generalization.
+- A random held-out split may be misleading if examples are duplicated
+  or grouped by source.
+- Generalization to one test set does not guarantee performance under
+  future distribution shifts.
+
+## Related terms
+
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+- [Data Leakage](../D/data-leakage.qmd)
+
+## Further reading
+
+- [Deep Learning Book: The Challenge of Generalization](https://www.deeplearningbook.org/contents/generalization.html) — discusses generalization, overfitting, and statistical learning.
+- [Google for Developers: Generalization](https://developers.google.com/machine-learning/crash-course/overfitting/generalization) — introduces generalization in machine learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

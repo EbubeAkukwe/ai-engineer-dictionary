@@ -1,0 +1,75 @@
+---
+title: "Gradient"
+description: "A vector of partial derivatives describing how a function changes with its inputs."
+term: "Gradient"
+letter: "G"
+category: "Mathematics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A gradient describes how a function changes as each input changes. For
+a model's loss, it indicates how adjusting parameters locally would
+affect that loss.
+
+## Technical explanation
+
+For a differentiable scalar function $L(\theta)$, its gradient is the
+vector of partial derivatives:
+
+$$
+\nabla_{\theta}L =
+\left[
+\frac{\partial L}{\partial \theta_1},
+\ldots,
+\frac{\partial L}{\partial \theta_n}
+\right]
+$$
+
+The gradient points in the direction of steepest local increase under
+the usual Euclidean geometry; its negative is used for gradient descent.
+
+## Why it matters in AI engineering
+
+Gradients are central to training neural networks and many other
+optimization methods. Their magnitude and direction help determine
+parameter updates and can reveal numerical or training-stability issues.
+
+## How it works
+
+Automatic differentiation applies derivative rules through the
+computation graph to calculate gradients efficiently. An optimizer then
+uses them, along with a learning rate and possibly additional state, to
+update parameters.
+
+## Practical example
+
+If a model's loss increases when a weight is increased slightly, the
+partial derivative with respect to that weight is positive near the
+current value. Gradient descent would move the weight in the opposite
+direction for a small update.
+
+## Common misconceptions
+
+- A gradient describes local behaviour and does not guarantee a global
+  improvement for a large step.
+- Gradients are not the same as model predictions or feature importance.
+- A zero gradient can occur at minima, maxima, saddle points, or due to
+  saturation and implementation issues.
+
+## Related terms
+
+- [Gradient Descent](gradient-descent.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Exploding Gradients](../E/exploding-gradients.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — explains gradients and differentiation in model training.
+- [PyTorch: Autograd mechanics](https://pytorch.org/docs/stable/notes/autograd.html) — describes automatic differentiation and gradient computation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

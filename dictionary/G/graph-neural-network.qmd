@@ -1,0 +1,66 @@
+---
+title: "Graph Neural Network"
+description: "A neural network that learns from entities and their relationships represented as a graph."
+term: "Graph Neural Network"
+letter: "G"
+category: "Deep Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A graph neural network (GNN) processes data represented as nodes and
+edges. It uses relationships between entities as well as their
+individual features to make predictions.
+
+## Technical explanation
+
+Many GNNs update node representations by aggregating messages from
+neighbouring nodes and combining them with the current representation.
+After several layers, a node representation can encode information from
+multiple graph hops. Architectures differ in aggregation, normalization,
+attention, and graph-level pooling.
+
+## Why it matters in AI engineering
+
+Graphs represent relationships in social networks, molecules,
+transactions, knowledge bases, and infrastructure. GNNs can use this
+structure, but require careful handling of scale, dynamic edges,
+heterogeneous entities, and train/test leakage through graph connections.
+
+## How it works
+
+Each layer sends or computes messages between connected nodes, aggregates
+neighbour information, and updates node embeddings. A prediction head
+then uses node, edge, or pooled graph representations for the target
+task.
+
+## Practical example
+
+A molecular-property model can represent atoms as nodes and chemical
+bonds as edges. A GNN aggregates information through the molecular graph
+before predicting a property.
+
+## Common misconceptions
+
+- A GNN does not automatically understand every relationship encoded in
+  a graph.
+- More message-passing layers can cause oversmoothing or increase cost.
+- Graph connectivity and feature construction can introduce leakage if
+  they use information unavailable at prediction time.
+
+## Related terms
+
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Clustering](../C/clustering.qmd)
+
+## Further reading
+
+- [A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/abs/1901.00596) — surveys GNN architectures, applications, and challenges.
+- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/) — framework documentation and examples for graph neural networks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

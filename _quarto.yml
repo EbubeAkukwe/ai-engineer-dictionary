@@ -149,7 +149,36 @@ website:
             - dictionary/F/function-calling.qmd
             - dictionary/F/false-positive.qmd
             - dictionary/F/false-negative.qmd
-        - section: "G–I"
+        - section: "G"
+          contents:
+            - dictionary/G/index.qmd
+            - dictionary/G/gan-generative-adversarial-network.qmd
+            - dictionary/G/generative-ai.qmd
+            - dictionary/G/generative-model.qmd
+            - dictionary/G/gelu.qmd
+            - dictionary/G/generalization.qmd
+            - dictionary/G/git.qmd
+            - dictionary/G/gradient.qmd
+            - dictionary/G/gradient-descent.qmd
+            - dictionary/G/gradient-clipping.qmd
+            - dictionary/G/graph-neural-network.qmd
+            - dictionary/G/greedy-decoding.qmd
+            - dictionary/G/grounding.qmd
+            - dictionary/G/gpu.qmd
+            - dictionary/G/grid-search.qmd
+        - section: "H"
+          contents:
+            - dictionary/H/index.qmd
+            - dictionary/H/hallucination.qmd
+            - dictionary/H/hashing.qmd
+            - dictionary/H/heuristic.qmd
+            - dictionary/H/hidden-layer.qmd
+            - dictionary/H/hierarchical-clustering.qmd
+            - dictionary/H/human-in-the-loop.qmd
+            - dictionary/H/hyperparameter.qmd
+            - dictionary/H/hyperparameter-optimization.qmd
+            - dictionary/H/hypothesis-testing.qmd
+        - section: "I"
           contents:
             - dictionary/letters.qmd
         - section: "J"

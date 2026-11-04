@@ -1,0 +1,63 @@
+---
+title: "Hallucination"
+description: "An AI-generated claim or output that is unsupported, fabricated, or inconsistent with available evidence."
+term: "Hallucination"
+letter: "H"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An AI hallucination is an output that sounds plausible but is false,
+unsupported, or inconsistent with the information available to the
+system.
+
+## Technical explanation
+
+The term is commonly used for language-model outputs that contain
+fabricated facts, citations, or details. The cause may involve
+uncertainty, missing context, training-data patterns, decoding, or
+application design. Definitions and evaluation criteria vary by task.
+
+## Why it matters in AI engineering
+
+Unsupported outputs can mislead users and cause harm, especially in
+high-impact contexts. Systems need task-specific evaluations,
+appropriate sourcing, uncertainty handling, and human review where
+necessary.
+
+## How it works
+
+A generative model produces outputs based on learned patterns and
+available context. It may generate a likely continuation even when it
+lacks reliable evidence. Retrieval, tools, constrained output formats,
+and verification can reduce some errors but do not eliminate them.
+
+## Practical example
+
+A question-answering system may invent a page number for a real report.
+Checking citations against the source document can detect this error.
+
+## Common misconceptions
+
+- Hallucination is not limited to made-up names; wrong details and
+  unsupported inferences also matter.
+- Retrieval-augmented generation does not eliminate hallucinations.
+- A confident tone is not evidence that an answer is correct.
+
+## Related terms
+
+- [Grounding](../G/grounding.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Chain of Thought](../C/chain-of-thought.qmd)
+
+## Further reading
+
+- [OpenAI: Why language models hallucinate](https://openai.com/index/why-language-models-hallucinate/) — discusses why language models produce incorrect claims.
+- [Anthropic: Reducing hallucinations](https://www.anthropic.com/research/reducing-hallucinations-in-large-language-models) — describes research on reducing unsupported outputs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

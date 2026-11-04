@@ -1,0 +1,65 @@
+---
+title: "GPU"
+description: "A graphics processing unit designed for parallel computation and widely used to accelerate AI workloads."
+term: "GPU"
+letter: "G"
+category: "AI Infrastructure"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A graphics processing unit (GPU) is a processor with many parallel
+computing units. GPUs can accelerate machine-learning operations that
+perform similar calculations across large arrays of data.
+
+## Technical explanation
+
+GPUs execute many threads and are optimized for throughput on parallel
+workloads. AI frameworks use GPU kernels for operations such as matrix
+multiplication and convolution. Performance depends on hardware,
+memory bandwidth, kernel implementation, batch size, software stack,
+and data-transfer overhead.
+
+## Why it matters in AI engineering
+
+GPUs can make model training and inference practical for workloads that
+would be too slow on general-purpose CPUs. Their memory capacity,
+availability, cost, power use, and compatibility influence architecture
+and deployment decisions.
+
+## How it works
+
+Data and model parameters are placed in GPU-accessible memory. Parallel
+kernels perform operations across many elements, often asynchronously
+with the CPU. Frameworks manage execution details, but transfers and
+synchronization can affect performance.
+
+## Practical example
+
+A deep-learning framework can run a batch of image convolutions on a
+GPU, processing many pixels and channels in parallel.
+
+## Common misconceptions
+
+- A GPU does not accelerate every workload; small or sequential tasks
+  may run faster on a CPU.
+- GPU performance depends on memory and data pipelines as well as raw
+  compute.
+- CUDA refers to NVIDIA's GPU computing platform, not to all GPUs.
+
+## Related terms
+
+- [CUDA](../C/cuda.qmd)
+- [Distributed Training](../D/distributed-training.qmd)
+- [Edge AI](../E/edge-ai.qmd)
+
+## Further reading
+
+- [NVIDIA: What is a GPU?](https://www.nvidia.com/en-us/glossary/gpu/) — overview of GPU architecture and applications.
+- [Google Cloud: GPU platforms](https://cloud.google.com/gpu) — information about GPU resources for computing workloads.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

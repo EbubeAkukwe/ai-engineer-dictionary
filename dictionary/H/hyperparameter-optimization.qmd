@@ -1,0 +1,65 @@
+---
+title: "Hyperparameter Optimization"
+description: "The process of selecting configuration values that improve a model's validation performance or operational fit."
+term: "Hyperparameter Optimization"
+letter: "H"
+category: "Model Optimization"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Hyperparameter optimization searches for useful settings—such as
+learning rate or regularization strength—by training and comparing
+models.
+
+## Technical explanation
+
+A search procedure evaluates candidate configurations using a
+validation metric or cross-validation estimate. Methods include grid
+search, random search, Bayesian optimization, and successive-halving
+approaches. Search results are affected by noisy evaluation, budget,
+parameter ranges, and the chosen objective.
+
+## Why it matters in AI engineering
+
+Hyperparameter choices can strongly affect model quality and resource
+use. A well-designed search can improve a model under a fixed budget,
+but the search itself can overfit validation data and consume
+substantial compute.
+
+## How it works
+
+Define tunable parameters, ranges, a search budget, and an evaluation
+procedure. Train candidate configurations, compare their results, and
+select a configuration using validation data. Keep final test data
+separate for an unbiased final assessment.
+
+## Practical example
+
+A team can compare learning rates and weight decay values using a fixed
+validation split, while logging each configuration, training duration,
+and metric.
+
+## Common misconceptions
+
+- More trials do not guarantee better generalization.
+- Optimization cannot compensate for a flawed evaluation dataset.
+- A configuration with the best noisy validation score may not be
+  meaningfully better than nearby settings.
+
+## Related terms
+
+- [Hyperparameter](hyperparameter.qmd)
+- [Grid Search](../G/grid-search.qmd)
+- [Bayesian Optimization](../B/bayesian-optimization.qmd)
+
+## Further reading
+
+- [Scikit-learn: Tuning the hyperparameters of an estimator](https://scikit-learn.org/stable/modules/grid_search.html) — covers search procedures and cross-validation.
+- [Google for Developers: Hyperparameter tuning](https://developers.google.com/machine-learning/crash-course/overfitting/hyperparameter-tuning) — gives an introduction to tuning strategies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

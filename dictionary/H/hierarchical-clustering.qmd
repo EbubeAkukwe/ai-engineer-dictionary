@@ -1,0 +1,64 @@
+---
+title: "Hierarchical Clustering"
+description: "A clustering method that builds a nested hierarchy of groups based on data similarity."
+term: "Hierarchical Clustering"
+letter: "H"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Hierarchical clustering organizes examples into nested groups. The
+result can be displayed as a tree-like diagram, and a chosen cut through
+that hierarchy gives a set of clusters.
+
+## Technical explanation
+
+Agglomerative methods start with individual examples and repeatedly
+merge clusters according to a linkage criterion. Divisive methods begin
+with one group and split it recursively. Linkage choices such as
+single, complete, average, or Ward's method define how distances between
+clusters are calculated.
+
+## Why it matters in AI engineering
+
+The hierarchy can help explore structure without choosing a cluster
+count at the start. Results can be sensitive to distance, scaling,
+linkage, and outliers, and many implementations have substantial
+memory or runtime costs for large datasets.
+
+## How it works
+
+Calculate pairwise distances or another similarity measure. Repeatedly
+merge the closest clusters under the chosen linkage, recording the
+merge distance. A dendrogram or related representation shows the
+sequence of merges; selecting a cut determines the final grouping.
+
+## Practical example
+
+A team can cluster document embeddings hierarchically and inspect a
+dendrogram to explore broad themes and their subtopics.
+
+## Common misconceptions
+
+- The hierarchy is not automatically a meaningful taxonomy.
+- The number of clusters still must be selected when a flat assignment
+  is needed.
+- Different distance and linkage choices can produce different trees.
+
+## Related terms
+
+- [Clustering](../C/clustering.qmd)
+- [Cosine Similarity](../C/cosine-similarity.qmd)
+- [Dimensionality Reduction](../D/dimensionality-reduction.qmd)
+
+## Further reading
+
+- [Scikit-learn: Hierarchical clustering](https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering) — documents agglomerative clustering and linkage options.
+- [SciPy: Hierarchical clustering](https://docs.scipy.org/doc/scipy/reference/cluster.hierarchy.html) — reference for linkage, dendrograms, and cluster cuts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

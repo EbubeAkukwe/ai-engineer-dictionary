@@ -1,0 +1,20 @@
+---
+title: "G"
+---
+
+# G
+
+- [GAN (Generative Adversarial Network)](gan-generative-adversarial-network.qmd)
+- [Generative AI](generative-ai.qmd)
+- [Generative Model](generative-model.qmd)
+- [GELU](gelu.qmd)
+- [Generalization](generalization.qmd)
+- [Git](git.qmd)
+- [Gradient](gradient.qmd)
+- [Gradient Descent](gradient-descent.qmd)
+- [Gradient Clipping](gradient-clipping.qmd)
+- [Graph Neural Network](graph-neural-network.qmd)
+- [Greedy Decoding](greedy-decoding.qmd)
+- [Grounding](grounding.qmd)
+- [GPU](gpu.qmd)
+- [Grid Search](grid-search.qmd)

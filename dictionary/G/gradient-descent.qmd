@@ -1,0 +1,84 @@
+---
+title: "Gradient Descent"
+description: "An iterative optimization method that updates parameters in the direction of decreasing loss."
+term: "Gradient Descent"
+letter: "G"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Gradient descent improves model parameters by repeatedly measuring how
+the loss changes and taking a step in the direction that locally reduces
+it.
+
+## Technical explanation
+
+For parameters $\theta$, loss $L(\theta)$, and learning rate $\eta$, a
+basic update is $\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$.
+Batch, stochastic, and mini-batch variants differ in how much training
+data is used to estimate each gradient. Optimizers such as momentum and
+Adam modify the update rule.
+
+## Why it matters in AI engineering
+
+Gradient-based optimization trains many machine-learning models.
+Learning-rate choice, noisy gradients, loss geometry, and data order
+affect convergence, stability, and compute requirements.
+
+## How it works
+
+At each step, calculate the loss gradient at current parameters, scale
+the update by a learning rate, and move parameters opposite the
+gradient. Repeat until a stopping criterion or training budget is met.
+The method may reach a local solution or fail to converge depending on
+the objective and configuration.
+
+<figure>
+<svg viewBox="0 0 640 360" role="img" aria-labelledby="gd-title gd-desc" style="max-width: 100%; height: auto;">
+<title id="gd-title">Gradient descent steps toward a loss minimum</title>
+<desc id="gd-desc">A bowl-shaped loss curve shows parameter values along the horizontal axis and loss vertically. A sequence of descending points moves along the curve toward its minimum.</desc>
+<path d="M75 300 H590 M75 300 V40" stroke="#334155" stroke-width="2"/>
+<path d="M95 80 C155 125 205 218 300 247 C395 276 490 208 565 90" fill="none" stroke="#64748b" stroke-width="4"/>
+<path d="M140 123 L224 220 L292 246 L340 253" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 5"/>
+<circle cx="140" cy="123" r="8" fill="#dc2626"/><circle cx="224" cy="220" r="8" fill="#f97316"/>
+<circle cx="292" cy="246" r="8" fill="#eab308"/><circle cx="340" cy="253" r="8" fill="#16a34a"/>
+<path d="M194 176 L216 210 M268 235 L285 244 M318 250 L333 253" stroke="#2563eb" stroke-width="2"/>
+<text x="126" y="106" font-size="14" fill="#7f1d1d">start</text>
+<text x="351" y="277" font-size="14" fill="#166534">lower loss</text>
+<text x="330" y="332" text-anchor="middle" font-size="16" fill="#0f172a">Parameter value</text>
+<text x="25" y="171" text-anchor="middle" font-size="16" fill="#0f172a" transform="rotate(-90 25 171)">Loss</text>
+</svg>
+<figcaption>Schematic optimization path on a one-dimensional loss curve. Gradient steps move toward lower loss locally; real objectives are often high-dimensional and non-convex, and step size affects the path.</figcaption>
+</figure>
+
+## Practical example
+
+A neural network calculates its training loss and gradients for a
+mini-batch. An optimizer updates its weights, then processes another
+batch and repeats the procedure.
+
+## Common misconceptions
+
+- Gradient descent does not guarantee finding a global minimum.
+- A larger learning rate is not always faster; it can overshoot or
+  destabilize training.
+- The loss may fluctuate between updates, especially with mini-batch
+  gradients.
+
+## Related terms
+
+- [Gradient](gradient.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Batch Size](../B/batch-size.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Optimization for Deep Learning](https://www.deeplearningbook.org/contents/optimization.html) — covers gradient-based optimization and its practical issues.
+- [Google for Developers: Gradient descent](https://developers.google.com/machine-learning/crash-course/linear-regression/gradient-descent) — visual introduction to gradient descent.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

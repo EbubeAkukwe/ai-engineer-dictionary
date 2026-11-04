@@ -1,0 +1,65 @@
+---
+title: "Gradient Clipping"
+description: "A technique that limits gradient magnitude before applying a parameter update."
+term: "Gradient Clipping"
+letter: "G"
+category: "Model Training"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Gradient clipping limits unusually large gradients during training. It
+can prevent a single update from changing model parameters too
+dramatically.
+
+## Technical explanation
+
+With global norm clipping and threshold $c$, a gradient vector $g$ can
+be rescaled as
+$g' = g\min(1,c/\|g\|)$. Value clipping instead clamps each gradient
+component independently. These methods change the update and should be
+selected with awareness of the optimizer and training dynamics.
+
+## Why it matters in AI engineering
+
+Clipping can stabilize training when gradients occasionally become
+large, especially in recurrent or deep networks. It is a mitigation
+technique, not a substitute for diagnosing poor scaling, numerical
+errors, or an unsuitable learning rate.
+
+## How it works
+
+After gradients are computed and before the optimizer update, the
+training loop measures their norm or values and applies the configured
+limit. The optimizer then uses the modified gradients to update
+parameters.
+
+## Practical example
+
+If a training run has sporadic large gradient norms, global norm
+clipping can cap those updates while retaining the direction of the
+gradient vector.
+
+## Common misconceptions
+
+- Gradient clipping does not guarantee convergence.
+- Norm clipping and value clipping are different operations.
+- A clipping threshold that is too low can suppress useful learning
+  signals.
+
+## Related terms
+
+- [Gradient](gradient.qmd)
+- [Exploding Gradients](../E/exploding-gradients.qmd)
+- [Gradient Descent](gradient-descent.qmd)
+
+## Further reading
+
+- [Pascanu, Mikolov, and Bengio: On the difficulty of training recurrent neural networks](https://arxiv.org/abs/1211.5063) — analyzes exploding gradients and gradient clipping.
+- [PyTorch: clip_grad_norm_](https://pytorch.org/docs/stable/generated/torch.nn.utils.clip_grad_norm_.html) — documents global norm clipping.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

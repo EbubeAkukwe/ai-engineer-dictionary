@@ -1,0 +1,66 @@
+---
+title: "Human-in-the-Loop"
+description: "An approach that includes people in an AI system's data, review, decision, or feedback process."
+term: "Human-in-the-Loop"
+letter: "H"
+category: "AI Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Human-in-the-loop systems involve people in parts of an AI workflow.
+People may label examples, review model outputs, provide corrections,
+or make the final decision.
+
+## Technical explanation
+
+Human involvement can occur during data collection, active learning,
+quality assurance, exception handling, or deployment decisions. The
+workflow should specify what information reviewers see, what authority
+they have, how disagreements are resolved, and how feedback is recorded.
+
+## Why it matters in AI engineering
+
+Human review can provide oversight where model errors are costly or
+uncertainty is high. Poorly designed review can create automation bias,
+excessive workload, inconsistent labels, or a false impression that a
+system is safe simply because a person is nominally present.
+
+## How it works
+
+The system routes selected cases to reviewers, presents relevant
+context and model outputs, and records the human decision. Routing
+criteria, escalation paths, review capacity, and feedback use should
+be evaluated as part of the end-to-end system.
+
+## Practical example
+
+A document-processing service can automatically handle routine cases
+and send low-confidence or high-impact cases to a trained reviewer
+before finalizing the result.
+
+## Common misconceptions
+
+- Human review is not automatically effective; reviewers need enough
+  time, context, and authority.
+- A human-in-the-loop process does not remove the need to evaluate the
+  model or workflow.
+- Reviewers may be influenced by model suggestions, especially when
+  those suggestions are presented with unjustified confidence.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Active Learning](../A/active-learning.qmd)
+- [Agentic Workflow](../A/agentic-workflow.qmd)
+
+## Further reading
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — guidance for managing AI risks across system design and use.
+- [Automation Bias in Intelligent Time-Critical Decision Support Systems](https://doi.org/10.1016/j.ijhcs.2013.01.001) — reviews human factors related to reliance on automated decision aids.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

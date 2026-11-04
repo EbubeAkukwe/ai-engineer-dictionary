@@ -1,0 +1,66 @@
+---
+title: "Grounding"
+description: "Connecting a model's outputs to relevant evidence, data, or actions in a specific context."
+term: "Grounding"
+letter: "G"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Grounding connects a model's response to information or evidence beyond
+the model's internal learned patterns. This may include supplied
+documents, database results, tool outputs, or observations from an
+environment.
+
+## Technical explanation
+
+Grounding is a broad term for conditioning or constraining outputs with
+external context and verifiable references. Retrieval-augmented
+generation, tool use, structured data access, and sensor input can all
+contribute to grounding. Grounded inputs do not guarantee that the model
+will use them correctly.
+
+## Why it matters in AI engineering
+
+Grounding can help applications use current, private, or task-specific
+information and provide evidence for answers. Engineers still need to
+evaluate source quality, retrieval relevance, attribution, and how the
+system behaves when evidence is missing.
+
+## How it works
+
+An application retrieves or obtains relevant evidence, supplies it with
+the task, and may require outputs to reference that evidence. Validation
+can compare claims with sources or route uncertain responses for review.
+
+## Practical example
+
+A policy assistant can retrieve approved handbook passages and ask a
+model to answer using those passages, including links or section
+references for review.
+
+## Common misconceptions
+
+- Grounding is not synonymous with RAG; other sources and mechanisms
+  can provide grounding.
+- Providing sources does not guarantee accurate citations or faithful
+  use of evidence.
+- Grounding cannot make stale or incorrect source data reliable.
+
+## Related terms
+
+- [Context Engineering](../C/context-engineering.qmd)
+- [Chunking](../C/chunking.qmd)
+- [External Tool](../E/external-tool.qmd)
+
+## Further reading
+
+- [Google Cloud: Grounding overview](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview) — describes grounding model responses in external sources.
+- [Anthropic: Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval) — discusses retrieval techniques for supplying relevant evidence.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

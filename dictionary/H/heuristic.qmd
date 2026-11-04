@@ -1,0 +1,65 @@
+---
+title: "Heuristic"
+description: "A practical rule or estimate that guides problem-solving without guaranteeing an optimal result."
+term: "Heuristic"
+letter: "H"
+category: "Algorithms"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A heuristic is a practical shortcut or estimate that helps solve a
+problem more efficiently. It can guide a search or decision, but it
+does not always guarantee the best answer.
+
+## Technical explanation
+
+In search algorithms, a heuristic function estimates the remaining
+cost or distance from a state to a goal. In other contexts, a heuristic
+may be a rule of thumb or approximate procedure. Its usefulness depends
+on the problem, and formal properties such as admissibility matter for
+some algorithms.
+
+## Why it matters in AI engineering
+
+Heuristics can make search and decision procedures practical when exact
+optimization is too costly. Engineers should understand the tradeoff
+between speed and solution quality and test heuristic behaviour on
+representative cases.
+
+## How it works
+
+A heuristic maps a state or input to an estimate or suggested action.
+An algorithm may use this estimate to prioritize candidates, prune
+search, or make a quick decision. The heuristic's quality affects the
+search path and, in some methods, guarantees.
+
+## Practical example
+
+A path-finding algorithm can use straight-line distance to the goal as
+a heuristic for prioritizing locations to explore.
+
+## Common misconceptions
+
+- A heuristic is not necessarily arbitrary; it may be based on domain
+  structure.
+- A heuristic does not guarantee an optimal result unless the algorithm
+  and heuristic satisfy the relevant conditions.
+- A heuristic score should not be mistaken for a calibrated probability.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [Beam Search](../B/beam-search.qmd)
+- [D* (D-Star)](../D/d-star.qmd)
+
+## Further reading
+
+- [A* Search](https://www.redblobgames.com/pathfinding/a-star/introduction.html) — visual explanation of heuristic-guided pathfinding.
+- [Artificial Intelligence: A Modern Approach](https://aima.cs.berkeley.edu/) — textbook coverage of heuristic search.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

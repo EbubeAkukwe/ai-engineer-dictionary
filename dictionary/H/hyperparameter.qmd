@@ -1,0 +1,66 @@
+---
+title: "Hyperparameter"
+description: "A configuration value that controls a learning algorithm or model setup rather than being learned directly from training examples."
+term: "Hyperparameter"
+letter: "H"
+category: "Model Training"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A hyperparameter is a setting chosen for a model or training process.
+Examples include learning rate, batch size, and the number of layers.
+The model's weights, in contrast, are usually learned from data.
+
+## Technical explanation
+
+Hyperparameters configure the hypothesis class, optimization procedure,
+regularization, or data processing. They are selected before or around
+training, often using validation data or an optimization procedure.
+Some systems have hierarchical or learned hyperparameters, so the
+distinction is based on their role in a particular training setup.
+
+## Why it matters in AI engineering
+
+Hyperparameters affect performance, training stability, cost, and
+deployment characteristics. Poor settings can waste compute or produce
+models that underfit or overfit.
+
+## How it works
+
+Choose candidate settings, train models under those settings, and
+compare them using a leakage-safe validation strategy. The selected
+configuration is then retrained or finalized according to the
+evaluation plan.
+
+## Practical example
+
+A training run may use a learning rate of 0.001 and a batch size of 64.
+Those are hyperparameters, while the network weights are updated during
+training.
+
+## Common misconceptions
+
+- Hyperparameters are not the same as model parameters learned by the
+  optimizer.
+- A hyperparameter that works for one dataset or architecture may not
+  work for another.
+- Tuning repeatedly on a test set leaks information into model
+  selection.
+
+## Related terms
+
+- [Hyperparameter Optimization](hyperparameter-optimization.qmd)
+- [Grid Search](../G/grid-search.qmd)
+- [Bayesian Optimization](../B/bayesian-optimization.qmd)
+
+## Further reading
+
+- [Google for Developers: Hyperparameter tuning](https://developers.google.com/machine-learning/crash-course/overfitting/hyperparameter-tuning) — introduces hyperparameters and tuning.
+- [Scikit-learn: Model selection](https://scikit-learn.org/stable/model_selection.html) — documents validation and parameter-search tools.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

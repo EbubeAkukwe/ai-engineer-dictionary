@@ -1,0 +1,62 @@
+---
+title: "Hidden Layer"
+description: "A neural-network layer between the input and output layers."
+term: "Hidden Layer"
+letter: "H"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A hidden layer is an intermediate layer in a neural network. It transforms
+information from earlier layers before passing it toward the output.
+
+## Technical explanation
+
+A hidden layer applies a parameterized transformation such as
+$h^{(l)}=f(W^{(l)}h^{(l-1)}+b^{(l)})$, where $W^{(l)}$ and $b^{(l)}$
+are learned parameters and $f$ may be a nonlinear activation. The term
+"hidden" means the layer is not itself the model's external input or
+target output; it does not imply secrecy or a fixed meaning.
+
+## Why it matters in AI engineering
+
+Hidden layers build intermediate representations used for predictions.
+Their number, width, operations, and activations affect model capacity,
+compute, and optimization.
+
+## How it works
+
+Each layer receives a representation, applies learned operations, and
+produces a new representation. During training, gradients update its
+parameters based on the model's loss.
+
+## Practical example
+
+A feedforward classifier may transform a tabular input through two
+hidden layers before a final layer produces class scores.
+
+## Common misconceptions
+
+- A hidden layer is not necessarily a dense layer; it may use
+  convolution, attention, recurrence, or other operations.
+- Hidden units do not automatically correspond to interpretable
+  concepts.
+- Adding hidden layers does not guarantee better performance.
+
+## Related terms
+
+- [Dense Layer](../D/dense-layer.qmd)
+- [Feedforward Neural Network](../F/feedforward-neural-network.qmd)
+- [Activation Function](../A/activation-function.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Multilayer Perceptrons](https://www.deeplearningbook.org/contents/mlp.html) — explains hidden layers and learned representations.
+- [PyTorch: Build the neural network](https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html) — illustrates layers in a neural-network model.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

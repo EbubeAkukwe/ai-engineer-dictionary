@@ -1,0 +1,60 @@
+---
+title: "GELU"
+description: "A smooth neural-network activation function that weights inputs by their Gaussian cumulative probability."
+term: "GELU"
+letter: "G"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+GELU, or Gaussian Error Linear Unit, is a smooth activation function
+commonly used in Transformer models. Unlike ReLU, it does not abruptly
+set every negative input to zero.
+
+## Technical explanation
+
+The exact GELU function is $x\Phi(x)$, where $\Phi$ is the standard
+normal cumulative distribution function. A common approximation is
+$0.5x\left(1+\tanh\left(\sqrt{2/\pi}(x+0.044715x^3)\right)\right)$.
+
+## Why it matters in AI engineering
+
+Activation functions affect optimization and model behaviour. GELU is
+widely associated with Transformer architectures, and implementations
+may use an approximation for computational efficiency.
+
+## How it works
+
+GELU scales an input according to the probability that a standard
+normally distributed variable is less than that input. This creates a
+smooth nonlinear transformation that retains small negative values
+rather than applying a hard cutoff.
+
+## Practical example
+
+A Transformer feedforward block may apply GELU between two learned
+linear transformations before passing activations onward.
+
+## Common misconceptions
+
+- GELU is not simply ReLU with a different name.
+- Different libraries may expose exact and approximate implementations.
+- Choosing GELU does not by itself guarantee better model performance.
+
+## Related terms
+
+- [Activation Function](../A/activation-function.qmd)
+- [Feedforward Neural Network](../F/feedforward-neural-network.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+
+## Further reading
+
+- [Gaussian Error Linear Units (GELUs)](https://arxiv.org/abs/1606.08415) — introduces the GELU activation.
+- [PyTorch: GELU](https://pytorch.org/docs/stable/generated/torch.nn.GELU.html) — documents exact and approximate GELU implementations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

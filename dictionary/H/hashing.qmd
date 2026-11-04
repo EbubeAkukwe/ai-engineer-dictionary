@@ -1,0 +1,67 @@
+---
+title: "Hashing"
+description: "The mapping of data to a fixed-size value using a hash function."
+term: "Hashing"
+letter: "H"
+category: "Computer Science"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Hashing turns data of varying sizes into a fixed-size value called a
+hash. Hashes can support fast lookup, deduplication, and data-integrity
+checks, depending on the hash function and use case.
+
+## Technical explanation
+
+A hash function maps input data to a fixed-size output. Different inputs
+can share an output (a collision), so collision handling is essential
+for data structures. Cryptographic hash functions have additional
+security properties and should not be confused with ordinary hash
+functions used for indexing.
+
+## Why it matters in AI engineering
+
+Hashing can index features, identify duplicate files, partition data,
+or support privacy-preserving workflows. Hash choice must match the
+application; ordinary hashes are not suitable for password storage or
+cryptographic integrity guarantees.
+
+## How it works
+
+The function processes an input and deterministically produces a
+fixed-size value. Hash tables use that value to select a storage
+location, resolving collisions when different keys map to the same
+location. Cryptographic hashes are designed to make certain attacks
+computationally difficult.
+
+## Practical example
+
+A data pipeline can hash file contents to identify exact duplicate
+images before building a training dataset. Near-duplicate images
+require similarity methods rather than exact hashes.
+
+## Common misconceptions
+
+- Hashing is not encryption; it is generally not designed to be
+  reversible.
+- Hash collisions are possible.
+- A fast general-purpose hash is not automatically secure for
+  cryptographic uses.
+
+## Related terms
+
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Data Validation](../D/data-validation.qmd)
+- [Embedding](../E/embedding.qmd)
+
+## Further reading
+
+- [NIST: Hash functions](https://csrc.nist.gov/projects/hash-functions) — information about cryptographic hash standards.
+- [Python: Hashing collections](https://docs.python.org/3/reference/datamodel.html#object.__hash__) — documents Python's hash method and its use in collections.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

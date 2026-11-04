@@ -1,0 +1,65 @@
+---
+title: "Generative Model"
+description: "A model that represents how data may be generated and can produce new samples."
+term: "Generative Model"
+letter: "G"
+category: "Generative AI"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A generative model learns patterns in data so it can produce new samples
+that resemble the examples or follow a condition, such as a prompt.
+
+## Technical explanation
+
+A generative model may estimate a joint distribution $p(x)$, a
+conditional distribution $p(x\mid c)$, or a mechanism for sampling data.
+Model families include autoregressive models, diffusion models,
+variational autoencoders, and GANs. Some models use implicit sampling
+without a tractable likelihood.
+
+## Why it matters in AI engineering
+
+Generative models power content creation, simulation, data synthesis,
+and conditional completion. Their outputs require task-specific
+evaluation because likelihood, realism, diversity, and usefulness are
+different properties.
+
+## How it works
+
+The model learns from data using an architecture and objective, then
+generates by sampling or iteratively transforming a latent input into
+an output. Conditioning information can guide the sample toward a
+requested category, context, or prompt.
+
+## Practical example
+
+A diffusion model can begin with a noise representation and iteratively
+denoise it while using a text prompt as conditioning information to
+generate an image.
+
+## Common misconceptions
+
+- A generative model does not necessarily memorize and replay training
+  examples, though memorization should be assessed.
+- A plausible sample is not necessarily true or representative.
+- Not every model that outputs text is generative in the same technical
+  sense; some systems select or retrieve existing content.
+
+## Related terms
+
+- [Generative AI](generative-ai.qmd)
+- [Diffusion Model](../D/diffusion-model.qmd)
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+
+## Further reading
+
+- [Generative Adversarial Nets](https://arxiv.org/abs/1406.2661) — a foundational generative-model approach based on adversarial training.
+- [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) — describes diffusion-based generation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

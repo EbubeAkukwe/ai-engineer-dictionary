@@ -128,11 +128,32 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## G {#g}
 
-Terms beginning with G will appear here as the dictionary grows.
+- [GAN (Generative Adversarial Network)](/dictionary/G/gan-generative-adversarial-network.qmd)
+- [Generative AI](/dictionary/G/generative-ai.qmd)
+- [Generative Model](/dictionary/G/generative-model.qmd)
+- [GELU](/dictionary/G/gelu.qmd)
+- [Generalization](/dictionary/G/generalization.qmd)
+- [Git](/dictionary/G/git.qmd)
+- [Gradient](/dictionary/G/gradient.qmd)
+- [Gradient Descent](/dictionary/G/gradient-descent.qmd)
+- [Gradient Clipping](/dictionary/G/gradient-clipping.qmd)
+- [Graph Neural Network](/dictionary/G/graph-neural-network.qmd)
+- [Greedy Decoding](/dictionary/G/greedy-decoding.qmd)
+- [Grounding](/dictionary/G/grounding.qmd)
+- [GPU](/dictionary/G/gpu.qmd)
+- [Grid Search](/dictionary/G/grid-search.qmd)
 
 ## H {#h}
 
-Terms beginning with H will appear here as the dictionary grows.
+- [Hallucination](/dictionary/H/hallucination.qmd)
+- [Hashing](/dictionary/H/hashing.qmd)
+- [Heuristic](/dictionary/H/heuristic.qmd)
+- [Hidden Layer](/dictionary/H/hidden-layer.qmd)
+- [Hierarchical Clustering](/dictionary/H/hierarchical-clustering.qmd)
+- [Human-in-the-Loop](/dictionary/H/human-in-the-loop.qmd)
+- [Hyperparameter](/dictionary/H/hyperparameter.qmd)
+- [Hyperparameter Optimization](/dictionary/H/hyperparameter-optimization.qmd)
+- [Hypothesis Testing](/dictionary/H/hypothesis-testing.qmd)
 
 ## I {#i}
 

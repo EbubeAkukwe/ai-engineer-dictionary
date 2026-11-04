@@ -1,0 +1,74 @@
+---
+title: "GAN (Generative Adversarial Network)"
+description: "A generative model trained through competition between a generator and a discriminator."
+term: "GAN (Generative Adversarial Network)"
+letter: "G"
+category: "Generative AI"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A generative adversarial network (GAN) contains two neural networks: a
+generator that creates samples and a discriminator that tries to
+distinguish generated samples from real ones. They train in opposition,
+with the goal of producing increasingly realistic samples.
+
+## Technical explanation
+
+The generator $G$ maps random noise $z$ to a sample $G(z)$. The
+discriminator $D$ estimates whether an input is real or generated. In
+the original formulation, the networks play a minimax game:
+
+$$
+\min_G \max_D
+\mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)]
++ \mathbb{E}_{z \sim p_z}[\log(1-D(G(z)))]
+$$
+
+Many variants change the objective or training procedure to improve
+stability or sample quality.
+
+## Why it matters in AI engineering
+
+GANs helped establish adversarial training as a powerful generative
+approach and have been used for image synthesis, translation, and data
+generation. They can be difficult to train and evaluate, and generated
+data may reproduce biases or artifacts.
+
+## How it works
+
+The discriminator learns from real examples and generated samples. The
+generator receives feedback through the discriminator's response and
+updates its parameters to produce samples that are harder to distinguish
+from real data. Training alternates updates to the two networks.
+
+## Practical example
+
+A GAN trained on a curated collection of product images can learn to
+generate novel-looking samples. Those outputs should be reviewed for
+quality, memorization, and suitability before use.
+
+## Common misconceptions
+
+- The generator does not simply retrieve copies from the training set,
+  although memorization can occur.
+- A GAN is not guaranteed to converge to a stable or useful solution.
+- Realistic-looking samples are not necessarily representative or
+  factually valid.
+
+## Related terms
+
+- [Generative Model](generative-model.qmd)
+- [Deep Learning](../D/deep-learning.qmd)
+- [Data Augmentation](../D/data-augmentation.qmd)
+
+## Further reading
+
+- [Generative Adversarial Nets](https://arxiv.org/abs/1406.2661) — introduces the original GAN framework.
+- [NVIDIA: Generative Adversarial Networks](https://blogs.nvidia.com/blog/what-is-a-generative-adversarial-network/) — provides an accessible overview of GANs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

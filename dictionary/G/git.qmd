@@ -1,0 +1,63 @@
+---
+title: "Git"
+description: "A distributed version-control system for tracking changes to files and coordinating software development."
+term: "Git"
+letter: "G"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Git records changes to files over time, allowing developers to review
+history, work on separate branches, and combine contributions.
+
+## Technical explanation
+
+Git stores content-addressed snapshots in a repository and represents
+history as commits connected by parent relationships. Branches are
+movable references to commits. Local repositories can exchange commits
+with remotes, and merges or rebases integrate changes.
+
+## Why it matters in AI engineering
+
+Version control helps teams review code, configuration, and documentation
+changes. Machine-learning projects also need explicit strategies for
+versioning large datasets, model artifacts, and experiment metadata,
+which are not always suited to ordinary Git storage.
+
+## How it works
+
+Changes are staged, recorded in commits with messages, and shared
+through branches and remotes. Teams use review workflows to discuss and
+validate proposed changes before integrating them.
+
+## Practical example
+
+A developer can create a branch for a model-evaluation change, commit
+the code and test updates, and open a pull request so teammates can
+review the differences.
+
+## Common misconceptions
+
+- Git and GitHub are different: Git is the version-control system;
+  GitHub is one hosting and collaboration service.
+- A commit does not automatically include untracked or unstaged files.
+- Git is not designed to efficiently store every large dataset or
+  frequently changing model artifact.
+
+## Related terms
+
+- [Continuous Integration](../C/continuous-integration.qmd)
+- [Docker](../D/docker.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+
+## Further reading
+
+- [Pro Git](https://git-scm.com/book/en/v2) — a free book covering Git concepts and workflows.
+- [Git documentation](https://git-scm.com/doc) — official reference and learning resources.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

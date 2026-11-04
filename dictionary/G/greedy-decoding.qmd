@@ -1,0 +1,65 @@
+---
+title: "Greedy Decoding"
+description: "A generation strategy that selects the highest-scoring next token at each step."
+term: "Greedy Decoding"
+letter: "G"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Greedy decoding generates a sequence one token at a time, choosing the
+most likely next token at each step. It is simple and fast, but an
+early choice can lead to a less desirable complete sequence.
+
+## Technical explanation
+
+At each step $t$, greedy decoding selects
+$x_t=\arg\max_x p(x\mid x_{<t})$. The chosen token is appended to the
+prefix, and the model predicts again until a stopping condition. It
+does not search over all possible sequences and is not guaranteed to
+maximize the probability of the entire sequence.
+
+## Why it matters in AI engineering
+
+Greedy decoding provides a deterministic baseline for generation when
+model outputs are stable. Its speed and reproducibility may be useful,
+but output quality depends on the task and model distribution.
+
+## How it works
+
+The model produces next-token scores or probabilities, the decoder
+chooses the highest-scoring token, and generation repeats. Special
+stopping tokens, maximum lengths, and constraints affect when decoding
+ends.
+
+## Practical example
+
+A language model asked to complete a short factual phrase can repeatedly
+choose its highest-probability next token until it produces a stop
+token or reaches the output limit.
+
+## Common misconceptions
+
+- Greedy decoding is not equivalent to exhaustive search.
+- Choosing the best token at every step does not ensure the best
+  complete sequence.
+- Deterministic decoding does not guarantee factual or repeatable
+  results if other parts of the system are nondeterministic.
+
+## Related terms
+
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+- [Beam Search](../B/beam-search.qmd)
+- [Decoder](../D/decoder.qmd)
+
+## Further reading
+
+- [Hugging Face: Generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — describes greedy search and alternative decoding strategies.
+- [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751) — analyzes limitations of common decoding strategies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

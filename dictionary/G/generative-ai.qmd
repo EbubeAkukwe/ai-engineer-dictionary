@@ -1,0 +1,66 @@
+---
+title: "Generative AI"
+description: "AI systems that produce new content such as text, images, audio, or code."
+term: "Generative AI"
+letter: "G"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Generative AI refers to systems that create content, such as a written
+response, image, audio clip, or code, in response to an input or prompt.
+
+## Technical explanation
+
+Generative systems learn patterns in data and model a distribution or
+conditional distribution from which outputs can be produced. Approaches
+include autoregressive models, diffusion models, variational
+autoencoders, and generative adversarial networks. Generation does not
+guarantee truth, originality, or usefulness.
+
+## Why it matters in AI engineering
+
+Generative models support assistants, creative tools, summarization,
+code generation, and synthetic media. Building useful applications
+requires evaluation, data and licensing review, safeguards, and
+integration with reliable tools or sources where appropriate.
+
+## How it works
+
+A model is trained on examples using an objective suited to its
+architecture. At inference, it conditions on an input and produces an
+output, often through iterative denoising or sequential token
+prediction. Application systems may add retrieval, validation, and
+human review.
+
+## Practical example
+
+A language model can draft a summary from a document. The application
+can include citations or require a human to review the summary before
+it is used in a high-impact decision.
+
+## Common misconceptions
+
+- Generative AI is not limited to chatbots or text.
+- Fluent or realistic output is not necessarily accurate.
+- A generated response is not automatically independent of patterns or
+  material in training data.
+
+## Related terms
+
+- [Generative Model](generative-model.qmd)
+- [Foundation Model](../F/foundation-model.qmd)
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+
+## Further reading
+
+- [Stanford Encyclopedia of Philosophy: Generative AI](https://plato.stanford.edu/entries/artificial-intelligence/) — background on AI approaches and concepts.
+- [Google Cloud: What is generative AI?](https://cloud.google.com/use-cases/generative-ai) — overview of generative AI capabilities and applications.
+- [OpenAI: Introducing ChatGPT](https://openai.com/index/chatgpt/) — describes a conversational application of generative models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
