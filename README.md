@@ -95,7 +95,7 @@ The [master vocabulary](vocabulary/MASTER_VOCABULARY.md) and
 - [x] Add entry validation and duplicate detection
 - [x] Add GitHub issue and pull-request templates
 - [x] Prepare automated Vercel deployment configuration
-- [ ] Publish the first public release
+- [x] Publish the first public release
 
 ## Licensing
 
