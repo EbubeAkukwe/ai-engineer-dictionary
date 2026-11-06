@@ -1,0 +1,65 @@
+---
+title: "Supervised Learning"
+description: "A machine-learning approach that fits a model from examples paired with target labels or values."
+term: "Supervised Learning"
+letter: "S"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Supervised learning uses examples that include the desired answer. A model
+learns from input-label pairs and then predicts labels or values for new
+inputs.
+
+## Technical explanation
+
+Given labeled examples $(x_i,y_i)$, supervised learning selects a model
+from a hypothesis class by minimizing a training objective and possibly
+regularization. Classification predicts discrete labels; regression
+predicts numeric targets. Generalization is assessed on data excluded from
+fitting.
+
+## Why it matters in AI engineering
+
+Supervised learning is widely used for prediction when labeled examples
+are available. Label quality, representativeness, leakage prevention, and
+deployment distribution strongly influence model usefulness.
+
+## How it works
+
+The data is split into training and evaluation sets. A learning algorithm
+fits parameters to minimize loss on training examples; model selection
+uses validation data, and final performance is measured on a separate test
+set or suitable deployment evaluation.
+
+## Practical example
+
+A maintenance system can learn from historical sensor readings labeled
+with whether equipment failed within a defined period. The target window
+and data cutoff must be chosen so training examples do not include
+information from the future.
+
+## Common misconceptions
+
+- More labeled data does not fix inconsistent labels or a mismatch with
+  deployment conditions.
+- High training performance does not establish that the model generalizes
+  to new data.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Regression](../R/regression.qmd)
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+
+## Further reading
+
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — supervised learning foundations.
+- [scikit-learn: Supervised learning](https://scikit-learn.org/stable/supervised_learning.html) — algorithms and practical documentation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

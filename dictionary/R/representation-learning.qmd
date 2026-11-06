@@ -1,0 +1,66 @@
+---
+title: "Representation Learning"
+description: "Learning useful transformations of raw data into features that support prediction, retrieval, or other tasks."
+term: "Representation Learning"
+letter: "R"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Representation learning lets a model discover useful ways to describe
+examples instead of requiring people to hand-design every feature. For
+images, a representation might encode edges and shapes; for text, it might
+capture aspects of meaning and context.
+
+## Technical explanation
+
+A representation is a mapping from input data to a feature vector or
+structured latent state. The mapping is learned through supervised,
+self-supervised, contrastive, or generative objectives. A useful
+representation preserves information relevant to downstream tasks while
+discarding nuisance variation.
+
+## Why it matters in AI engineering
+
+Learned representations power transfer learning, similarity search,
+classification, and multimodal systems. Their quality depends on training
+data and objectives, and an embedding that works for one use may not work
+well for another.
+
+## How it works
+
+An encoder maps examples to representations, and a training objective
+encourages desired properties such as predicting labels, reconstructing
+inputs, or bringing related pairs closer. Downstream systems consume the
+learned features directly or fine-tune the encoder.
+
+## Practical example
+
+A vision encoder pretrained on images can convert product photos into
+vectors. A downstream classifier can use these features or fine-tune the
+encoder on labeled examples from a particular catalog.
+
+## Common misconceptions
+
+- A compact or visually meaningful embedding is not automatically useful
+  for every downstream task.
+- Representation similarity is determined by the learned geometry and
+  metric; it should be validated against the intended notion of similarity.
+
+## Related terms
+
+- [Embedding](../E/embedding.qmd)
+- [Feature Learning](../F/feature-extraction.qmd)
+- [Fine-Tuning](../F/fine-tuning.qmd)
+
+## Further reading
+
+- [Representation Learning: A Review and New Perspectives](https://doi.org/10.1109/TPAMI.2013.50) — overview of learned representations.
+- [Deep Learning](https://www.deeplearningbook.org/) — representation learning foundations and applications.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

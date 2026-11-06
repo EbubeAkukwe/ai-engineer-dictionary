@@ -1,0 +1,66 @@
+---
+title: "Scaling Law"
+description: "An empirical relationship describing how model performance changes with scale such as data, parameters, or compute."
+term: "Scaling Law"
+letter: "S"
+category: "LLM Engineering"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A scaling law describes a pattern in how a model's performance changes as
+resources such as training data, model size, or compute increase. It can
+help estimate the likely benefit of scaling, but it does not promise that
+every larger model will be better.
+
+## Technical explanation
+
+Scaling laws are empirical fits relating a metric—often held-out loss—to
+quantities such as parameter count, dataset size, and compute. Some
+relationships follow approximate power laws over a measured regime. The
+fit may not extrapolate when data quality, architecture, training recipe,
+or evaluation distribution changes.
+
+## Why it matters in AI engineering
+
+Scaling estimates inform compute allocation and model-training plans.
+They can help compare investments, but must be balanced with data quality,
+serving cost, latency, and task-specific performance.
+
+## How it works
+
+Researchers train models or run experiments at multiple scales, measure a
+consistent outcome, and fit a functional relationship. Predictions should
+include uncertainty and be validated near the intended scale rather than
+assuming the fitted trend holds indefinitely.
+
+## Practical example
+
+A team can use results from smaller training runs to estimate whether a
+larger run is likely to reduce validation loss enough to justify its
+compute cost. It should also evaluate downstream tasks, since language
+model loss is not identical to product utility.
+
+## Common misconceptions
+
+- Scaling laws are empirical trends, not physical laws that guarantee
+  performance improvements for all settings.
+- More parameters alone do not ensure better outcomes; data, compute,
+  training, and evaluation matter.
+
+## Related terms
+
+- [Foundation Model](../F/foundation-model.qmd)
+- [Pretraining](../P/pretraining.qmd)
+- [Model Evaluation](../M/model-evaluation.qmd)
+
+## Further reading
+
+- [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) — empirical scaling relationships.
+- [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556) — compute-optimal model and data scaling.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -304,11 +304,46 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## R {#r}
 
-Terms beginning with R will appear here as the dictionary grows.
+- [RAG (Retrieval-Augmented Generation)](/dictionary/R/rag-retrieval-augmented-generation.qmd)
+- [Random Forest](/dictionary/R/random-forest.qmd)
+- [Ranking Model](/dictionary/R/ranking-model.qmd)
+- [Recall](/dictionary/R/recall.qmd)
+- [Recurrent Neural Network (RNN)](/dictionary/R/recurrent-neural-network-rnn.qmd)
+- [Regression](/dictionary/R/regression.qmd)
+- [Regularization](/dictionary/R/regularization.qmd)
+- [Reinforcement Learning](/dictionary/R/reinforcement-learning.qmd)
+- [ReLU](/dictionary/R/relu.qmd)
+- [Representation Learning](/dictionary/R/representation-learning.qmd)
+- [Retrieval](/dictionary/R/retrieval.qmd)
+- [Reranking](/dictionary/R/reranking.qmd)
+- [REST API](/dictionary/R/rest-api.qmd)
+- [Reward Model](/dictionary/R/reward-model.qmd)
+- [ROC Curve](/dictionary/R/roc-curve.qmd)
+- [Robotics](/dictionary/R/robotics.qmd)
+- [ROUGE](/dictionary/R/rouge.qmd)
+- [Runtime](/dictionary/R/runtime.qmd)
 
 ## S {#s}
 
-Terms beginning with S will appear here as the dictionary grows.
+- [Safety Evaluation](/dictionary/S/safety-evaluation.qmd)
+- [Sampling](/dictionary/S/sampling.qmd)
+- [Scaling Law](/dictionary/S/scaling-law.qmd)
+- [Self-Attention](/dictionary/S/self-attention.qmd)
+- [Semantic Search](/dictionary/S/semantic-search.qmd)
+- [Sequence-to-Sequence Model](/dictionary/S/sequence-to-sequence-model.qmd)
+- [Sigmoid](/dictionary/S/sigmoid.qmd)
+- [Similarity Search](/dictionary/S/similarity-search.qmd)
+- [SLAM](/dictionary/S/slam.qmd)
+- [Softmax](/dictionary/S/softmax.qmd)
+- [Sparse Attention](/dictionary/S/sparse-attention.qmd)
+- [Sparse Matrix](/dictionary/S/sparse-matrix.qmd)
+- [Stochastic Gradient Descent (SGD)](/dictionary/S/stochastic-gradient-descent-sgd.qmd)
+- [Structured Output](/dictionary/S/structured-output.qmd)
+- [Supervised Learning](/dictionary/S/supervised-learning.qmd)
+- [Support Vector Machine (SVM)](/dictionary/S/support-vector-machine-svm.qmd)
+- [Synthetic Data](/dictionary/S/synthetic-data.qmd)
+- [System Design](/dictionary/S/system-design.qmd)
+- [System Prompt](/dictionary/S/system-prompt.qmd)
 
 ## T {#t}
 

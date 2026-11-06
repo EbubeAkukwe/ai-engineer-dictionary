@@ -1,0 +1,65 @@
+---
+title: "System Design"
+description: "The process of defining a system's components, interfaces, data flows, and operational properties to meet requirements."
+term: "System Design"
+letter: "S"
+category: "Software Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+System design is deciding how parts of a software system fit together to
+meet user and operational needs. For an AI product, that includes the model,
+data, APIs, storage, and the controls around them.
+
+## Technical explanation
+
+System design translates functional and non-functional requirements into
+architecture, component responsibilities, interfaces, data flows, and
+failure-handling strategies. AI-specific considerations include model
+selection, inference capacity, evaluation, monitoring, privacy, and
+fallback behavior.
+
+## Why it matters in AI engineering
+
+A useful model can still fail as a product if the surrounding system is
+slow, unreliable, unsafe, or expensive. Explicit design makes trade-offs
+visible and supports scaling, maintenance, and incident response.
+
+## How it works
+
+Engineers identify requirements and constraints, sketch components and
+interactions, estimate capacity, and analyze failure modes. They validate
+the design with prototypes, load tests, threat modeling, and operational
+readiness checks, then revise it as evidence changes.
+
+## Practical example
+
+For a document question-answering service, design may include document
+ingestion, access-aware retrieval, model inference, citations, rate limits,
+and monitoring. Keeping retrieval separate from generation can help
+diagnose poor answers and scale components independently.
+
+## Common misconceptions
+
+- System design is not only drawing boxes; interfaces, failure modes, and
+  operational responsibilities must be specified.
+- The most distributed or complex architecture is not automatically the
+  best one; it should fit actual constraints.
+
+## Related terms
+
+- [Pipeline](../P/pipeline.qmd)
+- [Orchestration](../O/orchestration.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework) — system design and operational excellence guidance.
+- [Designing Data-Intensive Applications](https://dataintensive.net/) — data systems, reliability, and distributed architecture.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

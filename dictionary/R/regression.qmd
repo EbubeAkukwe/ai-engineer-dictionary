@@ -1,0 +1,64 @@
+---
+title: "Regression"
+description: "A family of methods for modeling relationships between inputs and a numeric target."
+term: "Regression"
+letter: "R"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Regression estimates a numeric quantity, such as a delivery time, energy
+use, or house price. A model learns how input features relate to observed
+numeric outcomes.
+
+## Technical explanation
+
+Regression specifies a function from predictors to a continuous target.
+Linear regression models a weighted sum; nonlinear models can use trees,
+neural networks, or other function classes. Losses such as mean squared
+error estimate fit, while evaluation should use data not used to fit the
+model.
+
+## Why it matters in AI engineering
+
+Many systems need forecasts or numerical estimates rather than categories.
+Model choice, feature quality, target definition, and error costs determine
+whether regression outputs are useful for downstream decisions.
+
+## How it works
+
+The training procedure adjusts model parameters to reduce a loss between
+predicted and observed targets. Engineers split data appropriately, inspect
+residuals, compare against baselines, and check performance across relevant
+ranges and subgroups.
+
+## Practical example
+
+A service can predict request latency from workload and resource features.
+Evaluate errors on a later time period if deployment will predict future
+traffic, and monitor for changes in workload distribution.
+
+## Common misconceptions
+
+- Regression is not synonymous with linear regression; many nonlinear
+  models perform regression.
+- A good average error can conceal large errors in important ranges or
+  groups.
+
+## Related terms
+
+- [Linear Regression](../L/linear-regression.qmd)
+- [Mean Squared Error (MSE)](../M/mean-squared-error-mse.qmd)
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+
+## Further reading
+
+- [scikit-learn: Regression metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics) — common regression evaluation measures.
+- [ISLR: Linear Regression](https://www.statlearning.com/) — accessible statistical learning foundations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,26 @@
+---
+title: "S Terms"
+description: "AI engineering dictionary terms beginning with S."
+---
+
+# S Terms
+
+- [Safety Evaluation](safety-evaluation.qmd)
+- [Sampling](sampling.qmd)
+- [Scaling Law](scaling-law.qmd)
+- [Self-Attention](self-attention.qmd)
+- [Semantic Search](semantic-search.qmd)
+- [Sequence-to-Sequence Model](sequence-to-sequence-model.qmd)
+- [Sigmoid](sigmoid.qmd)
+- [Similarity Search](similarity-search.qmd)
+- [SLAM](slam.qmd)
+- [Softmax](softmax.qmd)
+- [Sparse Attention](sparse-attention.qmd)
+- [Sparse Matrix](sparse-matrix.qmd)
+- [Stochastic Gradient Descent (SGD)](stochastic-gradient-descent-sgd.qmd)
+- [Structured Output](structured-output.qmd)
+- [Supervised Learning](supervised-learning.qmd)
+- [Support Vector Machine (SVM)](support-vector-machine-svm.qmd)
+- [Synthetic Data](synthetic-data.qmd)
+- [System Design](system-design.qmd)
+- [System Prompt](system-prompt.qmd)

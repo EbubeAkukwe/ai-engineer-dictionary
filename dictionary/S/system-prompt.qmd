@@ -1,0 +1,65 @@
+---
+title: "System Prompt"
+description: "A high-priority instruction message supplied by an application to guide an AI model's behavior."
+term: "System Prompt"
+letter: "S"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A system prompt is an instruction layer an application supplies to guide
+how an assistant should respond. It may describe the assistant's role,
+constraints, and how to handle the user's request.
+
+## Technical explanation
+
+In chat interfaces that support message roles, system-level instructions
+are provided separately from user messages and may have higher priority
+according to the model's conversation format. Exact semantics vary across
+providers; system prompts are still model inputs, not a security boundary
+or access-control mechanism.
+
+## Why it matters in AI engineering
+
+System prompts help make application behavior consistent across user
+requests. They should be versioned and evaluated like other application
+logic, and must be paired with authorization, validation, and data
+protection controls.
+
+## How it works
+
+The application includes the system instruction with the conversation
+context sent to the model. The model conditions its output on that context,
+but can still misunderstand, conflict with other inputs, or produce
+unexpected behavior. Tests should cover normal and adversarial cases.
+
+## Practical example
+
+A customer-support application may instruct its assistant to answer using
+approved support material, state when evidence is missing, and avoid
+requesting passwords. The backend must still prevent access to data the
+user is not authorized to see.
+
+## Common misconceptions
+
+- A system prompt is not a guaranteed security or safety boundary.
+- A longer prompt is not necessarily more effective; irrelevant
+  instructions can consume context and introduce conflicts.
+
+## Related terms
+
+- [Prompt](../P/prompt.qmd)
+- [Prompt Engineering](../P/prompt-engineering.qmd)
+- [Prompt Injection](../P/prompt-injection.qmd)
+
+## Further reading
+
+- [OpenAI: Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering) — structuring model instructions and context.
+- [Anthropic: System prompts](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) — using system prompts with Claude.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

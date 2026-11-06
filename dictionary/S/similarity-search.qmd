@@ -1,0 +1,64 @@
+---
+title: "Similarity Search"
+description: "Finding items whose representations are most similar to a query according to a chosen distance or similarity measure."
+term: "Similarity Search"
+letter: "S"
+category: "Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Similarity search finds items that resemble a query. An image or text can
+be represented as a vector, and a search system returns items with nearby
+or similarly oriented vectors.
+
+## Technical explanation
+
+Given a query vector and an indexed collection, similarity search ranks
+candidates using a metric such as cosine similarity, dot product, or
+Euclidean distance. Exact search compares against all vectors; approximate
+nearest-neighbor indexes trade exactness for speed and memory.
+
+## Why it matters in AI engineering
+
+Vector similarity search is used in semantic retrieval, recommendations,
+duplicate detection, and RAG. The embedding model, normalization, metric,
+index parameters, and data distribution jointly affect relevance and
+performance.
+
+## How it works
+
+An encoder maps items and queries to vectors. The index searches for
+nearest neighbors under the configured metric and returns ranked candidates.
+Systems often apply metadata filters or rerank the candidates using
+additional signals.
+
+## Practical example
+
+A product catalog can encode descriptions and retrieve products near a
+customer's text query. Evaluate results with human relevance judgments and
+measure index recall and latency at realistic catalog sizes.
+
+## Common misconceptions
+
+- Geometrically close vectors are not guaranteed to be semantically
+  relevant for every use case.
+- Approximate nearest-neighbor search may miss true nearest neighbors; its
+  recall-performance trade-off should be measured.
+
+## Related terms
+
+- [Semantic Search](semantic-search.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+
+## Further reading
+
+- [FAISS](https://faiss.ai/) — library for efficient similarity search and clustering of dense vectors.
+- [scikit-learn: Nearest neighbors](https://scikit-learn.org/stable/modules/neighbors.html) — neighbor search algorithms and metrics.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

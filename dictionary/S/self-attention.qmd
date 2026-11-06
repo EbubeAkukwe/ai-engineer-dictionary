@@ -1,0 +1,108 @@
+---
+title: "Self-Attention"
+description: "An attention operation in which elements of a sequence use one another to form context-aware representations."
+term: "Self-Attention"
+letter: "S"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Self-attention lets each token in a sequence look at other tokens in that
+same sequence and combine useful information from them. This helps a word's
+representation depend on its surrounding context.
+
+## Technical explanation
+
+Self-attention projects an input sequence into queries, keys, and values.
+Scaled dot-product attention computes
+$\mathrm{softmax}(QK^\mathsf{T}/\sqrt{d_k})V$. Masks can restrict which
+positions are visible; causal self-attention prevents a language model from
+attending to future tokens.
+
+## Why it matters in AI engineering
+
+Self-attention is a core component of Transformer models for language,
+vision, and other modalities. Its pairwise interactions can be expensive
+for long sequences, motivating efficient attention methods and careful
+context-length choices.
+
+## How it works
+
+For each token, the query is compared with keys from allowed positions.
+Softmax converts scores into weights, which combine the corresponding
+values. Multiple heads can perform separate learned attention operations
+and combine their outputs.
+
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="sa-title sa-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="sa-title">Self-attention connects sequence positions</title>
+  <desc id="sa-desc">Three token representations each produce a query, key, and value. The query from the middle token compares with keys from the sequence, creates attention weights, and combines values into a context-aware output.</desc>
+  <defs>
+    <marker id="sa-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="sa-highlight-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4666a8"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g fill="#f3f5f8" stroke="#8c9aab">
+      <rect x="34" y="24" width="116" height="42" rx="8"/><rect x="34" y="91" width="116" height="42" rx="8"/><rect x="34" y="158" width="116" height="42" rx="8"/>
+    </g>
+    <g fill="#202b3c" font-size="13">
+      <text x="92" y="50">Token 1</text><text x="92" y="117">Token 2</text><text x="92" y="184">Token 3</text>
+      <text x="231" y="50">K₁, V₁</text><text x="231" y="117">Q₂, K₂, V₂</text><text x="231" y="184">K₃, V₃</text>
+      <text x="451" y="49">score with Q₂</text><text x="451" y="92">weights</text><text x="451" y="136">combine values</text>
+      <text x="649" y="115">Context-aware</text><text x="649" y="135">Token 2</text>
+    </g>
+    <g fill="#e8f4ec" stroke="#438057" stroke-width="2">
+      <rect x="182" y="91" width="98" height="42" rx="8"/>
+    </g>
+    <g fill="#fff2df" stroke="#b9792e">
+      <rect x="396" y="31" width="110" height="34" rx="7"/><rect x="396" y="75" width="110" height="34" rx="7"/><rect x="396" y="119" width="110" height="34" rx="7"/>
+    </g>
+    <rect x="581" y="82" width="136" height="72" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <path d="M150 45 H174" stroke="#455b79" stroke-width="2" marker-end="url(#sa-arrow)"/>
+    <path d="M150 112 H174" stroke="#455b79" stroke-width="2" marker-end="url(#sa-arrow)"/>
+    <path d="M150 179 H174" stroke="#455b79" stroke-width="2" marker-end="url(#sa-arrow)"/>
+    <path d="M280 112 H388" stroke="#4666a8" stroke-width="2" marker-end="url(#sa-highlight-arrow)"/>
+    <path d="M280 112 C330 112 344 48 388 48" fill="none" stroke="#aab3bf" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#sa-arrow)"/>
+    <path d="M280 112 C330 112 344 136 388 136" fill="none" stroke="#aab3bf" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#sa-arrow)"/>
+    <path d="M506 92 H573" stroke="#455b79" stroke-width="2" marker-end="url(#sa-arrow)"/>
+  </g>
+</svg>
+
+The sketch focuses on one token's attention; a full layer computes
+attention for all positions and may use multiple heads.
+
+## Practical example
+
+In the sentence “The animal did not cross the road because it was tired,”
+self-attention can help the representation of “it” incorporate information
+from “animal.” Attention weights are part of the computation, not a complete
+explanation of the model's reasoning.
+
+## Common misconceptions
+
+- Self-attention operates within the same input sequence; cross-attention
+  attends to a separate sequence.
+- Standard full self-attention does not inherently know token order;
+  positional information is supplied separately or through the attention
+  mechanism.
+
+## Related terms
+
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Query-Key-Value (QKV)](../Q/query-key-value-qkv.qmd)
+- [Multi-Head Attention](../M/multi-head-attention.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — Transformer self-attention formulation.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — implementation walkthrough.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

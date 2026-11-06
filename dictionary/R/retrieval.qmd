@@ -1,0 +1,65 @@
+---
+title: "Retrieval"
+description: "The process of finding and returning candidate items from a collection in response to a query."
+term: "Retrieval"
+letter: "R"
+category: "Information Retrieval"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Retrieval finds potentially useful items from a collection. Given a search
+query, it might return relevant documents, product listings, images, or
+passages for another system to use.
+
+## Technical explanation
+
+A retrieval system represents a query and collection items, identifies
+candidates, and ranks or filters them. Methods include inverted-index
+keyword search, dense-vector nearest-neighbor search, and hybrid retrieval.
+Retrieval quality is often measured by whether relevant items appear among
+the candidates and how many relevant items are found.
+
+## Why it matters in AI engineering
+
+Retrieval supports search, recommendations, and RAG. Its quality, latency,
+freshness, and access controls affect downstream user experience and model
+answers.
+
+## How it works
+
+Items are ingested and indexed. At query time the system searches the index,
+applies filters and ranking, and returns a candidate set. Some applications
+then rerank results or pass selected items to a language model.
+
+## Practical example
+
+A help assistant can retrieve passages from documentation for a user's
+question, then provide those passages as context to a generation model.
+Measure retrieval separately from answer quality to identify where failures
+occur.
+
+## Common misconceptions
+
+- Retrieval returns candidates; it does not prove that they are correct,
+  relevant, or complete.
+- Vector search is not always better than exact lexical matching; different
+  query types can benefit from different approaches.
+
+## Related terms
+
+- [Information Retrieval](../I/information-retrieval.qmd)
+- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.qmd)
+- [Reranking](reranking.qmd)
+- [Semantic Search](../S/semantic-search.qmd)
+
+## Further reading
+
+- [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html) — foundations of indexing and retrieval.
+- [Elasticsearch: Retrieval augmented generation](https://www.elastic.co/what-is/retrieval-augmented-generation) — retrieval components in RAG systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

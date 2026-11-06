@@ -1,0 +1,64 @@
+---
+title: "Semantic Search"
+description: "A search approach that retrieves items based on meaning or intent rather than only exact word overlap."
+term: "Semantic Search"
+letter: "S"
+category: "Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Semantic search tries to find results that mean something similar to a
+query, even when they use different words. A search for “how to fix a
+leaking tap” might find a guide titled “repairing a dripping faucet.”
+
+## Technical explanation
+
+Semantic retrieval commonly encodes queries and documents into vector
+representations and searches by similarity. Other approaches use learned
+ranking models or language understanding. Quality depends on the embedding
+model, domain, index, query processing, and evaluation judgments.
+
+## Why it matters in AI engineering
+
+Semantic search can improve discovery when queries and documents use
+different terminology. It is often used in RAG and enterprise search, but
+exact lexical matching remains valuable for names, identifiers, and precise
+terms.
+
+## How it works
+
+Documents are encoded and indexed. At query time the system encodes the
+query, retrieves semantically nearby candidates, applies filters or
+reranking, and returns results. Hybrid systems combine this with keyword
+retrieval to handle both meaning and exact matches.
+
+## Practical example
+
+A help center can embed each article and retrieve candidates for a
+paraphrased user question. Evaluate recall and ranking using representative
+queries, including exact product codes and domain-specific terminology.
+
+## Common misconceptions
+
+- Semantic search does not guarantee factual or relevant results; vector
+  similarity is only a proxy.
+- It does not make keyword search obsolete; hybrid retrieval often handles
+  more query types effectively.
+
+## Related terms
+
+- [Similarity Search](similarity-search.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+
+## Further reading
+
+- [Sentence Transformers: Semantic search](https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — embeddings and semantic retrieval.
+- [Elastic: Semantic search](https://www.elastic.co/what-is/semantic-search) — concepts and hybrid search approaches.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

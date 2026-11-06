@@ -1,0 +1,88 @@
+---
+title: "Stochastic Gradient Descent (SGD)"
+description: "An optimization method that updates model parameters using gradients estimated from individual examples or small batches."
+term: "Stochastic Gradient Descent (SGD)"
+letter: "S"
+category: "Model Training"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Stochastic gradient descent (SGD) improves a model by taking repeated
+small steps in directions that reduce its loss. Instead of calculating each
+step from the entire dataset, it estimates the direction from a sample or
+small batch.
+
+## Technical explanation
+
+For parameters $\theta$ and a mini-batch gradient estimate
+$\hat{\nabla}L(\theta)$, SGD updates
+$\theta\leftarrow\theta-\eta\hat{\nabla}L(\theta)$, where $\eta$ is the
+learning rate. Sampling introduces noise into the estimate, which can
+reduce computation per update and affects convergence behavior.
+
+## Why it matters in AI engineering
+
+SGD and its variants train many machine-learning models. Batch size,
+learning-rate schedule, data ordering, and optimizer details affect training
+stability, speed, generalization, and reproducibility.
+
+## How it works
+
+The training loop samples a mini-batch, computes predictions and loss,
+calculates gradients by differentiation, and updates parameters. It repeats
+over batches and epochs while monitoring validation metrics and resource
+use.
+
+<svg viewBox="0 0 640 290" role="img" aria-labelledby="sgd-title sgd-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="sgd-title">Noisy gradient steps move toward a lower-loss region</title>
+  <desc id="sgd-desc">A bowl-shaped loss contour contains a sequence of uneven optimization steps heading toward its minimum. The uneven path illustrates that stochastic gradients are noisy estimates.</desc>
+  <ellipse cx="320" cy="152" rx="240" ry="105" fill="none" stroke="#cbd3df" stroke-width="2"/>
+  <ellipse cx="320" cy="152" rx="170" ry="72" fill="none" stroke="#b6c3d4" stroke-width="2"/>
+  <ellipse cx="320" cy="152" rx="96" ry="40" fill="none" stroke="#98acc5" stroke-width="2"/>
+  <ellipse cx="320" cy="152" rx="28" ry="13" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+  <g fill="none" stroke="#4666a8" stroke-width="3">
+    <path d="M113 70 L204 112 L243 88 L278 139 L302 126 L317 153"/>
+  </g>
+  <g fill="#b9792e" stroke="white" stroke-width="2">
+    <circle cx="113" cy="70" r="7"/><circle cx="204" cy="112" r="7"/><circle cx="243" cy="88" r="7"/><circle cx="278" cy="139" r="7"/><circle cx="302" cy="126" r="7"/>
+  </g>
+  <circle cx="320" cy="152" r="6" fill="#438057"/>
+  <text x="424" y="66" font-family="sans-serif" font-size="13" fill="#202b3c">loss contours</text>
+  <text x="334" y="174" font-family="sans-serif" font-size="12" fill="#276b3c">lower loss</text>
+  <text x="320" y="260" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202b3c">Illustrative parameter space; each step uses a sampled gradient</text>
+</svg>
+
+The sketch is conceptual: real models have high-dimensional parameters,
+and noisy updates need not follow a smooth path.
+
+## Practical example
+
+A neural network can train with mini-batches of 32 examples: compute the
+batch loss, backpropagate its gradient, and update the weights. A learning
+rate that is too high can destabilize training, while one that is too low
+can make learning very slow.
+
+## Common misconceptions
+
+- “Stochastic” does not always mean one example at a time; modern SGD
+  commonly uses mini-batches.
+- SGD does not guarantee finding a global optimum, especially for
+  non-convex objectives and finite training budgets.
+
+## Related terms
+
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Optimizer](../O/optimizer.qmd)
+- [Learning Rate](../L/learning-rate.qmd)
+
+## Further reading
+
+- [Dive into Deep Learning: Stochastic Gradient Descent](https://d2l.ai/chapter_optimization/sgd.html) — mini-batch SGD and its behavior.
+- [PyTorch: SGD optimizer](https://pytorch.org/docs/stable/generated/torch.optim.SGD.html) — optimizer parameters and implementation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

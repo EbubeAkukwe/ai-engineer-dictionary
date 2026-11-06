@@ -1,0 +1,63 @@
+---
+title: "Sigmoid"
+description: "A smooth function that maps real-valued inputs to values between zero and one."
+term: "Sigmoid"
+letter: "S"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+The sigmoid function squashes any real number into a value between zero
+and one. It is often used to represent a binary model's estimated
+probability, though that interpretation depends on training and calibration.
+
+## Technical explanation
+
+The logistic sigmoid is $\sigma(x)=1/(1+e^{-x})$. Its output approaches
+zero for large negative inputs and one for large positive inputs; its
+derivative is $\sigma(x)(1-\sigma(x))$. Saturation at extreme inputs can
+contribute to small gradients.
+
+## Why it matters in AI engineering
+
+Sigmoid is common in binary classification output layers and in gates of
+architectures such as LSTMs. It is generally not used as the hidden
+activation in deep networks when alternatives offer more favorable
+optimization behavior.
+
+## How it works
+
+The function applies an exponential transformation and normalization to
+each input. For binary classification, a model can output a logit $z$ and
+apply sigmoid to obtain a score in $(0,1)$, then use a threshold to make a
+class decision.
+
+## Practical example
+
+A binary classifier for equipment failure can transform its logit with
+sigmoid to produce a score. A threshold selected on validation data
+determines when the system raises an alert.
+
+## Common misconceptions
+
+- A sigmoid output is not automatically a well-calibrated probability.
+- Applying sigmoid independently to multiple classes does not enforce that
+  their scores sum to one.
+
+## Related terms
+
+- [Softmax](softmax.qmd)
+- [Classification](../C/classification.qmd)
+- [Activation Function](../A/activation-function.qmd)
+
+## Further reading
+
+- [PyTorch: Sigmoid](https://pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html) — module reference.
+- [scikit-learn: Probability calibration](https://scikit-learn.org/stable/modules/calibration.html) — interpreting classifier probability outputs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

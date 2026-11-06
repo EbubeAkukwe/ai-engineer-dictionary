@@ -1,0 +1,66 @@
+---
+title: "Sampling"
+description: "Selecting a subset of observations or outcomes from a population or probability distribution."
+term: "Sampling"
+letter: "S"
+category: "Statistics"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Sampling means selecting some examples from a larger collection or
+generating outcomes from a probability distribution. The way examples are
+selected affects what conclusions or model behavior they support.
+
+## Technical explanation
+
+A sampling procedure defines how observations are drawn, with or without
+replacement and possibly according to unequal probabilities. Statistical
+inference depends on the sampling design; machine learning also uses
+sampling for train-test splits, mini-batches, negative examples, and
+generation.
+
+## Why it matters in AI engineering
+
+Sampling affects dataset representativeness, uncertainty estimates,
+training dynamics, and evaluation validity. Biased sampling can distort
+metrics or model behavior, while random sampling alone does not guarantee
+coverage of rare but important cases.
+
+## How it works
+
+Define the target population and selection scheme, draw observations, and
+record relevant inclusion probabilities or grouping constraints. For model
+evaluation, preserve temporal, user, or entity boundaries when needed to
+avoid leakage.
+
+## Practical example
+
+A team can randomly sample production requests for human quality review,
+but should also deliberately include rare high-risk categories. Report
+results with the sampling method because oversampling certain cases changes
+the aggregate estimate unless appropriately weighted.
+
+## Common misconceptions
+
+- A large sample can still be biased if its selection process excludes
+  relevant populations.
+- Sampling with replacement can produce repeated examples; this is
+  intentional in procedures such as bootstrap sampling.
+
+## Related terms
+
+- [Bootstrap Sampling](../B/bootstrap-sampling.qmd)
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+- [Probability Distribution](../P/probability-distribution.qmd)
+
+## Further reading
+
+- [OpenIntro Statistics](https://www.openintro.org/book/os/) — sampling, study design, and statistical inference.
+- [scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — sampling-aware model evaluation strategies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,25 @@
+---
+title: "R Terms"
+description: "AI engineering dictionary terms beginning with R."
+---
+
+# R Terms
+
+- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.qmd)
+- [Random Forest](random-forest.qmd)
+- [Ranking Model](ranking-model.qmd)
+- [Recall](recall.qmd)
+- [Recurrent Neural Network (RNN)](recurrent-neural-network-rnn.qmd)
+- [Regression](regression.qmd)
+- [Regularization](regularization.qmd)
+- [Reinforcement Learning](reinforcement-learning.qmd)
+- [ReLU](relu.qmd)
+- [Representation Learning](representation-learning.qmd)
+- [Retrieval](retrieval.qmd)
+- [Reranking](reranking.qmd)
+- [REST API](rest-api.qmd)
+- [Reward Model](reward-model.qmd)
+- [ROC Curve](roc-curve.qmd)
+- [Robotics](robotics.qmd)
+- [ROUGE](rouge.qmd)
+- [Runtime](runtime.qmd)

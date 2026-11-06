@@ -1,0 +1,65 @@
+---
+title: "Reward Model"
+description: "A learned model that scores outcomes or behavior according to a reward or preference signal."
+term: "Reward Model"
+letter: "R"
+category: "Reinforcement Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A reward model estimates how desirable an outcome or behavior is. It can
+provide a learning signal when directly specifying a reward for every
+possible situation is difficult.
+
+## Technical explanation
+
+A reward model maps a state, action, trajectory, or response to a scalar
+score intended to approximate a target preference or reward. It may be
+trained from demonstrations, ratings, or pairwise comparisons. In
+preference-based language-model training, a model can learn to score
+responses, but that score is only a proxy for human judgments.
+
+## Why it matters in AI engineering
+
+Reward models are used in preference optimization, reinforcement learning,
+and learned objectives. They can scale feedback, but may be exploited by
+optimization, encode annotator biases, or fail outside the training
+distribution.
+
+## How it works
+
+The model is trained on examples labeled with rewards or relative
+preferences. A downstream optimizer or policy uses its scores to select
+behavior. Evaluation should include held-out judgments, adversarial cases,
+and checks that optimizing the reward does not degrade important properties.
+
+## Practical example
+
+Given pairs of assistant responses with a human preference label, a reward
+model can learn to assign a higher score to the preferred response. A
+language-model policy can then be optimized against that score, with
+independent evaluation to catch reward hacking.
+
+## Common misconceptions
+
+- A reward-model score is not an objective measure of quality or safety.
+- Optimizing a learned score can reveal weaknesses in the score model
+  instead of improving the intended real-world behavior.
+
+## Related terms
+
+- [Reinforcement Learning](reinforcement-learning.qmd)
+- [Policy Gradient](../P/policy-gradient.qmd)
+- [AI Alignment](../A/ai-alignment.qmd)
+
+## Further reading
+
+- [Deep Reinforcement Learning from Human Preferences](https://arxiv.org/abs/1706.03741) — preference-based reward learning.
+- [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155) — reward modeling in instruction following.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

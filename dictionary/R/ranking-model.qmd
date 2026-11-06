@@ -1,0 +1,66 @@
+---
+title: "Ranking Model"
+description: "A model that orders candidate items by estimated relevance, preference, or utility."
+term: "Ranking Model"
+letter: "R"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A ranking model decides which items should appear first in a list. A search
+engine, for example, estimates which results are most useful for a query and
+orders them accordingly.
+
+## Technical explanation
+
+Ranking methods include pointwise models that score items individually,
+pairwise methods that learn preferences between pairs, and listwise methods
+that optimize properties of an ordered list. Features may describe the
+query, item, user, or their interactions; evaluation often uses metrics such
+as NDCG or mean reciprocal rank.
+
+## Why it matters in AI engineering
+
+Ranking is central to search, recommendation, feed ordering, and retrieval
+pipelines. The order affects exposure and user outcomes, so offline metrics,
+latency, freshness, diversity, and responsible treatment of candidates all
+matter.
+
+## How it works
+
+The system generates candidate items, computes features, and applies a
+scoring or preference model. It sorts candidates by score, optionally
+applying constraints or reranking stages. Training labels can represent
+clicks, judgments, or preferences and should be interpreted with their
+collection biases in mind.
+
+## Practical example
+
+A document-search service can retrieve a broad set using lexical and vector
+search, then apply a ranking model to order passages for the user's query.
+Evaluate on held-out queries with relevance judgments and monitor the
+production experience.
+
+## Common misconceptions
+
+- A high ranking score is not necessarily a calibrated probability.
+- Click-derived labels reflect presentation and user behavior as well as
+  relevance; they are not unbiased ground truth.
+
+## Related terms
+
+- [Reranking](reranking.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+- [Retrieval](retrieval.qmd)
+
+## Further reading
+
+- [Introduction to Information Retrieval: Learning to Rank](https://nlp.stanford.edu/IR-book/html/htmledition/learning-to-rank-1.html) — ranking approaches and evaluation.
+- [TensorFlow Ranking](https://www.tensorflow.org/ranking) — tools and examples for learning-to-rank systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

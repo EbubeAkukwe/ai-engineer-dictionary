@@ -1,0 +1,63 @@
+---
+title: "REST API"
+description: "A web API style that exposes resources through HTTP methods and stateless requests."
+term: "REST API"
+letter: "R"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A REST API lets software request or modify resources over HTTP using
+conventional operations. An AI application might use one to submit
+inference requests or retrieve model metadata.
+
+## Technical explanation
+
+REST (Representational State Transfer) is an architectural style based on
+constraints such as a uniform interface, stateless communication, and
+cacheable responses. In practice, many APIs described as REST use HTTP
+methods and resource-oriented URLs, often with JSON representations.
+
+## Why it matters in AI engineering
+
+REST APIs are a common way to integrate model services with applications,
+data systems, and deployment platforms. Clear schemas, authentication,
+timeouts, rate limits, and error semantics are needed for reliable
+production use.
+
+## How it works
+
+A client sends an HTTP request to a resource endpoint with a method such as
+GET or POST, headers, and possibly a body. The server validates the request
+and returns a status code and representation. Statelessness means the
+server does not rely on hidden client session state between requests.
+
+## Practical example
+
+A client might send a POST request with text and model options to an
+inference endpoint. The service validates the payload, performs inference,
+and returns a structured response with an appropriate status code.
+
+## Common misconceptions
+
+- JSON over HTTP does not by itself make an API RESTful.
+- Stateless requests can still depend on databases, authentication, and
+  other server-side state.
+
+## Related terms
+
+- [API](../A/api.qmd)
+- [Inference](../I/inference.qmd)
+- [Pipeline](../P/pipeline.qmd)
+
+## Further reading
+
+- [Fielding: Architectural Styles and the Design of Network-based Software Architectures](https://ics.uci.edu/~fielding/pubs/dissertation/top.htm) — REST architectural constraints.
+- [MDN: HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods) — semantics of common HTTP methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

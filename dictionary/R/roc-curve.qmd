@@ -1,0 +1,84 @@
+---
+title: "ROC Curve"
+description: "A plot of true-positive rate against false-positive rate as a binary classifier's decision threshold varies."
+term: "ROC Curve"
+letter: "R"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A receiver operating characteristic (ROC) curve shows the trade-off
+between catching positive cases and incorrectly flagging negative cases as
+the decision threshold changes.
+
+## Technical explanation
+
+The ROC curve plots true-positive rate (recall) against false-positive
+rate, $FP/(FP+TN)$, across thresholds. The area under the ROC curve (ROC
+AUC) measures ranking ability across threshold choices; it does not specify
+performance at a particular operating threshold and can be misleading for
+highly imbalanced tasks.
+
+## Why it matters in AI engineering
+
+ROC analysis helps compare binary classifiers and select operating points.
+Teams should also inspect precision-recall behavior, class prevalence,
+calibration, and application-specific error costs.
+
+## How it works
+
+Sort examples by predicted score and vary the threshold. At each threshold,
+compute the true-positive and false-positive rates, then plot the resulting
+points. A random ranking has expected ROC AUC of 0.5; a perfect ranking
+has 1.0, subject to finite-sample uncertainty.
+
+<svg viewBox="0 0 620 340" role="img" aria-labelledby="roc-title roc-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="roc-title">Illustrative ROC curve</title>
+  <desc id="roc-desc">The horizontal axis is false-positive rate and the vertical axis is true-positive rate. A diagonal dashed line shows random ranking; an example classifier curve rises above the diagonal toward the top-left corner.</desc>
+  <line x1="90" y1="270" x2="540" y2="270" stroke="#455b79" stroke-width="2"/>
+  <line x1="90" y1="270" x2="90" y2="35" stroke="#455b79" stroke-width="2"/>
+  <line x1="90" y1="270" x2="520" y2="46" stroke="#9aa7b8" stroke-width="2" stroke-dasharray="7 6"/>
+  <path d="M90 270 C112 132 153 85 215 68 C300 47 406 42 520 40" fill="none" stroke="#4666a8" stroke-width="4"/>
+  <text x="312" y="315" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202b3c">False-positive rate</text>
+  <text x="29" y="155" text-anchor="middle" transform="rotate(-90 29 155)" font-family="sans-serif" font-size="14" fill="#202b3c">True-positive rate</text>
+  <text x="387" y="118" font-family="sans-serif" font-size="12" fill="#3c5791">Example classifier</text>
+  <text x="391" y="202" font-family="sans-serif" font-size="12" fill="#64748b">Random ranking</text>
+  <text x="98" y="289" font-family="sans-serif" font-size="11" fill="#46566d">0</text>
+  <text x="524" y="289" font-family="sans-serif" font-size="11" fill="#46566d">1</text>
+  <text x="72" y="45" font-family="sans-serif" font-size="11" fill="#46566d">1</text>
+</svg>
+
+The curve is illustrative. Compare models on the same evaluation data and
+choose a threshold based on the real costs of errors.
+
+## Practical example
+
+A fraud model can be evaluated across thresholds to see how many confirmed
+fraud cases it detects for each false-alarm rate. The chosen operating point
+should reflect review capacity and the relative costs of missed fraud and
+unnecessary investigations.
+
+## Common misconceptions
+
+- A high ROC AUC does not guarantee high precision when positive cases are
+  rare.
+- ROC AUC summarizes ranking across thresholds; it does not select the
+  threshold for deployment.
+
+## Related terms
+
+- [Recall](recall.qmd)
+- [Precision](../P/precision.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [scikit-learn: ROC metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics) — ROC curves and AUC.
+- [Google: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) — threshold trade-offs and ROC analysis.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

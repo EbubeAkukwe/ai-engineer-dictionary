@@ -1,0 +1,67 @@
+---
+title: "Random Forest"
+description: "An ensemble of decision trees whose predictions are combined to improve robustness over a single tree."
+term: "Random Forest"
+letter: "R"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A random forest combines the opinions of many decision trees. Each tree
+learns from a slightly different view of the training data, and their
+combined prediction is often more reliable than an individual tree.
+
+## Technical explanation
+
+A random forest is an ensemble of decision trees trained with
+bootstrapped samples and randomized feature subsets. Classification usually
+aggregates votes or class probabilities; regression commonly averages tree
+outputs. Randomization reduces correlation among trees, which can reduce
+ensemble variance.
+
+## Why it matters in AI engineering
+
+Random forests are strong, relatively low-maintenance baselines for
+structured data. They capture nonlinear relationships and feature
+interactions without feature scaling, although large forests can require
+substantial memory and are less straightforward to interpret than a single
+tree.
+
+## How it works
+
+Each tree is fitted on a sample drawn with replacement. At each split, the
+tree considers a random subset of features and selects a useful split.
+Predictions are combined across trees; out-of-bag examples can provide an
+internal performance estimate when bootstrap sampling is used.
+
+## Practical example
+
+For predicting whether a loan application will default, a random forest can
+combine many trees trained on applicant features. Evaluate it on a
+held-out, representative split and inspect class-specific metrics rather
+than relying on training accuracy alone.
+
+## Common misconceptions
+
+- A forest is not automatically unbiased or fair; it can reproduce
+  limitations in the data and target.
+- Feature importance scores are not causal explanations and can be biased
+  by feature properties or correlated inputs.
+
+## Related terms
+
+- [Decision Tree](../D/decision-tree.qmd)
+- [Ensemble Learning](../E/ensemble-learning.qmd)
+- [Classification](../C/classification.qmd)
+
+## Further reading
+
+- [scikit-learn: Random forests](https://scikit-learn.org/stable/modules/ensemble.html#forest) — implementation and practical details.
+- [Breiman: Random Forests](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) — original paper.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Sparse Attention"
+description: "An attention pattern that limits which positions can interact, reducing computation or encoding useful structure."
+term: "Sparse Attention"
+letter: "S"
+category: "LLM Engineering"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Full attention lets every token attend to every other allowed token.
+Sparse attention restricts those connections, for example to nearby tokens
+or selected global positions, to make long sequences more manageable.
+
+## Technical explanation
+
+Sparse attention computes attention over a subset or structured pattern of
+query-key pairs rather than a dense matrix. Patterns include local windows,
+strided connections, block sparsity, and selected global tokens. The
+theoretical reduction in work depends on sequence length and pattern, while
+practical speed depends on kernels and hardware.
+
+## Why it matters in AI engineering
+
+Attention memory and computation can grow quadratically with sequence
+length in dense implementations. Sparse patterns can extend usable context
+or reduce cost, but may limit information flow and complicate parallel
+execution.
+
+## How it works
+
+The model applies a mask or sparse kernel so each query computes attention
+only over permitted keys. The pattern may be fixed, learned, or based on
+content. Engineers must verify that the implementation actually exploits
+sparsity rather than merely masking a dense calculation.
+
+## Practical example
+
+A long-document model can use local attention for nearby tokens and add
+selected global tokens for document-wide information. Compare quality and
+end-to-end latency with a dense baseline on the target sequence lengths.
+
+## Common misconceptions
+
+- A sparse mask alone does not guarantee faster computation if the runtime
+  still materializes dense attention.
+- Sparsity changes which information can interact; it is an architectural
+  choice, not only an implementation optimization.
+
+## Related terms
+
+- [Self-Attention](self-attention.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Context Window](../C/context-window.qmd)
+
+## Further reading
+
+- [Longformer: The Long-Document Transformer](https://arxiv.org/abs/2004.05150) — local and global sparse attention.
+- [BigBird: Transformers for Longer Sequences](https://arxiv.org/abs/2007.14062) — sparse attention patterns and analysis.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

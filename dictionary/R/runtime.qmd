@@ -1,0 +1,63 @@
+---
+title: "Runtime"
+description: "The environment and execution period in which a program or model performs its work."
+term: "Runtime"
+letter: "R"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Runtime can mean the time a program is running or the software environment
+that executes it. In AI systems, it may refer to a model-serving engine
+that loads a model and handles inference requests.
+
+## Technical explanation
+
+The term has context-dependent meanings: execution time, a language
+runtime, or an inference runtime that manages model execution, operators,
+devices, and memory. Runtime behavior depends on the program, dependencies,
+hardware, and configuration.
+
+## Why it matters in AI engineering
+
+The runtime affects compatibility, performance, memory use, and operational
+reliability. A model that trains successfully may still need conversion,
+optimized kernels, or runtime-specific changes before deployment.
+
+## How it works
+
+A runtime loads code or a model artifact, resolves required operations,
+allocates resources, and executes work. Inference runtimes may schedule
+requests, select CPU/GPU kernels, batch inputs, and report errors or
+performance metrics.
+
+## Practical example
+
+An engineer can export a trained model and load it with an inference
+runtime on a target device. They should verify numerical agreement and
+measure end-to-end latency and memory use with representative inputs.
+
+## Common misconceptions
+
+- Runtime is not always synonymous with execution speed; it can refer to
+  the software environment itself.
+- A faster benchmark for one operation does not guarantee lower
+  end-to-end application latency.
+
+## Related terms
+
+- [Inference](../I/inference.qmd)
+- [ONNX](../O/onnx.qmd)
+- [Model Serving](../M/model-serving.qmd)
+
+## Further reading
+
+- [ONNX Runtime documentation](https://onnxruntime.ai/docs/) — model inference and execution providers.
+- [PyTorch: TorchScript and deployment](https://pytorch.org/docs/stable/jit.html) — model execution and deployment options.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

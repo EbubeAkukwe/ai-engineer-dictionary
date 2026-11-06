@@ -325,6 +325,49 @@ website:
             - dictionary/Q/query-key-value-qkv.qmd
             - dictionary/Q/queue.qmd
             - dictionary/Q/quicksort.qmd
+        - section: "R"
+          contents:
+            - dictionary/R/index.qmd
+            - dictionary/R/rag-retrieval-augmented-generation.qmd
+            - dictionary/R/random-forest.qmd
+            - dictionary/R/ranking-model.qmd
+            - dictionary/R/recall.qmd
+            - dictionary/R/recurrent-neural-network-rnn.qmd
+            - dictionary/R/regression.qmd
+            - dictionary/R/regularization.qmd
+            - dictionary/R/reinforcement-learning.qmd
+            - dictionary/R/relu.qmd
+            - dictionary/R/representation-learning.qmd
+            - dictionary/R/retrieval.qmd
+            - dictionary/R/reranking.qmd
+            - dictionary/R/rest-api.qmd
+            - dictionary/R/reward-model.qmd
+            - dictionary/R/roc-curve.qmd
+            - dictionary/R/robotics.qmd
+            - dictionary/R/rouge.qmd
+            - dictionary/R/runtime.qmd
+        - section: "S"
+          contents:
+            - dictionary/S/index.qmd
+            - dictionary/S/safety-evaluation.qmd
+            - dictionary/S/sampling.qmd
+            - dictionary/S/scaling-law.qmd
+            - dictionary/S/self-attention.qmd
+            - dictionary/S/semantic-search.qmd
+            - dictionary/S/sequence-to-sequence-model.qmd
+            - dictionary/S/sigmoid.qmd
+            - dictionary/S/similarity-search.qmd
+            - dictionary/S/slam.qmd
+            - dictionary/S/softmax.qmd
+            - dictionary/S/sparse-attention.qmd
+            - dictionary/S/sparse-matrix.qmd
+            - dictionary/S/stochastic-gradient-descent-sgd.qmd
+            - dictionary/S/structured-output.qmd
+            - dictionary/S/supervised-learning.qmd
+            - dictionary/S/support-vector-machine-svm.qmd
+            - dictionary/S/synthetic-data.qmd
+            - dictionary/S/system-design.qmd
+            - dictionary/S/system-prompt.qmd
         - section: "P–Z"
           contents:
             - dictionary/letters.qmd

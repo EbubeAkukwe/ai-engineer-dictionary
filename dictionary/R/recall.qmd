@@ -1,0 +1,63 @@
+---
+title: "Recall"
+description: "The fraction of actual positive cases that a classifier correctly identifies."
+term: "Recall"
+letter: "R"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Recall answers: “Of all the cases that really were positive, how many did
+the model find?” High recall is important when missing a positive case is
+costly.
+
+## Technical explanation
+
+For binary classification, recall (also called sensitivity or true-positive
+rate) is $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$, where TP is true positives
+and FN is false negatives. The metric depends on the classification
+threshold and the definition of the positive class.
+
+## Why it matters in AI engineering
+
+In screening, safety alerts, or defect detection, false negatives may carry
+high costs. Recall should be considered alongside precision, error costs,
+and the workload caused by false positives.
+
+## How it works
+
+Choose a threshold, compare predictions with labeled outcomes, and divide
+correctly detected positives by all actual positives. Lowering a threshold
+often increases recall while also increasing false positives; select an
+operating point using validation data and domain constraints.
+
+## Practical example
+
+If 90 of 100 actual defective items are flagged, recall is $90/100=0.9$,
+or 90%. This says nothing by itself about how many flagged items were
+actually defective; precision measures that.
+
+## Common misconceptions
+
+- Recall is not the fraction of model predictions that are correct; that
+  relates to precision.
+- A recall of 100% can be achieved by flagging every case, which may be
+  operationally useless.
+
+## Related terms
+
+- [Precision](../P/precision.qmd)
+- [F1 Score](../F/f1-score.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [scikit-learn: Precision, recall, and F-measure](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) — metric definitions and averaging.
+- [Google Machine Learning: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — practical metric trade-offs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

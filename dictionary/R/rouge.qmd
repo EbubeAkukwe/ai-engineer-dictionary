@@ -1,0 +1,65 @@
+---
+title: "ROUGE"
+description: "A family of metrics that compares generated text with reference text using overlap-based measures."
+term: "ROUGE"
+letter: "R"
+category: "NLP Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+ROUGE is a set of text-comparison metrics often used to evaluate generated
+summaries. It checks how much wording or sequences of words overlap with
+one or more reference texts.
+
+## Technical explanation
+
+ROUGE variants include n-gram overlap (ROUGE-N), longest common subsequence
+(ROUGE-L), and summary-level variants. Scores can be reported as precision,
+recall, or F-measure, depending on the implementation. Tokenization,
+stemming, aggregation, and reference selection affect results.
+
+## Why it matters in AI engineering
+
+ROUGE provides a reproducible automatic comparison for summarization
+experiments. It is inexpensive to compute but does not fully capture
+semantic equivalence, factuality, coherence, or usefulness, so it should be
+paired with other evaluations.
+
+## How it works
+
+The metric compares tokens or subsequences in a candidate output with
+reference summaries. It counts matching units and computes overlap-based
+scores. Multiple references can increase the chance that valid wording
+choices are represented.
+
+## Practical example
+
+For a summarization model, evaluate generated summaries against human
+references with a fixed ROUGE implementation and tokenization. Also inspect
+factual errors and human judgments, since a high overlap score can coexist
+with unsupported claims.
+
+## Common misconceptions
+
+- ROUGE is not a direct measure of factual correctness or overall summary
+  quality.
+- Different implementations and preprocessing settings can produce
+  different scores, so comparisons require a consistent setup.
+
+## Related terms
+
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+- [Perplexity](../P/perplexity.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [ROUGE: A Package for Automatic Evaluation of Summaries](https://aclanthology.org/W04-1013/) — original metric paper.
+- [Google Research: ROUGE](https://github.com/google-research/google-research/tree/master/rouge) — reference implementation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

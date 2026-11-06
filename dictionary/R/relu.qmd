@@ -1,0 +1,76 @@
+---
+title: "ReLU"
+description: "A piecewise-linear activation function that outputs zero for negative inputs and the input itself for positive values."
+term: "ReLU"
+letter: "R"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+The rectified linear unit (ReLU) keeps positive values and replaces
+negative values with zero. It gives neural networks a simple nonlinearity
+that helps them learn more than linear transformations alone.
+
+## Technical explanation
+
+ReLU is $f(x)=\max(0,x)$. Its derivative is 1 for positive inputs and 0
+for negative inputs; at zero, implementations choose a subgradient
+convention. It is computationally inexpensive, but units that remain
+negative can stop receiving gradient updates (the “dying ReLU” issue).
+
+## Why it matters in AI engineering
+
+ReLU is a common baseline activation in feed-forward and convolutional
+networks. Activation choice influences optimization and output behavior,
+and alternatives such as GELU or leaky ReLU may be more appropriate in some
+architectures.
+
+## How it works
+
+Applied elementwise to a pre-activation $z$, ReLU returns $z$ when $z>0$
+and 0 otherwise. Its zero-valued negative region creates sparse activations,
+while its positive region preserves the input magnitude.
+
+<svg viewBox="0 0 620 280" role="img" aria-labelledby="relu-title relu-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="relu-title">ReLU activation function</title>
+  <desc id="relu-desc">A graph of ReLU is flat at output zero for negative input values and rises linearly with slope one for positive input values.</desc>
+  <line x1="70" y1="210" x2="560" y2="210" stroke="#455b79" stroke-width="2"/>
+  <line x1="300" y1="245" x2="300" y2="32" stroke="#455b79" stroke-width="2"/>
+  <path d="M90 210 H300 L500 65" fill="none" stroke="#4666a8" stroke-width="4"/>
+  <circle cx="300" cy="210" r="5" fill="#b9792e"/>
+  <text x="550" y="232" font-family="sans-serif" font-size="14" fill="#202b3c">input x</text>
+  <text x="315" y="42" font-family="sans-serif" font-size="14" fill="#202b3c">output</text>
+  <text x="145" y="193" font-family="sans-serif" font-size="13" fill="#46566d">0 for x &lt; 0</text>
+  <text x="390" y="133" font-family="sans-serif" font-size="13" fill="#46566d">x for x &gt; 0</text>
+</svg>
+
+## Practical example
+
+A hidden layer can apply ReLU after a learned linear transformation:
+$h=\mathrm{ReLU}(Wx+b)$. Stacking such layers allows a network to model
+piecewise-linear decision boundaries.
+
+## Common misconceptions
+
+- ReLU is not linear over its entire input range, even though each region
+  is linear.
+- ReLU is not the only activation and may not be ideal for every layer or
+  architecture.
+
+## Related terms
+
+- [Activation Function](../A/activation-function.qmd)
+- [GELU](../G/gelu.qmd)
+- [Neural Network](../N/neural-network.qmd)
+
+## Further reading
+
+- [PyTorch: ReLU](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html) — API and behavior.
+- [Deep Learning: Rectified Linear Units](https://www.deeplearningbook.org/contents/mlp.html) — activation functions in neural networks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

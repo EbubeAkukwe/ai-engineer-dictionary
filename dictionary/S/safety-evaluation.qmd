@@ -1,0 +1,66 @@
+---
+title: "Safety Evaluation"
+description: "The systematic assessment of whether an AI system avoids harmful behavior and follows relevant safety requirements."
+term: "Safety Evaluation"
+letter: "S"
+category: "AI Safety"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Safety evaluation checks how an AI system behaves in situations where
+mistakes could cause harm. It asks not only whether the system works on
+ordinary requests, but also how it responds to risky, misleading, or
+unexpected inputs.
+
+## Technical explanation
+
+Safety evaluation uses defined hazard categories, test cases, metrics, and
+review procedures to assess model and system behavior. Methods may include
+adversarial testing, red teaming, policy-compliance checks, human review,
+and measurements of harmful output rates. Findings depend on the scope and
+coverage of the evaluation.
+
+## Why it matters in AI engineering
+
+Pre-deployment testing can reveal failure modes before users encounter
+them, while ongoing evaluation can detect regressions and changing risks.
+Safety is a system property involving models, tools, data, interfaces, and
+operational controls.
+
+## How it works
+
+Teams define intended use, prohibited outcomes, and relevant threat
+scenarios. They test representative and adversarial inputs, record outputs
+and severity, analyze gaps, and verify mitigations. Results should document
+limitations and be repeated after material changes.
+
+## Practical example
+
+A team deploying a support assistant can test whether it reveals private
+information, follows malicious instructions in retrieved content, or gives
+unsafe advice. Automated tests can be paired with expert review and
+production monitoring.
+
+## Common misconceptions
+
+- Passing a fixed test set does not prove a system is safe in every context.
+- A model-level refusal test alone does not evaluate tool permissions,
+  data access, user experience, or operational safeguards.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Prompt Injection](../P/prompt-injection.qmd)
+- [AI Alignment](../A/ai-alignment.qmd)
+
+## Further reading
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — guidance for identifying, measuring, and managing AI risks.
+- [NIST Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) — generative AI risks and suggested actions.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

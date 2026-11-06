@@ -1,0 +1,63 @@
+---
+title: "Support Vector Machine (SVM)"
+description: "A supervised learning method that finds a decision boundary with a large margin between classes."
+term: "Support Vector Machine (SVM)"
+letter: "S"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A support vector machine (SVM) separates classes by finding a boundary
+that leaves as much space as possible between the boundary and nearby
+training examples. Those closest examples are the support vectors.
+
+## Technical explanation
+
+A linear SVM optimizes a margin-based objective, commonly with hinge loss
+and regularization. Kernel methods implicitly map inputs into a feature
+space where nonlinear boundaries can be learned. The regularization
+parameter and kernel settings affect the margin and training errors.
+
+## Why it matters in AI engineering
+
+SVMs can perform well on small or medium-sized datasets, especially with
+high-dimensional features. Kernelized models can become costly as dataset
+size grows, and probability estimates require additional calibration.
+
+## How it works
+
+The model chooses a separating hyperplane that balances margin size and
+classification errors. Only support vectors directly determine the
+boundary in the standard formulation. For nonlinear separation, a kernel
+computes similarities without explicitly constructing transformed
+features.
+
+## Practical example
+
+A text classifier can use TF-IDF features with a linear SVM to categorize
+documents. Tune hyperparameters on validation data and evaluate per-class
+precision and recall on a held-out test set.
+
+## Common misconceptions
+
+- An SVM does not necessarily produce calibrated class probabilities.
+- The widest margin is defined relative to the chosen features, kernel,
+  and regularization, not an absolute notion of best separation.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Linear Algebra](../L/linear-algebra.qmd)
+- [Random Forest](../R/random-forest.qmd)
+
+## Further reading
+
+- [scikit-learn: Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html) — classifiers, kernels, and practical considerations.
+- [Cortes and Vapnik: Support-Vector Networks](https://link.springer.com/article/10.1007/BF00994018) — foundational paper.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

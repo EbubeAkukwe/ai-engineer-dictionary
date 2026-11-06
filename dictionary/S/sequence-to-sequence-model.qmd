@@ -1,0 +1,94 @@
+---
+title: "Sequence-to-Sequence Model"
+description: "A model that maps an input sequence to an output sequence, often with different lengths."
+term: "Sequence-to-Sequence Model"
+letter: "S"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A sequence-to-sequence (seq2seq) model turns one sequence into another. It
+can translate a sentence into another language, convert speech into text,
+or summarize a document.
+
+## Technical explanation
+
+Seq2seq systems use an encoder to represent the source sequence and a
+decoder to generate the target sequence. Attention lets the decoder access
+different parts of the source during generation. Architectures include
+recurrent encoder-decoders and encoder-decoder Transformers.
+
+## Why it matters in AI engineering
+
+Many language and multimodal tasks involve transforming one ordered
+representation into another. Seq2seq design handles variable-length inputs
+and outputs, but requires careful tokenization, masking, decoding, and
+evaluation.
+
+## How it works
+
+The encoder processes source tokens into contextual representations. The
+decoder generates target tokens step by step, conditioning on previous
+outputs and often attending to the encoder representations. Training commonly
+uses teacher forcing; inference uses a decoding strategy such as greedy
+decoding or beam search.
+
+<svg viewBox="0 0 800 220" role="img" aria-labelledby="s2s-title s2s-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="s2s-title">Encoder-decoder sequence-to-sequence flow</title>
+  <desc id="s2s-desc">A source token sequence is processed by an encoder into contextual representations. A decoder attends to those representations and generates a target token sequence.</desc>
+  <defs>
+    <marker id="s2s-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="28" y="74" width="144" height="70" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="100" y="103" font-size="15" fill="#202b3c">Source sequence</text><text x="100" y="125" font-size="12" fill="#46566d">x₁, x₂, …, xₙ</text>
+    <rect x="230" y="74" width="150" height="70" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="305" y="103" font-size="15" fill="#202b3c">Encoder</text><text x="305" y="125" font-size="12" fill="#46566d">contextual states</text>
+    <rect x="454" y="74" width="150" height="70" rx="9" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="529" y="103" font-size="15" fill="#202b3c">Decoder</text><text x="529" y="125" font-size="12" fill="#46566d">generates tokens</text>
+    <rect x="666" y="74" width="110" height="70" rx="9" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="721" y="103" font-size="15" fill="#202b3c">Target</text><text x="721" y="125" font-size="12" fill="#46566d">y₁, …, yₘ</text>
+    <path d="M172 109 H222" stroke="#455b79" stroke-width="2" marker-end="url(#s2s-arrow)"/>
+    <path d="M380 109 H446" stroke="#455b79" stroke-width="2" marker-end="url(#s2s-arrow)"/>
+    <path d="M604 109 H658" stroke="#455b79" stroke-width="2" marker-end="url(#s2s-arrow)"/>
+    <path d="M305 152 V183 H529 V152" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#s2s-arrow)"/>
+    <text x="417" y="205" font-size="12" fill="#276b3c">source context available through attention</text>
+  </g>
+</svg>
+
+The exact architecture varies; many modern implementations use
+Transformer encoders and decoders.
+
+## Practical example
+
+For translation, the encoder reads the source sentence and the decoder
+generates the translated sentence until it emits an end-of-sequence token.
+Evaluation should account for valid alternative translations, not just
+exact string matches.
+
+## Common misconceptions
+
+- An encoder-decoder model is not the only way to perform sequence
+  generation; decoder-only models can also transform input text.
+- During inference, the complete target sequence is not usually available
+  in advance; generation is autoregressive in many seq2seq systems.
+
+## Related terms
+
+- [Recurrent Neural Network (RNN)](../R/recurrent-neural-network-rnn.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Self-Attention](self-attention.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — Transformer encoder-decoder architecture.
+- [PyTorch: Translation with a Sequence to Sequence Network](https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html) — tutorial example.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

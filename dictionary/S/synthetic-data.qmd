@@ -1,0 +1,65 @@
+---
+title: "Synthetic Data"
+description: "Artificially generated data designed to resemble selected properties of real data or satisfy a defined use."
+term: "Synthetic Data"
+letter: "S"
+category: "Data Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Synthetic data is created rather than collected directly from real-world
+events. It can imitate some properties of real examples or represent
+scenarios that are difficult, costly, or sensitive to collect.
+
+## Technical explanation
+
+Synthetic datasets may be generated from simulations, probabilistic
+programs, generative models, or manually designed rules. Fidelity is
+multidimensional: a dataset can match marginal statistics while failing to
+preserve important correlations, rare cases, causal structure, or privacy
+properties.
+
+## Why it matters in AI engineering
+
+Synthetic data can support prototyping, testing, data augmentation, and
+privacy-aware development. It can also introduce artifacts or amplify
+generator bias, so its usefulness must be measured on the intended
+downstream task and compared with real-data evaluation.
+
+## How it works
+
+The team defines the target distribution, constraints, and intended use,
+then generates examples with a simulator, model, or rules. Quality checks
+compare important statistics and task performance, examine coverage and
+failure cases, and test for memorization or leakage where relevant.
+
+## Practical example
+
+A robotics team can simulate rare obstacle configurations to test a
+navigation pipeline. The simulations broaden test coverage, but performance
+must still be checked in realistic environments because simulated dynamics
+may differ from hardware.
+
+## Common misconceptions
+
+- Synthetic data is not automatically unbiased, private, or realistic.
+- Similar aggregate statistics do not prove that synthetic examples are
+  safe substitutes for real data.
+
+## Related terms
+
+- [Data Augmentation](../D/data-augmentation.qmd)
+- [Data Validation](../D/data-validation.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [NIST: Synthetic Data](https://www.nist.gov/itl/iad/mig/synthetic-data) — research and considerations for synthetic data.
+- [The Synthetic Data Vault](https://docs.sdv.dev/sdv) — tools and evaluation concepts for synthetic tabular data.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

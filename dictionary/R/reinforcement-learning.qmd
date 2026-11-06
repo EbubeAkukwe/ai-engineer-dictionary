@@ -1,0 +1,65 @@
+---
+title: "Reinforcement Learning"
+description: "A learning framework in which an agent improves decisions by interacting with an environment and receiving rewards."
+term: "Reinforcement Learning"
+letter: "R"
+category: "AI Fundamentals"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+In reinforcement learning, an agent tries actions, observes what happens,
+and receives rewards or penalties. Over time it learns a strategy for
+choosing actions that produce better long-term outcomes.
+
+## Technical explanation
+
+A reinforcement-learning problem is often modeled as a Markov decision
+process with states, actions, transition dynamics, and rewards. The agent
+uses experience to learn a policy that maximizes expected discounted return.
+Methods include value-based, policy-gradient, and model-based approaches.
+
+## Why it matters in AI engineering
+
+Reinforcement learning applies when actions affect future observations and
+outcomes, such as robotics, scheduling, and simulation. It can require many
+interactions, careful reward design, safe exploration, and evaluation beyond
+the training environment.
+
+## How it works
+
+The agent observes a state, selects an action, receives a reward, and
+observes the next state. Learning updates a policy or value estimate from
+these transitions. Training may use simulations or logged experience; the
+result must be tested under conditions that represent deployment.
+
+## Practical example
+
+A simulated robot can learn to navigate to a target by receiving positive
+reward for progress and penalties for collisions. Engineers should test
+different environments and ensure the reward does not encourage unsafe
+shortcuts.
+
+## Common misconceptions
+
+- Maximizing a reward only optimizes the specified objective, not every
+  human intention behind it.
+- More interaction does not guarantee a good policy if the environment,
+  exploration, or feedback is poorly designed.
+
+## Related terms
+
+- [Policy Gradient](../P/policy-gradient.qmd)
+- [Q-Learning](../Q/q-learning.qmd)
+- [Reward Model](reward-model.qmd)
+
+## Further reading
+
+- [Sutton and Barto: Reinforcement Learning](http://incompleteideas.net/book/RLbook2020.pdf) — foundational text.
+- [OpenAI Spinning Up](https://spinningup.openai.com/en/latest/) — introductory algorithms and implementation material.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

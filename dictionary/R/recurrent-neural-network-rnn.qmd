@@ -1,0 +1,107 @@
+---
+title: "Recurrent Neural Network (RNN)"
+description: "A neural-network architecture that processes sequences using a hidden state updated over time steps."
+term: "Recurrent Neural Network (RNN)"
+letter: "R"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A recurrent neural network processes a sequence one element at a time and
+carries a state forward. That state gives it a way to use information from
+earlier elements when processing later ones.
+
+## Technical explanation
+
+A basic RNN updates hidden state as $h_t=f(W_xx_t+W_hh_{t-1}+b)$ and
+produces outputs from the current state. Training commonly uses
+backpropagation through time. Simple RNNs can struggle with long-range
+dependencies because gradients may vanish or explode.
+
+## Why it matters in AI engineering
+
+RNNs established important approaches to sequential modeling and remain
+useful in some streaming or compact sequence applications. LSTMs, GRUs, and
+Transformers address limitations of the basic recurrent architecture in
+different ways.
+
+## How it works
+
+The same recurrent transformation is applied at each time step. The hidden
+state summarizes information from the preceding sequence prefix, and the
+model can emit an output at every step or only at selected positions.
+Padding, masking, and sequence length need careful handling in batches.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="rnn-title rnn-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="rnn-title">Recurrent state passes information across sequence steps</title>
+  <desc id="rnn-desc">Three sequence inputs enter recurrent cells in order. Each cell receives the hidden state from the previous time step and emits an output and a new hidden state for the next step.</desc>
+  <defs>
+    <marker id="rnn-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="rnn-state-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#438057"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g fill="#e6ecfa" stroke="#4666a8" stroke-width="2">
+      <rect x="124" y="70" width="112" height="64" rx="9"/><rect x="324" y="70" width="112" height="64" rx="9"/><rect x="524" y="70" width="112" height="64" rx="9"/>
+    </g>
+    <g fill="#202b3c" font-size="15">
+      <text x="180" y="98">RNN cell</text><text x="180" y="120" font-size="12">time t</text>
+      <text x="380" y="98">RNN cell</text><text x="380" y="120" font-size="12">time t+1</text>
+      <text x="580" y="98">RNN cell</text><text x="580" y="120" font-size="12">time t+2</text>
+    </g>
+    <g fill="#f3f5f8" stroke="#8c9aab">
+      <rect x="144" y="170" width="72" height="34" rx="7"/><rect x="344" y="170" width="72" height="34" rx="7"/><rect x="544" y="170" width="72" height="34" rx="7"/>
+    </g>
+    <g fill="#202b3c" font-size="13">
+      <text x="180" y="192">xₜ</text><text x="380" y="192">xₜ₊₁</text><text x="580" y="192">xₜ₊₂</text>
+      <text x="180" y="38">output yₜ</text><text x="380" y="38">output yₜ₊₁</text><text x="580" y="38">output yₜ₊₂</text>
+      <text x="280" y="59" font-size="12" fill="#276b3c">hidden state hₜ</text><text x="480" y="59" font-size="12" fill="#276b3c">hidden state hₜ₊₁</text>
+    </g>
+    <path d="M180 170 V142" stroke="#455b79" stroke-width="2" marker-end="url(#rnn-arrow)"/>
+    <path d="M380 170 V142" stroke="#455b79" stroke-width="2" marker-end="url(#rnn-arrow)"/>
+    <path d="M580 170 V142" stroke="#455b79" stroke-width="2" marker-end="url(#rnn-arrow)"/>
+    <path d="M180 70 V47" stroke="#455b79" stroke-width="2" marker-end="url(#rnn-arrow)"/>
+    <path d="M380 70 V47" stroke="#455b79" stroke-width="2" marker-end="url(#rnn-arrow)"/>
+    <path d="M580 70 V47" stroke="#455b79" stroke-width="2" marker-end="url(#rnn-arrow)"/>
+    <path d="M236 86 H316" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#rnn-state-arrow)"/>
+    <path d="M436 86 H516" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#rnn-state-arrow)"/>
+  </g>
+</svg>
+
+The diagram unfolds the recurrence across time; a standard RNN reuses the
+same cell parameters at every step.
+
+## Practical example
+
+A basic RNN can read sensor readings in order and update a hidden state
+after each observation. For long sequences, engineers often compare gated
+RNNs or attention-based models and measure performance under realistic
+sequence lengths.
+
+## Common misconceptions
+
+- The hidden state is a learned summary, not a perfect memory of all earlier
+  inputs.
+- RNNs can process variable-length sequences, but they process time steps
+  sequentially and may be harder to parallelize than Transformers.
+
+## Related terms
+
+- [Long Short-Term Memory (LSTM)](../L/long-short-term-memory-lstm.qmd)
+- [Sequence-to-Sequence Model](../S/sequence-to-sequence-model.qmd)
+- [Neural Network](../N/neural-network.qmd)
+
+## Further reading
+
+- [Deep Learning: Recurrent Neural Networks](https://www.deeplearningbook.org/contents/rnn.html) — recurrent architectures and sequence modeling.
+- [PyTorch: Recurrent layers](https://pytorch.org/docs/stable/nn.html#recurrent-layers) — RNN, GRU, and LSTM APIs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

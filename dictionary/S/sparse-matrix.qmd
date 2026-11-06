@@ -1,0 +1,63 @@
+---
+title: "Sparse Matrix"
+description: "A matrix in which most elements are zero and can potentially be stored or processed using specialized sparse representations."
+term: "Sparse Matrix"
+letter: "S"
+category: "Mathematics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A sparse matrix contains mostly zeros. Instead of storing every zero, a
+sparse representation stores the nonzero values and where they occur.
+
+## Technical explanation
+
+Sparsity is the fraction of zero entries in a matrix. Formats such as
+compressed sparse row (CSR) store nonzeros with index structures; other
+formats suit different access patterns. Sparse operations can save storage
+and computation when sparsity is high enough and supported by the hardware
+and libraries.
+
+## Why it matters in AI engineering
+
+Sparse matrices occur in graph data, one-hot features, recommendation
+systems, and pruned neural networks. Choosing a storage format affects
+memory, operation speed, and compatibility with downstream libraries.
+
+## How it works
+
+Instead of allocating dense storage, a sparse format records nonzero values
+and their positions or row/column boundaries. Algorithms operate on these
+entries while avoiding zero multiplications, although indexing and
+irregular memory access add overhead.
+
+## Practical example
+
+A user-item interaction matrix may have millions of possible cells but
+only a small number of observed ratings. A CSR matrix stores those ratings
+without allocating a value for every unobserved pair.
+
+## Common misconceptions
+
+- Sparse data is not automatically faster; small matrices or unsupported
+  operations may run better in dense form.
+- An unobserved value is not always equivalent to a known zero, especially
+  in recommendation and missing-data problems.
+
+## Related terms
+
+- [Clustering](../C/clustering.qmd)
+- [Pruning](../P/pruning.qmd)
+- [Graph Neural Network](../G/graph-neural-network.qmd)
+
+## Further reading
+
+- [SciPy: Sparse arrays](https://docs.scipy.org/doc/scipy/tutorial/sparse.html) — formats and operations.
+- [PyTorch: Sparse tensors](https://pytorch.org/docs/stable/sparse.html) — sparse tensor layouts and supported operations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

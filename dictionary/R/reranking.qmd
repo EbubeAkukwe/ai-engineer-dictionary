@@ -1,0 +1,62 @@
+---
+title: "Reranking"
+description: "A second-stage ranking process that reorders an initial set of retrieved candidates using a more detailed relevance model."
+term: "Reranking"
+letter: "R"
+category: "Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Reranking takes a first set of search results and sorts them again, usually
+with a model that can evaluate query-result relevance more carefully.
+
+## Technical explanation
+
+A retrieval stack commonly uses a fast first-stage retriever to produce
+candidate documents, then a reranker such as a cross-encoder to score
+query-document pairs. Reranking can improve ordering but adds computation
+and cannot recover relevant items absent from the candidate set.
+
+## Why it matters in AI engineering
+
+Reranking can improve the quality of top results for search and RAG, where
+only a limited context budget is available. The candidate count, model
+latency, and evaluation metric should be chosen to fit service constraints.
+
+## How it works
+
+The retriever returns top-$k$ candidates. A second model jointly evaluates
+each query-candidate pair or applies another relevance function, then sorts
+the candidates by score. The application selects the top results for display
+or downstream context.
+
+## Practical example
+
+A RAG system can retrieve 50 passages with a fast vector index, rerank them
+against the question using a cross-encoder, and send the top 5 to the
+language model. Evaluate both candidate recall and final ranking quality.
+
+## Common misconceptions
+
+- Reranking cannot find a relevant document that the first-stage retrieval
+  did not return.
+- A higher reranker score is not necessarily a calibrated probability of
+  relevance.
+
+## Related terms
+
+- [Retrieval](retrieval.qmd)
+- [Ranking Model](ranking-model.qmd)
+- [RAG (Retrieval-Augmented Generation)](rag-retrieval-augmented-generation.qmd)
+
+## Further reading
+
+- [Sentence Transformers: Cross-Encoder usage](https://sbert.net/docs/cross_encoder/usage/usage.html) — reranking with cross-encoders.
+- [Sentence Transformers: Retrieve and rerank](https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) — two-stage retrieval pattern.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

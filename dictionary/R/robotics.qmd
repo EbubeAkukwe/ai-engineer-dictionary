@@ -1,0 +1,63 @@
+---
+title: "Robotics"
+description: "The engineering of machines that sense, compute, and act in physical or simulated environments."
+term: "Robotics"
+letter: "R"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Robotics combines machines, sensors, software, and control so a system can
+perceive its surroundings and act on them. AI can help robots recognize
+objects, plan routes, or adapt actions.
+
+## Technical explanation
+
+A robotic system integrates sensing, state estimation, planning, control,
+and actuation. It may operate under uncertainty and real-time constraints,
+with physical dynamics and safety limits. Learning-based components often
+work alongside classical estimation and control methods.
+
+## Why it matters in AI engineering
+
+Robots connect AI decisions to physical consequences. Engineers must
+consider hardware variation, sensor noise, latency, safety, and the gap
+between simulation and real-world operation.
+
+## How it works
+
+Sensors provide observations, algorithms estimate state, planners choose
+goals or trajectories, and controllers send commands to actuators. Feedback
+from new sensor readings closes the loop and allows actions to adapt as the
+environment changes.
+
+## Practical example
+
+A warehouse robot can use cameras and range sensors to estimate position,
+plan a collision-free route, and adjust wheel speeds as people or obstacles
+move into its path.
+
+## Common misconceptions
+
+- Robotics is not only mechanical engineering or only AI; it depends on
+  integration across hardware and software.
+- A policy that succeeds in simulation may fail on real hardware because
+  sensors, dynamics, and environments differ.
+
+## Related terms
+
+- [Autonomous Systems](../A/autonomous-systems.qmd)
+- [Computer Vision](../C/computer-vision.qmd)
+- [Inverse Kinematics](../I/inverse-kinematics.qmd)
+
+## Further reading
+
+- [Modern Robotics](https://modernrobotics.northwestern.edu/) — foundations of robot kinematics, dynamics, and control.
+- [ROS 2 Documentation](https://docs.ros.org/en/rolling/) — a common robotics software framework.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

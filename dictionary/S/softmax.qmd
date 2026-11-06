@@ -1,0 +1,65 @@
+---
+title: "Softmax"
+description: "A function that converts a vector of real-valued scores into nonnegative values that sum to one."
+term: "Softmax"
+letter: "S"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Softmax turns a list of model scores into a distribution across
+alternatives. A larger score receives a larger share, and all output values
+sum to one.
+
+## Technical explanation
+
+For logits $z_i$, softmax is
+$\mathrm{softmax}(z_i)=e^{z_i}/\sum_j e^{z_j}$. Implementations commonly
+subtract the maximum logit for numerical stability. Temperature scaling
+changes the sharpness of the distribution without changing score order for
+positive temperatures.
+
+## Why it matters in AI engineering
+
+Softmax is used in multiclass classifiers, attention weights, and token
+generation. Its output is often interpreted probabilistically, but
+calibration and task context determine whether those values reflect actual
+frequencies.
+
+## How it works
+
+Each logit is exponentiated and normalized by the sum of all exponentials.
+For classification, the largest output corresponds to the largest logit.
+For attention, softmax-normalized scores act as weights used to combine
+value vectors.
+
+## Practical example
+
+A classifier with logits $(2,1,0)$ produces a categorical distribution
+after softmax. The values express relative model scores; evaluate
+calibration separately if probabilities are used for decisions.
+
+## Common misconceptions
+
+- Softmax outputs sum to one within the chosen class set, but are not
+  automatically calibrated.
+- Softmax over independent binary labels can be inappropriate; sigmoid
+  outputs may better represent independent decisions.
+
+## Related terms
+
+- [Sigmoid](sigmoid.qmd)
+- [Probability Distribution](../P/probability-distribution.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+
+## Further reading
+
+- [PyTorch: Softmax](https://pytorch.org/docs/stable/generated/torch.nn.Softmax.html) — API and dimension semantics.
+- [Dive into Deep Learning: Softmax Regression](https://d2l.ai/chapter_linear-classification/softmax-regression.html) — softmax in multiclass prediction.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

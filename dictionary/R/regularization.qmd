@@ -1,0 +1,65 @@
+---
+title: "Regularization"
+description: "Techniques that constrain model fitting to reduce overfitting or improve generalization."
+term: "Regularization"
+letter: "R"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Regularization discourages a model from fitting training examples too
+closely. It can favor simpler solutions that are more likely to work on new
+data.
+
+## Technical explanation
+
+Regularization modifies learning through penalties, constraints, or
+stochastic procedures. L1 and L2 penalties add terms based on parameter
+magnitudes to the objective; dropout and data augmentation are other
+regularizing techniques. Their effect depends on model, data, and training
+setup.
+
+## Why it matters in AI engineering
+
+Reducing overfitting can improve performance on unseen data, especially
+when training data is limited or noisy. Regularization choices affect
+accuracy, sparsity, calibration, and optimization, so they should be tuned
+using validation data.
+
+## How it works
+
+For a parameter vector $\theta$, an L2-regularized objective may be
+$L(\theta)+\lambda\|\theta\|_2^2$. The penalty discourages large weights;
+$\lambda$ controls its strength. Other methods constrain the hypothesis
+space or inject noise during training.
+
+## Practical example
+
+A text classifier that memorizes rare tokens may benefit from an L2 penalty
+or dropout. Compare candidate settings on a validation split, then report
+the final result on a separate test set.
+
+## Common misconceptions
+
+- Regularization does not guarantee better generalization; too much can
+  cause underfitting.
+- Weight decay and L2 penalties are closely related but can differ depending
+  on the optimizer and parameterization.
+
+## Related terms
+
+- [Overfitting](../O/overfitting.qmd)
+- [Dropout](../D/dropout.qmd)
+- [Early Stopping](../E/early-stopping.qmd)
+
+## Further reading
+
+- [Deep Learning: Regularization for Deep Learning](https://www.deeplearningbook.org/contents/regularization.html) — regularization methods and their motivations.
+- [scikit-learn: Linear models](https://scikit-learn.org/stable/modules/linear_model.html) — regularized linear estimators.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
