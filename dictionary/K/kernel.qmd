@@ -57,7 +57,7 @@ classifier to shape boundaries that capture nonlinear structure.
 
 - [Kernel Trick](kernel-trick.qmd)
 - [K-Nearest Neighbors (KNN)](k-nearest-neighbors-knn.qmd)
-- [Support Vector Machine](../S/support-vector-machine.qmd)
+- [Support Vector Machine](../S/support-vector-machine-svm.qmd)
 
 ## Further reading
 

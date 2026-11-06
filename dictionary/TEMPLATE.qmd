@@ -38,7 +38,8 @@ Clarify common mistakes or oversimplifications, if applicable.
 
 ## Related terms
 
-- [Related term](../B/related-term.qmd)
+- [Binary Classification](B/binary-classification.qmd) — replace this
+  example with a relevant existing term page.
 
 ## Further reading
 

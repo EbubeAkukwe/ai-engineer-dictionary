@@ -43,11 +43,10 @@ fields, authentication, response structure, and error behaviour.
 
 ## Related terms
 
-- HTTP
-- REST
-- JSON
-- Inference
-- Model serving
+- [REST API](../R/rest-api.qmd)
+- [JSON](../J/json.qmd)
+- [Inference](../I/inference.qmd)
+- [Model Serving](../M/model-serving.qmd)
 
 ## Further reading
 

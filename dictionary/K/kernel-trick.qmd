@@ -54,7 +54,7 @@ boundaries without needing to explicitly enumerate the transformed features.
 ## Related terms
 
 - [Kernel](kernel.qmd)
-- [Support Vector Machine](../S/support-vector-machine.qmd)
+- [Support Vector Machine](../S/support-vector-machine-svm.qmd)
 - [K-Nearest Neighbors (KNN)](k-nearest-neighbors-knn.qmd)
 
 ## Further reading

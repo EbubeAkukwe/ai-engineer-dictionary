@@ -56,7 +56,7 @@ training objective or for evaluation.
 
 - [Cross-Entropy Loss](../C/cross-entropy-loss.qmd)
 - [Jensen-Shannon Divergence](../J/jensen-shannon-divergence.qmd)
-- [Probability](../P/probability.qmd)
+- [Probability Distribution](../P/probability-distribution.qmd)
 
 ## Further reading
 

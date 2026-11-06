@@ -62,10 +62,10 @@ not to train a language model.
 ## Related terms
 
 - [Artificial Intelligence](artificial-intelligence.qmd)
-- Transformer
-- Embedding
-- Softmax
-- Query, Key, and Value
+- [Transformer](../T/transformer.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Softmax](../S/softmax.qmd)
+- [Query, Key, and Value](../Q/query-key-value-qkv.qmd)
 
 ## Further reading
 

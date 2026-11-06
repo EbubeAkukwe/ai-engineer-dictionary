@@ -74,8 +74,8 @@ credentials to unrelated production systems.
 
 ## Related terms
 
-- Identity verification
-- Least-privilege access
+- [Model Serving](../M/model-serving.qmd)
+- [External Tool](../E/external-tool.qmd)
 - [System Design](../S/system-design.qmd)
 
 ## Further reading
