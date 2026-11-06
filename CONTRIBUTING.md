@@ -10,8 +10,9 @@ Thanks for helping improve the AI Engineer Dictionary.
   existing entry.
 - Use the **Bug report** form for website, content, or navigation problems.
 
-Search the dictionary and both vocabulary files before proposing a new term.
-Wait for maintainers to review a proposed term before adding it.
+Search the [live dictionary](https://ai-engineer-dictionary.vercel.app/), the
+master vocabulary, and the CSV before proposing a new term. Wait for
+maintainers to review a proposed term before adding it.
 
 ## Make a change
 

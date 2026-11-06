@@ -25,7 +25,8 @@ All notable project changes are documented here.
 - Updated the contribution guide and README to describe the current project
   structure and workflow.
 
-### Deployment status
+### Deployment
 
-- Vercel configuration is ready for manual project setup. The website has not
-  been deployed and this release has not been published.
+- The site is live at
+  [ai-engineer-dictionary.vercel.app](https://ai-engineer-dictionary.vercel.app/).
+- The v1.0.0 GitHub release has not been published.

@@ -8,6 +8,9 @@ visualizations, and mathematical demonstrations.
 A notebook should teach one focused idea. Keep dependencies modest, explain
 each important step, and include expected outputs or observations.
 
+Visit the [live AI Engineer Dictionary](https://ai-engineer-dictionary.vercel.app/)
+to browse related concepts.
+
 ## A
 
 - [Scaled Dot-Product Attention](A/attention-mechanism.ipynb)

@@ -9,6 +9,8 @@ and practitioners.
 
 ## Ways to contribute
 
+- Browse the [live dictionary](https://ai-engineer-dictionary.vercel.app/)
+  before proposing a new term.
 - Add a missing term.
 - Improve an existing definition.
 - Correct a technical error.

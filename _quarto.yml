@@ -13,7 +13,7 @@ project:
 website:
   title: "AI Engineer Dictionary"
   description: "An open-source A–Z reference for AI engineering."
-  site-url: ""
+  site-url: "https://ai-engineer-dictionary.vercel.app"
   repo-url: ""
   navbar:
     left:

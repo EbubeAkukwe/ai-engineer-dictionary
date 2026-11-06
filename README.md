@@ -2,6 +2,8 @@
 
 **Understand AI. Build AI.**
 
+[Visit the live dictionary](https://ai-engineer-dictionary.vercel.app/).
+
 An open-source, community-maintained A–Z reference to the concepts, tools,
 algorithms, architectures, and systems used in modern AI engineering.
 
