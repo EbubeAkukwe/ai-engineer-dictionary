@@ -1,0 +1,65 @@
+---
+title: "Memory (AI Agents)"
+description: "Information an AI agent retains or retrieves to inform actions beyond the immediate input."
+term: "Memory (AI Agents)"
+letter: "M"
+category: "AI Agents"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Memory in an AI agent is information the agent can use again after it has
+handled an earlier step. It might include the current task state, a user's
+preferences, or notes retrieved from previous interactions.
+
+## Technical explanation
+
+Agent memory is application-managed state, not necessarily a special ability
+of the model itself. It may be kept in the current prompt, a conversation
+store, a structured database, a file, or a retrieval system. Memory designs
+often distinguish short-lived working state from information persisted
+across tasks or sessions.
+
+## Why it matters in AI engineering
+
+Memory can help agents maintain continuity, avoid repeating work, and
+personalize actions. It also introduces engineering concerns: what to store,
+how to retrieve and update it, how to handle stale or conflicting facts, and
+how to respect privacy and retention requirements.
+
+## How it works
+
+An agent or surrounding system writes selected information to a memory store.
+When a later task arrives, the system retrieves relevant records and includes
+them in the model's context or makes them available through a tool. Retrieval
+and write policies determine whether the memory is useful and current.
+
+## Practical example
+
+A project assistant can save a user's preferred programming language and
+active project decisions. In a later session it retrieves those details when
+they are relevant instead of requiring the user to repeat them.
+
+## Common misconceptions
+
+- A model does not automatically retain information across independent API calls; persistence must be provided by the application or model service.
+- Storing every conversation does not guarantee useful recall.
+- Retrieved memory can be outdated, irrelevant, or incorrect and should be treated as data to validate.
+
+## Related terms
+
+- [Context Engineering](../C/context-engineering.qmd)
+- [Context Window](../C/context-window.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+- [Agent](../A/agent.qmd)
+
+## Further reading
+
+- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) — an agent architecture using memory, reflection, and planning.
+- [Anthropic: Building effective agents](https://www.anthropic.com/research/building-effective-agents) — practical guidance on agent architectures and state.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

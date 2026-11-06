@@ -1,0 +1,113 @@
+---
+title: "Multi-Head Attention"
+description: "An attention mechanism that computes several learned attention patterns in parallel and combines them."
+term: "Multi-Head Attention"
+letter: "M"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Multi-head attention lets a model examine relationships between tokens in
+several learned ways at once. Each attention head produces a representation,
+and the model combines the heads for the next layer.
+
+## Technical explanation
+
+For each head $i$, input representations are projected into queries, keys,
+and values. Scaled dot-product attention is:
+
+$$
+\operatorname{Attention}(Q,K,V)
+= \operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+$$
+
+The outputs of $h$ heads are concatenated and projected:
+
+$$
+\operatorname{MultiHead}(Q,K,V)
+= \operatorname{Concat}(\operatorname{head}_1,\ldots,\operatorname{head}_h)W^O
+$$
+
+Each head has learned projections. Heads are not assigned fixed semantic
+roles, even if some heads appear to focus on particular patterns during
+analysis.
+
+## Why it matters in AI engineering
+
+Multi-head attention is a core component of Transformer models. Parallel
+attention patterns help models incorporate contextual relationships across
+tokens, supporting language, vision, and multimodal tasks.
+
+## How it works
+
+The model computes attention weights from query-key similarities, uses those
+weights to combine value vectors, and repeats this process with different
+learned projections for each head. It then concatenates and mixes the head
+outputs. Masks can restrict which positions are visible.
+
+<svg viewBox="0 0 780 250" role="img" aria-labelledby="mha-title mha-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="mha-title">Multi-head attention combines parallel heads</title>
+  <desc id="mha-desc">Input token representations are projected into queries, keys, and values. Two illustrative attention heads process them in parallel, and their outputs are concatenated and projected.</desc>
+  <defs>
+    <marker id="mha-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+  </defs>
+  <rect x="18" y="90" width="118" height="56" rx="9" fill="#f3f5f8" stroke="#8c9aab"/>
+  <text x="77" y="114" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Input tokens</text>
+  <text x="77" y="133" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">representations</text>
+  <line x1="136" y1="118" x2="188" y2="118" stroke="#455b79" stroke-width="2" marker-end="url(#mha-arrow)"/>
+  <rect x="200" y="84" width="124" height="68" rx="9" fill="#e6ecfa" stroke="#4666a8"/>
+  <text x="262" y="109" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Q, K, V</text>
+  <text x="262" y="130" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">learned projections</text>
+  <line x1="324" y1="105" x2="375" y2="61" stroke="#455b79" stroke-width="2" marker-end="url(#mha-arrow)"/>
+  <line x1="324" y1="131" x2="375" y2="175" stroke="#455b79" stroke-width="2" marker-end="url(#mha-arrow)"/>
+  <rect x="386" y="30" width="128" height="58" rx="9" fill="#e7f2e8" stroke="#55815d" stroke-width="2"/>
+  <rect x="386" y="146" width="128" height="58" rx="9" fill="#f3eafa" stroke="#80609a" stroke-width="2"/>
+  <text x="450" y="55" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Attention head 1</text>
+  <text x="450" y="74" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">pattern A</text>
+  <text x="450" y="171" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Attention head 2</text>
+  <text x="450" y="190" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">pattern B</text>
+  <line x1="514" y1="59" x2="565" y2="105" stroke="#455b79" stroke-width="2" marker-end="url(#mha-arrow)"/>
+  <line x1="514" y1="175" x2="565" y2="129" stroke="#455b79" stroke-width="2" marker-end="url(#mha-arrow)"/>
+  <rect x="576" y="84" width="112" height="68" rx="9" fill="#fff2d9" stroke="#b9792e"/>
+  <text x="632" y="110" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Concatenate</text>
+  <text x="632" y="131" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">and project</text>
+  <line x1="688" y1="118" x2="728" y2="118" stroke="#455b79" stroke-width="2" marker-end="url(#mha-arrow)"/>
+  <text x="752" y="123" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#202b3c">Output</text>
+</svg>
+
+The diagram shows two heads for readability; practical models may use more,
+and the heads are computed in parallel.
+
+## Practical example
+
+In a sentence such as "The animal sat by the bank," attention can combine
+information from different words to help represent context. Multiple heads
+provide different learned projections of token relationships, without
+guaranteeing that each head has a simple human-readable purpose.
+
+## Common misconceptions
+
+- Heads do not have predefined roles such as "grammar head" or "meaning head."
+- More heads do not automatically improve a model; head count is an architecture choice.
+- Attention weights are not by themselves a complete explanation of a model's decision.
+
+## Related terms
+
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Large Language Model (LLM)](../L/large-language-model-llm.qmd)
+- [Key (Attention)](../K/key-attention.qmd)
+- [Large Language Model (LLM)](../L/large-language-model-llm.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — Transformer architecture and multi-head attention.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — visual walkthrough of attention and Transformer components.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

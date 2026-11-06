@@ -1,0 +1,66 @@
+---
+title: "Multimodal AI"
+description: "AI systems that process or generate information across more than one modality, such as text, images, audio, or video."
+term: "Multimodal AI"
+letter: "M"
+category: "Generative AI"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Multimodal AI works with more than one kind of information. A system might
+answer questions about an image using text, combine spoken audio with video,
+or generate speech from written words.
+
+## Technical explanation
+
+Modalities are data forms such as text, images, audio, video, or structured
+signals. A multimodal model may use separate encoders, a shared representation
+space, cross-attention, or other fusion mechanisms to relate information
+across modalities. Some systems accept multiple modalities as input, generate
+multiple modalities as output, or both.
+
+## Why it matters in AI engineering
+
+Many real tasks combine sources of evidence, such as a spoken question and a
+visual scene. Multimodal systems can support richer interfaces, but they also
+raise challenges in alignment, synchronization, evaluation, data coverage,
+latency, and safety across modalities.
+
+## How it works
+
+Each input modality is represented in a form the model can process. The
+system then fuses or aligns those representations and produces a task output.
+For example, an image encoder can provide visual features that a language
+model conditions on while generating an answer.
+
+## Practical example
+
+A user submits a photo of a damaged appliance and asks a question by voice.
+A multimodal assistant can analyze the image and audio transcript together to
+suggest a next step, while the application can require confirmation before
+any consequential action.
+
+## Common misconceptions
+
+- A model that accepts text and images does not necessarily reason equally well in both.
+- Combining modalities does not remove the need to evaluate each modality and their interactions.
+- Multimodal output may still be uncertain or inaccurate and should not be treated as ground truth.
+
+## Related terms
+
+- [Large Language Model (LLM)](../L/large-language-model-llm.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Computer Vision](../C/computer-vision.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+
+## Further reading
+
+- [ImageBind: One Embedding Space To Bind Them All](https://arxiv.org/abs/2305.05665) — representations aligned across multiple modalities.
+- [OpenAI: Introducing GPT-4o](https://openai.com/index/hello-gpt-4o/) — example of a model designed for text, audio, and vision interaction.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Model Serving"
+description: "The infrastructure and process that makes a trained model available for predictions or generated outputs."
+term: "Model Serving"
+letter: "M"
+category: "AI Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Model serving is how an application makes a trained model available to users
+or other software. It accepts inputs, runs inference, and returns outputs
+through an interface such as an API or an on-device library.
+
+## Technical explanation
+
+A serving system packages or loads model artifacts and exposes inference
+through online requests, batch jobs, or embedded execution. It manages
+preprocessing, runtime dependencies, resource allocation, concurrency,
+versioning, and failure handling. In LLM serving, token generation, KV-cache
+memory, and batching are additional concerns.
+
+## Why it matters in AI engineering
+
+A model's practical value depends on whether it can be called reliably within
+latency, throughput, cost, and availability requirements. Serving decisions
+also affect rollout safety, hardware utilization, and how easily models can
+be updated or rolled back.
+
+## How it works
+
+The service receives a request, validates and transforms the input, invokes
+the model, and formats the result. It may batch compatible requests, scale
+replicas with traffic, and emit telemetry. Online serving handles requests
+interactively; batch serving processes many inputs asynchronously.
+
+## Practical example
+
+A recommendation API receives a user and candidate items, builds the
+required feature inputs, runs a ranking model, and returns an ordered list.
+The service records latency and errors without exposing sensitive data.
+
+## Common misconceptions
+
+- Model serving is not just loading model weights; preprocessing, dependencies, and operational behavior also matter.
+- A high-throughput configuration may increase individual request latency.
+- A successfully loaded model is not necessarily ready for production traffic.
+
+## Related terms
+
+- [Inference](../I/inference.qmd)
+- [Latency](../L/latency.qmd)
+- [Dynamic Batching](../D/dynamic-batching.qmd)
+- [MLOps](machine-learning-operations-mlops.qmd)
+
+## Further reading
+
+- [vLLM documentation](https://docs.vllm.ai/) — LLM serving architecture and optimization.
+- [KServe documentation](https://kserve.github.io/website/) — Kubernetes-based model inference serving.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

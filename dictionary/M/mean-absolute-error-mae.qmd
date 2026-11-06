@@ -1,0 +1,67 @@
+---
+title: "Mean Absolute Error (MAE)"
+description: "A regression metric equal to the average absolute difference between predicted and observed values."
+term: "Mean Absolute Error (MAE)"
+letter: "M"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Mean Absolute Error (MAE) measures the typical size of prediction errors
+without regard to whether predictions are too high or too low. It averages
+the absolute distance between each prediction and its true value.
+
+## Technical explanation
+
+For $n$ observations with targets $y_i$ and predictions $\hat{y}_i$:
+
+$$
+\operatorname{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|
+$$
+
+MAE is measured in the same units as the target. Absolute error gives each
+unit of deviation a linear penalty, making MAE less sensitive to large
+outliers than squared-error metrics.
+
+## Why it matters in AI engineering
+
+MAE is easy to interpret when errors have a meaningful unit, such as minutes,
+dollars, or degrees. It is often useful alongside other metrics because it
+does not reveal the direction of errors and can hide subgroup performance.
+
+## How it works
+
+For every example, subtract the prediction from the observed value, take the
+absolute value, and average the results. Lower MAE means smaller average
+absolute errors on the evaluated examples.
+
+## Practical example
+
+If a delivery-time model has absolute errors of 2, 4, and 6 minutes on three
+deliveries, its MAE is 4 minutes. This gives a direct description of the
+average miss size.
+
+## Common misconceptions
+
+- MAE does not indicate whether a model systematically overpredicts or underpredicts.
+- A low MAE on a test set does not guarantee low error for every group or future period.
+- MAE and mean squared error rank models differently when their error patterns differ.
+
+## Related terms
+
+- [Mean Squared Error (MSE)](mean-squared-error-mse.qmd)
+- [Metric](metric.qmd)
+- [Linear Regression](../L/linear-regression.qmd)
+- [Model Evaluation](model-evaluation.qmd)
+
+## Further reading
+
+- [scikit-learn: Mean absolute error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html) — definition and API.
+- [Google Machine Learning: Regression](https://developers.google.com/machine-learning/crash-course/linear-regression) — regression error and evaluation concepts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

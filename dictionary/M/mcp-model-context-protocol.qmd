@@ -1,0 +1,70 @@
+---
+title: "MCP (Model Context Protocol)"
+description: "An open protocol for connecting AI applications to external tools, resources, and prompts."
+term: "MCP (Model Context Protocol)"
+letter: "M"
+category: "AI Agents"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+The Model Context Protocol (MCP) is a standard way for an AI application to
+connect to external capabilities and information. Instead of building a
+different integration for every tool, an application can communicate with
+MCP-compatible servers through a shared protocol.
+
+## Technical explanation
+
+MCP defines client-server interactions and capability types, including
+resources, prompts, and tools. A host application creates clients that
+connect to servers; servers expose capabilities for clients to discover and
+use. The protocol describes message exchange and lifecycle behavior, while
+authentication, authorization, deployment, and user approval depend on the
+implementation and environment.
+
+## Why it matters in AI engineering
+
+Standardized integrations can make tools and data sources reusable across
+compatible AI applications. MCP also creates a security boundary: exposed
+tools may have side effects or access sensitive data, so applications should
+limit permissions, validate inputs, and make consequential actions visible
+to users.
+
+## How it works
+
+An MCP client establishes a connection to a server and negotiates supported
+capabilities. The client can then list or invoke tools, read resources, or
+retrieve prompts according to the protocol. The host application decides
+which capabilities to expose to a model and how to handle approvals and
+results.
+
+## Practical example
+
+A development assistant can connect to an MCP server that provides
+read-only access to project documentation. When a user asks about an API, the
+assistant can discover and retrieve relevant documentation through the server
+rather than embedding the entire document set in its prompt.
+
+## Common misconceptions
+
+- MCP is a connectivity protocol, not an AI model or an agent by itself.
+- A compatible server is not automatically safe; capabilities and permissions still need review.
+- MCP does not guarantee that a model will use a tool correctly or that returned data is trustworthy.
+
+## Related terms
+
+- [External Tool](../E/external-tool.qmd)
+- [Function Calling](../F/function-calling.qmd)
+- [Agent](../A/agent.qmd)
+- [Context Engineering](../C/context-engineering.qmd)
+
+## Further reading
+
+- [Model Context Protocol documentation](https://modelcontextprotocol.io/introduction) — protocol concepts and implementation guides.
+- [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest) — protocol capabilities and technical details.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

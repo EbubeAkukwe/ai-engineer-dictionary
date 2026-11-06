@@ -1,0 +1,70 @@
+---
+title: "Multilayer Perceptron (MLP)"
+description: "A feedforward neural network made of multiple layers of learned transformations."
+term: "Multilayer Perceptron (MLP)"
+letter: "M"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A multilayer perceptron (MLP) is a neural network made of layers that pass
+information forward. Each layer combines its inputs, applies a learned
+transformation, and usually uses a nonlinear activation.
+
+## Technical explanation
+
+An MLP with $L$ layers can be written as:
+
+$$
+h^{(0)} = x,\qquad
+h^{(\ell)} = \phi\left(W^{(\ell)}h^{(\ell-1)} + b^{(\ell)}\right)
+$$
+
+where $W^{(\ell)}$ and $b^{(\ell)}$ are learned parameters and $\phi$ is a
+nonlinear activation. The output layer may use a task-specific transformation
+or activation. Without nonlinear activations, stacking linear layers is
+equivalent to a single linear transformation.
+
+## Why it matters in AI engineering
+
+MLPs are a fundamental neural-network building block and can model nonlinear
+relationships. They are used for tabular data, prediction heads, and
+feed-forward sublayers inside larger architectures, including Transformers.
+
+## How it works
+
+The input passes through successive dense layers. Training compares the
+output with target data using a loss and updates the weights through
+backpropagation. Layer width, depth, activation, regularization, and data
+preparation all affect performance.
+
+## Practical example
+
+An MLP can classify a record from numeric features such as age, account
+activity, and transaction amount. Hidden layers learn combinations of those
+features, and an output layer estimates class scores.
+
+## Common misconceptions
+
+- More layers or neurons do not guarantee better generalization.
+- An MLP does not automatically understand spatial or sequential structure; other architectures or input representations may be better suited.
+- An MLP with only linear transformations cannot represent nonlinear functions.
+
+## Related terms
+
+- [Feedforward Neural Network](../F/feedforward-neural-network.qmd)
+- [Dense Layer](../D/dense-layer.qmd)
+- [Activation Function](../A/activation-function.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+
+## Further reading
+
+- [Deep Learning Book: Multilayer Perceptrons](https://www.deeplearningbook.org/contents/mlp.html) — theory and training of feedforward networks.
+- [PyTorch: Build the Neural Network](https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html) — practical construction of layered models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

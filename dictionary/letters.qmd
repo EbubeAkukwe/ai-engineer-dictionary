@@ -217,7 +217,26 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## M {#m}
 
-Terms beginning with M will appear here as the dictionary grows.
+- [Machine Learning](/dictionary/M/machine-learning.qmd)
+- [Machine Learning Operations (MLOps)](/dictionary/M/machine-learning-operations-mlops.qmd)
+- [Masked Language Model](/dictionary/M/masked-language-model.qmd)
+- [Mean Absolute Error (MAE)](/dictionary/M/mean-absolute-error-mae.qmd)
+- [Mean Squared Error (MSE)](/dictionary/M/mean-squared-error-mse.qmd)
+- [Memory (AI Agents)](/dictionary/M/memory-ai-agents.qmd)
+- [Metadata](/dictionary/M/metadata.qmd)
+- [Metric](/dictionary/M/metric.qmd)
+- [Mixture of Experts (MoE)](/dictionary/M/mixture-of-experts-moe.qmd)
+- [Model](/dictionary/M/model.qmd)
+- [Model Compression](/dictionary/M/model-compression.qmd)
+- [Model Evaluation](/dictionary/M/model-evaluation.qmd)
+- [Model Monitoring](/dictionary/M/model-monitoring.qmd)
+- [Model Quantization](/dictionary/M/model-quantization.qmd)
+- [Model Serving](/dictionary/M/model-serving.qmd)
+- [Monte Carlo Method](/dictionary/M/monte-carlo-method.qmd)
+- [Multimodal AI](/dictionary/M/multimodal-ai.qmd)
+- [Multi-Head Attention](/dictionary/M/multi-head-attention.qmd)
+- [Multilayer Perceptron (MLP)](/dictionary/M/multilayer-perceptron-mlp.qmd)
+- [MCP (Model Context Protocol)](/dictionary/M/mcp-model-context-protocol.qmd)
 
 ## N {#n}
 

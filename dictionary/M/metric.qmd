@@ -1,0 +1,64 @@
+---
+title: "Metric"
+description: "A defined measurement used to assess a model, system, or process against a particular objective."
+term: "Metric"
+letter: "M"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A metric is a measurement used to describe how well something is doing. In
+machine learning, metrics help answer questions such as how often a
+classifier is correct or how large a forecast error tends to be.
+
+## Technical explanation
+
+A metric is a function that maps observations, predictions, or system events
+to a quantitative summary. Metrics may be computed over a dataset, a time
+window, a user population, or production requests. The definition, unit,
+aggregation, and population being measured are all part of its meaning.
+
+## Why it matters in AI engineering
+
+Metrics guide model selection and operational decisions. A single number can
+hide trade-offs, so teams often use multiple metrics and slice results by
+important groups or conditions. Product and safety outcomes may not be
+captured by a model-quality metric alone.
+
+## How it works
+
+Choose a measurement that reflects a decision or goal, define how it is
+computed, and specify the data and aggregation used. For example, precision
+measures the fraction of positive predictions that are correct, whereas
+recall measures the fraction of actual positives that are found.
+
+## Practical example
+
+A medical triage classifier may be evaluated with recall for urgent cases and
+precision to understand false alarms. The team can then choose a decision
+threshold with clinicians, considering the costs of both error types.
+
+## Common misconceptions
+
+- A metric is only meaningful when its definition and evaluation population are clear.
+- Improving one metric can worsen another or harm an unmeasured objective.
+- Offline model metrics do not automatically predict the full production experience.
+
+## Related terms
+
+- [Model Evaluation](model-evaluation.qmd)
+- [F1 Score](../F/f1-score.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+- [Mean Absolute Error (MAE)](mean-absolute-error-mae.qmd)
+
+## Further reading
+
+- [Google Machine Learning: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — precision, recall, and accuracy.
+- [scikit-learn: Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html) — definitions and usage of common metrics.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Model Quantization"
+description: "A model optimization technique that represents weights or activations with lower-precision numbers."
+term: "Model Quantization"
+letter: "M"
+category: "Model Optimization"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Quantization stores or computes model values using fewer bits. For example,
+a model may use 8-bit integers instead of 32-bit floating-point numbers,
+which can reduce memory and sometimes improve inference speed.
+
+## Technical explanation
+
+Quantization maps values from a higher-precision range to a finite set of
+lower-precision values. A simplified affine mapping is
+$q = \operatorname{round}(x/s) + z$, where $s$ is a scale and $z$ is a
+zero-point. Quantization may apply to weights, activations, or both, and can
+be performed after training or incorporated into training with simulated
+quantization.
+
+## Why it matters in AI engineering
+
+Lower-precision representations can reduce model memory, bandwidth, and
+energy use, and hardware may execute them efficiently. Quantization can also
+introduce approximation error, so the chosen format and calibration process
+must be tested for the specific model and target device.
+
+## How it works
+
+The quantizer estimates or learns a mapping between real-valued tensors and
+representable low-bit values. In post-training quantization, calibration data
+may help determine activation ranges. Quantization-aware training simulates
+quantization effects during training so the model can adapt.
+
+## Practical example
+
+A mobile application converts a neural network's weights to an 8-bit format.
+The team benchmarks memory and latency on the target phone and checks
+accuracy on representative images before shipping the quantized artifact.
+
+## Common misconceptions
+
+- Fewer bits do not guarantee faster execution unless the hardware and runtime support the format efficiently.
+- Quantization can affect different model layers and tasks differently.
+- Quantization is not the same as pruning; one changes numeric precision, while the other removes or sparsifies parameters.
+
+## Related terms
+
+- [Model Compression](model-compression.qmd)
+- [Model Serving](model-serving.qmd)
+- [Low-Rank Adaptation](../L/low-rank-adaptation.qmd)
+
+## Further reading
+
+- [TensorFlow Lite: Post-training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization) — practical quantization options.
+- [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](https://arxiv.org/abs/2208.07339) — techniques for quantizing large language models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

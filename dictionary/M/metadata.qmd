@@ -1,0 +1,65 @@
+---
+title: "Metadata"
+description: "Data that describes, organizes, or provides context about other data or model artifacts."
+term: "Metadata"
+letter: "M"
+category: "Data Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Metadata is information about data. A photo's metadata might include when it
+was taken; a dataset's metadata might describe its columns, source, and
+collection date.
+
+## Technical explanation
+
+Metadata is descriptive or administrative information associated with a
+dataset, model, experiment, or service. It can include schemas, provenance,
+versions, ownership, timestamps, licensing, or configuration. Metadata is
+distinct from the primary payload, though in practice it may be stored
+alongside or embedded within it.
+
+## Why it matters in AI engineering
+
+Metadata helps teams discover data, understand its limitations, reproduce
+experiments, and track model lineage. Without reliable metadata, it is harder
+to determine what a model was trained on, which artifact is deployed, or
+whether a dataset is appropriate for a use case.
+
+## How it works
+
+Teams define metadata fields and record them at data ingestion, training,
+evaluation, and deployment. Registries or catalogs can make those records
+searchable. Metadata should be versioned and validated because missing or
+incorrect descriptions can mislead downstream users.
+
+## Practical example
+
+A dataset catalog entry can record a dataset's owner, schema, source,
+collection period, license, and known limitations so engineers can assess it
+before training.
+
+## Common misconceptions
+
+- Metadata does not guarantee that the underlying data is accurate or appropriate.
+- A filename alone is rarely enough metadata to reproduce an experiment.
+- Metadata can itself contain sensitive information and may need access controls.
+
+## Related terms
+
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Data Validation](../D/data-validation.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Model](model.qmd)
+
+## Further reading
+
+- [W3C: Data on the Web Best Practices](https://www.w3.org/TR/dwbp/) — practices for publishing and describing datasets.
+- [Google Cloud: Data Catalog](https://cloud.google.com/data-catalog/docs) — examples of cataloging data assets and metadata.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

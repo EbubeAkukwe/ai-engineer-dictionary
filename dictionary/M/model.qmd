@@ -1,0 +1,64 @@
+---
+title: "Model"
+description: "A learned or specified function that maps inputs to predictions, representations, or actions."
+term: "Model"
+letter: "M"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A model is the component that applies a learned pattern to an input. It may
+classify an image, estimate a number, generate text, or choose an action.
+
+## Technical explanation
+
+In machine learning, a model is often represented as a parameterized function
+$f_\theta$ mapping an input $x$ to an output $\hat{y}$. Training selects
+parameters $\theta$ using data and an objective. The word can also refer to
+the architecture plus learned parameters, or to a serialized artifact used
+for inference.
+
+## Why it matters in AI engineering
+
+The model is only one part of an AI system. Preprocessing, postprocessing,
+data dependencies, configuration, serving infrastructure, and evaluation
+influence the behavior users experience. Clear artifact and version
+management helps ensure that the intended model is deployed.
+
+## How it works
+
+A trained model receives input in the format it expects and computes an
+output. For example, a neural network performs a sequence of learned
+transformations. Its output may be a class score, probability, numeric
+estimate, embedding, or generated token.
+
+## Practical example
+
+A trained image classifier takes a preprocessed image and returns scores for
+possible classes. Application code can select a class or present the scores
+to a user.
+
+## Common misconceptions
+
+- A model is not the entire application or data pipeline around it.
+- A model's learned parameters do not explain where its training data came from or what its output means.
+- Two files called by the same model name may differ in version, configuration, or preprocessing assumptions.
+
+## Related terms
+
+- [Machine Learning](machine-learning.qmd)
+- [Model Evaluation](model-evaluation.qmd)
+- [Model Serving](model-serving.qmd)
+- [Foundation Model](../F/foundation-model.qmd)
+
+## Further reading
+
+- [Google Machine Learning: ML models](https://developers.google.com/machine-learning/intro-to-ml/what-is-ml) — introductory explanation of models and learning.
+- [Hugging Face: Models](https://huggingface.co/docs/transformers/models) — examples of model architectures and their interfaces.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

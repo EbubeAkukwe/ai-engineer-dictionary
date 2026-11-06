@@ -1,0 +1,66 @@
+---
+title: "Model Evaluation"
+description: "The process of measuring a model's quality and limitations against defined tasks and data."
+term: "Model Evaluation"
+letter: "M"
+category: "AI Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Model evaluation checks whether a model performs well enough for its intended
+use. It uses carefully chosen examples and measurements to reveal both
+successes and shortcomings.
+
+## Technical explanation
+
+Evaluation applies a model to data and computes metrics or qualitative
+judgments according to a protocol. The protocol should specify the target
+population, data split, metrics, baselines, and relevant slices. For
+generative systems, evaluation may combine automated tests, expert review,
+user studies, and safety checks.
+
+## Why it matters in AI engineering
+
+Evaluation informs model selection, release decisions, and ongoing
+improvement. Poorly designed tests can produce misleading confidence,
+especially when evaluation data leaks into training or fails to represent
+production conditions.
+
+## How it works
+
+Define use cases and acceptance criteria, prepare data that is separate from
+training where appropriate, run the model, and analyze results. Inspect
+aggregate metrics and important subgroups, test edge cases, and document
+limitations. For high-impact applications, include human review and a plan
+for monitoring after launch.
+
+## Practical example
+
+Before deploying an image classifier, a team measures accuracy and class-wise
+recall on a held-out set, checks performance across lighting conditions, and
+reviews examples where the model is confidently wrong.
+
+## Common misconceptions
+
+- One metric or benchmark score cannot describe every model behavior.
+- Good offline results do not guarantee good production performance.
+- Evaluation is not a one-time event; it should be repeated when models, data, or use cases change.
+
+## Related terms
+
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+- [Metric](metric.qmd)
+- [Error Analysis](../E/error-analysis.qmd)
+- [Model Monitoring](model-monitoring.qmd)
+
+## Further reading
+
+- [OpenAI: Evaluating model performance](https://platform.openai.com/docs/guides/evals) — evaluation workflows for model applications.
+- [Google: Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml) — practical advice on metrics and system evaluation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

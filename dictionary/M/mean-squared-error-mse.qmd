@@ -1,0 +1,68 @@
+---
+title: "Mean Squared Error (MSE)"
+description: "A regression metric equal to the average squared difference between predicted and observed values."
+term: "Mean Squared Error (MSE)"
+letter: "M"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Mean Squared Error (MSE) measures prediction error by squaring each
+prediction's difference from the true value and then averaging. Large errors
+count disproportionately more because of the squaring.
+
+## Technical explanation
+
+For $n$ observations with targets $y_i$ and predictions $\hat{y}_i$:
+
+$$
+\operatorname{MSE} = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
+$$
+
+MSE is nonnegative and is zero for perfect predictions. It has squared target
+units, which can make it less directly interpretable than MAE. Minimizing MSE
+is equivalent to minimizing root mean squared error (RMSE), since the square
+root is monotonic for nonnegative values.
+
+## Why it matters in AI engineering
+
+MSE is a common regression objective and metric. Its smooth derivative is
+convenient for optimization, but its strong penalty on large errors can make
+training sensitive to outliers.
+
+## How it works
+
+Compute each residual, square it, and take the average. A prediction that is
+twice as far from the target contributes four times as much squared error.
+Whether that penalty is appropriate depends on the task and error costs.
+
+## Practical example
+
+If a model's prediction errors are 1, 2, and 3 units, its MSE is
+$(1^2+2^2+3^2)/3 = 14/3$. The large error of 3 has a larger influence than
+the smaller errors.
+
+## Common misconceptions
+
+- MSE is not expressed in the original target units; RMSE is.
+- MSE can be dominated by a small number of large errors.
+- MSE and MAE are not interchangeable; they emphasize errors differently.
+
+## Related terms
+
+- [Mean Absolute Error (MAE)](mean-absolute-error-mae.qmd)
+- [Loss Function](../L/loss-function.qmd)
+- [Metric](metric.qmd)
+- [Least Squares](../L/least-squares.qmd)
+
+## Further reading
+
+- [scikit-learn: Mean squared error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html) — definition and API.
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — background on optimization objectives and derivatives.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

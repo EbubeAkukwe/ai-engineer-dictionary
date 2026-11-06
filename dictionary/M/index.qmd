@@ -1,0 +1,27 @@
+---
+title: "M Terms"
+description: "AI engineering dictionary terms beginning with M."
+---
+
+# M Terms
+
+- [Machine Learning](machine-learning.qmd)
+- [Machine Learning Operations (MLOps)](machine-learning-operations-mlops.qmd)
+- [Masked Language Model](masked-language-model.qmd)
+- [Mean Absolute Error (MAE)](mean-absolute-error-mae.qmd)
+- [Mean Squared Error (MSE)](mean-squared-error-mse.qmd)
+- [Memory (AI Agents)](memory-ai-agents.qmd)
+- [Metadata](metadata.qmd)
+- [Metric](metric.qmd)
+- [Mixture of Experts (MoE)](mixture-of-experts-moe.qmd)
+- [Model](model.qmd)
+- [Model Compression](model-compression.qmd)
+- [Model Evaluation](model-evaluation.qmd)
+- [Model Monitoring](model-monitoring.qmd)
+- [Model Quantization](model-quantization.qmd)
+- [Model Serving](model-serving.qmd)
+- [Monte Carlo Method](monte-carlo-method.qmd)
+- [Multimodal AI](multimodal-ai.qmd)
+- [Multi-Head Attention](multi-head-attention.qmd)
+- [Multilayer Perceptron (MLP)](multilayer-perceptron-mlp.qmd)
+- [MCP (Model Context Protocol)](mcp-model-context-protocol.qmd)

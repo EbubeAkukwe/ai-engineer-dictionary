@@ -1,0 +1,66 @@
+---
+title: "Machine Learning"
+description: "A field of AI in which systems learn patterns from data to make predictions or decisions."
+term: "Machine Learning"
+letter: "M"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Machine learning (ML) is a way to build software that learns patterns from
+examples instead of relying only on rules written by a programmer. A trained
+model can use those patterns to make predictions on new inputs.
+
+## Technical explanation
+
+An ML system uses data and an optimization procedure to select a model from a
+family of possible functions. In supervised learning, it learns from input and
+target pairs; in unsupervised learning, it finds structure without supplied
+target labels. Reinforcement learning optimizes behavior using feedback from
+actions and outcomes.
+
+## Why it matters in AI engineering
+
+ML is the foundation for systems such as classifiers, recommenders, language
+models, and forecasting tools. Engineering a useful ML product involves more
+than selecting an algorithm: data quality, evaluation, deployment, monitoring,
+and feedback are also essential.
+
+## How it works
+
+1. Define a task and collect representative data.
+2. Choose a model and an objective that reflect the task.
+3. Train the model by adjusting its parameters to reduce the objective.
+4. Evaluate it on data not used for fitting.
+5. Deploy and monitor the model, then improve it as needs or data change.
+
+## Practical example
+
+A photo app can learn to classify images by training on examples paired with
+labels such as "cat" and "dog." After training, it can predict labels for
+previously unseen photos.
+
+## Common misconceptions
+
+- Machine learning is not synonymous with deep learning; deep learning is one family of ML methods.
+- A model's training performance does not guarantee that it will work well on new data.
+- ML systems learn from the data and objective they are given; they do not automatically learn the right goal.
+
+## Related terms
+
+- [Model](model.qmd)
+- [Deep Learning](../D/deep-learning.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Model Evaluation](model-evaluation.qmd)
+
+## Further reading
+
+- [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — introductory concepts and practical exercises.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — a hands-on introduction to training and using models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

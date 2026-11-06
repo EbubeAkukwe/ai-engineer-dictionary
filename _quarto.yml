@@ -238,7 +238,30 @@ website:
             - dictionary/L/lora.qmd
             - dictionary/L/loss-function.qmd
             - dictionary/L/low-rank-adaptation.qmd
-        - section: "L–Z"
+        - section: "M"
+          contents:
+            - dictionary/M/index.qmd
+            - dictionary/M/machine-learning.qmd
+            - dictionary/M/machine-learning-operations-mlops.qmd
+            - dictionary/M/masked-language-model.qmd
+            - dictionary/M/mean-absolute-error-mae.qmd
+            - dictionary/M/mean-squared-error-mse.qmd
+            - dictionary/M/memory-ai-agents.qmd
+            - dictionary/M/metadata.qmd
+            - dictionary/M/metric.qmd
+            - dictionary/M/mixture-of-experts-moe.qmd
+            - dictionary/M/model.qmd
+            - dictionary/M/model-compression.qmd
+            - dictionary/M/model-evaluation.qmd
+            - dictionary/M/model-monitoring.qmd
+            - dictionary/M/model-quantization.qmd
+            - dictionary/M/model-serving.qmd
+            - dictionary/M/monte-carlo-method.qmd
+            - dictionary/M/multimodal-ai.qmd
+            - dictionary/M/multi-head-attention.qmd
+            - dictionary/M/multilayer-perceptron-mlp.qmd
+            - dictionary/M/mcp-model-context-protocol.qmd
+        - section: "M–Z"
           contents:
             - dictionary/letters.qmd
     - title: "Notebooks"

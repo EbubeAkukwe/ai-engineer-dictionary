@@ -1,0 +1,65 @@
+---
+title: "Model Compression"
+description: "Techniques that reduce a model's storage, memory, or computation requirements."
+term: "Model Compression"
+letter: "M"
+category: "Model Optimization"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Model compression makes a model smaller or cheaper to run. This can help
+deploy it on devices with limited memory, reduce serving costs, or improve
+response speed.
+
+## Technical explanation
+
+Compression is an umbrella for techniques such as quantization, pruning,
+knowledge distillation, low-rank factorization, and parameter sharing. These
+methods reduce representation size, parameter count, or computation in
+different ways and may require additional training or calibration.
+
+## Why it matters in AI engineering
+
+A model that performs well but exceeds deployment memory, latency, or energy
+budgets may not be usable. Compression can improve deployability, but
+engineers must measure the compressed model on target hardware and check
+whether quality changes are acceptable.
+
+## How it works
+
+Choose a resource constraint, apply a compression method, then evaluate
+quality and runtime behavior. Quantization uses lower-precision values;
+pruning removes or sparsifies parameters; distillation trains a smaller
+student from a larger teacher. Methods can be combined, but their effects are
+not always additive.
+
+## Practical example
+
+A mobile vision application may quantize a model and prune redundant
+connections to fit within a memory budget. The team compares accuracy,
+latency, and size on the actual device before release.
+
+## Common misconceptions
+
+- Smaller file size does not necessarily mean faster inference on every device.
+- Compression can reduce accuracy or change failure modes.
+- Compression is not one single algorithm; different methods trade off size, speed, and quality differently.
+
+## Related terms
+
+- [Model Quantization](model-quantization.qmd)
+- [Knowledge Distillation](../K/knowledge-distillation.qmd)
+- [Model Quantization](model-quantization.qmd)
+- [Model Serving](model-serving.qmd)
+
+## Further reading
+
+- [TensorFlow Model Optimization](https://www.tensorflow.org/model_optimization) — practical quantization, pruning, and optimization tools.
+- [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) — foundational work on model distillation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

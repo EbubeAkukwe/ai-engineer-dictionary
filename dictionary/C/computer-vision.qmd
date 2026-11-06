@@ -37,8 +37,9 @@ compares outputs with suitable reference data and operational requirements.
 
 ## Practical example
 
-A beginner project can train an image classifier to distinguish penguin
-photos from ostrich photos using transfer learning with fastai.
+We can train an image classifier to distinguish between two objects. See [Penguin vs Ostrich with FastAI ]('/notebooks/B/binary-classification.ipynb').
+
+
 
 ## Common misconceptions
 

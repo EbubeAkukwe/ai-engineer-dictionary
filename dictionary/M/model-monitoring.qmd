@@ -1,0 +1,67 @@
+---
+title: "Model Monitoring"
+description: "The practice of tracking a deployed model and its surrounding system for changes or failures."
+term: "Model Monitoring"
+letter: "M"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Model monitoring means checking a deployed AI system over time to see whether
+it remains healthy and useful. Teams track system behavior as well as model
+quality, because either can degrade.
+
+## Technical explanation
+
+Monitoring may include service metrics such as latency and errors, input and
+output statistics, data-quality checks, drift indicators, and outcome metrics
+when ground-truth labels become available. Monitoring signals are proxies:
+they can identify changes but do not always prove that model quality has
+changed.
+
+## Why it matters in AI engineering
+
+Production data, user behavior, dependencies, and traffic patterns can change
+after a model is evaluated. Monitoring helps teams detect incidents, decide
+when investigation or retraining is needed, and verify the impact of a
+deployment.
+
+## How it works
+
+Instrument the serving pipeline, define expected ranges or alert conditions,
+and retain enough information to diagnose issues while respecting privacy and
+retention policies. Compare current data with suitable baselines. When labels
+are delayed, use proxy signals cautiously and confirm suspected problems with
+direct evaluation where possible.
+
+## Practical example
+
+A deployed text classifier records request latency, prediction rates, and
+input validation failures. When the share of a certain class changes
+unexpectedly, the team investigates whether traffic or the underlying data
+has shifted before deciding to retrain.
+
+## Common misconceptions
+
+- Monitoring input drift alone does not establish that predictive performance has degraded.
+- Alerts need owners and response procedures; dashboards alone do not resolve incidents.
+- Retraining should follow evidence and evaluation, not every detected distribution change.
+
+## Related terms
+
+- [MLOps](machine-learning-operations-mlops.qmd)
+- [Data Drift](../D/data-drift.qmd)
+- [Concept Drift](../C/concept-drift.qmd)
+- [Model Serving](model-serving.qmd)
+
+## Further reading
+
+- [Evidently AI: ML monitoring](https://docs.evidentlyai.com/) — practical methods for monitoring data and model behavior.
+- [Google Cloud: MLOps continuous delivery](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning) — production pipeline and monitoring considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

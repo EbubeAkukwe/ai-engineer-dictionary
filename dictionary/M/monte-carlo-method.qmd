@@ -1,0 +1,69 @@
+---
+title: "Monte Carlo Method"
+description: "A family of methods that use repeated random sampling to estimate quantities that may be difficult to calculate exactly."
+term: "Monte Carlo Method"
+letter: "M"
+category: "Statistics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+The Monte Carlo method estimates an answer by running many random trials.
+Instead of solving a difficult calculation exactly, it uses the average
+outcome of sampled cases as an approximation.
+
+## Technical explanation
+
+For a quantity expressible as an expectation $\mathbb{E}[f(X)]$, draw
+independent samples $X_1,\ldots,X_N$ and estimate it with:
+
+$$
+\hat{\mu}_N = \frac{1}{N}\sum_{i=1}^{N} f(X_i)
+$$
+
+Under suitable conditions, this estimate converges to the target expectation
+as the number of samples increases. The estimation error depends on sample
+count and variance; sampling design and random-number quality also matter.
+
+## Why it matters in AI engineering
+
+Sampling-based estimates are used in probabilistic modeling, Bayesian
+inference, planning, uncertainty analysis, and reinforcement learning. They
+offer flexibility for complex systems but can require many samples for
+precise estimates.
+
+## How it works
+
+Define the target quantity and a sampling procedure, run repeated draws,
+compute the outcome for each draw, and aggregate. Engineers often check
+convergence by increasing samples or comparing independent runs. Variance
+reduction techniques can improve efficiency.
+
+## Practical example
+
+To estimate the probability that a system's response time exceeds a service
+limit under uncertain workloads, simulate many workload scenarios and count
+the fraction that exceed the limit.
+
+## Common misconceptions
+
+- More samples improve precision gradually; they do not guarantee an exact answer after a fixed count.
+- Random sampling is not inherently unbiased if the sampling process does not represent the target distribution.
+- A Monte Carlo estimate should include uncertainty or convergence checks when decisions depend on its precision.
+
+## Related terms
+
+- [Bayesian Optimization](../B/bayesian-optimization.qmd)
+- [Expectation-Maximization](../E/expectation-maximization.qmd)
+- [Expectation-Maximization](../E/expectation-maximization.qmd)
+
+## Further reading
+
+- [Monte Carlo Methods in Statistical Physics](https://arxiv.org/abs/cond-mat/9702026) — overview of sampling methods and their behavior.
+- [Stan User's Guide: Markov Chain Monte Carlo](https://mc-stan.org/docs/stan-users-guide/markov-chain-monte-carlo.html) — practical sampling and convergence considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

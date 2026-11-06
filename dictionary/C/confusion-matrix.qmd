@@ -65,7 +65,7 @@ labels and columns are predicted labels.
 
 ## Practical example
 
-For a penguin-versus-ostrich classifier, the matrix can show how many
+For our penguin-versus-ostrich classifier, the matrix can show how many
 penguin images were predicted as ostrich and how many ostrich images were
 predicted as penguin. The [binary-classification notebook](../../notebooks/B/binary-classification.ipynb)
 includes a prompt to inspect these errors.

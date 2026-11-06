@@ -1,0 +1,66 @@
+---
+title: "Machine Learning Operations (MLOps)"
+description: "Practices and infrastructure for reliably developing, deploying, and maintaining machine-learning systems."
+term: "Machine Learning Operations (MLOps)"
+letter: "M"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+MLOps is the set of practices that helps teams move models from experiments
+into reliable production systems and keep them working over time. It combines
+machine-learning development with software operations and data management.
+
+## Technical explanation
+
+MLOps covers repeatable workflows for data preparation, training, evaluation,
+model and dataset versioning, deployment, monitoring, and retraining. The
+extent of automation varies: a small project may use scripts and documented
+checks, while a large platform may use orchestration, registries, and
+continuous delivery.
+
+## Why it matters in AI engineering
+
+Model behavior depends on both code and data, and those can change
+independently. MLOps practices make it easier to reproduce a model, trace
+which data and configuration produced it, roll out changes safely, and detect
+performance or infrastructure problems after deployment.
+
+## How it works
+
+A typical lifecycle automates or standardizes data validation, training,
+testing, artifact registration, deployment, and post-deployment monitoring.
+The system may trigger a new training run when new data arrives or a monitored
+condition requires review. Human approval and rollback mechanisms remain
+important safeguards.
+
+## Practical example
+
+A team retrains a demand-forecasting model weekly. Its workflow validates the
+new data, trains a candidate, compares it with the current model on a fixed
+evaluation set, and only deploys the candidate if it meets release criteria.
+
+## Common misconceptions
+
+- MLOps is not just putting a model behind an API.
+- Not every project needs a complex platform; automation should match the project's risk and scale.
+- Automated retraining is not automatically beneficial unless candidate models are evaluated before release.
+
+## Related terms
+
+- [Continuous Integration](../C/continuous-integration.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Model Monitoring](model-monitoring.qmd)
+- [Model Serving](model-serving.qmd)
+
+## Further reading
+
+- [Google Cloud: MLOps](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning) — lifecycle and automation patterns for production ML.
+- [Made With ML: MLOps](https://madewithml.com/courses/mlops/) — practical material on production ML workflows.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

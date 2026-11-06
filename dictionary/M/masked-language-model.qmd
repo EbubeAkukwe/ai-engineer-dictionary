@@ -1,0 +1,64 @@
+---
+title: "Masked Language Model"
+description: "A language model trained to predict tokens hidden or corrupted within an input sequence."
+term: "Masked Language Model"
+letter: "M"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A masked language model learns by reading text with some words hidden and
+trying to recover them. This encourages the model to use surrounding context
+from both before and after the hidden word.
+
+## Technical explanation
+
+During masked language modeling, selected input tokens are replaced or
+corrupted, and the model is trained to predict their original identities.
+This is a form of self-supervised learning because the training targets come
+from the text itself. BERT is a well-known model trained with a masked-token
+objective.
+
+## Why it matters in AI engineering
+
+Masked language modeling produces contextual representations useful for
+classification, retrieval, and other language-understanding tasks. Its
+bidirectional context makes the objective different from next-token
+prediction, which is commonly used to train generative LLMs.
+
+## How it works
+
+The training pipeline selects positions to predict, constructs a corrupted
+input, and computes a loss between the model's predicted token distribution
+and the original tokens at those positions. Masking rules and the proportion
+of selected tokens are part of the training recipe.
+
+## Practical example
+
+Given "The bird lives in a [MASK]," a masked language model may assign a high
+probability to "nest." The model uses context on both sides of the masked
+position when available.
+
+## Common misconceptions
+
+- Predicting a masked token is not the same objective as generating text one token at a time.
+- A masked language model can provide useful representations without being designed for unrestricted text generation.
+- The mask token and training corruption strategy are model-design choices, not universal requirements for every language model.
+
+## Related terms
+
+- [BERT](../B/bert.qmd)
+- [Large Language Model (LLM)](../L/large-language-model-llm.qmd)
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+
+## Further reading
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) — original BERT paper and its masked-language-model objective.
+- [Hugging Face: Masked language modeling](https://huggingface.co/docs/transformers/tasks/masked_language_modeling) — practical fine-tuning guide.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
