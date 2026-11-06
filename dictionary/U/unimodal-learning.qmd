@@ -1,0 +1,63 @@
+---
+title: "Unimodal Learning"
+description: "Learning from one data modality, such as text, images, audio, or structured measurements."
+term: "Unimodal Learning"
+letter: "U"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Unimodal learning uses one kind of input at a time, such as only images or
+only text. A model trained on product photos alone is learning from a
+single modality even if each image contains many pixels.
+
+## Technical explanation
+
+A modality is a data type or channel with characteristic structure, such
+as vision, audio, language, or tabular measurements. Unimodal models learn
+representations and tasks within one modality, in contrast to multimodal
+systems that align or combine distinct modalities.
+
+## Why it matters in AI engineering
+
+Unimodal systems can be simpler to collect, model, and deploy when one
+source is sufficient. Teams should compare the value of adding modalities
+against integration costs, missing-data behavior, privacy requirements,
+and the need for modality-specific evaluation.
+
+## How it works
+
+The pipeline preprocesses one data type and maps it to features or
+representations suited to that modality. A task objective trains the model,
+and evaluation checks coverage and performance across relevant inputs.
+
+## Practical example
+
+A speech recognizer trained only on audio waveforms is unimodal. A system
+that combines audio with video of a speaker uses multiple modalities and
+must account for synchronization and missing streams.
+
+## Common misconceptions
+
+- “Unimodal” describes the number of input modalities, not the number of
+  features or channels inside one input.
+- A unimodal model is not necessarily less capable; suitability depends
+  on the task and available evidence.
+
+## Related terms
+
+- [Multimodal AI](../M/multimodal-ai.qmd)
+- [Representation Learning](../R/representation-learning.qmd)
+- [Feature Extraction](../F/feature-extraction.qmd)
+
+## Further reading
+
+- [A Survey on Multimodal Learning](https://arxiv.org/abs/1705.09406) — modality-specific and multimodal representation learning.
+- [Deep Learning](https://www.deeplearningbook.org/) — representation and learning foundations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,63 @@
+---
+title: "Unsupervised Learning"
+description: "A machine-learning approach that finds structure in data without using explicit target labels."
+term: "Unsupervised Learning"
+letter: "U"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Unsupervised learning looks for patterns in data that does not come with
+target answers. It can group similar examples, compress data, or discover
+representations that may be useful for later tasks.
+
+## Technical explanation
+
+Unsupervised methods optimize objectives based on input data without
+supervised target labels. Examples include clustering, density estimation,
+dimensionality reduction, and some self-supervised representation-learning
+methods. “Unsupervised” covers a broad range of objectives and assumptions.
+
+## Why it matters in AI engineering
+
+Labels can be expensive or unavailable, while large collections of raw
+data may be accessible. Unsupervised structure can support exploration,
+anomaly detection, and pretraining, but discovered groups do not
+automatically correspond to meaningful real-world categories.
+
+## How it works
+
+An algorithm uses similarity, reconstruction, likelihood, or another
+data-derived objective to organize or represent examples. Engineers assess
+the output using domain review, stability checks, downstream tasks, or
+appropriate intrinsic metrics.
+
+## Practical example
+
+A team can cluster support tickets using text embeddings to explore common
+themes before defining a supervised routing taxonomy. Human review is
+needed to decide whether the clusters are coherent and useful.
+
+## Common misconceptions
+
+- Unsupervised learning does not mean the algorithm makes no assumptions;
+  its representation, objective, and hyperparameters shape results.
+- Clusters are not automatically true classes or causal categories.
+
+## Related terms
+
+- [Clustering](../C/clustering.qmd)
+- [Representation Learning](../R/representation-learning.qmd)
+- [Self-Attention](../S/self-attention.qmd)
+
+## Further reading
+
+- [scikit-learn: Unsupervised learning](https://scikit-learn.org/stable/unsupervised_learning.html) — algorithms and practical examples.
+- [Deep Learning](https://www.deeplearningbook.org/) — unsupervised and representation-learning methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

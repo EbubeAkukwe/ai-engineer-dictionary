@@ -1,0 +1,62 @@
+---
+title: "True Positive"
+description: "A positive prediction that correctly matches a positive ground-truth label."
+term: "True Positive"
+letter: "T"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A true positive is a case the model flags as positive that really is
+positive. For example, a defect detector correctly identifies an item that
+has a defect.
+
+## Technical explanation
+
+In binary classification, a true positive (TP) occurs when the predicted
+class is positive and the reference label is positive. TP is one cell of
+the confusion matrix and is used in metrics including precision, recall,
+and F1.
+
+## Why it matters in AI engineering
+
+Counting true positives shows how many target cases a classifier correctly
+identifies. It must be interpreted with false positives and false
+negatives, since the count depends on dataset size and class prevalence.
+
+## How it works
+
+Choose the positive class and decision rule, compare model predictions
+with ground-truth labels, then count cases where both are positive. Report
+the evaluation data and threshold so the count can be interpreted.
+
+## Practical example
+
+If a classifier marks 40 examples positive and 32 of them have positive
+ground-truth labels, it has 32 true positives and 8 false positives. Its
+precision is $32/40$.
+
+## Common misconceptions
+
+- A true positive is a count, not a rate; recall divides true positives by
+  all actual positives.
+- The label called “positive” is a task convention and may represent
+  different outcomes in different applications.
+
+## Related terms
+
+- [True Negative](true-negative.qmd)
+- [False Positive](../F/false-positive.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [scikit-learn: Confusion matrix](https://scikit-learn.org/stable/modules/model_evaluation.html#confusion-matrix) — classification outcomes and matrix layout.
+- [Google: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — true positives and related measures.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

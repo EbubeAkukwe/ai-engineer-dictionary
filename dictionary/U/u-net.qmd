@@ -1,0 +1,105 @@
+---
+title: "U-Net"
+description: "An encoder-decoder convolutional neural network with skip connections, commonly used for image segmentation."
+term: "U-Net"
+letter: "U"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+U-Net is a neural-network architecture that labels pixels in an image.
+Its encoder learns increasingly abstract features while reducing spatial
+resolution; its decoder restores resolution to produce a pixel-level
+prediction.
+
+## Technical explanation
+
+The original U-Net uses a contracting path of convolution and downsampling
+and an expanding path of upsampling and convolution. Skip connections
+concatenate or otherwise combine corresponding encoder features with
+decoder features, helping preserve localization information.
+
+## Why it matters in AI engineering
+
+U-Net is widely used for biomedical and other image-segmentation tasks,
+particularly when annotated data is limited. Variants adapt it to different
+modalities, dimensions, and compute budgets.
+
+## How it works
+
+The encoder builds feature maps at multiple scales. The decoder upsamples
+coarse representations, combines them with high-resolution encoder
+features, and predicts a class for each output pixel. Training commonly
+uses pixel-wise losses and task-specific metrics.
+
+<svg viewBox="0 0 760 280" role="img" aria-labelledby="unet-title unet-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="unet-title">U-Net encoder and decoder with skip connections</title>
+  <desc id="unet-desc">An image passes through a contracting encoder with progressively smaller feature maps, then an expanding decoder with larger maps to produce a segmentation mask. Horizontal skip connections bring matching encoder features to decoder stages.</desc>
+  <defs>
+    <marker id="unet-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="unet-skip" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#b9792e"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="18" y="106" width="72" height="52" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+    <text x="54" y="128" font-size="12">Image</text><text x="54" y="145" font-size="11">input</text>
+    <rect x="118" y="86" width="82" height="92" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="159" y="125" font-size="13">Encoder</text><text x="159" y="145" font-size="11">high resolution</text>
+    <rect x="238" y="98" width="78" height="68" rx="8" fill="#e6ecfa" stroke="#4666a8"/>
+    <text x="277" y="128" font-size="13">Downsample</text><text x="277" y="146" font-size="11">features</text>
+    <rect x="350" y="106" width="80" height="52" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="390" y="128" font-size="13">Bottleneck</text><text x="390" y="146" font-size="11">coarse features</text>
+    <rect x="464" y="98" width="78" height="68" rx="8" fill="#e8f4ec" stroke="#438057"/>
+    <text x="503" y="128" font-size="13">Upsample</text><text x="503" y="146" font-size="11">+ combine</text>
+    <rect x="578" y="86" width="82" height="92" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="619" y="125" font-size="13">Decoder</text><text x="619" y="145" font-size="11">pixel details</text>
+    <rect x="684" y="106" width="62" height="52" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+    <text x="715" y="128" font-size="12">Mask</text><text x="715" y="145" font-size="11">output</text>
+    <path d="M90 132 H110" stroke="#455b79" stroke-width="2" marker-end="url(#unet-arrow)"/>
+    <path d="M200 132 H230" stroke="#455b79" stroke-width="2" marker-end="url(#unet-arrow)"/>
+    <path d="M316 132 H342" stroke="#455b79" stroke-width="2" marker-end="url(#unet-arrow)"/>
+    <path d="M430 132 H456" stroke="#455b79" stroke-width="2" marker-end="url(#unet-arrow)"/>
+    <path d="M542 132 H570" stroke="#455b79" stroke-width="2" marker-end="url(#unet-arrow)"/>
+    <path d="M660 132 H676" stroke="#455b79" stroke-width="2" marker-end="url(#unet-arrow)"/>
+    <path d="M159 82 V48 H503 V92" fill="none" stroke="#b9792e" stroke-width="2" marker-end="url(#unet-skip)"/>
+    <text x="330" y="40" font-size="12" fill="#8a5722">skip connection carries spatial detail</text>
+    <text x="380" y="218" font-size="12" fill="#46566d">Contracting path</text>
+    <text x="578" y="218" font-size="12" fill="#46566d">Expanding path</text>
+  </g>
+</svg>
+
+The sketch shows one skip connection for clarity; practical U-Nets use
+several resolutions and corresponding connections.
+
+## Practical example
+
+A medical-imaging model can use U-Net to assign a tissue class to each
+pixel. Evaluate overlap and boundary quality, and ensure image-level
+splits prevent related slices from leaking across training and test sets.
+
+## Common misconceptions
+
+- U-Net is an architecture, not a particular pretrained model.
+- Pixel-level segmentation quality can be poor even when image-level
+  classification is accurate.
+
+## Related terms
+
+- [Image Segmentation](../I/image-segmentation.qmd)
+- [Convolution](../C/convolution.qmd)
+- [CNN (Convolutional Neural Network)](../C/cnn-convolutional-neural-network.qmd)
+
+## Further reading
+
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) — original architecture paper.
+- [PyTorch: Semantic segmentation model](https://pytorch.org/vision/stable/models.html) — computer-vision model and training resources.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

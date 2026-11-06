@@ -1,0 +1,63 @@
+---
+title: "Training"
+description: "The process of fitting a model's parameters using data and a learning objective."
+term: "Training"
+letter: "T"
+category: "AI Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Training is how a model learns from examples. The system makes predictions,
+measures errors against a learning objective, and adjusts model parameters
+to improve performance.
+
+## Technical explanation
+
+Training optimizes model parameters using an objective function and an
+optimization algorithm. It can involve supervised labels, self-supervised
+targets, rewards, or other signals. Data preparation, batching, numerical
+precision, and stopping criteria are part of the training system.
+
+## Why it matters in AI engineering
+
+Training decisions shape model capability, generalization, cost, and
+reproducibility. A successful training run is not sufficient evidence of
+quality; models still require evaluation, deployment testing, and
+monitoring.
+
+## How it works
+
+The training loop loads a batch, computes model outputs and loss,
+calculates gradients, and updates parameters. It repeats across batches
+and epochs, while validation checks guide model selection and checkpointing.
+
+## Practical example
+
+A classifier trains on labeled examples using cross-entropy loss and an
+optimizer. The team monitors validation performance and stops or adjusts
+training if the model begins to overfit.
+
+## Common misconceptions
+
+- Lower training loss does not guarantee better performance on unseen or
+  deployment data.
+- Training and inference are different workloads; a model that trains on
+  one device may need different optimization to serve efficiently.
+
+## Related terms
+
+- [Pretraining](../P/pretraining.qmd)
+- [Fine-Tuning](../F/fine-tuning.qmd)
+- [Stochastic Gradient Descent (SGD)](../S/stochastic-gradient-descent-sgd.qmd)
+
+## Further reading
+
+- [Dive into Deep Learning](https://d2l.ai/) — practical and mathematical treatment of model training.
+- [PyTorch: Training a classifier](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) — example training workflow.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

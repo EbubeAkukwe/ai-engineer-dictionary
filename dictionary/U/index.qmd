@@ -1,0 +1,17 @@
+---
+title: "U Terms"
+description: "AI engineering dictionary terms beginning with U."
+---
+
+# U Terms
+
+- [Under-sampling](under-sampling.qmd)
+- [Underfitting](underfitting.qmd)
+- [Uncertainty Estimation](uncertainty-estimation.qmd)
+- [Unimodal Learning](unimodal-learning.qmd)
+- [Universal Approximation Theorem](universal-approximation-theorem.qmd)
+- [Unsupervised Learning](unsupervised-learning.qmd)
+- [U-Net](u-net.qmd)
+- [Unit Testing](unit-testing.qmd)
+- [Uplift Modeling](uplift-modeling.qmd)
+- [User Simulation](user-simulation.qmd)

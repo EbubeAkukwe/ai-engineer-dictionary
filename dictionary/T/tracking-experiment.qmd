@@ -1,0 +1,64 @@
+---
+title: "Tracking (Experiment)"
+description: "Recording experiment configurations, code versions, metrics, and artifacts so machine-learning runs can be compared and reproduced."
+term: "Tracking (Experiment)"
+letter: "T"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Experiment tracking is keeping an organized record of model-training and
+evaluation runs. It helps a team remember which data, code, settings, and
+results produced each model.
+
+## Technical explanation
+
+An experiment tracker records metadata such as hyperparameters, metrics,
+source revision, dataset and artifact identifiers, environment details, and
+output files. Tracking systems may support comparisons, lineage, model
+registry workflows, and collaboration.
+
+## Why it matters in AI engineering
+
+Without reliable records, teams can lose the ability to reproduce results,
+compare candidates, or identify regressions. Tracking also supports audits
+and helps connect a deployed model to its training evidence.
+
+## How it works
+
+At the start of a run, the training job records its configuration and
+identifiers. During execution it logs metrics and artifacts; after the run,
+the team reviews and compares results. Sensitive data and credentials
+should not be logged as artifacts or parameters.
+
+## Practical example
+
+A training workflow can record the Git commit, dataset version, learning
+rate, validation metrics, and final checkpoint for each run. A later
+engineer can inspect the run record to reproduce or explain the selected
+model.
+
+## Common misconceptions
+
+- Logging a metric alone does not make an experiment reproducible; data,
+  code, environment, and randomness can also matter.
+- An experiment-tracking service is not automatically a model registry or
+  full deployment-management system.
+
+## Related terms
+
+- [Hyperparameter](../H/hyperparameter.qmd)
+- [Model Evaluation](../M/model-evaluation.qmd)
+- [Git](../G/git.qmd)
+
+## Further reading
+
+- [MLflow Tracking](https://mlflow.org/docs/latest/ml/tracking/) — logging and comparing machine-learning runs.
+- [Weights & Biases: Experiment tracking](https://docs.wandb.ai/guides/track/) — run configuration, metrics, and artifacts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

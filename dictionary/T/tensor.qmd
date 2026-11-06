@@ -1,0 +1,63 @@
+---
+title: "Tensor"
+description: "A multidimensional array used to represent data and parameters in machine-learning computation."
+term: "Tensor"
+letter: "T"
+category: "Mathematics"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A tensor is a container for numbers arranged along one or more dimensions.
+A single number is a scalar, a list is a vector, and a table is a matrix;
+higher-dimensional tensors can represent batches of images or sequences.
+
+## Technical explanation
+
+In machine learning libraries, a tensor is a typed, shaped numerical array
+that supports operations such as addition, matrix multiplication, and
+automatic differentiation. Its shape and layout determine how dimensions
+represent batch, sequence, channel, or feature axes.
+
+## Why it matters in AI engineering
+
+Model inputs, weights, activations, and gradients are commonly represented
+as tensors. Understanding shape, dtype, device, and memory layout helps
+prevent broadcasting errors and diagnose performance or memory problems.
+
+## How it works
+
+Tensor operations transform arrays according to their dimensions. A library
+may execute operations on a CPU or accelerator and track them for gradient
+computation. Engineers check that dimensions align and that values use a
+suitable numeric precision.
+
+## Practical example
+
+An image batch might have shape $(B,C,H,W)$, where $B$ is batch size, $C$
+is the channel count, and $H,W$ are image dimensions. A model layer
+consumes this tensor and produces another tensor with a new shape.
+
+## Common misconceptions
+
+- The word “tensor” has a precise meaning in mathematics and physics; in
+  machine-learning code it commonly refers to a multidimensional array
+  abstraction.
+- Shape alone does not describe an array's dtype, device, or memory layout.
+
+## Related terms
+
+- [Linear Algebra](../L/linear-algebra.qmd)
+- [NumPy](../N/numpy.qmd)
+- [PyTorch](../P/pytorch.qmd)
+
+## Further reading
+
+- [PyTorch: Tensors](https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html) — tensor creation, attributes, and operations.
+- [NumPy: The array](https://numpy.org/doc/stable/user/basics.creation.html) — multidimensional array basics.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

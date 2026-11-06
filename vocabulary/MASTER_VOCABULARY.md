@@ -253,7 +253,7 @@
 **Software Engineering:** System Design.
 **Statistics:** Sampling.
 
-### T (18 terms)
+### T (20 terms)
 
 **AI Agents:** Tool Calling.
 **AI Frameworks:** TensorFlow.
@@ -265,7 +265,7 @@
 **MLOps:** Tracking (Experiment).
 **Machine Learning:** Transfer Learning.
 **Mathematics:** Tensor.
-**Model Evaluation:** Test Set.
+**Model Evaluation:** Test Set; True Negative; True Positive.
 **NLP:** Text Classification.
 **Robotics:** Trajectory Optimization.
 

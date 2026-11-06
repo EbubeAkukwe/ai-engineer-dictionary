@@ -1,0 +1,65 @@
+---
+title: "Test Set"
+description: "A held-out dataset used to estimate how a finalized model performs on unseen examples."
+term: "Test Set"
+letter: "T"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A test set is a group of examples kept separate from model training and
+tuning. It provides a final check of how well the chosen model may perform
+on new data.
+
+## Technical explanation
+
+The test set is held out from parameter fitting and model selection, then
+used to estimate generalization under an evaluation design. Repeatedly
+using test results to make choices leaks information from the test set into
+development and makes the reported estimate optimistic.
+
+## Why it matters in AI engineering
+
+A well-managed test set helps teams compare the final system with
+baselines and communicate expected performance. Its representativeness,
+label quality, and independence from training data are as important as its
+size.
+
+## How it works
+
+Partition data into training, validation, and test subsets using splits
+appropriate to the use case, such as time-based or group-based splits.
+Tune decisions on training and validation data, lock the approach, and
+evaluate on the test set once for the final estimate.
+
+## Practical example
+
+For a model that predicts future equipment failures, a chronological test
+set can contain the most recent period. This checks temporal generalization
+more realistically than a random split if deployment predicts future
+events.
+
+## Common misconceptions
+
+- A large test set can still give a misleading estimate if it differs from
+  deployment data.
+- The test set should not be used repeatedly for hyperparameter tuning or
+  threshold selection.
+
+## Related terms
+
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+- [Cross-Validation](../C/cross-validation.qmd)
+- [Data Leakage](../D/data-leakage.qmd)
+
+## Further reading
+
+- [scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — data splitting and evaluation strategies.
+- [Google: Dataset splitting](https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets) — training, validation, and test sets.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,82 @@
+---
+title: "Trajectory Optimization"
+description: "Finding a sequence of states or actions that achieves a goal while minimizing cost and satisfying constraints."
+term: "Trajectory Optimization"
+letter: "T"
+category: "Robotics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Trajectory optimization finds a good path for a system to follow over time.
+For a robot, it can choose movements that reach a target while avoiding
+obstacles and respecting limits on speed or acceleration.
+
+## Technical explanation
+
+A trajectory optimization problem selects state and control sequences to
+minimize an objective subject to dynamics and constraints. The objective
+may include goal error, smoothness, energy, or collision penalties.
+Methods include direct transcription, sequential quadratic programming,
+and sampling-based optimization.
+
+## Why it matters in AI engineering
+
+Planning a dynamically feasible trajectory is important in robotics,
+autonomous driving, and control. Solutions depend on model accuracy,
+constraint handling, computational budget, and replanning frequency.
+
+## How it works
+
+The system discretizes time, represents candidate states and controls,
+evaluates cost and constraints, and iteratively searches for a feasible,
+low-cost sequence. A controller tracks the plan and may re-optimize as new
+sensor observations arrive.
+
+<svg viewBox="0 0 700 260" role="img" aria-labelledby="trajectory-title trajectory-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="trajectory-title">A robot trajectory balances reaching a goal and avoiding an obstacle</title>
+  <desc id="trajectory-desc">A robot begins at a start point and follows a curved planned path around a circular obstacle toward a goal. The path is an illustrative optimized trajectory.</desc>
+  <defs>
+    <marker id="trajectory-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4666a8"/>
+    </marker>
+  </defs>
+  <rect x="48" y="28" width="604" height="190" rx="12" fill="#f7f8fb" stroke="#cbd3df"/>
+  <circle cx="330" cy="126" r="44" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+  <text x="330" y="131" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202b3c">obstacle</text>
+  <circle cx="96" cy="172" r="9" fill="#438057"/>
+  <text x="96" y="199" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#276b3c">start</text>
+  <circle cx="600" cy="72" r="10" fill="#b9792e"/>
+  <text x="600" y="52" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#8a5722">goal</text>
+  <path d="M106 168 C178 143 196 74 266 71 C327 68 350 186 417 183 C486 180 517 84 590 74" fill="none" stroke="#4666a8" stroke-width="4" marker-end="url(#trajectory-arrow)"/>
+  <text x="350" y="246" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#46566d">Illustrative path; real plans also satisfy motion and actuator constraints.</text>
+</svg>
+
+## Practical example
+
+A mobile robot can optimize a short-horizon path that approaches a target,
+avoids obstacles, and limits abrupt steering. It replans after receiving
+new sensor information rather than assuming the environment remains fixed.
+
+## Common misconceptions
+
+- The shortest geometric path may be dynamically infeasible or unsafe.
+- An optimizer can fail to find a global optimum, and a feasible plan still
+  requires reliable feedback control.
+
+## Related terms
+
+- [Robotics](../R/robotics.qmd)
+- [Optimization](../O/optimization.qmd)
+- [Autonomous Systems](../A/autonomous-systems.qmd)
+
+## Further reading
+
+- [Modern Robotics: Trajectory Generation](https://modernrobotics.northwestern.edu/nu-gm-book-resource/9-1-and-9-2-point-to-point-trajectories-part-1-of-2/) — trajectory representations and constraints.
+- [MIT Underactuated Robotics](https://underactuated.mit.edu/) — planning, dynamics, and optimization for robotics.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

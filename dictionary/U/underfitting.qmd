@@ -1,0 +1,64 @@
+---
+title: "Underfitting"
+description: "A model underfits when it fails to capture patterns needed to perform well even on its training data."
+term: "Underfitting"
+letter: "U"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Underfitting happens when a model is too limited or too poorly trained to
+learn useful patterns. It performs poorly not only on new examples but
+often on the training data too.
+
+## Technical explanation
+
+Underfitting is associated with high bias or insufficient optimization,
+features, or model capacity relative to the task. Training and validation
+errors may both remain high, though reliable diagnosis depends on
+appropriate data and metrics.
+
+## Why it matters in AI engineering
+
+An underfit model may be inexpensive and stable but fail to meet task
+requirements. Diagnosing it helps teams decide whether to improve features,
+increase capacity, train longer, or revise the objective.
+
+## How it works
+
+Compare training and validation performance against a simple baseline and
+the target requirement. If both are poor, investigate data quality,
+features, optimization, and model capacity before increasing complexity.
+Changes should be evaluated on held-out data.
+
+## Practical example
+
+A linear model may be unable to capture a nonlinear relationship in the
+data. Adding appropriate nonlinear features or using a more expressive
+model can reduce training error, after which validation performance checks
+whether generalization also improves.
+
+## Common misconceptions
+
+- Underfitting is not simply “a model with too few parameters”; poor data,
+  objectives, optimization, or features can cause it too.
+- Increasing model size may reduce training error but does not guarantee
+  lower validation error.
+
+## Related terms
+
+- [Overfitting](../O/overfitting.qmd)
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+- [Regularization](../R/regularization.qmd)
+
+## Further reading
+
+- [Google Machine Learning: Overfitting and underfitting](https://developers.google.com/machine-learning/crash-course/overfitting) — diagnosing model fit and generalization.
+- [scikit-learn: Underfitting vs. overfitting](https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html) — illustrative model-complexity example.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

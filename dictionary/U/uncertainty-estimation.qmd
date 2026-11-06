@@ -1,0 +1,64 @@
+---
+title: "Uncertainty Estimation"
+description: "The process of estimating how uncertain a model's predictions are."
+term: "Uncertainty Estimation"
+letter: "U"
+category: "Model Evaluation"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Uncertainty estimation helps a system express when it is unsure about a
+prediction. This can support decisions such as asking for human review,
+collecting more data, or abstaining from an answer.
+
+## Technical explanation
+
+Uncertainty may reflect irreducible noise in observations (aleatoric
+uncertainty) or limited knowledge of the model (epistemic uncertainty).
+Methods include calibrated probabilities, ensembles, Bayesian approaches,
+and predictive intervals. Estimates require validation under relevant
+distribution shifts.
+
+## Why it matters in AI engineering
+
+Confidence-aware systems can handle ambiguous inputs more responsibly and
+prioritize review. A model's raw score is not necessarily a calibrated
+uncertainty measure, especially on unfamiliar inputs.
+
+## How it works
+
+An estimation method produces a probability, interval, disagreement score,
+or other uncertainty signal alongside predictions. The system evaluates
+whether that signal matches observed errors, then defines thresholds or
+fallbacks appropriate to the task's risk.
+
+## Practical example
+
+A document classifier can send cases with low calibrated confidence to a
+human reviewer. Evaluate coverage and error rates at different abstention
+thresholds, including on data that differs from the training distribution.
+
+## Common misconceptions
+
+- A model's maximum softmax score is not automatically a reliable
+  uncertainty estimate.
+- High confidence does not guarantee correctness, especially for
+  out-of-distribution inputs.
+
+## Related terms
+
+- [Calibration](../C/calibration.qmd)
+- [Probability Distribution](../P/probability-distribution.qmd)
+- [Out-of-Distribution (OOD)](../O/out-of-distribution-ood.qmd)
+
+## Further reading
+
+- [Uncertainty in Deep Learning](https://arxiv.org/abs/1703.04977) — overview of uncertainty methods.
+- [scikit-learn: Probability calibration](https://scikit-learn.org/stable/modules/calibration.html) — calibration assessment and methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

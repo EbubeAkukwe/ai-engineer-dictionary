@@ -1,0 +1,67 @@
+---
+title: "Universal Approximation Theorem"
+description: "A result showing that certain neural networks can approximate broad classes of functions under specified conditions."
+term: "Universal Approximation Theorem"
+letter: "U"
+category: "Mathematics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+The universal approximation theorem says that some neural networks can
+approximate many continuous functions as closely as desired, if they have
+enough units and satisfy certain assumptions. It does not say that training
+will find the right network or that it will generalize.
+
+## Technical explanation
+
+Universal approximation results establish density of a network function
+class in a target function space under conditions on the activation,
+domain, and architecture. Classic results apply to sufficiently wide
+feed-forward networks on compact domains; other versions cover different
+architectures and function spaces.
+
+## Why it matters in AI engineering
+
+The theorem provides an expressive-capacity result, but practical AI work
+also depends on data, optimization, finite resources, inductive biases,
+and generalization. It should not be used by itself to justify model
+selection.
+
+## How it works
+
+The result shows that linear combinations of transformed inputs can form
+approximations to functions in the specified class as network width grows.
+The theorem is existential: it establishes that suitable parameters exist,
+not that a learning algorithm can efficiently discover them.
+
+## Practical example
+
+The theorem does not imply that a small network trained on a limited dataset
+will accurately model every real-world process. Engineers still choose an
+architecture, train it with finite data, and measure performance on held-out
+examples.
+
+## Common misconceptions
+
+- Universal approximation does not guarantee efficient training, small
+  model size, or good generalization.
+- It does not mean every neural-network architecture can represent every
+  function under every constraint.
+
+## Related terms
+
+- [Neural Network](../N/neural-network.qmd)
+- [Activation Function](../A/activation-function.qmd)
+- [Overfitting](../O/overfitting.qmd)
+
+## Further reading
+
+- [Approximation by superpositions of a sigmoidal function](https://doi.org/10.1007/BF02551274) — a classic universal-approximation result.
+- [Deep Learning](https://www.deeplearningbook.org/) — neural-network capacity and approximation theory.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

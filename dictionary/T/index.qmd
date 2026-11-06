@@ -1,0 +1,27 @@
+---
+title: "T Terms"
+description: "AI engineering dictionary terms beginning with T."
+---
+
+# T Terms
+
+- [Temperature](temperature.qmd)
+- [Tensor](tensor.qmd)
+- [Tensor Core](tensor-core.qmd)
+- [TensorFlow](tensorflow.qmd)
+- [Test Set](test-set.qmd)
+- [Text Classification](text-classification.qmd)
+- [Token](token.qmd)
+- [Token Embedding](token-embedding.qmd)
+- [Tokenization](tokenization.qmd)
+- [Tool Calling](tool-calling.qmd)
+- [Top-k Sampling](top-k-sampling.qmd)
+- [Top-p Sampling](top-p-sampling.qmd)
+- [Tracking (Experiment)](tracking-experiment.qmd)
+- [Training](training.qmd)
+- [Transfer Learning](transfer-learning.qmd)
+- [Transformer](transformer.qmd)
+- [Trajectory Optimization](trajectory-optimization.qmd)
+- [Tree Search](tree-search.qmd)
+- [True Negative](true-negative.qmd)
+- [True Positive](true-positive.qmd)

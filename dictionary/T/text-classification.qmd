@@ -1,0 +1,63 @@
+---
+title: "Text Classification"
+description: "The task of assigning one or more predefined categories to a text."
+term: "Text Classification"
+letter: "T"
+category: "NLP"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Text classification assigns labels to text. Examples include sorting
+support tickets by topic, detecting spam, or identifying the language of a
+message.
+
+## Technical explanation
+
+A text classifier maps a text representation to one or more labels. It may
+use bag-of-words features with a linear model, a pretrained encoder, or a
+generative model. Tasks can be binary, multiclass, or multilabel, and
+evaluation should match the label structure and class distribution.
+
+## Why it matters in AI engineering
+
+Classification supports routing, moderation, analytics, and information
+extraction workflows. Production systems need reliable labels, threshold
+selection, drift monitoring, and clear handling of ambiguous or
+out-of-scope text.
+
+## How it works
+
+Text is normalized or tokenized and mapped to features or contextual
+representations. A model predicts class scores, which are converted into
+labels using an argmax or per-label thresholds. Performance is measured
+against labeled held-out examples.
+
+## Practical example
+
+A ticket-routing system can classify incoming messages into product
+areas. Evaluate precision and recall for each category, especially rare
+categories, and provide a fallback when confidence is insufficient.
+
+## Common misconceptions
+
+- A classifier's top label is not necessarily reliable, especially for
+  inputs unlike its training data.
+- Accuracy can hide poor performance on rare classes.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Natural Language Processing (NLP)](../N/natural-language-processing-nlp.qmd)
+- [Precision](../P/precision.qmd)
+
+## Further reading
+
+- [scikit-learn: Text feature extraction](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction) — common representations for text.
+- [Hugging Face: Text classification](https://huggingface.co/docs/transformers/tasks/sequence_classification) — transformer-based classification workflow.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

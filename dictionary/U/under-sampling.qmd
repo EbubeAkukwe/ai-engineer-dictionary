@@ -1,0 +1,66 @@
+---
+title: "Under-sampling"
+description: "A data-balancing approach that reduces the number of examples from a majority class."
+term: "Under-sampling"
+letter: "U"
+category: "Data Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Under-sampling reduces the number of examples from a common class so a
+training set is less dominated by that class. It can make training more
+balanced, but discarded examples may contain useful variation.
+
+## Technical explanation
+
+Under-sampling selects a subset of majority-class observations, either
+randomly or using a rule such as near-miss selection. It changes the
+training class distribution and may alter the learned decision boundary;
+probability estimates and threshold behavior may need recalibration to
+match deployment prevalence.
+
+## Why it matters in AI engineering
+
+Class imbalance can make a learner favor the majority class. Under-sampling
+can reduce training cost and increase minority influence, but it risks
+information loss and can create a mismatch between training and production
+distributions.
+
+## How it works
+
+Apply the sampling strategy only to the training data, leaving validation
+and test sets representative of the intended population. Train the model,
+then evaluate relevant class-specific metrics and calibration on
+untouched, representative data.
+
+## Practical example
+
+A fraud classifier might retain a subset of legitimate transactions while
+keeping all observed fraud examples during training. Evaluate it at the
+realistic production class prevalence and tune alert thresholds using
+appropriate validation data.
+
+## Common misconceptions
+
+- Balancing the training set does not automatically make a model fair or
+  improve minority-class performance.
+- Resampling before a train-test split can leak information and make
+  evaluation overly optimistic.
+
+## Related terms
+
+- [Imbalanced Dataset](../I/imbalanced-dataset.qmd)
+- [Oversampling](../O/oversampling.qmd)
+- [Sampling](../S/sampling.qmd)
+
+## Further reading
+
+- [imbalanced-learn: Under-sampling](https://imbalanced-learn.org/stable/under_sampling.html) — methods and implementation guidance.
+- [Google: Classification on imbalanced datasets](https://developers.google.com/machine-learning/crash-course/overfitting/imbalanced-datasets) — metrics and strategies for class imbalance.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

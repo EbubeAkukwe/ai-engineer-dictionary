@@ -1,0 +1,99 @@
+---
+title: "Transformer"
+description: "A neural-network architecture built around attention and feed-forward layers for processing sequences and other structured inputs."
+term: "Transformer"
+letter: "T"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A Transformer processes input representations using attention, which lets
+parts of the input exchange information. Transformers power many language,
+vision, and multimodal models.
+
+## Technical explanation
+
+Transformer layers commonly combine multi-head attention, feed-forward
+networks, residual connections, and normalization. Encoder, decoder, and
+encoder-decoder variants use different attention masks and information
+flows. Positional information is needed to represent order.
+
+## Why it matters in AI engineering
+
+Transformers underpin many foundation models and provide a flexible
+architecture for sequence and multimodal tasks. Their compute and memory
+requirements, context handling, and inference behavior influence system
+design.
+
+## How it works
+
+Inputs are embedded and supplied with positional information. Attention
+forms context-aware representations, and feed-forward sublayers transform
+them. Stacking layers builds richer representations. Decoder-only language
+models use causal masks so each position predicts from permitted preceding
+context.
+
+<svg viewBox="0 0 760 280" role="img" aria-labelledby="transformer-title transformer-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="transformer-title">Simplified Transformer layer stack</title>
+  <desc id="transformer-desc">Token embeddings combined with positional information pass through repeated Transformer layers. Each layer contains attention and a feed-forward sublayer, producing contextual representations used by an output head.</desc>
+  <defs>
+    <marker id="transformer-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="34" y="106" width="136" height="62" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="102" y="132" font-size="14">Token embeddings</text><text x="102" y="152" font-size="12" fill="#46566d">+ position</text>
+    <rect x="225" y="61" width="210" height="150" rx="10" fill="#f7f8fb" stroke="#4666a8" stroke-width="2"/>
+    <text x="330" y="85" font-size="14">Transformer layer</text>
+    <rect x="250" y="99" width="160" height="42" rx="7" fill="#e6ecfa" stroke="#4666a8"/>
+    <text x="330" y="125" font-size="13">Attention</text>
+    <rect x="250" y="157" width="160" height="36" rx="7" fill="#e8f4ec" stroke="#438057"/>
+    <text x="330" y="180" font-size="13">Feed-forward</text>
+    <rect x="490" y="61" width="164" height="150" rx="10" fill="#f7f8fb" stroke="#4666a8" stroke-width="2"/>
+    <text x="572" y="85" font-size="14">Repeated layers</text>
+    <rect x="513" y="103" width="118" height="34" rx="6" fill="#e6ecfa" stroke="#4666a8"/>
+    <rect x="513" y="151" width="118" height="34" rx="6" fill="#e8f4ec" stroke="#438057"/>
+    <text x="572" y="125" font-size="12">Attention</text><text x="572" y="173" font-size="12">Feed-forward</text>
+    <rect x="686" y="106" width="66" height="62" rx="9" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="719" y="132" font-size="12">Output</text><text x="719" y="151" font-size="11">head</text>
+    <path d="M170 137 H217" stroke="#455b79" stroke-width="2" marker-end="url(#transformer-arrow)"/>
+    <path d="M435 137 H482" stroke="#455b79" stroke-width="2" marker-end="url(#transformer-arrow)"/>
+    <path d="M654 137 H678" stroke="#455b79" stroke-width="2" marker-end="url(#transformer-arrow)"/>
+    <text x="330" y="243" font-size="12" fill="#46566d">Residual connections and normalization are omitted for clarity.</text>
+  </g>
+</svg>
+
+The diagram is simplified; exact sublayers and ordering vary by
+Transformer design.
+
+## Practical example
+
+A decoder-only Transformer can receive token IDs and predict a probability
+distribution for the next token. At generation time, the application
+repeatedly samples or selects a token and appends it to the context.
+
+## Common misconceptions
+
+- A Transformer is an architecture family, not a single model or training
+  objective.
+- Attention alone does not encode order; architectures add positional
+  signals or related mechanisms.
+
+## Related terms
+
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Self-Attention](../S/self-attention.qmd)
+- [Positional Encoding](../P/positional-encoding.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — original Transformer paper.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — implementation-oriented explanation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

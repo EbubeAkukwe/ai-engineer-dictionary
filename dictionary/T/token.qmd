@@ -1,0 +1,62 @@
+---
+title: "Token"
+description: "A unit produced by a model's tokenizer, such as a word fragment, character, or special marker."
+term: "Token"
+letter: "T"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A token is a piece of text as processed by a language model. A token may
+be a whole word, part of a word, punctuation, or a special control marker;
+it is not necessarily the same as a word.
+
+## Technical explanation
+
+Tokenizers map text to discrete token IDs from a model-specific vocabulary.
+Subword algorithms such as byte-pair encoding or unigram tokenization
+balance vocabulary size and sequence length. Special tokens may mark
+boundaries, roles, or tasks.
+
+## Why it matters in AI engineering
+
+Tokenization affects context-window usage, inference cost, latency, and
+model behavior. Different models tokenize the same text differently, so
+token counts and truncation limits are model-dependent.
+
+## How it works
+
+The tokenizer normalizes or segments input text into tokens and maps them
+to integer IDs. The model processes those IDs and produces output token
+IDs, which the tokenizer decodes back into text.
+
+## Practical example
+
+A long technical term may be split into several subword tokens, while a
+common short word may use one token. Before sending a prompt, an application
+can count tokens with the target model's tokenizer to avoid exceeding
+context limits.
+
+## Common misconceptions
+
+- One token does not always equal one word or one character.
+- Token counts are not interchangeable across tokenizers or model
+  families.
+
+## Related terms
+
+- [Tokenization](tokenization.qmd)
+- [Token Embedding](token-embedding.qmd)
+- [Context Window](../C/context-window.qmd)
+
+## Further reading
+
+- [Hugging Face: Tokenizers](https://huggingface.co/docs/transformers/tokenizer_summary) — tokenizer algorithms and model inputs.
+- [OpenAI: Tokenizer](https://platform.openai.com/tokenizer) — inspect how text maps to tokens for supported models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

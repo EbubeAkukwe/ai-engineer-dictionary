@@ -1,0 +1,65 @@
+---
+title: "Unit Testing"
+description: "Testing a small, isolated unit of software to check that it behaves as expected."
+term: "Unit Testing"
+letter: "U"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Unit testing checks a small piece of code, such as a function, with
+controlled inputs and expected outputs. It helps catch regressions early
+and makes component behavior easier to understand.
+
+## Technical explanation
+
+A unit test exercises a narrowly scoped component, often using fixtures,
+assertions, and mocks or fakes for external dependencies. Tests should be
+deterministic and independent where practical; integration and end-to-end
+tests cover interactions that unit tests do not.
+
+## Why it matters in AI engineering
+
+AI applications include ordinary software logic around models, including
+preprocessing, schema handling, scoring, and tool execution. Unit tests can
+verify these deterministic behaviors, while model quality requires
+separate data-driven evaluation.
+
+## How it works
+
+A test supplies known inputs, invokes the unit, and compares outputs or
+side effects with expectations. Edge cases and invalid inputs should be
+included. Model-dependent behavior may need statistical or benchmark
+tests rather than brittle exact-output assertions.
+
+## Practical example
+
+A preprocessing function can be tested to ensure that missing fields are
+handled consistently and that output tensors have the expected shape.
+Separately, a model evaluation suite checks predictive quality on a
+representative dataset.
+
+## Common misconceptions
+
+- Passing unit tests does not establish that a model is accurate, fair, or
+  safe in deployment.
+- Mocking every dependency can hide integration errors; tests at multiple
+  levels are useful.
+
+## Related terms
+
+- [Continuous Integration](../C/continuous-integration.qmd)
+- [Data Validation](../D/data-validation.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+
+## Further reading
+
+- [pytest documentation](https://docs.pytest.org/en/stable/) — Python testing framework and practices.
+- [Google Testing Blog](https://testing.googleblog.com/) — testing strategies and engineering principles.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

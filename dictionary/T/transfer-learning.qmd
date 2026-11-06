@@ -1,0 +1,64 @@
+---
+title: "Transfer Learning"
+description: "Reusing knowledge learned on one task or dataset to improve learning on a related target task."
+term: "Transfer Learning"
+letter: "T"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Transfer learning starts with a model or representation learned elsewhere
+and adapts it to a new but related task. This can reduce the labeled data
+and compute needed compared with training from scratch.
+
+## Technical explanation
+
+Transfer learning reuses parameters, features, or learned structure from a
+source domain or task. Common strategies include using a frozen pretrained
+encoder as a feature extractor and fine-tuning some or all of its
+parameters on target data. Benefit depends on source-target similarity and
+the adaptation procedure.
+
+## Why it matters in AI engineering
+
+Pretrained models can provide a strong starting point for specialized
+applications. Teams must still consider data compatibility, licensing,
+distribution shift, evaluation quality, and the compute cost of adaptation.
+
+## How it works
+
+Select a pretrained model, adapt its input and output layers as needed,
+then train on target examples. Parameters may remain frozen, be updated
+partially, or be fine-tuned end-to-end. Validate on data representative of
+the target use case.
+
+## Practical example
+
+A vision model pretrained on general images can be adapted to classify
+defects in manufactured parts. Compare frozen-feature and fine-tuned
+approaches using a held-out test set from the relevant production setting.
+
+## Common misconceptions
+
+- Pretraining on a large dataset does not ensure the model transfers well
+  to every target domain.
+- Fine-tuning can cause forgetting or overfitting, especially with small
+  or mismatched target datasets.
+
+## Related terms
+
+- [Fine-Tuning](../F/fine-tuning.qmd)
+- [Foundation Model](../F/foundation-model.qmd)
+- [Representation Learning](../R/representation-learning.qmd)
+
+## Further reading
+
+- [Hugging Face: Transfer learning](https://huggingface.co/docs/transformers/training) — adapting pretrained Transformer models.
+- [Yosinski et al.: How transferable are features in deep neural networks?](https://arxiv.org/abs/1411.1792) — transferability across layers and tasks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

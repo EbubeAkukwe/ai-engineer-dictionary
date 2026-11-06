@@ -1,0 +1,99 @@
+---
+title: "Uplift Modeling"
+description: "A modeling approach that estimates how an intervention changes an outcome for different individuals or groups."
+term: "Uplift Modeling"
+letter: "U"
+category: "Machine Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Uplift modeling estimates who is more likely to change behavior because
+of an intervention, such as a discount or reminder. It focuses on the
+difference the intervention makes, rather than only predicting who is
+likely to act.
+
+## Technical explanation
+
+Uplift modeling estimates heterogeneous treatment effects using treatment
+and control data. A common target is conditional average treatment effect,
+$\tau(x)=E[Y(1)-Y(0)\mid X=x]$, where $Y(1)$ and $Y(0)$ are potential
+outcomes under treatment and control. Individual-level causal effects
+cannot both be observed for the same unit, so estimation requires
+assumptions and appropriate experimental design.
+
+## Why it matters in AI engineering
+
+It can help allocate interventions to people who benefit, avoid spending
+resources on those who would act anyway, and reduce interventions that
+cause harm. Valid conclusions depend on randomization or defensible
+causal assumptions, not predictive accuracy alone.
+
+## How it works
+
+Collect outcomes from treated and control groups, estimate treatment
+effects as a function of features, and rank or segment cases by expected
+uplift. Evaluate with randomized holdout data and causal metrics, while
+checking treatment cost, harms, and subgroup effects.
+
+<svg viewBox="0 0 760 260" role="img" aria-labelledby="uplift-title uplift-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="uplift-title">Uplift compares outcomes with and without an intervention</title>
+  <desc id="uplift-desc">The same target population is split into randomized treatment and control groups. Their outcome rates are compared to estimate the intervention's effect, which an uplift model predicts across feature-defined groups.</desc>
+  <defs>
+    <marker id="uplift-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="20" y="88" width="134" height="62" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="87" y="115" font-size="14" fill="#202b3c">Eligible units</text><text x="87" y="135" font-size="11" fill="#46566d">random assignment</text>
+    <rect x="230" y="32" width="162" height="62" rx="9" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="311" y="59" font-size="14" fill="#202b3c">Treatment group</text><text x="311" y="79" font-size="11" fill="#46566d">receives intervention</text>
+    <rect x="230" y="144" width="162" height="62" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="311" y="171" font-size="14" fill="#202b3c">Control group</text><text x="311" y="191" font-size="11" fill="#46566d">no intervention</text>
+    <rect x="470" y="88" width="128" height="62" rx="9" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="534" y="115" font-size="14" fill="#202b3c">Compare</text><text x="534" y="135" font-size="11" fill="#46566d">outcome rates</text>
+    <rect x="650" y="88" width="96" height="62" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="698" y="115" font-size="13" fill="#202b3c">Estimate</text><text x="698" y="135" font-size="11" fill="#46566d">uplift by X</text>
+    <path d="M154 104 L222 72" stroke="#455b79" stroke-width="2" marker-end="url(#uplift-arrow)"/>
+    <path d="M154 132 L222 164" stroke="#455b79" stroke-width="2" marker-end="url(#uplift-arrow)"/>
+    <path d="M392 63 L462 100" stroke="#438057" stroke-width="2" marker-end="url(#uplift-arrow)"/>
+    <path d="M392 175 L462 138" stroke="#4666a8" stroke-width="2" marker-end="url(#uplift-arrow)"/>
+    <path d="M598 119 H642" stroke="#455b79" stroke-width="2" marker-end="url(#uplift-arrow)"/>
+    <text x="390" y="238" font-size="12" fill="#46566d">The causal effect is a group-level contrast; individual outcomes are not both observed.</text>
+  </g>
+</svg>
+
+Randomized assignment supports estimating average treatment effects;
+estimating which individuals benefit requires additional modeling and
+validation.
+
+## Practical example
+
+A retailer can randomize eligible customers to receive or not receive a
+coupon, then estimate which customer segments show incremental purchases.
+Test the policy on a separate randomized holdout before deploying it.
+
+## Common misconceptions
+
+- A response-propensity model predicts who is likely to act; uplift
+  estimates how the intervention changes behavior.
+- Correlation in observational data is not enough to identify a causal
+  treatment effect without assumptions and adjustment.
+
+## Related terms
+
+- [Causal Inference](../C/causal-inference.qmd)
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Sampling](../S/sampling.qmd)
+
+## Further reading
+
+- [Uplift Modeling: A Review of the Literature](https://doi.org/10.1007/s11747-020-00735-7) — methods and applications.
+- [CausalML documentation](https://causalml.readthedocs.io/en/latest/) — uplift modeling methods and evaluation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

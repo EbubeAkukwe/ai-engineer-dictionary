@@ -1,0 +1,63 @@
+---
+title: "TensorFlow"
+description: "An open-source machine-learning platform for building, training, and deploying models."
+term: "TensorFlow"
+letter: "T"
+category: "AI Frameworks"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+TensorFlow is a software platform for creating and running machine-learning
+models. It provides numerical operations, automatic differentiation,
+training tools, and deployment options across different devices.
+
+## Technical explanation
+
+TensorFlow provides tensor operations and automatic gradient computation,
+with higher-level APIs such as Keras for model construction and training.
+Its ecosystem includes tools for data input, distributed execution,
+conversion, and deployment.
+
+## Why it matters in AI engineering
+
+TensorFlow is used to develop and deploy models in research and production.
+Its APIs and deployment ecosystem support workflows from experimentation
+to mobile and server environments, though teams should select tools that
+fit their model and operational constraints.
+
+## How it works
+
+Developers define a model and loss, provide data, and use an optimizer to
+update trainable variables from computed gradients. TensorFlow can execute
+operations on supported hardware and export models for compatible
+deployment runtimes.
+
+## Practical example
+
+A classification model can be built with Keras layers, trained on batches
+of labeled examples, and evaluated on held-out data. The exported model
+should be tested in the same runtime and input format used in deployment.
+
+## Common misconceptions
+
+- TensorFlow is a framework, not a model or a guarantee of good predictions.
+- An exported model still depends on compatible operators, preprocessing,
+  and runtime configuration.
+
+## Related terms
+
+- [PyTorch](../P/pytorch.qmd)
+- [Neural Network](../N/neural-network.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [TensorFlow Tutorials](https://www.tensorflow.org/tutorials) — official learning materials and examples.
+- [Keras guides](https://keras.io/guides/) — model-building and training workflows.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

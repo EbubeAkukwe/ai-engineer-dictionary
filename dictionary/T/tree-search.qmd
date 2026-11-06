@@ -1,0 +1,98 @@
+---
+title: "Tree Search"
+description: "A search strategy that explores possible future states by expanding a tree of choices."
+term: "Tree Search"
+letter: "T"
+category: "Algorithms"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Tree search explores choices by representing them as branches. Each path
+corresponds to a sequence of decisions, and the algorithm expands promising
+branches to find a goal or a high-value outcome.
+
+## Technical explanation
+
+A search tree has nodes representing states and edges representing actions.
+Algorithms such as breadth-first search, depth-first search, and
+Monte Carlo tree search differ in how they expand nodes, manage memory, and
+prioritize exploration. Search quality depends on branching factor,
+depth, costs, and any heuristic or rollout policy.
+
+## Why it matters in AI engineering
+
+Tree search is used in planning, games, program synthesis, and reasoning
+systems. It offers explicit exploration of alternatives but can grow
+exponentially, so practical systems use pruning, heuristics, or compute
+budgets.
+
+## How it works
+
+The algorithm starts from an initial state, selects a node to expand,
+generates successor states, and tracks paths or values. It stops when it
+finds a goal, reaches a depth or resource limit, or determines a best
+available action.
+
+<svg viewBox="0 0 700 260" role="img" aria-labelledby="tree-title tree-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="tree-title">Tree search expands choices into future states</title>
+  <desc id="tree-desc">A root state branches into two possible actions, each leading to successor states. One branch is highlighted as the current search path, while other branches remain alternatives to explore.</desc>
+  <g fill="none" stroke="#9aa7b8" stroke-width="2">
+    <path d="M350 58 L190 117"/><path d="M350 58 L510 117"/>
+    <path d="M190 145 L100 205"/><path d="M190 145 L278 205"/>
+    <path d="M510 145 L422 205"/><path d="M510 145 L600 205"/>
+  </g>
+  <g fill="none" stroke="#4666a8" stroke-width="4">
+    <path d="M350 58 L190 117 L278 205"/>
+  </g>
+  <g stroke-width="2">
+    <circle cx="350" cy="48" r="20" fill="#e6ecfa" stroke="#4666a8"/>
+    <circle cx="190" cy="135" r="20" fill="#e6ecfa" stroke="#4666a8"/>
+    <circle cx="510" cy="135" r="20" fill="#f3f5f8" stroke="#8c9aab"/>
+    <circle cx="100" cy="220" r="18" fill="#f3f5f8" stroke="#8c9aab"/>
+    <circle cx="278" cy="220" r="18" fill="#e8f4ec" stroke="#438057"/>
+    <circle cx="422" cy="220" r="18" fill="#f3f5f8" stroke="#8c9aab"/>
+    <circle cx="600" cy="220" r="18" fill="#f3f5f8" stroke="#8c9aab"/>
+  </g>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c" font-size="12">
+    <text x="350" y="53">start</text>
+    <text x="190" y="140">A</text><text x="510" y="140">B</text>
+    <text x="100" y="225">A1</text><text x="278" y="225">A2</text>
+    <text x="422" y="225">B1</text><text x="600" y="225">B2</text>
+    <text x="248" y="88" fill="#3c5791">expanded path</text>
+    <text x="350" y="253" fill="#46566d">Other branches remain candidate futures.</text>
+  </g>
+</svg>
+
+The highlighted path is illustrative; search algorithms may expand nodes
+in different orders.
+
+## Practical example
+
+A game-playing program can search future move sequences and evaluate
+resulting positions. It may prioritize branches using a heuristic or
+sampled outcomes, then choose a move within a fixed compute budget.
+
+## Common misconceptions
+
+- Tree search does not guarantee an optimal result if depth, branching,
+  evaluation, or time is limited.
+- A state-space tree can contain repeated states; implementations may use
+  caching or graph-search techniques to avoid redundant work.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [Heuristic](../H/heuristic.qmd)
+- [Reinforcement Learning](../R/reinforcement-learning.qmd)
+
+## Further reading
+
+- [AIMA: Search in Complex Environments](https://aima.cs.berkeley.edu/) — search algorithms and planning.
+- [Monte Carlo Tree Search: A Review](https://doi.org/10.1109/TCIAIG.2012.2186810) — tree-search methods and applications.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,63 @@
+---
+title: "Tensor Core"
+description: "A specialized accelerator unit designed to speed up matrix operations used in deep learning."
+term: "Tensor Core"
+letter: "T"
+category: "AI Infrastructure"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A Tensor Core is a specialized hardware unit in some GPUs that accelerates
+matrix calculations common in neural networks. It can perform these
+operations faster than general-purpose compute units when the software and
+data formats are compatible.
+
+## Technical explanation
+
+Tensor Cores accelerate matrix multiply-accumulate operations, often using
+lower-precision input formats with higher-precision accumulation. Exact
+supported formats and behavior depend on GPU generation, libraries, and
+kernel selection.
+
+## Why it matters in AI engineering
+
+Hardware acceleration can improve training throughput and inference
+latency, but only when the workload maps to supported operations. Precision
+choices also affect numerical error, memory use, and model quality.
+
+## How it works
+
+Optimized frameworks select kernels that partition matrix operations into
+tiles and dispatch them to the accelerator. Developers can use mixed
+precision or optimized libraries, then benchmark the complete workload and
+check numerical behavior.
+
+## Practical example
+
+A neural network's large matrix multiplications may use a supported
+lower-precision format on a GPU with Tensor Cores. Compare throughput and
+validation metrics against a baseline before changing production settings.
+
+## Common misconceptions
+
+- Tensor Cores are not available or used for every operation or every GPU.
+- Lower-precision execution does not guarantee a speedup if the workload is
+  too small, memory-bound, or unsupported by optimized kernels.
+
+## Related terms
+
+- [GPU](../G/gpu.qmd)
+- [Quantization](../Q/quantization.qmd)
+- [Tensor](tensor.qmd)
+
+## Further reading
+
+- [NVIDIA: Tensor Cores](https://www.nvidia.com/en-us/data-center/tensor-cores/) — hardware overview and applications.
+- [NVIDIA CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/) — programming model and hardware capabilities.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

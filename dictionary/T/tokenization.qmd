@@ -1,0 +1,63 @@
+---
+title: "Tokenization"
+description: "The process of converting text or other input into discrete units that a model can process."
+term: "Tokenization"
+letter: "T"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Tokenization breaks input into units a model can process. For language
+models, those units are often words, word pieces, punctuation, or special
+markers, each mapped to an ID.
+
+## Technical explanation
+
+A tokenizer applies a vocabulary and segmentation algorithm to map strings
+to token IDs. Common subword schemes include byte-pair encoding, WordPiece,
+and unigram language models. Normalization, unknown-token behavior, and
+special-token handling vary by tokenizer.
+
+## Why it matters in AI engineering
+
+Tokenization determines sequence length and influences what patterns a
+model can represent. It affects context limits, cost, multilingual
+coverage, code handling, and compatibility between training and inference.
+
+## How it works
+
+Text is normalized according to the tokenizer's rules, segmented into
+vocabulary units, and converted into integer IDs. The model consumes those
+IDs; generated IDs are mapped back to text during decoding.
+
+## Practical example
+
+Before deploying a model on multilingual inputs, an engineer can inspect
+token counts for representative languages and scripts. A tokenizer that
+uses many tokens for some languages may increase latency and reduce the
+effective amount of text that fits in the context.
+
+## Common misconceptions
+
+- Tokenization is not always splitting on spaces; subword and byte-level
+  schemes can divide words in surprising ways.
+- A model and its tokenizer are a matched pair; substituting another
+  tokenizer changes the meaning of token IDs.
+
+## Related terms
+
+- [Token](token.qmd)
+- [Token Embedding](token-embedding.qmd)
+- [Natural Language Processing (NLP)](../N/natural-language-processing-nlp.qmd)
+
+## Further reading
+
+- [Hugging Face: Tokenizer summary](https://huggingface.co/docs/transformers/tokenizer_summary) — overview of tokenization algorithms.
+- [SentencePiece](https://github.com/google/sentencepiece) — language-independent subword tokenizer and detokenizer.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,97 @@
+---
+title: "Tool Calling"
+description: "A model-assisted workflow in which an application lets a model request approved operations through tools."
+term: "Tool Calling"
+letter: "T"
+category: "AI Agents"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Tool calling lets an AI application connect a model to operations such as
+searching documents or checking a database. The model can ask for a tool to
+be used, while the application decides whether the request is valid and
+allowed.
+
+## Technical explanation
+
+An application describes available tools and their input schemas to a
+model. The model may return a structured request; the application validates
+the request, enforces permissions, executes the implementation, and may
+return the result for further model processing. Provider APIs and agent
+frameworks use different tool-calling formats.
+
+## Why it matters in AI engineering
+
+Tools extend a model's ability to interact with current data and software
+systems. They also create security and reliability concerns because
+operations may access sensitive information or cause side effects.
+
+## How it works
+
+The host provides tool descriptions and user context. If the model requests
+a tool, the host checks the name, arguments, authorization, and applicable
+approval requirements before execution. Results are returned to the model
+or user, with errors handled explicitly.
+
+<svg viewBox="0 0 820 220" role="img" aria-labelledby="tool-title tool-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="tool-title">Application-mediated tool-calling loop</title>
+  <desc id="tool-desc">A user request reaches an AI model. The model requests a tool, the host validates and authorizes it, then executes the tool and returns the result to the model before a response is sent to the user.</desc>
+  <defs>
+    <marker id="tool-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="tool-return" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#438057"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="20" y="58" width="130" height="62" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="85" y="84" font-size="15" fill="#202b3c">User</text><text x="85" y="104" font-size="12" fill="#46566d">request</text>
+    <rect x="212" y="58" width="144" height="62" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="284" y="84" font-size="15" fill="#202b3c">Model</text><text x="284" y="104" font-size="12" fill="#46566d">requests a tool</text>
+    <rect x="416" y="58" width="170" height="62" rx="9" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="501" y="84" font-size="15" fill="#202b3c">Host application</text><text x="501" y="104" font-size="12" fill="#46566d">validates + authorizes</text>
+    <rect x="646" y="58" width="146" height="62" rx="9" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="719" y="84" font-size="15" fill="#202b3c">Tool</text><text x="719" y="104" font-size="12" fill="#46566d">executes</text>
+    <path d="M150 89 H204" stroke="#455b79" stroke-width="2" marker-end="url(#tool-arrow)"/>
+    <path d="M356 89 H408" stroke="#455b79" stroke-width="2" marker-end="url(#tool-arrow)"/>
+    <path d="M586 89 H638" stroke="#455b79" stroke-width="2" marker-end="url(#tool-arrow)"/>
+    <path d="M719 120 V166 H501 V128" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#tool-return)"/>
+    <text x="610" y="159" font-size="12" fill="#276b3c">tool result</text>
+    <path d="M501 166 H284 V128" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#tool-return)"/>
+    <text x="391" y="187" font-size="12" fill="#276b3c">result supplied for response</text>
+  </g>
+</svg>
+
+The model requests an operation; the host retains control of execution.
+
+## Practical example
+
+A research assistant can request a search tool with a query. The host can
+restrict the search to permitted sources, validate the query, execute a
+read-only search, and return selected results for the model to summarize.
+
+## Common misconceptions
+
+- Tool calling does not mean the model executes arbitrary code or accesses
+  tools directly.
+- A declared schema does not replace server-side validation, authorization,
+  or safeguards for side effects.
+
+## Related terms
+
+- [Function Calling](../F/function-calling.qmd)
+- [Agent](../A/agent.qmd)
+- [MCP (Model Context Protocol)](../M/mcp-model-context-protocol.qmd)
+
+## Further reading
+
+- [OpenAI: Function calling](https://platform.openai.com/docs/guides/function-calling) — tool definitions and structured calls.
+- [Anthropic: Tool use](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview) — tool-use workflow and application responsibilities.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

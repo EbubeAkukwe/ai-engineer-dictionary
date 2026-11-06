@@ -1,0 +1,63 @@
+---
+title: "True Negative"
+description: "A negative prediction that correctly matches a negative ground-truth label."
+term: "True Negative"
+letter: "T"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A true negative is a case the model labels negative that really is
+negative. For example, a spam filter correctly leaves a legitimate message
+in the inbox.
+
+## Technical explanation
+
+In binary classification, a true negative (TN) occurs when the predicted
+class is negative and the reference label is negative. TN is one cell of
+the confusion matrix and contributes to metrics such as specificity and
+accuracy.
+
+## Why it matters in AI engineering
+
+True negatives show how often a model correctly rejects non-target cases.
+They are important when false alarms matter, but a large TN count can
+dominate accuracy when the negative class is common.
+
+## How it works
+
+Define the negative class and classification threshold, compare model
+predictions to ground-truth labels, and count cases where both are
+negative. Interpret the count alongside the dataset size and other
+confusion-matrix cells.
+
+## Practical example
+
+If a test set contains 900 legitimate messages and the classifier correctly
+labels 855 as legitimate, those 855 are true negatives; the remaining
+legitimate messages are false positives.
+
+## Common misconceptions
+
+- A true negative is not a measure of how many positive examples the model
+  catches; that relates to recall.
+- A high true-negative count alone may simply reflect a large negative
+  class.
+
+## Related terms
+
+- [True Positive](true-positive.qmd)
+- [False Negative](../F/false-negative.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [scikit-learn: Confusion matrix](https://scikit-learn.org/stable/modules/model_evaluation.html#confusion-matrix) — classification outcomes and matrix layout.
+- [Google: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — classification metric definitions.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

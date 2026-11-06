@@ -1,0 +1,64 @@
+---
+title: "Temperature"
+description: "A decoding parameter that controls how concentrated or varied a model's sampling distribution is."
+term: "Temperature"
+letter: "T"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Temperature changes how predictable sampled model outputs tend to be.
+Lower values favor the highest-scoring options more strongly; higher values
+spread probability more broadly and can produce more varied text.
+
+## Technical explanation
+
+For logits $z_i$ and positive temperature $T$, sampling commonly applies
+$\mathrm{softmax}(z_i/T)$. Lowering $T$ sharpens the distribution, while
+raising it flattens the distribution. Temperature changes sampling
+probabilities, not the underlying model parameters.
+
+## Why it matters in AI engineering
+
+Temperature is a simple way to tune the trade-off between repeatability and
+variety in generation. Its effect depends on the prompt, model, other
+decoding controls, and task, so it should be evaluated rather than treated
+as a universal creativity setting.
+
+## How it works
+
+The decoder divides logits by the temperature before normalizing them into
+probabilities. The next token is sampled from that distribution. A very
+low temperature makes outputs more deterministic but does not guarantee
+correctness; a high temperature increases the chance of lower-ranked
+tokens.
+
+## Practical example
+
+A structured extraction task may use a low temperature to reduce variation,
+while an ideation task may benefit from a higher one. Compare outputs on
+fixed prompts and check validity and task quality for each setting.
+
+## Common misconceptions
+
+- Temperature does not add knowledge or improve factual accuracy by itself.
+- A temperature of zero is handled differently by providers and may select
+  the highest-scoring token rather than perform sampling.
+
+## Related terms
+
+- [Sampling](../S/sampling.qmd)
+- [Softmax](../S/softmax.qmd)
+- [Top-k Sampling](top-k-sampling.qmd)
+
+## Further reading
+
+- [Hugging Face: Generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — decoding methods and generation controls.
+- [OpenAI: Text generation](https://platform.openai.com/docs/guides/text) — generation settings and model behavior.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

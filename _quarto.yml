@@ -368,6 +368,42 @@ website:
             - dictionary/S/synthetic-data.qmd
             - dictionary/S/system-design.qmd
             - dictionary/S/system-prompt.qmd
+        - section: "T"
+          contents:
+            - dictionary/T/index.qmd
+            - dictionary/T/temperature.qmd
+            - dictionary/T/tensor.qmd
+            - dictionary/T/tensor-core.qmd
+            - dictionary/T/tensorflow.qmd
+            - dictionary/T/test-set.qmd
+            - dictionary/T/text-classification.qmd
+            - dictionary/T/token.qmd
+            - dictionary/T/token-embedding.qmd
+            - dictionary/T/tokenization.qmd
+            - dictionary/T/tool-calling.qmd
+            - dictionary/T/top-k-sampling.qmd
+            - dictionary/T/top-p-sampling.qmd
+            - dictionary/T/tracking-experiment.qmd
+            - dictionary/T/training.qmd
+            - dictionary/T/transfer-learning.qmd
+            - dictionary/T/transformer.qmd
+            - dictionary/T/trajectory-optimization.qmd
+            - dictionary/T/tree-search.qmd
+            - dictionary/T/true-negative.qmd
+            - dictionary/T/true-positive.qmd
+        - section: "U"
+          contents:
+            - dictionary/U/index.qmd
+            - dictionary/U/under-sampling.qmd
+            - dictionary/U/underfitting.qmd
+            - dictionary/U/uncertainty-estimation.qmd
+            - dictionary/U/unimodal-learning.qmd
+            - dictionary/U/universal-approximation-theorem.qmd
+            - dictionary/U/unsupervised-learning.qmd
+            - dictionary/U/u-net.qmd
+            - dictionary/U/unit-testing.qmd
+            - dictionary/U/uplift-modeling.qmd
+            - dictionary/U/user-simulation.qmd
         - section: "P–Z"
           contents:
             - dictionary/letters.qmd

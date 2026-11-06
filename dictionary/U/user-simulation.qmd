@@ -1,0 +1,65 @@
+---
+title: "User Simulation"
+description: "Using simulated users or user behavior to test and evaluate a system before or alongside real-user studies."
+term: "User Simulation"
+letter: "U"
+category: "AI Agents"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+User simulation creates artificial users or interactions so a system can
+be tested under controlled scenarios. It can help explore edge cases, but
+it does not replace evidence from real users.
+
+## Technical explanation
+
+Simulated users may be rule-based agents, learned behavioral models, or
+language-model-driven personas that produce actions or feedback. A
+simulation defines user goals, context, constraints, and environment
+dynamics; validity depends on how well these reproduce relevant real
+behavior.
+
+## Why it matters in AI engineering
+
+Simulation can expand test coverage, support repeatable experiments, and
+reduce the cost of early-stage evaluation. It can also encode unrealistic
+assumptions or shared model biases, creating false confidence if results
+are treated as equivalent to user studies.
+
+## How it works
+
+Define representative user profiles and scenarios, simulate interactions
+with the system, and record outcomes such as task success, errors, or
+completion time. Calibrate scenarios against observed behavior and confirm
+important findings with human evaluation or production evidence.
+
+## Practical example
+
+A team building a customer-support assistant can simulate users who ask
+ambiguous questions, provide incomplete details, or change goals mid-chat.
+Human reviewers should verify whether the scenarios and success criteria
+reflect actual customers.
+
+## Common misconceptions
+
+- A simulated persona is not a representative sample of real users.
+- Many successful simulated conversations do not prove product usability,
+  safety, or satisfaction in deployment.
+
+## Related terms
+
+- [AI Evaluation](../A/ai-evaluation.qmd)
+- [Agent](../A/agent.qmd)
+- [Safety Evaluation](../S/safety-evaluation.qmd)
+
+## Further reading
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — evaluation and risk measurement practices.
+- [Human-centered evaluation of AI systems](https://www.nist.gov/itl/ai-risk-management-framework) — evaluation should include intended users and context of use.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

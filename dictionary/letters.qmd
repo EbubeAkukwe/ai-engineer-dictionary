@@ -347,11 +347,39 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## T {#t}
 
-Terms beginning with T will appear here as the dictionary grows.
+- [Temperature](/dictionary/T/temperature.qmd)
+- [Tensor](/dictionary/T/tensor.qmd)
+- [Tensor Core](/dictionary/T/tensor-core.qmd)
+- [TensorFlow](/dictionary/T/tensorflow.qmd)
+- [Test Set](/dictionary/T/test-set.qmd)
+- [Text Classification](/dictionary/T/text-classification.qmd)
+- [Token](/dictionary/T/token.qmd)
+- [Token Embedding](/dictionary/T/token-embedding.qmd)
+- [Tokenization](/dictionary/T/tokenization.qmd)
+- [Tool Calling](/dictionary/T/tool-calling.qmd)
+- [Top-k Sampling](/dictionary/T/top-k-sampling.qmd)
+- [Top-p Sampling](/dictionary/T/top-p-sampling.qmd)
+- [Tracking (Experiment)](/dictionary/T/tracking-experiment.qmd)
+- [Training](/dictionary/T/training.qmd)
+- [Transfer Learning](/dictionary/T/transfer-learning.qmd)
+- [Transformer](/dictionary/T/transformer.qmd)
+- [Trajectory Optimization](/dictionary/T/trajectory-optimization.qmd)
+- [Tree Search](/dictionary/T/tree-search.qmd)
+- [True Negative](/dictionary/T/true-negative.qmd)
+- [True Positive](/dictionary/T/true-positive.qmd)
 
 ## U {#u}
 
-Terms beginning with U will appear here as the dictionary grows.
+- [Under-sampling](/dictionary/U/under-sampling.qmd)
+- [Underfitting](/dictionary/U/underfitting.qmd)
+- [Uncertainty Estimation](/dictionary/U/uncertainty-estimation.qmd)
+- [Unimodal Learning](/dictionary/U/unimodal-learning.qmd)
+- [Universal Approximation Theorem](/dictionary/U/universal-approximation-theorem.qmd)
+- [Unsupervised Learning](/dictionary/U/unsupervised-learning.qmd)
+- [U-Net](/dictionary/U/u-net.qmd)
+- [Unit Testing](/dictionary/U/unit-testing.qmd)
+- [Uplift Modeling](/dictionary/U/uplift-modeling.qmd)
+- [User Simulation](/dictionary/U/user-simulation.qmd)
 
 ## V {#v}
 

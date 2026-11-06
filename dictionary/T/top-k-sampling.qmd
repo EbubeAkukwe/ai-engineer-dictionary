@@ -1,0 +1,65 @@
+---
+title: "Top-k Sampling"
+description: "A decoding method that samples the next token from only the k highest-scoring candidates."
+term: "Top-k Sampling"
+letter: "T"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Top-k sampling limits a model's next-token choices to the $k$ most likely
+tokens, then samples among those choices. It removes the long tail of
+low-scoring alternatives for each generation step.
+
+## Technical explanation
+
+Given next-token logits, top-k decoding retains the $k$ largest logits,
+masks the rest, normalizes the remaining scores, and samples from the
+result. The candidate set changes at each step. Top-k is commonly combined
+with temperature and other decoding controls.
+
+## Why it matters in AI engineering
+
+Top-k offers a direct bound on the number of candidate tokens considered
+during sampling and can reduce unlikely continuations. A fixed $k$ may be
+too restrictive when the model's distribution is flat and too permissive
+when it is sharply peaked.
+
+## How it works
+
+At each generation step, the decoder selects the $k$ highest-scoring
+tokens, sets other logits to negative infinity, applies any temperature
+scaling, and samples from the normalized distribution over the remaining
+candidates.
+
+## Practical example
+
+A creative writing application can compare several top-k values on a fixed
+prompt set and evaluate diversity, coherence, and repetition. Keep the
+model, prompts, and other decoding settings fixed to understand the effect
+of changing $k$.
+
+## Common misconceptions
+
+- Top-k limits candidate count, not the number of tokens in the final
+  response.
+- A larger $k$ does not always improve quality; it permits more low-ranked
+  candidates to be sampled.
+
+## Related terms
+
+- [Top-p Sampling](top-p-sampling.qmd)
+- [Temperature](temperature.qmd)
+- [Token](token.qmd)
+
+## Further reading
+
+- [Hugging Face: Generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — sampling controls and decoding.
+- [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751) — analysis of sampling and text generation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
