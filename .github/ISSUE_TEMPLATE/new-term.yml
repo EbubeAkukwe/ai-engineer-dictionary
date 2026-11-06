@@ -1,7 +1,6 @@
 name: Suggest a dictionary term
 description: Propose a term that should be added to the AI Engineer Dictionary.
 title: "[New term]: "
-labels: ["new-term"]
 body:
   - type: input
     id: term
@@ -10,17 +9,31 @@ body:
       placeholder: e.g. Speculative decoding
     validations:
       required: true
-  - type: textarea
-    id: meaning
+  - type: input
+    id: category
     attributes:
-      label: What does it mean?
-      description: Give a short explanation and why it belongs in the dictionary.
+      label: Relevant category or field
+      placeholder: e.g. LLM Engineering, Robotics, or Model Evaluation
     validations:
       required: true
   - type: textarea
-    id: sources
+    id: definition
     attributes:
-      label: Suggested references
-      description: Link to reliable documentation, papers, or books. Essential but not required.
+      label: Suggested definition
+      description: Explain the term accurately and clearly in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why does this term belong in the dictionary?
+      description: Describe its relevance to AI engineering and how it differs from existing entries.
     validations:
       required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: Supporting references or documentation
+      description: Link reliable papers, books, standards, or technical documentation.
+    validations:
+      required: true

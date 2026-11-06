@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a problem with dictionary content, navigation, or the website.
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the steps or links that reliably show the issue.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or error messages
+      description: Attach screenshots or paste relevant errors. Remove secrets and personal information.
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Browser or environment
+      description: Include browser/version, device/OS, and deployment URL or local setup if relevant.
+    validations:
+      required: false

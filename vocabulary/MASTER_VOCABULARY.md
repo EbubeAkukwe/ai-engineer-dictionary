@@ -2,7 +2,7 @@
 
 > Status: Proposed vocabulary for V1. This is a curated starting scope, not a claim that every term is already written or reviewed.
 
-**Current proposed terms: 345**
+**Current proposed terms: 347**
 
 ## Editorial rules
 
@@ -53,8 +53,9 @@
 **Statistics:** Causal Inference; Confidence Interval.
 **Systems:** Cache; Caching.
 
-### D (20 terms)
+### D (21 terms)
 
+**AI Engineering:** Decoupling.
 **AI Fundamentals:** Deep Learning.
 **AI Infrastructure:** Distributed Training.
 **Data Systems:** Data Engineering; Data Pipeline; Data Validation.
@@ -127,11 +128,12 @@
 **Retrieval:** Information Retrieval.
 **Robotics:** Inverse Kinematics.
 
-### J (8 terms)
+### J (9 terms)
 
 **AI Frameworks:** JAX.
 **AI Infrastructure:** Job Scheduling; Just-in-Time (JIT) Compilation.
 **Developer Tools:** Jupyter Notebook.
+**Mathematics:** Jacobian.
 **Software Engineering:** JavaScript; JSON; JSON Schema.
 **Statistics:** Jensen-Shannon Divergence.
 

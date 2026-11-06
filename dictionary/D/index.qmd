@@ -14,6 +14,7 @@ title: "D"
 - [Decision Boundary](decision-boundary.qmd)
 - [Decision Tree](decision-tree.qmd)
 - [Decoder](decoder.qmd)
+- [Decoupling](decoupling.qmd)
 - [Deep Learning](deep-learning.qmd)
 - [Dense Layer](dense-layer.qmd)
 - [Dimensionality Reduction](dimensionality-reduction.qmd)

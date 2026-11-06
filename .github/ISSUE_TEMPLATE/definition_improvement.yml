@@ -1,0 +1,37 @@
+name: Improve an existing definition
+description: Suggest a correction or improvement to a dictionary entry.
+title: "[Definition]: "
+body:
+  - type: input
+    id: term
+    attributes:
+      label: Existing term
+      description: Link the dictionary page if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What needs improvement?
+      description: Identify the inaccurate, unclear, outdated, or incomplete part.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction or alternative definition
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for the proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Supporting references
+      description: Link reliable papers, books, standards, or technical documentation.
+    validations:
+      required: true

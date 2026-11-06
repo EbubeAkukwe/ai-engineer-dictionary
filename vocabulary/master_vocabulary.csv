@@ -62,6 +62,7 @@ Data Validation,D,Data Systems,Intermediate,Recommended,,Proposed
 Decision Boundary,D,Machine Learning,Intermediate,Recommended,,Proposed
 Decision Tree,D,Machine Learning,Beginner,Essential,,Proposed
 Decoder,D,Deep Learning,Intermediate,Recommended,,Proposed
+Decoupling,D,AI Engineering,Intermediate,Recommended,,Proposed
 Deep Learning,D,AI Fundamentals,Beginner,Essential,,Proposed
 Dense Layer,D,Deep Learning,Beginner,Essential,,Proposed
 Dimensionality Reduction,D,Machine Learning,Intermediate,Essential,,Proposed
@@ -135,6 +136,7 @@ Intersection over Union (IoU),I,Computer Vision,Intermediate,Recommended,,Propos
 In-Context Learning,I,LLM Engineering,Intermediate,Recommended,,Proposed
 Interpolation,I,Mathematics,Intermediate,Optional,,Proposed
 Inverse Kinematics,I,Robotics,Advanced,Recommended,,Proposed
+Jacobian,J,Mathematics,Advanced,Recommended,,Proposed
 JAX,J,AI Frameworks,Intermediate,Recommended,,Proposed
 JavaScript,J,Software Engineering,Beginner,Optional,,Proposed
 Jensen-Shannon Divergence,J,Statistics,Advanced,Optional,,Proposed

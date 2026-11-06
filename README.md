@@ -5,10 +5,17 @@
 An open-source, community-maintained A–Z reference to the concepts, tools,
 algorithms, architectures, and systems used in modern AI engineering.
 
+The project aims to make AI engineering concepts easier to learn and apply
+through concise, layered explanations, practical examples, and links to
+authoritative references.
+
 ## What belongs here?
 
 The dictionary covers AI fundamentals, machine learning, deep learning,
-LLM engineering, AI agents, data and retrieval systems, MLOps, infrastructure, robotics, and related software engineering concepts.
+LLM engineering, AI agents, data and retrieval systems, MLOps, infrastructure,
+robotics, and related software engineering concepts. The maintained vocabulary
+currently contains 347 unique terms; the live count can grow as reviewed
+contributions are accepted.
 
 Entries use a layered teaching format: simple explanation first, then
 technical depth, practical examples, and further reading.
@@ -36,7 +43,7 @@ scripts/      Validation and maintenance scripts
 3. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/ai-engineer-dictionary.git
+   git clone https://github.com/EbubeAkukwe/ai-engineer-dictionary.git
    cd ai-engineer-dictionary
    ```
 
@@ -49,16 +56,32 @@ scripts/      Validation and maintenance scripts
 5. Render the static website:
 
    ```bash
-   quarto render
+   quarto render --output-dir _site
    ```
 
 The generated website is written to `_site/`.
+
+To run the entry metadata and duplicate check:
+
+```bash
+python scripts/validate_entries.py
+```
 
 ## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) or the website's
 [contribution guide](contribute.qmd). New terms should use
 [`dictionary/TEMPLATE.qmd`](dictionary/TEMPLATE.qmd).
+Use the [GitHub issue forms](https://github.com/EbubeAkukwe/ai-engineer-dictionary/issues/new/choose)
+to report a bug, propose terminology, or suggest a definition improvement.
+
+## Navigation
+
+Browse entries from the [dictionary index](dictionary/index.qmd), the
+[A–Z page](dictionary/letters.qmd), or the letter sections in the website
+sidebar. Individual letter folders contain their own index and `.qmd` entries.
+The [master vocabulary](vocabulary/MASTER_VOCABULARY.md) and
+[CSV vocabulary](vocabulary/master_vocabulary.csv) track the canonical terms.
 
 ## Project Progress
 
@@ -66,11 +89,10 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) or the website's
 - [x] Create initial Quarto website scaffold
 - [x] Add example A entries
 - [x] Add an example Jupyter notebook
-- [x] Draft the A–Z master vocabulary (343 proposed terms)
-- [x] Editorially review and approve the vocabulary
+- [x] Create and maintain the curated A–Z master vocabulary (347 current terms)
 - [x] Add entry validation and duplicate detection
-- [ ] Add GitHub issue and pull-request templates
-- [ ] Enable automated GitHub Pages deployment
+- [x] Add GitHub issue and pull-request templates
+- [x] Prepare automated Vercel deployment configuration
 - [ ] Publish the first public release
 
 ## Licensing

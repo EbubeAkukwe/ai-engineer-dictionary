@@ -37,7 +37,7 @@ compares outputs with suitable reference data and operational requirements.
 
 ## Practical example
 
-We can train an image classifier to distinguish between two objects. See [Penguin vs Ostrich with FastAI ]('/notebooks/B/binary-classification.ipynb').
+We can train an image classifier to distinguish between two objects. See [Penguin vs Ostrich with FastAI](/notebooks/B/binary-classification.ipynb).
 
 
 

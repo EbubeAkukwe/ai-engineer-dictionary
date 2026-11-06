@@ -1,6 +1,14 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - "notebooks/**/*.ipynb"
+  render:
+    - "*.qmd"
+    - "dictionary/**/*.qmd"
+    - "notebooks/**/*.qmd"
+    - "notebooks/**/*.ipynb"
+    - "vocabulary/**/*.qmd"
 
 website:
   title: "AI Engineer Dictionary"
