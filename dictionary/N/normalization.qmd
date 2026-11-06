@@ -1,0 +1,70 @@
+---
+title: "Normalization"
+description: "A family of transformations that adjusts data or intermediate activations to a chosen scale or distribution."
+term: "Normalization"
+letter: "N"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Normalization changes values into a more convenient scale or form. In
+machine learning, the word can refer to preparing input features or to
+normalizing activations inside a neural network; the exact method matters.
+
+## Technical explanation
+
+Feature normalization may rescale values, for example to a fixed interval
+or to zero mean and unit variance. Neural-network methods such as
+Batch Normalization and Layer Normalization normalize intermediate
+activations using statistics over different axes and may include learned
+scale and shift parameters.
+
+## Why it matters in AI engineering
+
+Appropriate normalization can improve numerical conditioning, make
+optimization more stable, and reduce sensitivity to feature scales. The
+choice depends on the data, model architecture, and inference setting;
+normalization parameters must be computed without leaking validation or
+test information into training.
+
+## How it works
+
+Standard score normalization of a feature uses training-set mean $\mu$ and
+standard deviation $\sigma$:
+
+$$
+z = \frac{x-\mu}{\sigma}
+$$
+
+Other methods use ranges, norms, or statistics across a batch or feature
+dimensions. Training and inference must use consistent statistics where
+the method requires stored estimates.
+
+## Practical example
+
+If a dataset has one feature measured in millimeters and another in
+millions of dollars, standardizing both using training-set statistics can
+prevent their raw scales from dominating an optimization procedure.
+
+## Common misconceptions
+
+- Normalization is not one single algorithm; specify which data or activations are normalized and how.
+- Normalization does not remove the need for sound train/validation/test splits.
+- Batch Normalization and Layer Normalization use different statistics and behave differently.
+
+## Related terms
+
+- [Batch Normalization](../B/batch-normalization.qmd)
+- [Feature](../F/feature.qmd)
+
+## Further reading
+
+- [Batch Normalization: Accelerating Deep Network Training](https://arxiv.org/abs/1502.03167) — the original Batch Normalization paper.
+- [Layer Normalization](https://arxiv.org/abs/1607.06450) — normalization across features within an example.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

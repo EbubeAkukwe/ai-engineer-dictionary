@@ -1,0 +1,64 @@
+---
+title: "Named Entity Recognition (NER)"
+description: "A natural language processing task that identifies and labels mentions of entities such as people, organizations, and places."
+term: "Named Entity Recognition (NER)"
+letter: "N"
+category: "NLP"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Named entity recognition finds meaningful names and quantities in text and
+labels their types. In "Ada works at Acme in London," a NER system might
+identify Ada as a person, Acme as an organization, and London as a location.
+
+## Technical explanation
+
+NER is commonly framed as sequence labeling: a model assigns a tag to each
+token or token span. Schemes such as BIO mark the beginning and inside of an
+entity span, while modern systems may predict spans directly. Entity
+categories are defined by the dataset or application.
+
+## Why it matters in AI engineering
+
+NER can turn unstructured text into structured fields for document search,
+analytics, knowledge graphs, and workflow automation. Entity labels and
+quality requirements are domain-specific, so production systems need
+evaluation on representative data and careful handling of sensitive
+entities.
+
+## How it works
+
+Text is tokenized and passed to a model that uses the surrounding context
+to predict token labels or entity spans. A post-processing step may merge
+subword tokens and enforce valid span boundaries. Performance is often
+measured with precision, recall, and F1 at the entity-span level.
+
+## Practical example
+
+A support-ticket pipeline could detect product names, dates, and order
+identifiers, then make tickets easier to route or search. Since a missed
+identifier can affect downstream work, the system should be tested on
+realistic ticket formats before automation.
+
+## Common misconceptions
+
+- NER identifies entity mentions; it does not necessarily resolve which real-world entity a mention refers to.
+- A model's entity categories are not universal and may not match a new domain.
+- Correctly tagging a word does not establish that the extracted information is true.
+
+## Related terms
+
+- [Natural Language Processing (NLP)](natural-language-processing-nlp.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+
+## Further reading
+
+- [spaCy: Linguistic features](https://spacy.io/usage/linguistic-features#named-entities) — named entity recognition concepts and usage.
+- [Stanford CS224N](https://web.stanford.edu/class/cs224n/) — course materials on neural methods for natural language processing.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

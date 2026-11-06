@@ -1,0 +1,66 @@
+---
+title: "Open-Set Recognition"
+description: "A recognition setting in which a model must classify known classes while detecting inputs from classes it did not learn."
+term: "Open-Set Recognition"
+letter: "O"
+category: "Machine Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+In ordinary classification, a model is generally expected to choose among
+the classes it knows. Open-set recognition also asks the model to recognize
+when an input may belong to none of those known classes.
+
+## Technical explanation
+
+Open-set recognition separates a set of known classes from unknown or
+unseen classes. A system may assign known labels to familiar inputs and
+reject or flag examples that do not sufficiently match known classes.
+This differs from closed-set classification, where every test example is
+assumed to belong to one of the trained classes.
+
+## Why it matters in AI engineering
+
+Real deployments encounter inputs beyond the training taxonomy. Rejecting
+uncertain or unfamiliar cases can reduce confident misclassification and
+route examples for human review, but threshold choices determine the trade
+off between rejecting known examples and accepting unknown ones.
+
+## How it works
+
+Methods may use distance in a learned representation, calibrated
+confidence, explicit unknown-class training data, or specialized scoring
+rules. The system compares a score to a decision threshold and can abstain
+when evidence for known classes is insufficient. Evaluation should include
+unknown classes not seen during training.
+
+## Practical example
+
+A wildlife classifier trained on five bird species could flag a deer image
+as unknown rather than incorrectly forcing it into one of the five bird
+labels. It should also be tested on new bird species and challenging
+images of known species.
+
+## Common misconceptions
+
+- Open-set recognition is not solved simply by adding an "unknown" label if representative unknown examples are unavailable.
+- Low confidence is a useful signal but does not guarantee that an input is unfamiliar.
+- Open-set recognition and out-of-distribution detection are related but describe different problem formulations.
+
+## Related terms
+
+- [Out-of-Distribution (OOD)](out-of-distribution-ood.qmd)
+- [Classification](../C/classification.qmd)
+- [Anomaly Detection](../A/anomaly-detection.qmd)
+
+## Further reading
+
+- [Towards Open Set Deep Networks](https://arxiv.org/abs/1511.06233) — a foundational formulation and approach for open-set recognition.
+- [A Survey on Open Set Recognition](https://arxiv.org/abs/2109.00893) — overview of methods and evaluation considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

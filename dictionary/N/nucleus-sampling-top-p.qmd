@@ -1,0 +1,64 @@
+---
+title: "Nucleus Sampling (Top-p)"
+description: "A text-generation decoding method that samples from the smallest set of likely next tokens whose cumulative probability reaches p."
+term: "Nucleus Sampling (Top-p)"
+letter: "N"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Nucleus sampling, or top-p sampling, lets a language model choose its next
+token from a dynamically sized group of likely options. It includes the
+most probable tokens until their probabilities add up to at least a chosen
+value $p$.
+
+## Technical explanation
+
+Given next-token probabilities sorted from largest to smallest,
+top-p selects the smallest prefix whose cumulative probability is at least
+$p$, then samples from that restricted distribution after renormalizing
+the probabilities.
+
+## Why it matters in AI engineering
+
+Top-p is a decoding control that can balance predictable and varied text.
+Its behavior depends on the model distribution and interacts with
+temperature and other decoding settings; it does not change model weights
+or guarantee factual output.
+
+## How it works
+
+For token probabilities $p_1 \ge p_2 \ge \cdots$, find the smallest $k$
+such that $\sum_{i=1}^{k}p_i \ge p$. The sampler retains those $k$ tokens,
+renormalizes their probabilities to sum to one, and samples one token.
+The candidate set can vary from step to step.
+
+## Practical example
+
+If a prompt yields token probabilities $0.50$, $0.30$, $0.15$, and $0.05$,
+with $p=0.8$, the first two tokens form the nucleus. The generated token
+is sampled from those two after their probabilities are renormalized.
+
+## Common misconceptions
+
+- Top-p is not the same as top-k: top-p chooses a probability-mass threshold, while top-k fixes the number of candidates.
+- A higher $p$ generally admits more candidate tokens but does not guarantee better writing.
+- Sampling settings affect variation, not the underlying truth or reliability of the model's knowledge.
+
+## Related terms
+
+- [Greedy Decoding](../G/greedy-decoding.qmd)
+- [Language Model](../L/large-language-model-llm.qmd)
+- [Beam Search](../B/beam-search.qmd)
+
+## Further reading
+
+- [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751) — analysis introducing nucleus sampling.
+- [Hugging Face: Generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — practical decoding options and configuration.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

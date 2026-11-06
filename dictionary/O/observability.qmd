@@ -1,0 +1,64 @@
+---
+title: "Observability"
+description: "The ability to understand a system's internal behavior from the outputs it exposes, such as logs, metrics, and traces."
+term: "Observability"
+letter: "O"
+category: "MLOps"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Observability helps an engineering team work out what a running system is
+doing and why it may be behaving unexpectedly. Logs, metrics, and traces
+provide different views of that behavior.
+
+## Technical explanation
+
+In software operations, logs record events, metrics summarize measurements
+over time, and traces connect spans across a request's path through
+services. ML observability may also track model inputs and outputs,
+latency, errors, data quality, drift indicators, and task-specific
+performance, subject to privacy and retention controls.
+
+## Why it matters in AI engineering
+
+A model can appear healthy at the infrastructure level while its input
+distribution or output quality degrades. Observability supports incident
+investigation, reliability work, and model monitoring, but it does not
+replace a sound evaluation process or establish why a model made a
+particular prediction.
+
+## How it works
+
+Instrument applications and services to emit structured telemetry, collect
+it in a backend, and connect it to dashboards and alerts. For ML systems,
+choose signals tied to user outcomes and operational risks, and avoid
+logging sensitive content unless there is a justified, protected need.
+
+## Practical example
+
+For an inference API, a team could track request rate, error rate, latency
+percentiles, and model version. A trace can show whether a slow response
+came from feature retrieval, model inference, or another dependency.
+
+## Common misconceptions
+
+- Observability is not just collecting logs; useful signals need context and a way to investigate them.
+- Monitoring dashboards do not automatically identify root cause.
+- Capturing all model inputs can create privacy, security, and storage risks.
+
+## Related terms
+
+- [Model Monitoring](../M/model-monitoring.qmd)
+- [Machine Learning Operations (MLOps)](../M/machine-learning-operations-mlops.qmd)
+
+## Further reading
+
+- [OpenTelemetry documentation](https://opentelemetry.io/docs/) — vendor-neutral instrumentation and telemetry concepts.
+- [Google SRE: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) — practical guidance on monitoring signals and alerting.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

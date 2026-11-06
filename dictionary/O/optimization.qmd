@@ -1,0 +1,87 @@
+---
+title: "Optimization"
+description: "The process of finding parameters or decisions that minimize or maximize an objective under specified constraints."
+term: "Optimization"
+letter: "O"
+category: "Mathematics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Optimization means searching for a good or best solution according to a
+measurable goal. In machine learning, the goal is often to find model
+parameters that make a loss function small.
+
+## Technical explanation
+
+An optimization problem specifies an objective and, optionally,
+constraints. For model training, a common form is to minimize empirical
+loss $L(\theta)$ over parameters $\theta$. The objective may be
+non-convex, high-dimensional, and expensive to evaluate.
+
+## Why it matters in AI engineering
+
+Training, hyperparameter selection, resource allocation, and scheduling
+all involve optimization. The objective and constraints encode what the
+system is intended to improve, so poorly chosen objectives can produce
+solutions that score well numerically but fail in practice.
+
+## How it works
+
+An optimization algorithm proposes candidate values, evaluates the
+objective, and updates its search based on previous results. Gradient-based
+methods use derivatives where available; other problems use coordinate
+search, evolutionary methods, or constrained solvers. Practical results
+may be approximate and depend on initialization and computation limits.
+
+<svg viewBox="0 0 680 270" role="img" aria-labelledby="opt-title opt-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="opt-title">Optimization searches for lower objective values</title>
+  <desc id="opt-desc">A curve plots objective value against a parameter. An illustrative sequence of candidate points moves toward a lower region of the curve.</desc>
+  <line x1="76" y1="218" x2="626" y2="218" stroke="#455b79" stroke-width="2"/>
+  <line x1="76" y1="218" x2="76" y2="36" stroke="#455b79" stroke-width="2"/>
+  <text x="350" y="256" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202b3c">Parameter value</text>
+  <text x="28" y="126" text-anchor="middle" transform="rotate(-90 28 126)" font-family="sans-serif" font-size="14" fill="#202b3c">Objective (loss)</text>
+  <path d="M95 66 C170 85, 188 197, 300 198 C405 199, 455 110, 612 80" fill="none" stroke="#4666a8" stroke-width="4"/>
+  <g fill="#b9792e" stroke="white" stroke-width="2">
+    <circle cx="130" cy="82" r="7"/><circle cx="208" cy="174" r="7"/><circle cx="286" cy="197" r="7"/>
+  </g>
+  <g stroke="#b9792e" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="130" y1="82" x2="208" y2="174"/>
+    <line x1="208" y1="174" x2="286" y2="197"/>
+  </g>
+  <text x="415" y="53" font-family="sans-serif" font-size="13" fill="#46566d">Illustrative search path</text>
+  <text x="300" y="188" font-family="sans-serif" font-size="12" fill="#276b3c">lower-loss region</text>
+</svg>
+
+The sketch shows one objective landscape; real optimization problems may
+have many dimensions, constraints, and local minima.
+
+## Practical example
+
+During neural-network training, an optimizer updates weights to reduce
+training loss. Engineers also monitor validation performance and resource
+use, because optimizing training loss alone can lead to overfitting or
+miss deployment constraints.
+
+## Common misconceptions
+
+- Optimization finds a solution relative to the specified objective, not automatically the best real-world outcome.
+- A local optimum is not always a global optimum.
+- Lower training loss does not guarantee better generalization.
+
+## Related terms
+
+- [Optimizer](optimizer.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Loss Function](../L/loss-function.qmd)
+
+## Further reading
+
+- [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/) — foundational treatment of optimization modeling and algorithms.
+- [Dive into Deep Learning: Optimization Algorithms](https://d2l.ai/chapter_optimization/index.html) — optimization methods used in deep learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

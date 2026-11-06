@@ -1,0 +1,87 @@
+---
+title: "Non-Maximum Suppression (NMS)"
+description: "A post-processing method that removes redundant overlapping detections while retaining high-scoring bounding boxes."
+term: "Non-Maximum Suppression (NMS)"
+letter: "N"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An object detector may produce several boxes around the same object.
+Non-maximum suppression (NMS) keeps the strongest box and removes nearby
+overlapping boxes that likely describe that same object.
+
+## Technical explanation
+
+NMS processes candidate boxes by confidence score. It selects the highest
+scoring box, then suppresses remaining boxes whose intersection over union
+(IoU) with it exceeds a chosen threshold. It repeats until no candidates
+remain or a limit is reached.
+
+## Why it matters in AI engineering
+
+NMS helps convert many raw detections into a smaller set that is easier to
+interpret and use. Thresholds affect the balance between duplicate boxes
+and missed nearby objects, so they should be tested for the target data and
+application.
+
+## How it works
+
+For boxes $A$ and $B$, intersection over union is
+$\operatorname{IoU}(A,B)=|A\cap B|/|A\cup B|$. Standard NMS suppresses a
+lower-scoring box when its IoU with a selected box exceeds the threshold.
+Variants such as Soft-NMS reduce scores instead of removing boxes outright.
+
+<svg viewBox="0 0 680 280" role="img" aria-labelledby="nms-title nms-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="nms-title">Non-maximum suppression removes a duplicate box</title>
+  <desc id="nms-desc">Two overlapping candidate boxes surround one object. The higher-scoring box is kept, and the lower-scoring overlapping box is suppressed.</desc>
+  <rect x="22" y="36" width="298" height="205" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+  <rect x="74" y="78" width="150" height="118" fill="#e7f2e8" fill-opacity="0.35" stroke="#32804b" stroke-width="4"/>
+  <rect x="126" y="57" width="155" height="122" fill="#f3eafa" fill-opacity="0.35" stroke="#8957a6" stroke-width="4" stroke-dasharray="8 5"/>
+  <circle cx="176" cy="137" r="25" fill="#f4c778" stroke="#b9792e" stroke-width="2"/>
+  <text x="46" y="62" font-family="sans-serif" font-size="14" fill="#202b3c">Candidate boxes</text>
+  <text x="78" y="218" font-family="sans-serif" font-size="13" fill="#276b3c">score 0.92</text>
+  <text x="202" y="199" font-family="sans-serif" font-size="13" fill="#70458a">score 0.78</text>
+  <line x1="327" y1="138" x2="369" y2="138" stroke="#455b79" stroke-width="2"/>
+  <path d="M362 130 L372 138 L362 146" fill="none" stroke="#455b79" stroke-width="2"/>
+  <rect x="382" y="36" width="276" height="205" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+  <rect x="443" y="78" width="150" height="118" fill="#e7f2e8" fill-opacity="0.35" stroke="#32804b" stroke-width="4"/>
+  <circle cx="518" cy="137" r="25" fill="#f4c778" stroke="#b9792e" stroke-width="2"/>
+  <text x="405" y="62" font-family="sans-serif" font-size="14" fill="#202b3c">After NMS</text>
+  <text x="448" y="218" font-family="sans-serif" font-size="13" fill="#276b3c">keep highest score</text>
+  <text x="591" y="101" font-family="sans-serif" font-size="18" fill="#8957a6">×</text>
+</svg>
+
+The diagram is illustrative: NMS compares box overlap and scores; it does
+not identify objects from their visual appearance.
+
+## Practical example
+
+If an image detector returns three highly overlapping boxes for one car,
+NMS can keep the box with the highest confidence and suppress the other
+candidates. A box around a nearby second car may remain if its overlap is
+below the suppression threshold.
+
+## Common misconceptions
+
+- NMS is post-processing, not the model's object-recognition mechanism.
+- NMS can suppress a valid nearby object when boxes overlap heavily.
+- The IoU threshold and score threshold have different roles and should not be confused.
+
+## Related terms
+
+- [Object Detection](../O/object-detection.qmd)
+- [Intersection over Union (IoU)](../I/intersection-over-union-iou.qmd)
+- [Bounding Box](../B/bounding-box.qmd)
+
+## Further reading
+
+- [Soft-NMS](https://arxiv.org/abs/1704.04503) — a variant that decays scores rather than directly suppressing boxes.
+- [Torchvision: Non-Maximum Suppression](https://pytorch.org/vision/stable/generated/torchvision.ops.nms.html) — implementation behavior and API.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

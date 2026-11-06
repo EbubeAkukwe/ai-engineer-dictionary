@@ -1,0 +1,61 @@
+---
+title: "Node (Graph)"
+description: "A vertex in a graph that represents an entity and may connect to other vertices through edges."
+term: "Node (Graph)"
+letter: "N"
+category: "Computer Science"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A node is one of the things represented in a graph. If a graph models a
+social network, each person can be a node and each friendship can be an
+edge.
+
+## Technical explanation
+
+A graph is commonly defined as $G=(V,E)$, where $V$ is a set of nodes
+(also called vertices) and $E$ is a set of edges that connect pairs of
+nodes. Graphs may be directed or undirected, weighted or unweighted.
+
+## Why it matters in AI engineering
+
+Nodes are the basic units in graph data and graph neural networks. They can
+represent users, products, locations, documents, or entities, with edges
+encoding relationships that a model can use.
+
+## How it works
+
+Each node may have an identifier and associated features. Algorithms
+traverse edges to find neighbors, paths, or connected components. In a
+graph neural network, node representations are often updated using
+information from neighboring nodes.
+
+## Practical example
+
+In a product recommendation graph, a node may represent a product and an
+edge may connect two products that are frequently purchased together. A
+recommendation system can use those connections to identify related items.
+
+## Common misconceptions
+
+- A node and its edges are different parts of a graph.
+- A node does not have to represent a physical object; it can represent any entity.
+- Graph structure does not imply that connected nodes are identical or causally related.
+
+## Related terms
+
+- [Graph Neural Network](../G/graph-neural-network.qmd)
+- [Knowledge Graph](../K/knowledge-graph.qmd)
+- [Machine Learning](../M/machine-learning.qmd)
+
+## Further reading
+
+- [NetworkX: Graph types](https://networkx.org/documentation/stable/reference/classes/index.html) — graph objects, nodes, and edges in a Python library.
+- [Stanford CS224W: Machine Learning with Graphs](https://web.stanford.edu/class/cs224w/) — graph representations and learning methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

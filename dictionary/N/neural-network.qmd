@@ -1,0 +1,71 @@
+---
+title: "Neural Network"
+description: "A parameterized model made of connected computational units that learns patterns by adjusting its parameters from data."
+term: "Neural Network"
+letter: "N"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A neural network transforms input values through layers of adjustable
+computations to produce an output. Training changes the adjustable
+parameters so that the network's predictions better match examples.
+
+## Technical explanation
+
+A feed-forward network is a composition of functions. A layer commonly
+applies an affine transformation followed by a nonlinear activation:
+
+$$
+h^{(l)} = \phi(W^{(l)}h^{(l-1)} + b^{(l)})
+$$
+
+Here $W^{(l)}$ and $b^{(l)}$ are learned parameters and $\phi$ is an
+activation function. Other architectures include convolutional,
+recurrent, and attention-based networks.
+
+## Why it matters in AI engineering
+
+Neural networks power many image, language, audio, and multimodal systems.
+Their flexibility makes them useful for complex patterns, while training
+and deployment require choices about data, architecture, compute, model
+size, and evaluation.
+
+## How it works
+
+During a forward pass, inputs flow through the network to produce
+predictions. A loss function measures error, and backpropagation computes
+gradients used by an optimizer to update parameters. Repeating this process
+over training examples is called training.
+
+## Practical example
+
+A small image classifier can map pixel values through several layers to
+scores for classes such as "cat" and "dog." During training, the loss and
+gradient updates adjust weights to make the correct class score more
+likely.
+
+## Common misconceptions
+
+- Neural networks do not learn automatically without suitable data, objectives, and training procedures.
+- More layers or parameters do not guarantee better generalization.
+- A model's internal representations are learned computations, not necessarily human-like reasoning.
+
+## Related terms
+
+- [Neuron](neuron.qmd)
+- [Activation Function](../A/activation-function.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Optimizer](../O/optimizer.qmd)
+
+## Further reading
+
+- [Deep Learning](https://www.deeplearningbook.org/) — comprehensive reference on neural network fundamentals and architectures.
+- [Dive into Deep Learning](https://d2l.ai/) — an interactive textbook with implementations and explanations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

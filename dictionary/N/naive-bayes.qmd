@@ -1,0 +1,75 @@
+---
+title: "Naive Bayes"
+description: "A family of probabilistic classifiers that applies Bayes' rule with a simplifying conditional-independence assumption."
+term: "Naive Bayes"
+letter: "N"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Naive Bayes predicts a class by combining how common that class is with how
+likely the observed features are under that class. It is called "naive"
+because it treats features as conditionally independent given the class,
+which is usually an approximation.
+
+## Technical explanation
+
+For class $c$ and features $x_1,\ldots,x_d$, Bayes' rule gives:
+
+$$
+P(c \mid x_1,\ldots,x_d)
+\propto P(c)\,P(x_1,\ldots,x_d \mid c)
+$$
+
+Naive Bayes assumes
+$P(x_1,\ldots,x_d \mid c)=\prod_{j=1}^{d}P(x_j \mid c)$.
+Variants such as Gaussian, Multinomial, and Bernoulli Naive Bayes model
+different kinds of features.
+
+## Why it matters in AI engineering
+
+It trains quickly, scales to high-dimensional sparse data, and provides a
+strong baseline for tasks such as spam filtering and text categorization.
+Its probability estimates can be poorly calibrated, so scores should not
+automatically be treated as reliable confidence.
+
+## How it works
+
+Training estimates class priors and feature likelihoods from labeled
+examples. At prediction time, the model computes a score for each class and
+selects the largest. Implementations commonly use log probabilities to
+avoid numerical underflow:
+
+$$
+\log P(c \mid x) \propto \log P(c) + \sum_j \log P(x_j \mid c)
+$$
+
+## Practical example
+
+In a word-based spam filter, Multinomial Naive Bayes estimates how often
+each word occurs in spam and non-spam messages. The words in a new email
+update the two class scores, and the larger score determines the predicted
+label.
+
+## Common misconceptions
+
+- Conditional independence is an assumption of the model, not a claim that real-world features are independent.
+- "Naive" does not mean useless; the approximation can work well for some tasks.
+- A high class score is not necessarily a calibrated probability.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Machine Learning](../M/machine-learning.qmd)
+
+## Further reading
+
+- [scikit-learn: Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html) — assumptions, variants, and practical guidance.
+- [A Tutorial on Learning with Bayesian Networks](https://www.cs.toronto.edu/~graves/teaching/317/2018F/handouts/naive_bayes.pdf) — an introduction to probabilistic classification.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

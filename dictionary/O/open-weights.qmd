@@ -1,0 +1,65 @@
+---
+title: "Open Weights"
+description: "A model release that makes learned parameter values available, without necessarily making the full system open source."
+term: "Open Weights"
+letter: "O"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+When a model has open weights, people can download its learned parameters
+and run or adapt them under the release's terms. This does not by itself
+mean that the training data, code, or full development process are public.
+
+## Technical explanation
+
+Model weights are the learned numerical parameters of a trained model.
+Releasing them can enable local inference, fine-tuning, and independent
+evaluation, depending on the model architecture, tooling, compute needs,
+and license. The phrase "open weights" describes availability of
+parameters, not necessarily every component of the model lifecycle.
+
+## Why it matters in AI engineering
+
+Available weights can support deployment control, customization, and
+research access. Engineers still need to assess license restrictions,
+provenance, safety, data handling, model quality, and the compute required
+to operate the model.
+
+## How it works
+
+A publisher distributes parameter files and usually specifies the
+architecture, tokenizer, configuration, and terms of use. A compatible
+runtime loads these files and executes the model. Reproducibility may still
+be limited if training data, code, or training details are unavailable.
+
+## Practical example
+
+A company might download an open-weight language model, run inference in
+its own environment, and fine-tune it for a domain. It must first check the
+license and verify performance, security, and resource requirements for its
+intended use.
+
+## Common misconceptions
+
+- Open weights are not synonymous with open source; released weights alone may not satisfy an open-source definition.
+- Availability of weights does not reveal the full training dataset or guarantee reproducibility.
+- Downloadable weights do not remove licensing, safety, or deployment obligations.
+
+## Related terms
+
+- [Large Language Model (LLM)](../L/large-language-model-llm.qmd)
+- [Fine-Tuning](../F/fine-tuning.qmd)
+- [Model Serving](../M/model-serving.qmd)
+
+## Further reading
+
+- [Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition) — criteria for describing an AI system as open source.
+- [Hugging Face Hub documentation](https://huggingface.co/docs/hub/models-the-hub) — model repositories, files, and model cards.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

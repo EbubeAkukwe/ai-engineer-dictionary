@@ -1,0 +1,70 @@
+---
+title: "Negative Log-Likelihood"
+description: "A loss that measures how poorly a probabilistic model assigns probability to the observed outcomes."
+term: "Negative Log-Likelihood"
+letter: "N"
+category: "Statistics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Negative log-likelihood (NLL) penalizes a model when it gives low
+probability to the correct answer. A model that assigns high probability
+to what actually happened receives a smaller loss.
+
+## Technical explanation
+
+For observed outcomes $y_1,\ldots,y_n$ and model parameters $\theta$, the
+likelihood is $L(\theta)=\prod_i p_\theta(y_i)$. Its negative log is:
+
+$$
+\operatorname{NLL}(\theta)
+= -\sum_{i=1}^{n}\log p_\theta(y_i)
+$$
+
+The average NLL divides this sum by the number of examples. Minimizing NLL
+is equivalent to maximizing the likelihood when the data are fixed.
+
+## Why it matters in AI engineering
+
+NLL is a standard objective for probabilistic prediction, including
+classification and language modeling. It rewards assigning probability to
+the observed target and strongly penalizes confidently wrong predictions.
+It is also useful for comparing probabilistic forecasts when computed on
+the same evaluation data and convention.
+
+## How it works
+
+For each example, the model produces a probability distribution and the
+loss selects the probability assigned to the observed target, takes its
+logarithm, and negates it. In classification with one-hot labels this is
+the cross-entropy loss. Numerical implementations generally operate on
+logits directly for stability.
+
+## Practical example
+
+If a classifier assigns probability $0.9$ to the correct class, its
+per-example NLL is $-\log(0.9)$. If it assigns only $0.01$, the loss is
+much larger, reflecting a poor and confident prediction.
+
+## Common misconceptions
+
+- NLL is small when probability on the observed outcome is high; it is not itself a probability.
+- Summed NLL and mean NLL have different scales, so confirm the reduction used when comparing values.
+- A lower training NLL does not guarantee better performance on unseen data.
+
+## Related terms
+
+- [Cross-Entropy Loss](../C/cross-entropy-loss.qmd)
+- [Loss Function](../L/loss-function.qmd)
+
+## Further reading
+
+- [PyTorch: Negative log likelihood loss](https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html) — API semantics and input expectations.
+- [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/) — statistical foundations for likelihood-based modeling.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,80 @@
+---
+title: "Overfitting"
+description: "A model overfits when it learns training-specific patterns that do not generalize well to new data."
+term: "Overfitting"
+letter: "O"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Overfitting is like memorizing practice questions instead of learning the
+underlying skill. A model performs well on examples it trained on but less
+well on new examples.
+
+## Technical explanation
+
+Overfitting occurs when a model captures noise, accidental correlations,
+or overly specific details in its training data. A common sign is a widening
+gap between training and validation performance, though reliable diagnosis
+also depends on representative data and a sound evaluation design.
+
+## Why it matters in AI engineering
+
+A model is useful when it performs on the data it will encounter after
+deployment, not merely on its training set. Overfitting can lead to brittle
+predictions and misleadingly optimistic training results.
+
+## How it works
+
+As training proceeds, training loss may continue to decrease while
+validation loss stops improving or increases. More data, regularization,
+early stopping, data augmentation, or a simpler model can help, depending
+on the cause. The validation set should guide model selection; a separate
+test set should be reserved for final evaluation.
+
+<svg viewBox="0 0 680 275" role="img" aria-labelledby="overfit-title overfit-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="overfit-title">Training and validation loss can diverge</title>
+  <desc id="overfit-desc">Training loss decreases with more epochs. Validation loss decreases at first, reaches a minimum, and then rises as the model overfits.</desc>
+  <line x1="78" y1="220" x2="630" y2="220" stroke="#455b79" stroke-width="2"/>
+  <line x1="78" y1="220" x2="78" y2="36" stroke="#455b79" stroke-width="2"/>
+  <text x="350" y="255" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202b3c">Training epochs</text>
+  <text x="29" y="126" text-anchor="middle" transform="rotate(-90 29 126)" font-family="sans-serif" font-size="14" fill="#202b3c">Loss</text>
+  <path d="M90 62 C190 124, 345 174, 610 198" fill="none" stroke="#4666a8" stroke-width="4"/>
+  <path d="M90 55 C210 127, 295 173, 370 184 C450 196, 500 148, 610 105" fill="none" stroke="#b9792e" stroke-width="4"/>
+  <line x1="370" y1="184" x2="370" y2="220" stroke="#b9792e" stroke-dasharray="5 5" stroke-width="2"/>
+  <text x="485" y="202" font-family="sans-serif" font-size="13" fill="#3c5791">Training loss</text>
+  <text x="505" y="130" font-family="sans-serif" font-size="13" fill="#8a5722">Validation loss</text>
+  <text x="374" y="176" font-family="sans-serif" font-size="12" fill="#8a5722">best validation point</text>
+</svg>
+
+This sketch shows a common pattern, not a rule: validation curves are
+noisy, and their shape depends on data and training choices.
+
+## Practical example
+
+A decision tree grown without limits may memorize individual training
+examples. Restricting tree depth or pruning it can improve performance on a
+held-out set if the original tree was fitting noise.
+
+## Common misconceptions
+
+- High training accuracy alone is not evidence that a model generalizes.
+- Overfitting is not fixed by repeatedly tuning against the test set; doing so leaks test information into model selection.
+- Model complexity is one cause, but data leakage, small datasets, and distribution mismatch also affect apparent generalization.
+
+## Related terms
+
+- [Generalization](../G/generalization.qmd)
+- [Early Stopping](../E/early-stopping.qmd)
+
+## Further reading
+
+- [Google Machine Learning Crash Course: Generalization](https://developers.google.com/machine-learning/crash-course/overfitting) — practical explanation of overfitting and generalization.
+- [Deep Learning](https://www.deeplearningbook.org/) — theory and methods related to generalization and regularization.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

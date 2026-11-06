@@ -1,0 +1,69 @@
+---
+title: "Optimizer"
+description: "An algorithm that updates a model's parameters to reduce an objective such as training loss."
+term: "Optimizer"
+letter: "O"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An optimizer decides how to adjust a model's parameters during training.
+It uses information about the loss, often gradients, to make the next
+parameter update.
+
+## Technical explanation
+
+Given parameters $\theta$ and loss $L(\theta)$, a basic gradient descent
+update is:
+
+$$
+\theta_{t+1} = \theta_t - \eta \nabla_\theta L(\theta_t)
+$$
+
+where $\eta$ is the learning rate. Adaptive optimizers such as Adam
+maintain additional estimates based on past gradients.
+
+## Why it matters in AI engineering
+
+The optimizer and its settings influence training speed, stability, and
+final model quality. A model may fail to train well because of an unsuitable
+learning rate or update rule even when its architecture and data are
+reasonable.
+
+## How it works
+
+For each training step, the model computes a loss and gradients. The
+optimizer combines the gradients with its state and hyperparameters to
+update parameters. In mini-batch training, each update uses a subset of the
+training data.
+
+## Practical example
+
+An engineer can train a neural network with Adam while monitoring training
+and validation loss. If updates are unstable, they may inspect the learning
+rate, gradient behavior, and data pipeline rather than assuming the
+optimizer alone is at fault.
+
+## Common misconceptions
+
+- An optimizer minimizes the specified objective; it does not decide whether that objective represents the real goal.
+- Adaptive methods do not eliminate the need to tune learning rates and other settings.
+- Changing optimizers can affect training dynamics but does not fix incorrect labels or data leakage.
+
+## Related terms
+
+- [Optimization](optimization.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Learning Rate](../L/learning-rate.qmd)
+
+## Further reading
+
+- [PyTorch: Optimizers](https://pytorch.org/docs/stable/optim.html) — optimizer interfaces and available algorithms.
+- [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) — the Adam optimizer paper.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

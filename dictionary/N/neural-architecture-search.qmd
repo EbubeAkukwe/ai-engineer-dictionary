@@ -1,0 +1,65 @@
+---
+title: "Neural Architecture Search"
+description: "The automated or semi-automated search for a neural network architecture that performs well under chosen constraints."
+term: "Neural Architecture Search"
+letter: "N"
+category: "Deep Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Neural architecture search (NAS) uses an algorithm to explore possible
+neural network designs instead of relying entirely on a person to choose
+each layer and connection.
+
+## Technical explanation
+
+NAS defines a search space of candidate architectures, a strategy for
+selecting candidates, and an evaluation procedure. Search strategies include
+random search, evolutionary methods, reinforcement learning, and
+differentiable relaxations. The objective may combine validation quality
+with latency, memory, or energy constraints.
+
+## Why it matters in AI engineering
+
+NAS can help tailor models to a task or deployment target, including
+resource-limited devices. It can also be extremely costly and its result is
+only as useful as the search space, data, and evaluation protocol.
+
+## How it works
+
+The search process proposes an architecture, trains or estimates its
+performance, and uses that result to guide later candidates. Some methods
+train candidates independently; weight-sharing approaches reuse parameters
+to reduce cost but can make candidate rankings less reliable. The final
+architecture should be retrained and evaluated independently.
+
+## Practical example
+
+A team deploying image classification on a mobile device could search
+within a constrained set of convolutional and attention blocks, optimizing
+for validation accuracy while requiring inference latency below a target
+on the actual device.
+
+## Common misconceptions
+
+- NAS does not guarantee a better design than careful manual engineering.
+- Search results depend on the search space and evaluation setup.
+- A proxy metric or hardware simulator may not predict real deployment cost accurately.
+
+## Related terms
+
+- [Neural Network](neural-network.qmd)
+- [Hyperparameter](../H/hyperparameter.qmd)
+- [Optimization](../O/optimization.qmd)
+
+## Further reading
+
+- [Neural Architecture Search with Reinforcement Learning](https://arxiv.org/abs/1611.01578) — an influential controller-based NAS approach.
+- [DARTS: Differentiable Architecture Search](https://arxiv.org/abs/1806.09055) — a differentiable relaxation of architecture selection.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

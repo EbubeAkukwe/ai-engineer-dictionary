@@ -1,0 +1,64 @@
+---
+title: "Natural Language Processing (NLP)"
+description: "A field of AI that builds methods for computers to analyze, understand, and generate human language."
+term: "Natural Language Processing (NLP)"
+letter: "N"
+category: "AI Fundamentals"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Natural language processing (NLP) is the area of AI concerned with human
+language. It includes systems that classify messages, translate text,
+answer questions, extract names, and generate responses.
+
+## Technical explanation
+
+NLP combines ideas from linguistics, statistics, and machine learning to
+process language data. Tasks range from tokenization and tagging to
+sequence modeling, retrieval, and generation. Modern systems often represent
+text as tokens and learn contextual representations from large datasets.
+
+## Why it matters in AI engineering
+
+Language is a common interface to documents, users, and business processes.
+NLP components can search, summarize, classify, or extract information from
+text, but engineering them also requires attention to data quality,
+evaluation, latency, privacy, and the consequences of errors.
+
+## How it works
+
+A typical NLP workflow cleans or normalizes input, splits text into tokens,
+converts tokens into model-compatible representations, and applies a model
+for a task. The output may be labels, spans, ranked documents, or generated
+text. The right workflow depends on whether the problem is classification,
+retrieval, extraction, or generation.
+
+## Practical example
+
+A customer-support tool might classify incoming messages by topic, retrieve
+relevant help articles, and draft a response for a human to review. These
+are separate NLP capabilities and should each be evaluated for their own
+failure modes.
+
+## Common misconceptions
+
+- NLP is broader than large language models; many useful NLP systems use rules, classical models, or specialized neural networks.
+- A fluent response is not proof that the system understood the user's intent or gave a correct answer.
+- Language systems can inherit biases and gaps from their data and evaluation setup.
+
+## Related terms
+
+- [Language Model](../L/large-language-model-llm.qmd)
+- [Named Entity Recognition (NER)](named-entity-recognition-ner.qmd)
+
+## Further reading
+
+- [Stanford Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) — broad textbook coverage of NLP foundations and methods.
+- [Stanford CS224N](https://web.stanford.edu/class/cs224n/) — lectures and resources on deep learning for NLP.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,70 @@
+---
+title: "N-gram"
+description: "A contiguous sequence of n items, commonly words or characters, used to represent local context in language."
+term: "N-gram"
+letter: "N"
+category: "NLP"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+An n-gram is a group of $n$ neighboring tokens. A one-word group is a
+unigram, a two-word group is a bigram, and a three-word group is a trigram.
+For example, "machine learning works" contains the bigrams "machine
+learning" and "learning works."
+
+## Technical explanation
+
+N-grams are contiguous token sequences extracted from text. They provide a
+simple way to represent local word order for language modeling, search,
+classification, and feature engineering. The sequence may consist of words,
+characters, or other tokens.
+
+## Why it matters in AI engineering
+
+N-grams are useful baselines for text classification and information
+retrieval, and they help explain how language models estimate likely
+continuations. They are inexpensive to compute but represent only a limited
+context window.
+
+## How it works
+
+Given a token sequence $w_1,\ldots,w_T$, a sliding window of length $n$
+produces the sequence $(w_i,\ldots,w_{i+n-1})$. A statistical n-gram language
+model estimates the next token using only the preceding $n-1$ tokens:
+
+$$
+P(w_t \mid w_1,\ldots,w_{t-1})
+\approx
+P(w_t \mid w_{t-n+1},\ldots,w_{t-1})
+$$
+
+Sparse counts for unseen sequences are often handled with smoothing.
+
+## Practical example
+
+For the sentence "a small model learns," a bigram featurizer can produce
+"a small," "small model," and "model learns." A spam classifier can use
+these phrase features alongside individual word counts.
+
+## Common misconceptions
+
+- An n-gram is not necessarily a sequence of words; character n-grams are common too.
+- Increasing $n$ does not always improve a model: larger sequences are sparser and need more data.
+- N-grams capture local order, not long-range meaning or the full context of a sentence.
+
+## Related terms
+
+- [Natural Language Processing (NLP)](natural-language-processing-nlp.qmd)
+- [Language Model](../L/large-language-model-llm.qmd)
+
+## Further reading
+
+- [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) — textbook chapters on n-gram language models and tokenization.
+- [scikit-learn: Feature extraction for text](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction) — bag-of-words and n-gram features for machine learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

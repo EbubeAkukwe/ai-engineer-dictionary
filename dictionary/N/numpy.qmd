@@ -1,0 +1,63 @@
+---
+title: "NumPy"
+description: "A Python library for efficient numerical computing with multidimensional arrays and a broad collection of mathematical operations."
+term: "NumPy"
+letter: "N"
+category: "Developer Tools"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+NumPy is a foundational Python library for working with arrays of numbers.
+It makes common operations on vectors, matrices, and higher-dimensional
+arrays concise and efficient.
+
+## Technical explanation
+
+Its core `ndarray` type stores homogeneous data in a multidimensional,
+strided array. NumPy provides vectorized elementwise operations,
+broadcasting, linear algebra routines, random-number generation, and
+interfaces used by much of the scientific Python ecosystem.
+
+## Why it matters in AI engineering
+
+Numerical data preparation, feature processing, and experimentation often
+use NumPy arrays. Understanding array shapes, dtypes, and broadcasting
+helps prevent subtle bugs and supports interoperability with libraries
+such as pandas, scikit-learn, and PyTorch.
+
+## How it works
+
+Many operations are implemented in compiled code and applied to whole
+arrays rather than through Python-level loops. Broadcasting allows
+compatible shapes to participate in an operation without explicitly
+copying a value across every element.
+
+## Practical example
+
+Given an array of feature values, subtracting its mean and dividing by its
+standard deviation can standardize all values with concise array
+operations. Always inspect shapes and handle zero-variance features
+appropriately.
+
+## Common misconceptions
+
+- NumPy arrays are not interchangeable with every framework's tensor type; conversion and device placement may matter.
+- Broadcasting can produce a mathematically unintended shape even when code runs successfully.
+- Vectorization improves many numerical workloads but does not make every operation automatically faster or memory-free.
+
+## Related terms
+
+- [Feature Engineering](../F/feature-engineering.qmd)
+- [Machine Learning](../M/machine-learning.qmd)
+
+## Further reading
+
+- [NumPy documentation](https://numpy.org/doc/stable/) — user guide, API reference, and learning resources.
+- [NumPy quickstart](https://numpy.org/doc/stable/user/quickstart.html) — array fundamentals and common operations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

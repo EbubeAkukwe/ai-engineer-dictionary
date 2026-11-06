@@ -1,0 +1,92 @@
+---
+title: "Object Detection"
+description: "A computer vision task that locates objects in an image or video frame and predicts a class for each one."
+term: "Object Detection"
+letter: "O"
+category: "Computer Vision"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Object detection answers two questions about an image: what objects are
+present, and where are they? A detector commonly returns a class label, a
+confidence score, and a bounding box for each detected object.
+
+## Technical explanation
+
+Object detection is a structured prediction task. A model predicts one or
+more regions, their classes, and confidence values. Common approaches
+include two-stage detectors that propose regions before classification and
+localization, and single-stage detectors that predict boxes and classes
+more directly.
+
+## Why it matters in AI engineering
+
+Detection supports applications such as inventory counting, robotics, and
+traffic analysis. Evaluation must account for both classification and
+localization, often using intersection over union and average precision.
+Real deployments also need to consider speed, camera variation, and
+consequences of missed or false detections.
+
+## How it works
+
+The image is encoded into visual features. Detection heads use those
+features to predict candidate boxes and class scores. A post-processing
+step such as [Non-Maximum Suppression (NMS)](../N/non-maximum-suppression-nms.qmd)
+may remove duplicate boxes.
+
+<svg viewBox="0 0 760 235" role="img" aria-labelledby="detect-title detect-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="detect-title">Object detection produces labeled bounding boxes</title>
+  <desc id="detect-desc">An image is processed by a detector, which outputs bounding boxes with class labels and confidence scores.</desc>
+  <defs>
+    <marker id="detect-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+  </defs>
+  <rect x="18" y="52" width="172" height="132" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+  <rect x="49" y="83" width="52" height="74" fill="#e7f2e8" stroke="#32804b" stroke-width="3"/>
+  <rect x="119" y="99" width="48" height="48" fill="#e6ecfa" stroke="#4666a8" stroke-width="3"/>
+  <text x="75" y="78" font-family="sans-serif" font-size="12" fill="#276b3c">person</text>
+  <text x="128" y="94" font-family="sans-serif" font-size="12" fill="#3c5791">dog</text>
+  <text x="104" y="208" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#202b3c">Image</text>
+  <line x1="196" y1="118" x2="283" y2="118" stroke="#455b79" stroke-width="2" marker-end="url(#detect-arrow)"/>
+  <rect x="300" y="78" width="176" height="80" rx="10" fill="#fff2d9" stroke="#b9792e" stroke-width="2"/>
+  <text x="388" y="111" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#202b3c">Object detector</text>
+  <text x="388" y="135" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#46566d">features → boxes + scores</text>
+  <line x1="482" y1="118" x2="558" y2="118" stroke="#455b79" stroke-width="2" marker-end="url(#detect-arrow)"/>
+  <rect x="577" y="51" width="164" height="135" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+  <text x="659" y="87" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202b3c">person — 0.96</text>
+  <text x="659" y="119" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202b3c">dog — 0.91</text>
+  <text x="659" y="153" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#46566d">class, box, score</text>
+</svg>
+
+The confidence values in the diagram are illustrative, not model results.
+
+## Practical example
+
+A warehouse camera system could detect boxes on a conveyor and return a
+bounding box and class for each visible package. Engineers would test it
+across different lighting, camera angles, package types, and occlusions.
+
+## Common misconceptions
+
+- Object detection is different from image classification, which typically assigns labels to an entire image without locating instances.
+- A confidence score is not automatically a calibrated probability.
+- A correct class with an inaccurate box may still count as an incorrect detection under the evaluation rule.
+
+## Related terms
+
+- [Image Classification](../I/image-classification.qmd)
+- [Non-Maximum Suppression (NMS)](../N/non-maximum-suppression-nms.qmd)
+- [Intersection over Union (IoU)](../I/intersection-over-union-iou.qmd)
+
+## Further reading
+
+- [Torchvision Object Detection Finetuning Tutorial](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html) — fine-tuning a detector on a custom dataset.
+- [COCO dataset and evaluation](https://cocodataset.org/#detection-eval) — a widely used object detection benchmark and evaluation overview.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

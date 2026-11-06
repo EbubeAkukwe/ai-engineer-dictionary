@@ -1,0 +1,65 @@
+---
+title: "ONNX"
+description: "An open format for representing machine-learning models so they can be exchanged between supported tools and runtimes."
+term: "ONNX"
+letter: "O"
+category: "AI Infrastructure"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+ONNX, the Open Neural Network Exchange, is a common format for describing
+machine-learning models. It can help move a model from a framework used
+during development to a compatible inference runtime.
+
+## Technical explanation
+
+An ONNX model represents computation as a graph of operators, values, and
+initializers, along with metadata and an opset version. Framework exporters
+translate supported model operations into this representation, and
+inference engines execute the graph when they support its operators and
+constraints.
+
+## Why it matters in AI engineering
+
+Model interchange can make deployment choices more flexible and enable
+hardware-specific optimizations. Conversion is not a guarantee of
+identical behavior: operators, dynamic shapes, precision, preprocessing,
+and runtime support must be checked.
+
+## How it works
+
+Export a model from its source framework, validate the resulting graph, and
+run it in a compatible ONNX runtime. Compare outputs against the original
+model on representative inputs and measure performance on the target
+hardware.
+
+## Practical example
+
+A team can export an image classifier to ONNX and run it using ONNX Runtime
+in a service that does not use the training framework. They should verify
+that preprocessing and predicted outputs match expected behavior before
+deployment.
+
+## Common misconceptions
+
+- ONNX is a model representation, not a training framework or inference engine by itself.
+- Successful export does not ensure every target runtime supports all operators or shapes.
+- A converted model may differ numerically from the source model, especially under changed precision or kernels.
+
+## Related terms
+
+- [Model Serving](../M/model-serving.qmd)
+- [Model Quantization](../M/model-quantization.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [ONNX documentation](https://onnx.ai/onnx/) — format, operator sets, and tools.
+- [ONNX Runtime documentation](https://onnxruntime.ai/docs/) — deploying and optimizing ONNX models across platforms.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

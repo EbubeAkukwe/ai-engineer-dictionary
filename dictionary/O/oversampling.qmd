@@ -1,0 +1,64 @@
+---
+title: "Oversampling"
+description: "A data-balancing technique that increases the representation of underrepresented classes in a training dataset."
+term: "Oversampling"
+letter: "O"
+category: "Data Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Oversampling gives a minority class more presence during training. It can
+do this by repeating examples or generating additional synthetic examples,
+so a model has more opportunity to learn from that class.
+
+## Technical explanation
+
+Random oversampling duplicates minority-class examples. Synthetic
+oversampling methods such as SMOTE create new feature vectors by
+interpolating among minority examples. These approaches change the
+effective training distribution and can affect both decision boundaries
+and probability calibration.
+
+## Why it matters in AI engineering
+
+Imbalanced labels can make a model favor the majority class, even when
+minority cases are important. Oversampling is one option alongside
+class-weighted losses, data collection, and threshold adjustment. The
+choice should reflect the task's error costs and evaluation metrics.
+
+## How it works
+
+For random oversampling, select minority examples with replacement until
+the desired class balance is reached. For synthetic approaches, create
+examples using local relationships in feature space. Apply resampling only
+to training data and within each training fold to avoid leakage.
+
+## Practical example
+
+In fraud detection, a training set may contain far fewer fraud cases than
+legitimate transactions. Oversampling can increase minority examples
+during training, while final evaluation should use a held-out set that
+reflects the deployment distribution.
+
+## Common misconceptions
+
+- Oversampling does not add genuinely new information when it simply duplicates examples.
+- A balanced training set does not mean production class frequencies are balanced.
+- Resampling before a train/test split can leak information and produce misleading evaluation.
+
+## Related terms
+
+- [Imbalanced Dataset](../I/imbalanced-dataset.qmd)
+- [Classification](../C/classification.qmd)
+
+## Further reading
+
+- [imbalanced-learn: Over-sampling](https://imbalanced-learn.org/stable/over_sampling.html) — implementation and guidance for oversampling methods.
+- [SMOTE: Synthetic Minority Over-sampling Technique](https://doi.org/10.1613/jair.953) — the paper introducing SMOTE.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

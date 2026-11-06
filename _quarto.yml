@@ -261,7 +261,38 @@ website:
             - dictionary/M/multi-head-attention.qmd
             - dictionary/M/multilayer-perceptron-mlp.qmd
             - dictionary/M/mcp-model-context-protocol.qmd
-        - section: "M–Z"
+        - section: "N"
+          contents:
+            - dictionary/N/index.qmd
+            - dictionary/N/n-gram.qmd
+            - dictionary/N/naive-bayes.qmd
+            - dictionary/N/named-entity-recognition-ner.qmd
+            - dictionary/N/natural-language-processing-nlp.qmd
+            - dictionary/N/negative-log-likelihood.qmd
+            - dictionary/N/neural-architecture-search.qmd
+            - dictionary/N/neural-network.qmd
+            - dictionary/N/neuron.qmd
+            - dictionary/N/node-graph.qmd
+            - dictionary/N/non-maximum-suppression-nms.qmd
+            - dictionary/N/normalization.qmd
+            - dictionary/N/numpy.qmd
+            - dictionary/N/nucleus-sampling-top-p.qmd
+        - section: "O"
+          contents:
+            - dictionary/O/index.qmd
+            - dictionary/O/object-detection.qmd
+            - dictionary/O/observability.qmd
+            - dictionary/O/onnx.qmd
+            - dictionary/O/open-set-recognition.qmd
+            - dictionary/O/open-weights.qmd
+            - dictionary/O/optimization.qmd
+            - dictionary/O/optimizer.qmd
+            - dictionary/O/orchestration.qmd
+            - dictionary/O/out-of-distribution-ood.qmd
+            - dictionary/O/over-the-air-ota-update.qmd
+            - dictionary/O/overfitting.qmd
+            - dictionary/O/oversampling.qmd
+        - section: "P–Z"
           contents:
             - dictionary/letters.qmd
     - title: "Notebooks"

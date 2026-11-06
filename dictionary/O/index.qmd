@@ -1,0 +1,19 @@
+---
+title: "O Terms"
+description: "AI engineering dictionary terms beginning with O."
+---
+
+# O Terms
+
+- [Object Detection](object-detection.qmd)
+- [Observability](observability.qmd)
+- [ONNX](onnx.qmd)
+- [Open-Set Recognition](open-set-recognition.qmd)
+- [Open Weights](open-weights.qmd)
+- [Optimization](optimization.qmd)
+- [Optimizer](optimizer.qmd)
+- [Orchestration](orchestration.qmd)
+- [Out-of-Distribution (OOD)](out-of-distribution-ood.qmd)
+- [Over-the-Air (OTA) Update](over-the-air-ota-update.qmd)
+- [Overfitting](overfitting.qmd)
+- [Oversampling](oversampling.qmd)

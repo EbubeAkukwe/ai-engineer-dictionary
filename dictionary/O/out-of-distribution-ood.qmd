@@ -1,0 +1,66 @@
+---
+title: "Out-of-Distribution (OOD)"
+description: "An input is out-of-distribution when it differs in relevant ways from the data distribution a model was trained or validated on."
+term: "Out-of-Distribution (OOD)"
+letter: "O"
+category: "Model Evaluation"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+An out-of-distribution (OOD) input comes from a setting that differs from
+what a model learned from. A model trained on daytime road images, for
+example, may encounter night scenes or a new camera type.
+
+## Technical explanation
+
+Let training examples be drawn from a distribution $P_{\text{train}}$ and
+deployment inputs from $P_{\text{deploy}}$. An input is considered OOD
+when its relevant characteristics are not adequately represented by the
+training distribution. This can involve covariate, label, or concept shift,
+and the exact definition depends on the task.
+
+## Why it matters in AI engineering
+
+OOD inputs can cause unreliable predictions, especially when models remain
+confident outside their training experience. Engineers use representative
+testing, monitoring, uncertainty estimates, and escalation policies to
+reduce risk; no single detector identifies every kind of distribution
+change.
+
+## How it works
+
+OOD detection methods may use confidence or energy scores, distances in a
+representation space, density estimates, or auxiliary data. A detector
+compares a score with a threshold, but the threshold and method should be
+evaluated against realistic in-distribution and OOD examples.
+
+## Practical example
+
+A medical-image model developed at one hospital may be tested on images
+from a different scanner and patient population. A performance drop or
+unusual input statistics can signal a distribution shift and trigger
+additional review rather than automatic reliance on predictions.
+
+## Common misconceptions
+
+- OOD is relative to the training and deployment context, not an absolute property of an input.
+- Distribution shift does not always mean every prediction is wrong, and in-distribution inputs can still be misclassified.
+- High model confidence does not prove that an input is in-distribution.
+
+## Related terms
+
+- [Open-Set Recognition](open-set-recognition.qmd)
+- [Concept Drift](../C/concept-drift.qmd)
+- [Model Monitoring](../M/model-monitoring.qmd)
+
+## Further reading
+
+- [A baseline for detecting misclassified and out-of-distribution examples](https://arxiv.org/abs/1610.02136) — an influential baseline for OOD detection.
+- [A Survey on Out-of-Distribution Detection](https://arxiv.org/abs/2110.11334) — methods, assumptions, and evaluation practices.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,63 @@
+---
+title: "Orchestration"
+description: "The coordination and control of multiple tasks, services, or agents so they work together as an end-to-end system."
+term: "Orchestration"
+letter: "O"
+category: "AI Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Orchestration coordinates the steps in a larger workflow. It determines
+what runs, in what order, how components pass results, and what should
+happen when a step fails.
+
+## Technical explanation
+
+An orchestrator manages execution across components such as data jobs,
+model services, tools, or agents. It may provide dependency handling,
+state, retries, timeouts, scheduling, and observability. Workflow
+orchestration is distinct from the logic inside each individual task.
+
+## Why it matters in AI engineering
+
+AI applications often combine retrieval, model inference, validation, and
+external services. Orchestration makes these steps manageable and
+recoverable, but adds complexity that must be controlled with clear
+interfaces, limits, and failure handling.
+
+## How it works
+
+The workflow is represented as ordered steps or a graph of dependencies.
+The orchestrator starts eligible tasks, records state, passes outputs,
+and applies policies for errors and retries. For agent systems, tool
+permissions and stopping conditions should be explicit.
+
+## Practical example
+
+A document-processing pipeline could extract text, classify the document,
+check required fields, and store the result. If classification fails, the
+orchestrator can retry within a limit or route the document for review
+without silently treating it as successfully processed.
+
+## Common misconceptions
+
+- Orchestration is not the same as implementing the work performed by each task.
+- More components or agents do not necessarily make a workflow more capable or reliable.
+- Retrying every failure can duplicate side effects or worsen an outage.
+
+## Related terms
+
+- [Agentic Workflow](../A/agentic-workflow.qmd)
+- [Machine Learning Operations (MLOps)](../M/machine-learning-operations-mlops.qmd)
+
+## Further reading
+
+- [Kubernetes: Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) — coordinating run-to-completion workloads.
+- [Argo Workflows](https://argo-workflows.readthedocs.io/) — workflow orchestration using containerized steps and dependencies.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
