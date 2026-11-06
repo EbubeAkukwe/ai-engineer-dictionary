@@ -1,0 +1,73 @@
+---
+title: "Least Squares"
+description: "A method for estimating model parameters by minimizing the sum of squared prediction errors."
+term: "Least Squares"
+letter: "L"
+category: "Statistics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Least squares chooses model parameters so that predictions are, overall, as
+close as possible to the observed values, with larger errors penalized more
+heavily because they are squared.
+
+## Technical explanation
+
+Given observed targets $y_i$ and predictions $\hat{y}_i(\theta)$, least
+squares estimates parameters $\theta$ by minimizing the residual sum of
+squares:
+
+$$
+\hat{\theta} = \arg\min_{\theta} \sum_{i=1}^{n}
+\left(y_i - \hat{y}_i(\theta)\right)^2
+$$
+
+For a linear model with design matrix $X$, the ordinary least-squares problem
+is to minimize $\|y - X\beta\|_2^2$. When $X^\top X$ is invertible, its
+solution can be written as $\hat{\beta} = (X^\top X)^{-1}X^\top y$; practical
+libraries generally use numerically stable factorizations instead of
+explicitly computing this inverse.
+
+## Why it matters in AI engineering
+
+Least squares is a foundational fitting method for regression and a useful
+reference point for understanding optimization and error metrics. Its
+assumptions and sensitivity to outliers matter when selecting a model for
+real data.
+
+## How it works
+
+The method calculates residuals (observed minus predicted values), squares
+them, and sums them. For linear models, the objective is convex and can be
+solved directly or minimized iteratively. Weighted and regularized variants
+adapt the objective to different data and constraints.
+
+## Practical example
+
+A team can fit a straight line to historical demand and temperature data to
+estimate how demand changes with temperature. Least squares selects the line
+with the smallest total squared residual across the training observations.
+
+## Common misconceptions
+
+- Least squares does not guarantee that predictions are accurate outside the data range.
+- Squared errors give outliers substantial influence.
+- The closed-form equation is not always the most numerically stable way to compute a solution.
+
+## Related terms
+
+- [Linear Regression](linear-regression.qmd)
+- [Loss Function](loss-function.qmd)
+- [Linear Algebra](linear-algebra.qmd)
+
+## Further reading
+
+- [scikit-learn: Linear Models](https://scikit-learn.org/stable/modules/linear_model.html) — least-squares regression and related linear estimators.
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — numerical considerations relevant to solving optimization problems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

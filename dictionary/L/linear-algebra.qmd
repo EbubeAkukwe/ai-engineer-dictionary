@@ -1,0 +1,72 @@
+---
+title: "Linear Algebra"
+description: "The mathematics of vectors, matrices, and linear transformations used throughout machine learning."
+term: "Linear Algebra"
+letter: "L"
+category: "Mathematics"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Linear algebra is the mathematics of lists of numbers (vectors), rectangular
+arrays of numbers (matrices), and operations that transform them. It gives
+machine-learning systems a compact way to represent data and compute model
+predictions.
+
+## Technical explanation
+
+Vectors and matrices have shapes that determine which operations are valid.
+For example, a matrix $X \in \mathbb{R}^{n \times d}$ may represent $n$
+examples, each with $d$ features. Multiplying it by a parameter vector
+$w \in \mathbb{R}^{d}$ produces one score per example:
+
+$$
+Xw \in \mathbb{R}^{n}
+$$
+
+Dot products, matrix multiplication, norms, and decompositions are common
+operations. In neural networks, tensor libraries extend these ideas to
+higher-dimensional arrays.
+
+## Why it matters in AI engineering
+
+Model inputs, embeddings, weights, gradients, and batches are represented as
+arrays. Understanding shapes and transformations helps engineers interpret
+model code, diagnose dimension errors, and reason about compute and memory.
+
+## How it works
+
+Each operation has algebraic rules and shape requirements. A dot product
+combines corresponding components of vectors; matrix multiplication composes
+linear transformations. A model layer often applies a matrix to a batch of
+vectors, then may apply a nonlinear activation.
+
+## Practical example
+
+For a batch of 32 examples with 10 numeric features each, the feature matrix
+has shape $32 \times 10$. A linear layer with 4 outputs uses a weight matrix
+of shape $10 \times 4$, producing output scores with shape $32 \times 4$.
+
+## Common misconceptions
+
+- Array shape is not just bookkeeping; it tells you what an operation means and whether it is valid.
+- A matrix operation may be implemented efficiently on GPUs, but large arrays still consume memory and compute.
+- Neural networks are not purely linear algebra: nonlinear functions and other operations are essential.
+
+## Related terms
+
+- [Jacobian](../J/jacobian.qmd)
+- [Gradient](../G/gradient.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Linear Regression](linear-regression.qmd)
+
+## Further reading
+
+- [MIT OpenCourseWare: Linear Algebra](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/) — lectures and exercises on vectors, matrices, and linear systems.
+- [Deep Learning Book: Linear Algebra](https://www.deeplearningbook.org/contents/linear_algebra.html) — core linear algebra concepts used in deep learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

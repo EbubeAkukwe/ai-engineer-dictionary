@@ -1,0 +1,65 @@
+---
+title: "Learning Rate Scheduler"
+description: "A training strategy that changes the learning rate according to a schedule or training signal."
+term: "Learning Rate Scheduler"
+letter: "L"
+category: "Model Training"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A learning-rate scheduler changes how large the model's training steps are as
+training progresses. It may start cautiously, reduce the rate over time, or
+adjust it when progress stalls.
+
+## Technical explanation
+
+A scheduler defines a sequence of learning rates $\eta_t$ for optimizer steps
+or epochs. Common schedules include step decay, exponential decay, cosine
+decay, and warmup followed by decay. Some schedulers respond to a measured
+signal, such as a validation metric, rather than a fixed timeline.
+
+The optimizer applies updates using the current learning rate; the scheduler
+does not replace the optimizer or compute gradients itself.
+
+## Why it matters in AI engineering
+
+One constant learning rate may not be ideal throughout training. A schedule
+can support stable early optimization and smaller later updates, and can be
+important when reproducing a model's training recipe.
+
+## How it works
+
+The training loop calls a scheduler at the intended interval, updating the
+optimizer's learning rate according to its rule. A cosine schedule, for
+example, gradually reduces a starting rate over a chosen duration. The
+schedule's step timing must match the framework's expected convention.
+
+## Practical example
+
+An LLM fine-tuning run may warm up the learning rate over the first few
+hundred optimizer steps, then decay it toward the end. Warmup can reduce the
+risk of large early updates, while decay can help training settle.
+
+## Common misconceptions
+
+- A scheduler does not automatically improve every training run; its shape and timing depend on the task.
+- A scheduler's progress counter may advance per batch, optimizer step, or epoch, depending on its design.
+- Learning-rate scheduling is not the same as changing batch size.
+
+## Related terms
+
+- [Learning Rate](learning-rate.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Hyperparameter Optimization](../H/hyperparameter-optimization.qmd)
+
+## Further reading
+
+- [PyTorch: Learning Rate Scheduling](https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate) — scheduler types and usage patterns.
+- [Hugging Face Transformers: Learning Rate Schedules](https://huggingface.co/docs/transformers/main_classes/optimizer_schedules) — schedules commonly used for Transformer training.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

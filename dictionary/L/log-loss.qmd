@@ -1,0 +1,71 @@
+---
+title: "Log Loss"
+description: "A probabilistic classification loss that penalizes incorrect predictions more when they are made with high confidence."
+term: "Log Loss"
+letter: "L"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Log loss measures how well a classifier's predicted probabilities match the
+correct labels. It penalizes a confident wrong prediction more heavily than
+an uncertain one.
+
+## Technical explanation
+
+For binary labels $y_i \in \{0,1\}$ and predicted probabilities $p_i$ for the
+positive class, the average binary log loss is:
+
+$$
+-\frac{1}{n}\sum_{i=1}^{n}
+\left[y_i \log(p_i) + (1-y_i)\log(1-p_i)\right]
+$$
+
+For multiple classes, the loss is the negative log-probability assigned to
+the true class, averaged across examples. Implementations typically clip
+probabilities near 0 and 1 to avoid taking the logarithm of zero.
+
+## Why it matters in AI engineering
+
+Log loss evaluates probability quality, not just whether the top predicted
+class is correct. It is also a common training objective for probabilistic
+classifiers, including logistic regression and neural-network classifiers.
+
+## How it works
+
+Each example contributes the negative logarithm of the probability assigned
+to its true outcome. Assigning high probability to the correct class gives a
+small loss; assigning very low probability gives a large loss. The total is
+usually averaged over the dataset.
+
+## Practical example
+
+Suppose two models both classify an image as "penguin" correctly. One assigns
+probability 0.55 and the other 0.99. Log loss rewards the second model's
+stronger correct confidence. If that 0.99 prediction were wrong, however, its
+penalty would be much larger.
+
+## Common misconceptions
+
+- Log loss is not accuracy: two classifiers can have the same accuracy and different probability quality.
+- A lower log loss is better, but only when comparing predictions on a suitable, consistently prepared evaluation set.
+- Log loss does not by itself show whether probabilities are well calibrated across subgroups.
+
+## Related terms
+
+- [Cross-Entropy Loss](../C/cross-entropy-loss.qmd)
+- [Logistic Regression](logistic-regression.qmd)
+- [Calibration](../C/calibration.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [scikit-learn: log_loss](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html) — definition and API for log loss.
+- [Google Machine Learning: Classification](https://developers.google.com/machine-learning/crash-course/classification) — classification probabilities and evaluation concepts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

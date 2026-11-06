@@ -1,0 +1,111 @@
+---
+title: "Latent Space"
+description: "A learned representation space where a model encodes data using compact, useful features."
+term: "Latent Space"
+letter: "L"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A latent space is an internal coordinate system a model learns to represent
+data. Instead of storing every detail of an image or sentence directly, the
+model maps it to a smaller set of numbers that capture features useful for a
+task.
+
+## Technical explanation
+
+An encoder maps an input $x$ into a latent representation $z$. A decoder or
+downstream model can use $z$ to reconstruct the input, generate a related
+sample, or make a prediction. The representation is called latent because its
+dimensions are learned rather than directly observed or assigned meanings in
+advance.
+
+The latent representation may be a vector, a sequence of vectors, or a
+structured collection of variables. Its geometry depends on the model,
+training objective, and data; nearby points do not always correspond to
+semantically similar examples unless training encourages that behavior.
+
+## Why it matters in AI engineering
+
+Latent representations make it possible to compress data, compare examples,
+generate variations, and reuse learned features. They appear in autoencoders,
+generative models, embeddings, and many vision and language systems.
+
+## How it works
+
+An encoder computes a representation such as $z = f_\theta(x)$. Training
+defines what information the representation should preserve. An autoencoder,
+for example, learns a representation that helps a decoder reconstruct the
+input; other models optimize representations for prediction, similarity, or
+generation.
+
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="latent-title latent-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="latent-title">Inputs mapped into a latent space</title>
+  <desc id="latent-desc">Several input examples pass through an encoder and become points in a two-dimensional latent space. Similar examples are shown near one another, but the axes do not have predefined meanings.</desc>
+  <defs>
+    <marker id="latent-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4666a8"/>
+    </marker>
+  </defs>
+  <rect x="12" y="48" width="160" height="148" rx="12" fill="#f3f5f8" stroke="#9aa7b8"/>
+  <text x="92" y="76" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#202b3c">Input examples</text>
+  <rect x="38" y="94" width="42" height="36" rx="5" fill="#cfe4f5" stroke="#4666a8"/>
+  <circle cx="59" cy="112" r="8" fill="#4666a8"/>
+  <rect x="102" y="94" width="42" height="36" rx="5" fill="#cfe4f5" stroke="#4666a8"/>
+  <circle cx="123" cy="112" r="8" fill="#4666a8"/>
+  <rect x="38" y="144" width="42" height="36" rx="5" fill="#f8e2c5" stroke="#b9792e"/>
+  <path d="M50 169 L59 151 L68 169 Z" fill="#b9792e"/>
+  <rect x="102" y="144" width="42" height="36" rx="5" fill="#f8e2c5" stroke="#b9792e"/>
+  <path d="M114 169 L123 151 L132 169 Z" fill="#b9792e"/>
+  <line x1="185" y1="122" x2="287" y2="122" stroke="#4666a8" stroke-width="3" marker-end="url(#latent-arrow)"/>
+  <rect x="302" y="82" width="142" height="80" rx="12" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+  <text x="373" y="116" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#202b3c">Encoder</text>
+  <text x="373" y="140" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#46566d">learned mapping</text>
+  <line x1="455" y1="122" x2="526" y2="122" stroke="#4666a8" stroke-width="3" marker-end="url(#latent-arrow)"/>
+  <rect x="541" y="34" width="204" height="180" rx="10" fill="#fff" stroke="#9aa7b8"/>
+  <line x1="578" y1="183" x2="718" y2="183" stroke="#596579" stroke-width="1.5"/>
+  <line x1="578" y1="183" x2="578" y2="62" stroke="#596579" stroke-width="1.5"/>
+  <circle cx="614" cy="105" r="7" fill="#4666a8"/>
+  <circle cx="632" cy="120" r="7" fill="#4666a8"/>
+  <circle cx="601" cy="132" r="7" fill="#4666a8"/>
+  <circle cx="682" cy="147" r="7" fill="#b9792e"/>
+  <circle cx="697" cy="131" r="7" fill="#b9792e"/>
+  <circle cx="674" cy="119" r="7" fill="#b9792e"/>
+  <text x="646" y="28" text-anchor="middle" font-size="15" font-family="sans-serif" fill="#202b3c">Latent space</text>
+  <text x="648" y="204" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">learned coordinates, not fixed labels</text>
+</svg>
+
+In the diagram, the similar-looking examples are grouped for illustration.
+Real latent spaces can be higher-dimensional and their organization depends
+on the model's objective.
+
+## Practical example
+
+An image autoencoder can compress each image into a latent vector and use a
+decoder to reconstruct it. If the vector preserves useful visual structure,
+nearby vectors may decode to images with related characteristics.
+
+## Common misconceptions
+
+- Latent dimensions do not automatically have clear human meanings.
+- A latent space is not necessarily two-dimensional or directly viewable.
+- Similarity in latent space is meaningful only to the extent that the model's training objective makes it so.
+
+## Related terms
+
+- [Embedding](../E/embedding.qmd)
+- [Autoencoder](../A/autoencoder.qmd)
+- [Dimensionality Reduction](../D/dimensionality-reduction.qmd)
+- [Diffusion Model](../D/diffusion-model.qmd)
+
+## Further reading
+
+- [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114) — foundational paper on learning probabilistic latent representations.
+- [Deep Learning: Representation Learning](https://www.deeplearningbook.org/contents/representation.html) — textbook chapter on learned representations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

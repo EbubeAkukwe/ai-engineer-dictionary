@@ -1,0 +1,70 @@
+---
+title: "Loss Function"
+description: "A mathematical measure of how different a model's prediction is from the desired target."
+term: "Loss Function"
+letter: "L"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A loss function gives a model a numerical signal about how wrong its
+prediction is. Training algorithms use that signal to adjust the model so
+future predictions improve.
+
+## Technical explanation
+
+A loss function maps model predictions and target values to a scalar (or a
+set of values that can be aggregated). For model parameters $\theta$, inputs
+$x$, and target $y$, it can be written as $\ell(f_\theta(x), y)$. Training
+typically minimizes the average loss over examples, possibly with added
+regularization.
+
+The loss should reflect the task and desired behavior. Mean squared error is
+common for numeric regression; cross-entropy is common for classification.
+The training loss is not necessarily the same as the business metric used to
+judge a deployed system.
+
+## Why it matters in AI engineering
+
+The loss defines what the model is optimized to do. A poorly chosen objective
+can reward behavior that does not match product goals, and a low training
+loss does not guarantee strong performance on new examples.
+
+## How it works
+
+During training, the loss is computed from predictions and targets.
+Gradient-based optimizers use its derivatives with respect to model
+parameters to make updates. Losses can be averaged across a batch, weighted
+to reflect class frequency, or combined with regularization terms.
+
+## Practical example
+
+For a classifier that predicts whether an image contains a penguin or an
+ostrich, cross-entropy loss penalizes low probability assigned to the correct
+bird category. Evaluation can additionally track accuracy and class-specific
+errors.
+
+## Common misconceptions
+
+- Loss is not always the same as accuracy or another user-facing success metric.
+- Lower training loss can coexist with worse validation performance when a model overfits.
+- Different loss functions encode different penalties and assumptions; they are not interchangeable.
+
+## Related terms
+
+- [Cross-Entropy Loss](../C/cross-entropy-loss.qmd)
+- [Log Loss](log-loss.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Early Stopping](../E/early-stopping.qmd)
+
+## Further reading
+
+- [PyTorch: Loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) — common loss functions and their implementation interfaces.
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) — optimization objectives and their role in training.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,75 @@
+---
+title: "Latency"
+description: "The time taken for a system to respond to a request or complete an operation."
+term: "Latency"
+letter: "L"
+category: "AI Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Latency is how long someone waits for an operation to finish. For an AI
+application, it can mean the time from submitting a prompt to receiving a
+response, or the time to produce a particular token or prediction.
+
+## Technical explanation
+
+Latency is a time measurement, typically reported in milliseconds or seconds.
+The exact start and end points matter: an API's end-to-end latency may include
+network travel, queueing, preprocessing, model computation, and response
+transfer. Percentiles such as p50 and p95 describe the median and slower
+tail of observed requests.
+
+For token-generating models, time to first token and the time between
+subsequent tokens are useful separate measures. A system can begin responding
+quickly yet take a long time to finish a lengthy answer.
+
+## Why it matters in AI engineering
+
+Latency affects user experience, system capacity, and operational cost.
+Engineers use consistent latency metrics to compare deployments, set service
+objectives, and identify bottlenecks without hiding slow requests behind an
+average.
+
+## How it works
+
+Instrument requests with timestamps at meaningful boundaries, then aggregate
+the elapsed times over a representative workload. A simplified end-to-end
+measurement is:
+
+$$
+\text{latency} = t_{\text{response}} - t_{\text{request}}
+$$
+
+Measure under realistic concurrency and input sizes. Caching, batching,
+hardware, model size, queueing, and network conditions can all change the
+result, sometimes in opposing ways.
+
+## Practical example
+
+An assistant may have a p50 response latency of 1.2 seconds but a p95 of 6
+seconds. The median experience is quick, while a notable fraction of users
+experience delays. The tail may point to queueing or unusually long prompts.
+
+## Common misconceptions
+
+- Average latency alone does not describe the slowest requests users experience.
+- Latency is not the same as throughput; a system can serve many requests per second while individual requests remain slow.
+- A model's compute time is only one part of end-to-end application latency.
+
+## Related terms
+
+- [Inference](../I/inference.qmd)
+- [Dynamic Batching](../D/dynamic-batching.qmd)
+- [KV Cache](../K/kv-cache.qmd)
+
+## Further reading
+
+- [Google SRE Book: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/) — why user-facing services measure latency distributions and set objectives.
+- [vLLM documentation](https://docs.vllm.ai/) — serving techniques and measurements relevant to LLM inference.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

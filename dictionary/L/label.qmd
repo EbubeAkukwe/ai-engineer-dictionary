@@ -1,0 +1,64 @@
+---
+title: "Label"
+description: "A target value or annotation that tells a machine-learning model what an example represents."
+term: "Label"
+letter: "L"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A label is the answer attached to a training example. In a photo dataset, a
+label might say "penguin"; in a housing dataset, it might be the recorded sale
+price.
+
+## Technical explanation
+
+In supervised learning, a dataset contains inputs $x$ and corresponding target
+values $y$. The target is often called a label, especially when it is a
+category. Labels may be class IDs, text tags, numeric measurements, bounding
+boxes, or other annotations, depending on the task.
+
+## Why it matters in AI engineering
+
+Models learn patterns from the relationship between examples and their labels.
+Incorrect, inconsistent, or biased labels can teach the model the wrong
+relationship, even when the training algorithm is implemented correctly.
+Label quality, labeling guidelines, and review processes are therefore part of
+the data pipeline.
+
+## How it works
+
+For each labeled example, a training process compares the model's prediction
+$\hat{y}$ with the target $y$ using a loss function. The resulting error guides
+parameter updates. Classification labels usually represent categories, while
+regression labels represent numbers on a meaningful scale.
+
+## Practical example
+
+For a penguin-versus-ostrich image classifier, each training image needs a
+label that identifies the bird shown. A mislabeled ostrich image marked
+"penguin" gives the learner contradictory evidence.
+
+## Common misconceptions
+
+- A label is not necessarily a human-readable word; it may be an integer or a structured annotation.
+- More labels do not automatically mean better training data if the labels are noisy or inconsistent.
+- Labels used for training should not accidentally reveal information that would be unavailable at prediction time.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+- [Feature](../F/feature.qmd)
+
+## Further reading
+
+- [Google Machine Learning: Data preparation](https://developers.google.com/machine-learning/data-prep) — practical guidance on preparing and labeling training data.
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — hands-on examples of datasets, labels, and model training.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

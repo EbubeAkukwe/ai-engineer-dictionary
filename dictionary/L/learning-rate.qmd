@@ -1,0 +1,71 @@
+---
+title: "Learning Rate"
+description: "A parameter that controls the size of model-parameter updates during optimization."
+term: "Learning Rate"
+letter: "L"
+category: "Model Training"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+The learning rate controls how big a step a model takes when adjusting its
+parameters during training. If the steps are too large, training may jump
+around or become unstable; if too small, learning can be very slow.
+
+## Technical explanation
+
+In gradient-based optimization, parameters $\theta$ are updated using the
+gradient of a loss function. For a basic gradient descent step with learning
+rate $\eta$:
+
+$$
+\theta_{t+1} = \theta_t - \eta \nabla_\theta L(\theta_t)
+$$
+
+The learning rate scales the gradient-based update. Its useful value depends on
+the model, data, optimizer, batch size, and training procedure.
+
+## Why it matters in AI engineering
+
+The learning rate is one of the most influential training settings. It affects
+convergence speed and stability, and it often needs to be tuned or changed
+during training. Large models may use a warmup period before reaching their
+main learning rate.
+
+## How it works
+
+At each optimization step, the optimizer calculates an update from the loss
+gradient and applies it to the parameters. A fixed learning rate uses the same
+base scale throughout; an adaptive optimizer may additionally adjust effective
+updates per parameter. A scheduler changes the learning rate over time.
+
+## Practical example
+
+When fine-tuning a pretrained image classifier, a modest learning rate helps
+preserve useful learned features while adapting the model to new examples. A
+rate that is too high can overwrite those features and make validation
+performance worse.
+
+## Common misconceptions
+
+- A higher learning rate does not always make training finish sooner; unstable updates can prevent useful learning.
+- The learning rate is not the same as the number of training examples or epochs.
+- An optimizer's adaptive behavior does not make the learning-rate choice irrelevant.
+
+## Related terms
+
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Gradient](../G/gradient.qmd)
+- [Learning Rate Scheduler](learning-rate-scheduler.qmd)
+- [Hyperparameter](../H/hyperparameter.qmd)
+
+## Further reading
+
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) — practical treatment of model training and learning-rate selection.
+- [PyTorch: Optimizers](https://pytorch.org/docs/stable/optim.html) — optimizer APIs and learning-rate parameters.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,117 @@
+---
+title: "Long Short-Term Memory (LSTM)"
+description: "A recurrent neural-network architecture designed to preserve useful information over longer sequences."
+term: "Long Short-Term Memory (LSTM)"
+letter: "L"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An LSTM is a type of recurrent neural network that carries a memory through a
+sequence. Gates let it decide what information to keep, add, or expose at each
+step, helping it learn dependencies that span many time steps.
+
+## Technical explanation
+
+At time step $t$, an LSTM combines the current input $x_t$, previous hidden
+state $h_{t-1}$, and previous cell state $c_{t-1}$. It computes a forget gate
+$f_t$, input gate $i_t$, candidate cell content $\tilde{c}_t$, and output
+gate $o_t$:
+
+$$
+\begin{aligned}
+f_t &= \sigma(W_f [h_{t-1}, x_t] + b_f) \\
+i_t &= \sigma(W_i [h_{t-1}, x_t] + b_i) \\
+\tilde{c}_t &= \tanh(W_c [h_{t-1}, x_t] + b_c) \\
+c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \\
+o_t &= \sigma(W_o [h_{t-1}, x_t] + b_o) \\
+h_t &= o_t \odot \tanh(c_t)
+\end{aligned}
+$$
+
+Here, $\sigma$ is the sigmoid function, $[\cdot,\cdot]$ concatenates vectors,
+and $\odot$ is element-wise multiplication. The cell state provides a path for
+information to persist through the sequence.
+
+## Why it matters in AI engineering
+
+LSTMs helped make recurrent models effective for language, time series, and
+other sequential data by improving information flow across time. They remain
+useful in some settings, although Transformers are now common for many
+large-scale sequence tasks.
+
+## How it works
+
+At each step, the forget gate controls how much of the old cell state remains;
+the input gate controls how much candidate information is written; and the
+output gate controls how much of the cell state becomes the hidden state.
+
+<svg viewBox="0 0 820 260" role="img" aria-labelledby="lstm-title lstm-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="lstm-title">LSTM cell and its gates</title>
+  <desc id="lstm-desc">The previous cell state and current input enter an LSTM cell. A forget gate and input gate update the cell state; an output gate produces the new hidden state.</desc>
+  <defs>
+    <marker id="lstm-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+  </defs>
+  <rect x="20" y="104" width="108" height="48" rx="8" fill="#f3f5f8" stroke="#8c9aab"/>
+  <text x="74" y="133" text-anchor="middle" font-size="15" font-family="sans-serif" fill="#202b3c">Previous state</text>
+  <line x1="128" y1="128" x2="180" y2="128" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+  <rect x="190" y="40" width="600" height="180" rx="14" fill="#f8faff" stroke="#4666a8" stroke-width="2"/>
+  <text x="490" y="28" text-anchor="middle" font-size="17" font-family="sans-serif" fill="#202b3c">LSTM cell</text>
+  <rect x="218" y="76" width="112" height="56" rx="8" fill="#f7e9cc" stroke="#b9792e"/>
+  <text x="274" y="101" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Forget gate</text>
+  <text x="274" y="119" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">keep old memory?</text>
+  <rect x="356" y="76" width="112" height="56" rx="8" fill="#e6ecfa" stroke="#4666a8"/>
+  <text x="412" y="101" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Input gate</text>
+  <text x="412" y="119" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">write new content?</text>
+  <rect x="494" y="76" width="112" height="56" rx="8" fill="#e6f3e8" stroke="#55815d"/>
+  <text x="550" y="101" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Cell update</text>
+  <text x="550" y="119" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">new memory cₜ</text>
+  <rect x="632" y="76" width="112" height="56" rx="8" fill="#f0e7f7" stroke="#80609a"/>
+  <text x="688" y="101" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Output gate</text>
+  <text x="688" y="119" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#46566d">expose state?</text>
+  <line x1="330" y1="104" x2="350" y2="104" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+  <line x1="468" y1="104" x2="488" y2="104" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+  <line x1="606" y1="104" x2="626" y2="104" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+  <line x1="190" y1="174" x2="760" y2="174" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+  <text x="208" y="197" font-size="13" font-family="sans-serif" fill="#46566d">cell state flows through time</text>
+  <line x1="744" y1="104" x2="796" y2="104" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+  <text x="754" y="88" font-size="13" font-family="sans-serif" fill="#46566d">hₜ</text>
+  <rect x="36" y="180" width="94" height="38" rx="7" fill="#f3f5f8" stroke="#8c9aab"/>
+  <text x="83" y="204" text-anchor="middle" font-size="14" font-family="sans-serif" fill="#202b3c">Input xₜ</text>
+  <line x1="130" y1="198" x2="190" y2="150" stroke="#455b79" stroke-width="2" marker-end="url(#lstm-arrow)"/>
+</svg>
+
+The diagram simplifies the computation: each gate uses both the current input
+and previous hidden state, and the cell update combines gated values.
+
+## Practical example
+
+For a sequence of sensor readings, an LSTM can process one reading at a time
+and use its hidden state to help predict the next value. The cell state can
+retain a pattern that spans several readings.
+
+## Common misconceptions
+
+- LSTM gates learn their behavior from data; they are not manually written rules.
+- LSTMs reduce some long-range learning difficulties but do not guarantee that arbitrarily distant information is retained.
+- An LSTM is one recurrent architecture, not a synonym for all sequence models.
+
+## Related terms
+
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+- [Hidden Layer](../H/hidden-layer.qmd)
+- [Gradient](../G/gradient.qmd)
+
+## Further reading
+
+- [Empirical Evaluation of Gated Recurrent Neural Networks](https://arxiv.org/abs/1412.3555) — comparison of gated recurrent architectures, including LSTMs.
+- [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) — visual explanation of the cell and its gates.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

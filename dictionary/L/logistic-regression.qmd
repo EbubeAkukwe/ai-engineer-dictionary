@@ -1,0 +1,72 @@
+---
+title: "Logistic Regression"
+description: "A supervised-learning model that estimates class probabilities using a linear score passed through a logistic function."
+term: "Logistic Regression"
+letter: "L"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Logistic regression is a classification model. It combines input features into
+a score, then converts that score into a probability for a class, such as
+whether an email is spam.
+
+## Technical explanation
+
+For a binary task, the model computes a linear score $z = w^\top x + b$ and
+maps it to a probability with the sigmoid function:
+
+$$
+p(y=1 \mid x) = \sigma(z) = \frac{1}{1 + e^{-z}}
+$$
+
+The parameters are commonly learned by minimizing binary cross-entropy (also
+called binary log loss). A decision threshold converts the probability into
+a predicted class; 0.5 is common but is not always the best choice.
+
+## Why it matters in AI engineering
+
+Logistic regression is a fast, interpretable baseline for classification and
+produces probabilities that can support threshold-based decisions. It is also
+a useful reference for understanding classification losses and decision
+boundaries.
+
+## How it works
+
+The model forms a weighted sum of the input features, applies the sigmoid to
+produce a value between 0 and 1, and compares that probability with the true
+label during training. For multiple classes, related formulations such as
+multinomial logistic regression use a softmax function.
+
+## Practical example
+
+A service can estimate the probability that a transaction is fraudulent from
+features such as transaction amount, account age, and recent activity. The
+team can choose a decision threshold based on the relative cost of missed
+fraud and false alarms.
+
+## Common misconceptions
+
+- Despite its name, logistic regression is commonly used for classification, not numeric regression.
+- A predicted probability is not automatically well calibrated.
+- The default 0.5 threshold is a choice, not a universal rule.
+- The model is linear in its input features unless features are transformed or interactions are added.
+
+## Related terms
+
+- [Linear Regression](linear-regression.qmd)
+- [Classification](../C/classification.qmd)
+- [Log Loss](log-loss.qmd)
+- [Decision Boundary](../D/decision-boundary.qmd)
+
+## Further reading
+
+- [Google Machine Learning: Logistic regression](https://developers.google.com/machine-learning/crash-course/logistic-regression) — model intuition, probabilities, and training.
+- [scikit-learn: Logistic Regression](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) — estimator behavior and practical parameters.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

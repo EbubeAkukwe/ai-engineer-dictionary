@@ -1,0 +1,71 @@
+---
+title: "Low-Rank Adaptation"
+description: "A parameter-efficient fine-tuning approach that represents model updates with trainable low-rank matrices."
+term: "Low-Rank Adaptation"
+letter: "L"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Low-rank adaptation is a way to customize a pretrained model by learning a
+compact update instead of changing every original weight. LoRA (Low-Rank
+Adaptation) is the best-known method using this idea.
+
+## Technical explanation
+
+For a frozen weight matrix $W_0$, an adapted matrix can be represented as:
+
+$$
+W = W_0 + BA
+$$
+
+The trainable matrices $A$ and $B$ are chosen so their shared inner dimension,
+the rank $r$, is much smaller than the dimensions of $W_0$. This constrains
+the update to a lower-dimensional parameterization. LoRA typically includes
+an additional scale factor and initializes the factors so the initial update
+is zero or near zero.
+
+## Why it matters in AI engineering
+
+Low-rank adaptation can make model customization more resource-efficient and
+make it practical to maintain separate task or customer adapters. The
+trade-offs include adapter quality, rank selection, compatibility, and the
+serving cost of loading or applying adapters.
+
+## How it works
+
+The method inserts a low-rank trainable path alongside selected frozen
+weights. Fine-tuning updates the path's factors based on the task objective.
+When appropriate, the resulting update can be merged into the original
+weights; otherwise, it can be applied as a separate adapter.
+
+## Practical example
+
+A research group can adapt the same base language model for summarization and
+question answering using separate low-rank adapters. Each adapter stores a
+compact task-specific update, while the base model remains shared.
+
+## Common misconceptions
+
+- Low-rank adaptation describes a family of techniques; LoRA is a specific and widely used approach.
+- The method does not eliminate the need to select training data, tune settings, and evaluate the adapted model.
+- Lower parameter count does not imply that every runtime or serving cost is reduced by the same amount.
+
+## Related terms
+
+- [LoRA](lora.qmd)
+- [Fine-Tuning](../F/fine-tuning.qmd)
+- [Adapter](../A/adapter.qmd)
+- [Large Language Model (LLM)](large-language-model-llm.qmd)
+
+## Further reading
+
+- [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685) — a concrete low-rank adaptation method and its evaluation.
+- [Hugging Face PEFT](https://huggingface.co/docs/peft/index) — practical tooling for parameter-efficient fine-tuning methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

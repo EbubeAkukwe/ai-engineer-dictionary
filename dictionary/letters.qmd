@@ -199,7 +199,21 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## L {#l}
 
-Terms beginning with L will appear here as the dictionary grows.
+- [Label](/dictionary/L/label.qmd)
+- [Large Language Model (LLM)](/dictionary/L/large-language-model-llm.qmd)
+- [Latent Space](/dictionary/L/latent-space.qmd)
+- [Latency](/dictionary/L/latency.qmd)
+- [Learning Rate](/dictionary/L/learning-rate.qmd)
+- [Learning Rate Scheduler](/dictionary/L/learning-rate-scheduler.qmd)
+- [Least Squares](/dictionary/L/least-squares.qmd)
+- [Linear Algebra](/dictionary/L/linear-algebra.qmd)
+- [Linear Regression](/dictionary/L/linear-regression.qmd)
+- [Log Loss](/dictionary/L/log-loss.qmd)
+- [Logistic Regression](/dictionary/L/logistic-regression.qmd)
+- [Long Short-Term Memory (LSTM)](/dictionary/L/long-short-term-memory-lstm.qmd)
+- [LoRA](/dictionary/L/lora.qmd)
+- [Loss Function](/dictionary/L/loss-function.qmd)
+- [Low-Rank Adaptation](/dictionary/L/low-rank-adaptation.qmd)
 
 ## M {#m}
 

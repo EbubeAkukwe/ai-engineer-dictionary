@@ -1,0 +1,69 @@
+---
+title: "Linear Regression"
+description: "A supervised-learning method that predicts a numeric target as a linear function of input features."
+term: "Linear Regression"
+letter: "L"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Linear regression predicts a number by combining input features with learned
+weights. For example, it can estimate a home's price from its size, location,
+and age.
+
+## Technical explanation
+
+For feature vector $x$, a basic linear regression model predicts:
+
+$$
+\hat{y} = w^\top x + b
+$$
+
+where $w$ contains feature weights and $b$ is an intercept. Parameters are
+often fit by minimizing squared prediction errors, although other objectives
+and regularization can be used.
+
+## Why it matters in AI engineering
+
+Linear regression is a simple, interpretable baseline for numeric prediction.
+It helps establish whether a more complex model is necessary and provides a
+clear setting for reasoning about features, loss, training, and evaluation.
+
+## How it works
+
+The model computes a weighted sum of the input features. During fitting, it
+chooses weights and an intercept that reduce error on training examples.
+Ordinary least squares minimizes the sum of squared residuals. The learned
+relationship may be useful even when the underlying problem is more complex,
+but its predictions remain linear in the chosen features.
+
+## Practical example
+
+A delivery service can estimate delivery time from distance and the number of
+stops. The model learns weights from historical deliveries, then predicts a
+time for new deliveries with similar input features.
+
+## Common misconceptions
+
+- "Linear" describes the model's relationship to its parameters; features can be transformed before fitting.
+- A good fit on training data does not prove that the relationship generalizes.
+- Linear regression predicts numeric values; it is not the same model as logistic regression for classification.
+
+## Related terms
+
+- [Least Squares](least-squares.qmd)
+- [Logistic Regression](logistic-regression.qmd)
+- [Loss Function](loss-function.qmd)
+- [Linear Algebra](linear-algebra.qmd)
+
+## Further reading
+
+- [Google Machine Learning: Linear regression](https://developers.google.com/machine-learning/crash-course/linear-regression) — introductory explanation of linear models and training.
+- [scikit-learn: Ordinary Least Squares](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares) — implementation and practical considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

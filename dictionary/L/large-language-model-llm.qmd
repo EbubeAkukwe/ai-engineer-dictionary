@@ -1,0 +1,77 @@
+---
+title: "Large Language Model (LLM)"
+description: "A neural language model with many learned parameters, trained on text to understand and generate language."
+term: "Large Language Model (LLM)"
+letter: "L"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A large language model, or LLM, is a neural network trained on large amounts of
+text so it can process and generate language. It can answer questions, draft
+text, summarize documents, and perform other language tasks when given an
+instruction or context.
+
+## Technical explanation
+
+Most modern LLMs are based on the Transformer architecture. During
+pretraining, the model learns statistical patterns in token sequences, often
+by predicting a next token. The result is a parameterized model that maps an
+input context to a probability distribution over possible next tokens.
+
+The word "large" is relative and may refer to model parameters, training data,
+compute, or a combination of them. Size alone does not determine quality:
+training data, architecture, post-training, inference setup, and evaluation
+all matter.
+
+## Why it matters in AI engineering
+
+LLMs power conversational interfaces, code assistants, retrieval-augmented
+systems, and many agent workflows. Engineers must account for context limits,
+latency, inference cost, reliability, safety, and the difference between
+generated text and verified facts.
+
+## How it works
+
+Text is divided into tokens and converted to numerical representations. A
+Transformer processes the token sequence, using attention to relate tokens to
+one another. At generation time, the model repeatedly selects or samples a
+next token and appends it to the context.
+
+The model's output is not a database lookup: it is generated from learned
+parameters and the current context. External tools or retrieval systems can
+provide additional information when needed.
+
+## Practical example
+
+A support assistant can receive a user's question together with relevant
+product documentation, then generate a response grounded in that material.
+The LLM handles language generation; retrieval and application logic help
+provide the right evidence and enforce product rules.
+
+## Common misconceptions
+
+- An LLM does not reliably know whether every generated statement is true.
+- A larger parameter count does not guarantee better performance for every task.
+- Prompting alone is not the same as training or fine-tuning a model.
+- LLM and chatbot are not synonyms: a chatbot is an application that may use an LLM.
+
+## Related terms
+
+- [Foundation Model](../F/foundation-model.qmd)
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Context Window](../C/context-window.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223) — overview of LLM architectures, training, adaptation, and evaluation.
+- [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) — practical introduction to language models and their tooling.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

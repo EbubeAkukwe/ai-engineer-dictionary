@@ -1,0 +1,22 @@
+---
+title: "L Terms"
+description: "AI engineering dictionary terms beginning with L."
+---
+
+# L Terms
+
+- [Label](label.qmd)
+- [Large Language Model (LLM)](large-language-model-llm.qmd)
+- [Latent Space](latent-space.qmd)
+- [Latency](latency.qmd)
+- [Learning Rate](learning-rate.qmd)
+- [Learning Rate Scheduler](learning-rate-scheduler.qmd)
+- [Least Squares](least-squares.qmd)
+- [Linear Algebra](linear-algebra.qmd)
+- [Linear Regression](linear-regression.qmd)
+- [Log Loss](log-loss.qmd)
+- [Logistic Regression](logistic-regression.qmd)
+- [Long Short-Term Memory (LSTM)](long-short-term-memory-lstm.qmd)
+- [LoRA](lora.qmd)
+- [Loss Function](loss-function.qmd)
+- [Low-Rank Adaptation](low-rank-adaptation.qmd)
