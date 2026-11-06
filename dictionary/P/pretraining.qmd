@@ -1,0 +1,65 @@
+---
+title: "Pretraining"
+description: "The initial training of a model on a broad dataset before task-specific adaptation or evaluation."
+term: "Pretraining"
+letter: "P"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Pretraining gives a model broad capabilities by learning from a large
+collection of data before it is adapted for a particular use. It is similar
+to building general knowledge before taking specialized instruction.
+
+## Technical explanation
+
+Pretraining optimizes a model objective over a broad corpus. Language models
+often learn to predict masked or next tokens; other model families use
+objectives such as contrastive learning or reconstruction. The learned
+weights are later reused as a starting point for downstream tasks.
+
+## Why it matters in AI engineering
+
+Pretraining can produce reusable representations and reduce the labeled data
+needed for later adaptation. It is also resource-intensive and carries
+important choices about data provenance, filtering, licensing, privacy, and
+evaluation.
+
+## How it works
+
+Training examples are constructed from the corpus and passed through the
+model. A self-supervised objective supplies learning targets from the data
+itself, and optimization updates model parameters over many batches. The
+resulting checkpoint may then be fine-tuned, aligned, or used directly.
+
+## Practical example
+
+A decoder-only language model is pretrained on text using next-token
+prediction. Afterward, a separate fine-tuning stage can teach it to follow
+instructions, with evaluation determining whether it performs the intended
+tasks reliably.
+
+## Common misconceptions
+
+- Pretraining data is not automatically clean, unbiased, or suitable for
+  every downstream use.
+- Pretraining and fine-tuning are different stages, even when both use
+  gradient-based training.
+
+## Related terms
+
+- [Foundation Model](../F/foundation-model.qmd)
+- [Fine-Tuning](../F/fine-tuning.qmd)
+- [Autoregressive Model](../A/autoregressive-model.qmd)
+
+## Further reading
+
+- [BERT: Pre-training of Deep Bidirectional Transformers](https://arxiv.org/abs/1810.04805) — an example of masked-language-model pretraining.
+- [Stanford CS324: Large Language Models](https://stanford-cs324.github.io/winter2022/) — course material on large-language-model training and data.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Query (Attention)"
+description: "The attention vector that expresses what information a position is looking for in other representations."
+term: "Query (Attention)"
+letter: "Q"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+In attention, a query represents what a token or position is looking for.
+Other representations are compared with it so the model can decide which
+ones are most relevant to the current computation.
+
+## Technical explanation
+
+In scaled dot-product attention, a query vector $q$ is compared with key
+vectors $k_j$. Scores such as $qk_j^\mathsf{T}/\sqrt{d_k}$ are normalized
+with softmax to form weights over values $v_j$. A query is typically
+computed by applying a learned projection to hidden states.
+
+## Why it matters in AI engineering
+
+Queries are central to attention in Transformers and many retrieval
+architectures. Understanding them helps explain token-to-token information
+flow, attention shapes, and how query embeddings can be used to find
+relevant content.
+
+## How it works
+
+For each query, the model scores available keys, normalizes the scores, and
+uses the resulting weights to combine associated values. In self-attention,
+queries, keys, and values are projected from the same sequence; in
+cross-attention they can come from different sources.
+
+## Practical example
+
+When processing the word “it” in a sentence, its query can assign higher
+attention weights to earlier tokens that help resolve the referent. The
+weights are part of the computation and should not automatically be treated
+as a complete explanation of the model's reasoning.
+
+## Common misconceptions
+
+- A query is not itself the final answer or necessarily a natural-language
+  question.
+- Attention weights indicate computational weighting, not guaranteed
+  causal importance or human-readable explanation.
+
+## Related terms
+
+- [Query-Key-Value (QKV)](query-key-value-qkv.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Embedding](../E/embedding.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — scaled dot-product attention and query/key/value projections.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — implementation walkthrough of attention.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

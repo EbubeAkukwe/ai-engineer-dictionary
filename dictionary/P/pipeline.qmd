@@ -1,0 +1,64 @@
+---
+title: "Pipeline"
+description: "An ordered sequence of data or model-processing steps that transforms inputs into useful outputs."
+term: "Pipeline"
+letter: "P"
+category: "AI Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A pipeline is a repeatable sequence of steps. In an AI system, data might be
+validated, cleaned, transformed, passed to a model, and then turned into a
+prediction or report.
+
+## Technical explanation
+
+A pipeline composes operations into a defined workflow, often with explicit
+inputs, outputs, dependencies, and failure handling. A pipeline can run in
+memory for model training or span distributed services and scheduled jobs
+for data preparation and inference.
+
+## Why it matters in AI engineering
+
+Explicit pipelines make preprocessing consistent between training and
+inference, support reproducibility, and make failures easier to locate.
+Production pipelines also expose operational concerns such as retries,
+latency, monitoring, and data lineage.
+
+## How it works
+
+Each stage consumes an input, performs a bounded transformation, and passes
+its output to a downstream stage. Implementations may run stages
+sequentially, in parallel, or as a dependency graph. Reliable pipelines
+validate stage contracts and make retries safe where possible.
+
+## Practical example
+
+An inference pipeline could check a request's schema, normalize text,
+generate an embedding, retrieve relevant passages, call a language model,
+and validate the response before returning it.
+
+## Common misconceptions
+
+- A pipeline is not necessarily a simple linear chain; stages may branch or
+  run concurrently.
+- Putting steps in a pipeline does not by itself make them reproducible:
+  inputs, versions, configuration, and random seeds may also need tracking.
+
+## Related terms
+
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Orchestration](../O/orchestration.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [scikit-learn: Pipelines and composite estimators](https://scikit-learn.org/stable/modules/compose.html) — composing preprocessing and estimators.
+- [Google Cloud: MLOps continuous delivery and automation pipelines](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning) — production workflow patterns.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

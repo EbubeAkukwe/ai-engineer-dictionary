@@ -271,11 +271,36 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## P {#p}
 
-Terms beginning with P will appear here as the dictionary grows.
+- [Parameter](/dictionary/P/parameter.qmd)
+- [Parameter-Efficient Fine-Tuning (PEFT)](/dictionary/P/parameter-efficient-fine-tuning-peft.qmd)
+- [Perceptron](/dictionary/P/perceptron.qmd)
+- [Perplexity](/dictionary/P/perplexity.qmd)
+- [Pipeline](/dictionary/P/pipeline.qmd)
+- [Policy Gradient](/dictionary/P/policy-gradient.qmd)
+- [Pooling](/dictionary/P/pooling.qmd)
+- [Positional Encoding](/dictionary/P/positional-encoding.qmd)
+- [Precision](/dictionary/P/precision.qmd)
+- [Pretraining](/dictionary/P/pretraining.qmd)
+- [Principal Component Analysis (PCA)](/dictionary/P/principal-component-analysis-pca.qmd)
+- [Probability Distribution](/dictionary/P/probability-distribution.qmd)
+- [Prompt](/dictionary/P/prompt.qmd)
+- [Prompt Engineering](/dictionary/P/prompt-engineering.qmd)
+- [Prompt Injection](/dictionary/P/prompt-injection.qmd)
+- [Pruning](/dictionary/P/pruning.qmd)
+- [PyTorch](/dictionary/P/pytorch.qmd)
+- [Python](/dictionary/P/python.qmd)
 
 ## Q {#q}
 
-Terms beginning with Q will appear here as the dictionary grows.
+- [Q-Learning](/dictionary/Q/q-learning.qmd)
+- [QLoRA](/dictionary/Q/qlora.qmd)
+- [Q-Value](/dictionary/Q/q-value.qmd)
+- [Quantization](/dictionary/Q/quantization.qmd)
+- [Query (Attention)](/dictionary/Q/query-attention.qmd)
+- [Query Expansion](/dictionary/Q/query-expansion.qmd)
+- [Query-Key-Value (QKV)](/dictionary/Q/query-key-value-qkv.qmd)
+- [Queue](/dictionary/Q/queue.qmd)
+- [QuickSort](/dictionary/Q/quicksort.qmd)
 
 ## R {#r}
 

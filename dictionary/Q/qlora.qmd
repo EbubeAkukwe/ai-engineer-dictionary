@@ -1,0 +1,66 @@
+---
+title: "QLoRA"
+description: "A fine-tuning method that trains low-rank adapters while keeping a large base model in quantized form."
+term: "QLoRA"
+letter: "Q"
+category: "LLM Engineering"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+QLoRA makes it possible to fine-tune a large language model with less GPU
+memory. It stores the frozen base model in a compact quantized format and
+trains small low-rank adapter weights.
+
+## Technical explanation
+
+QLoRA combines low-bit quantization of pretrained weights with
+parameter-efficient low-rank adaptation. The original method introduced
+NF4, double quantization, and paged optimizers to reduce memory use during
+fine-tuning. The base weights are frozen; gradients update the adapter
+parameters.
+
+## Why it matters in AI engineering
+
+QLoRA can lower the hardware barrier for adapting large models and allow
+more experiments within a fixed memory budget. Results still depend on
+quantization choices, data, target modules, and the quality of evaluation.
+
+## How it works
+
+The frozen model weights are quantized and dequantized as needed for
+computation. Trainable low-rank matrices represent weight updates in selected
+layers. Training updates only those matrices, and deployment loads them
+alongside the compatible base checkpoint.
+
+## Practical example
+
+An engineer can load a supported pretrained model in 4-bit form, attach
+low-rank adapters to attention projections, and fine-tune on a task dataset.
+They should validate output quality and confirm the saved adapter matches
+the exact base model and tokenizer.
+
+## Common misconceptions
+
+- QLoRA is not a new base model architecture; it is a memory-efficient
+  fine-tuning approach.
+- Low-bit loading does not make every training or inference operation
+  4-bit, nor does it guarantee identical quality to full-precision
+  fine-tuning.
+
+## Related terms
+
+- [Quantization](quantization.qmd)
+- [LoRA](../L/lora.qmd)
+- [Parameter-Efficient Fine-Tuning (PEFT)](../P/parameter-efficient-fine-tuning-peft.qmd)
+
+## Further reading
+
+- [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314) — method details and experiments.
+- [Hugging Face PEFT: QLoRA](https://huggingface.co/docs/peft/developer_guides/quantization) — implementation guide.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

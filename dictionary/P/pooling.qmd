@@ -1,0 +1,65 @@
+---
+title: "Pooling"
+description: "A neural-network operation that summarizes nearby values, commonly reducing the spatial size of feature maps."
+term: "Pooling"
+letter: "P"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Pooling summarizes a small neighborhood of values. In an image model, it can
+shrink a feature map while keeping a coarse signal about what was detected.
+Max pooling keeps the largest value in each neighborhood; average pooling
+keeps the mean.
+
+## Technical explanation
+
+A pooling layer applies a reduction over windows of an input tensor, with
+choices such as window size, stride, padding, and reduction function. A
+spatial pooling operation typically reduces height and width while leaving
+the channel dimension unchanged.
+
+## Why it matters in AI engineering
+
+Downsampling can reduce later computation and memory use and can make a
+representation less sensitive to small shifts. It also discards detail, so
+the operation must suit the task; dense localization tasks may need to
+preserve spatial resolution.
+
+## How it works
+
+For each window, the layer computes a statistic such as its maximum or
+average. With a 2-by-2 max-pooling window and stride 2, each non-overlapping
+2-by-2 region becomes one value. During backpropagation, gradients are routed
+through the values selected or averaged by the pooling operation.
+
+## Practical example
+
+A convolutional image classifier may apply a 2-by-2 max-pooling layer after
+convolution and activation. This halves each spatial dimension when stride is
+2, reducing the size of the feature maps passed to later layers.
+
+## Common misconceptions
+
+- Pooling is not the same as resizing an input image; it operates on
+  intermediate feature tensors.
+- Pooling does not always improve accuracy. Strided convolutions or
+  architectures that preserve resolution may be preferable.
+
+## Related terms
+
+- [Convolution](../C/convolution.qmd)
+- [CNN (Convolutional Neural Network)](../C/cnn-convolutional-neural-network.qmd)
+- [Feature Extraction](../F/feature-extraction.qmd)
+
+## Further reading
+
+- [Dive into Deep Learning: Pooling](https://d2l.ai/chapter_convolutional-neural-networks/pooling.html) — pooling operations and their effects.
+- [PyTorch: Pooling layers](https://pytorch.org/docs/stable/nn.html#pooling-layers) — pooling module reference.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

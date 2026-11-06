@@ -1,0 +1,64 @@
+---
+title: "Quantization"
+description: "Representing model values with lower-precision numbers to reduce storage or computation cost."
+term: "Quantization"
+letter: "Q"
+category: "Model Optimization"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Quantization stores or computes numbers using fewer bits. In machine
+learning, this can shrink model weights and sometimes speed up inference,
+with a possible trade-off in numerical accuracy.
+
+## Technical explanation
+
+Quantization maps values from a higher-precision range to a finite set of
+lower-precision levels. Affine quantization commonly uses a scale and zero
+point to map between floating-point and integer values. Methods include
+post-training quantization and quantization-aware training.
+
+## Why it matters in AI engineering
+
+Lower-precision representations can reduce model memory, bandwidth, and
+hardware cost, enabling deployment on constrained devices or higher
+throughput. The benefit depends on supported kernels, model architecture,
+and acceptable quality loss.
+
+## How it works
+
+A quantizer scales and rounds values to representable levels; inference
+performs operations in a supported low-precision format or converts values
+when needed. Calibration can estimate activation ranges, while
+quantization-aware training simulates quantization effects during learning.
+
+## Practical example
+
+A team can quantize a trained model to an 8-bit format, run it on the target
+device, and compare task metrics, memory use, and end-to-end latency with the
+floating-point baseline. Tests should include representative edge cases.
+
+## Common misconceptions
+
+- Quantization does not always improve latency; hardware and runtime support
+  determine whether operations are faster.
+- A lower bit-width does not imply a fixed amount of accuracy loss for every
+  model or task.
+
+## Related terms
+
+- [QLoRA](qlora.qmd)
+- [Model Quantization](../M/model-quantization.qmd)
+- [Pruning](../P/pruning.qmd)
+
+## Further reading
+
+- [PyTorch: Quantization](https://pytorch.org/docs/stable/quantization.html) — quantization techniques and workflows.
+- [TensorFlow Model Optimization: Quantization](https://www.tensorflow.org/model_optimization/guide/quantization) — post-training and training-aware quantization.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,25 @@
+---
+title: "P Terms"
+description: "AI engineering dictionary terms beginning with P."
+---
+
+# P Terms
+
+- [Parameter](parameter.qmd)
+- [Parameter-Efficient Fine-Tuning (PEFT)](parameter-efficient-fine-tuning-peft.qmd)
+- [Perceptron](perceptron.qmd)
+- [Perplexity](perplexity.qmd)
+- [Pipeline](pipeline.qmd)
+- [Policy Gradient](policy-gradient.qmd)
+- [Pooling](pooling.qmd)
+- [Positional Encoding](positional-encoding.qmd)
+- [Precision](precision.qmd)
+- [Pretraining](pretraining.qmd)
+- [Principal Component Analysis (PCA)](principal-component-analysis-pca.qmd)
+- [Probability Distribution](probability-distribution.qmd)
+- [Prompt](prompt.qmd)
+- [Prompt Engineering](prompt-engineering.qmd)
+- [Prompt Injection](prompt-injection.qmd)
+- [Pruning](pruning.qmd)
+- [PyTorch](pytorch.qmd)
+- [Python](python.qmd)

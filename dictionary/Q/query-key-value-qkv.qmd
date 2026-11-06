@@ -1,0 +1,95 @@
+---
+title: "Query-Key-Value (QKV)"
+description: "The three learned representations used by attention to compute relevance weights and combine information."
+term: "Query-Key-Value (QKV)"
+letter: "Q"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Attention uses three roles: a **query** says what a position is looking for,
+**keys** describe what each position offers, and **values** carry the
+information to combine. Matching queries with keys determines how much of
+each value contributes.
+
+## Technical explanation
+
+Given input representations $X$, learned matrices produce
+$Q=XW_Q$, $K=XW_K$, and $V=XW_V$. Scaled dot-product attention is
+$\mathrm{softmax}(QK^\mathsf{T}/\sqrt{d_k})V$. Multi-head attention applies
+separate projections in parallel and combines the resulting representations.
+
+## Why it matters in AI engineering
+
+QKV is the core computation behind Transformer attention. Its tensor shapes,
+memory use, and sequence-length scaling influence model implementation,
+training efficiency, and inference latency.
+
+## How it works
+
+Each query is compared with keys to produce attention scores. Softmax
+converts each score row into weights, and those weights form a weighted sum
+of values. In self-attention all three projections come from the same
+sequence; cross-attention can source keys and values from another sequence.
+
+<svg viewBox="0 0 680 190" role="img" aria-labelledby="qkv-title qkv-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="qkv-title">Query, key, and value flow in attention</title>
+  <desc id="qkv-desc">Input representations are projected into queries, keys, and values. Queries and keys produce attention weights that combine the values into an output.</desc>
+  <g font-family="sans-serif" font-size="14" text-anchor="middle" fill="#202b3c">
+    <rect x="18" y="68" width="104" height="48" rx="8" fill="#eaf0fb" stroke="#4666a8" stroke-width="2"/>
+    <text x="70" y="97">Inputs</text>
+    <rect x="187" y="18" width="100" height="42" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="237" y="44">Queries</text>
+    <rect x="187" y="72" width="100" height="42" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="237" y="98">Keys</text>
+    <rect x="187" y="126" width="100" height="42" rx="8" fill="#f3eafa" stroke="#8055a5" stroke-width="2"/>
+    <text x="237" y="152">Values</text>
+    <rect x="373" y="35" width="132" height="60" rx="8" fill="#f7f0e2" stroke="#b9792e" stroke-width="2"/>
+    <text x="439" y="61">Attention</text>
+    <text x="439" y="80">weights</text>
+    <rect x="554" y="68" width="108" height="48" rx="8" fill="#eaf0fb" stroke="#4666a8" stroke-width="2"/>
+    <text x="608" y="97">Output</text>
+  </g>
+  <g fill="none" stroke="#596b82" stroke-width="2">
+    <path d="M122 82 C145 82 158 39 187 39"/>
+    <path d="M122 92 H187"/>
+    <path d="M122 104 C145 104 158 147 187 147"/>
+    <path d="M287 39 C325 39 334 54 373 54"/>
+    <path d="M287 93 C325 93 334 77 373 77"/>
+    <path d="M287 147 C420 147 476 123 554 93"/>
+    <path d="M505 65 H554"/>
+  </g>
+</svg>
+
+The diagram omits implementation details such as masking and multiple heads.
+
+## Practical example
+
+In language-model self-attention, every token position generates a query,
+key, and value. A token can then combine information from earlier positions,
+subject to the model's causal mask.
+
+## Common misconceptions
+
+- “Key” and “value” are learned vector roles, not necessarily stored
+  database keys and literal text values.
+- Query, key, and value are not three separate models; they are usually
+  projections within one attention layer.
+
+## Related terms
+
+- [Query (Attention)](query-attention.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Multi-Head Attention](../M/multi-head-attention.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — original Transformer formulation.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — detailed code and tensor-shape walkthrough.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

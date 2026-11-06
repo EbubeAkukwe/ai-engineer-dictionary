@@ -1,0 +1,64 @@
+---
+title: "Q-Learning"
+description: "A model-free reinforcement-learning algorithm that learns action values using temporal-difference updates."
+term: "Q-Learning"
+letter: "Q"
+category: "Reinforcement Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Q-learning teaches an agent which actions are valuable in different
+situations. It can learn from rewards and experience without being given a
+complete model of how the environment works.
+
+## Technical explanation
+
+Q-learning estimates the action-value function $Q(s,a)$, the expected
+discounted return from taking action $a$ in state $s$ and then following an
+optimal policy. A tabular update is
+$Q(s,a)\leftarrow Q(s,a)+\alpha[r+\gamma\max_{a'}Q(s',a')-Q(s,a)]$.
+
+## Why it matters in AI engineering
+
+The algorithm is a foundational example of off-policy temporal-difference
+learning. Its tabular form is simple, while extensions with function
+approximation require care because training can be unstable and large
+state-action spaces cannot be stored in a table.
+
+## How it works
+
+The agent explores by selecting actions, observes reward and next state, and
+updates the value estimate toward the reward plus discounted best estimated
+future value. A behavior policy may explore, while the target in the update
+uses the greedy next action.
+
+## Practical example
+
+In a small grid-world, the agent can store one Q-value per state-action pair.
+After each move it updates that value from the reward and the best value
+estimated for the next state, gradually favoring paths with higher return.
+
+## Common misconceptions
+
+- Q-learning's learned Q-values are estimates; they are not guaranteed to
+  be accurate from limited experience.
+- The tabular algorithm does not scale directly to every large or
+  continuous state space.
+
+## Related terms
+
+- [Q-Value](q-value.qmd)
+- [Policy Gradient](../P/policy-gradient.qmd)
+- [Policy Gradient](../P/policy-gradient.qmd)
+
+## Further reading
+
+- [Sutton and Barto: Reinforcement Learning, Chapter 6](http://incompleteideas.net/book/RLbook2020.pdf) — temporal-difference learning and Q-learning.
+- [OpenAI Spinning Up: Q-Learning](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html) — overview of reinforcement-learning algorithms.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

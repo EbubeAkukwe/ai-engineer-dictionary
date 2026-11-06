@@ -1,0 +1,65 @@
+---
+title: "Positional Encoding"
+description: "Information added to a sequence representation so a model can distinguish token positions and order."
+term: "Positional Encoding"
+letter: "P"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Attention can compare tokens without naturally knowing which came first.
+Positional encoding gives a model information about where tokens occur,
+helping it distinguish sequences such as “dog bites person” from “person
+bites dog.”
+
+## Technical explanation
+
+In a Transformer, position information is combined with token
+representations or incorporated into attention. The original Transformer
+used fixed sine and cosine functions of position and dimension. Other
+architectures learn position embeddings or use relative-position and rotary
+schemes.
+
+## Why it matters in AI engineering
+
+Position representations affect how models use order, handle longer inputs,
+and transfer to sequence lengths not seen during training. The choice is
+part of model architecture and can influence both quality and context-length
+behavior.
+
+## How it works
+
+With additive encoding, a position vector is added to each token embedding:
+$\mathbf{h}_i=\mathbf{e}_i+\mathbf{p}_i$. Attention then uses these
+position-aware representations. Relative schemes instead encode distance
+between positions in token representations or attention scores.
+
+## Practical example
+
+At inference, a language model assigns an embedding to each input token and
+adds or applies its position information before self-attention. The
+resulting attention can use both token identity and sequence order.
+
+## Common misconceptions
+
+- Positional encoding is not the same as a token embedding: one represents
+  sequence location, the other represents token content.
+- There is no single positional scheme used by every Transformer.
+
+## Related terms
+
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Multi-Head Attention](../M/multi-head-attention.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — the Transformer paper and its sinusoidal positional encoding.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — implementation-oriented explanation of positional encodings and attention.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

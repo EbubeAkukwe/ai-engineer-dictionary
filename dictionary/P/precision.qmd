@@ -1,0 +1,61 @@
+---
+title: "Precision"
+description: "The fraction of predicted positive cases that are actually positive."
+term: "Precision"
+letter: "P"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Precision answers: “Of the cases the model flagged as positive, how many
+really were positive?” It is important when false alarms are costly.
+
+## Technical explanation
+
+For a binary classifier, precision is
+$\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$, where TP is the number of true
+positives and FP the number of false positives. If there are no predicted
+positives, the denominator is zero and a metric library must apply an
+explicitly chosen convention.
+
+## Why it matters in AI engineering
+
+In moderation, fraud review, or alerting, a high false-positive rate can
+waste human effort or harm users. Precision should be considered alongside
+recall and at the operating threshold that matches the use case.
+
+## How it works
+
+Choose a classification threshold, compare predictions with labeled
+outcomes, and count true and false positives. Changing the threshold usually
+changes both precision and recall, so teams examine a precision-recall curve
+or select a threshold on validation data.
+
+## Practical example
+
+If a model flags 100 transactions and 80 are confirmed fraudulent, its
+precision is $80/100=0.8$, or 80%. This does not reveal how many fraudulent
+transactions the model missed; that is measured by recall.
+
+## Common misconceptions
+
+- Precision is not the same as overall accuracy.
+- A high-precision model may have low recall if it flags only a small number
+  of very clear positives.
+
+## Related terms
+
+- [F1 Score](../F/f1-score.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [scikit-learn: Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) — definitions and metric behavior.
+- [Google Machine Learning: Classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) — practical trade-offs among precision, recall, and accuracy.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

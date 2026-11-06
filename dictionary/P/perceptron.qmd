@@ -1,0 +1,65 @@
+---
+title: "Perceptron"
+description: "A simple computational unit that applies a weighted sum and activation function to its inputs."
+term: "Perceptron"
+letter: "P"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A perceptron takes several inputs, gives each one a weight, adds a bias, and
+uses the result to make an output. It is a basic building block for
+understanding neural networks.
+
+## Technical explanation
+
+A common perceptron computes $y=\phi(\mathbf{w}^{\mathsf T}\mathbf{x}+b)$,
+where $\mathbf{x}$ is the input, $\mathbf{w}$ the weights, $b$ the bias,
+and $\phi$ an activation function. The original threshold perceptron learns
+a linear decision boundary and can represent only linearly separable
+classification problems.
+
+## Why it matters in AI engineering
+
+The perceptron introduces weighted computation, activations, and learning
+from examples. These ideas extend to multilayer networks, although modern
+neural networks use many types of layers and optimization techniques beyond
+the original perceptron learning rule.
+
+## How it works
+
+The unit calculates a weighted sum and passes it through an activation. In
+the classic binary rule, the output is one when the sum crosses a threshold.
+Training adjusts weights when the prediction is wrong; adding layers and
+nonlinear activations allows networks to model more complex functions.
+
+## Practical example
+
+A single perceptron can learn the AND function from binary inputs, because
+the positive examples can be separated from negative examples by a line.
+One perceptron cannot learn XOR, whose examples are not linearly separable.
+
+## Common misconceptions
+
+- A single perceptron is not a deep neural network.
+- The classic hard-threshold unit is not differentiable everywhere; modern
+  networks usually use differentiable activations for gradient-based
+  training.
+
+## Related terms
+
+- [Neuron](../N/neuron.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Activation Function](../A/activation-function.qmd)
+
+## Further reading
+
+- [scikit-learn: Perceptron](https://scikit-learn.org/stable/modules/linear_model.html#perceptron) — a practical linear classifier implementation.
+- [Deep Learning](https://www.deeplearningbook.org/) — background on neural networks and learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

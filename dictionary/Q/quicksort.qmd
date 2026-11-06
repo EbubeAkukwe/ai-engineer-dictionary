@@ -1,0 +1,61 @@
+---
+title: "QuickSort"
+description: "A comparison-based sorting algorithm that partitions values around a pivot and recursively sorts the partitions."
+term: "QuickSort"
+letter: "Q"
+category: "Algorithms"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+QuickSort sorts a list by choosing a pivot value, moving smaller values to
+one side and larger values to the other, then repeating the process on each
+side.
+
+## Technical explanation
+
+QuickSort is an in-place, divide-and-conquer comparison sort in common
+implementations. Its average time complexity is $O(n\log n)$, while an
+unbalanced sequence of partitions can produce $O(n^2)$ time. Pivot choice
+and partition strategy affect performance and implementation behavior.
+
+## Why it matters in AI engineering
+
+Sorting is a common operation in data processing, ranking, and evaluation.
+QuickSort illustrates how algorithmic choices affect runtime and why
+average-case performance does not remove worst-case considerations.
+
+## How it works
+
+Choose a pivot, partition the range so values fall before or after it, and
+recursively sort the partitions. Efficient implementations use small
+subarray optimizations and strategies to avoid consistently poor pivots.
+
+## Practical example
+
+Sorting prediction scores can help order results for a ranking task. A
+language runtime or library should usually handle the sort; implementing
+QuickSort directly is useful mainly for learning or when a specialized
+partitioning behavior is required.
+
+## Common misconceptions
+
+- QuickSort is not guaranteed to run in $O(n\log n)$ time on every input.
+- “In-place” and stability depend on the exact variant; typical in-place
+  QuickSort is not stable.
+
+## Related terms
+
+- [Algorithm](../A/algorithm.qmd)
+- [Python](../P/python.qmd)
+
+## Further reading
+
+- [Princeton: Quicksort](https://algs4.cs.princeton.edu/23quicksort/) — explanation, implementation, and analysis.
+- [OpenDSA: Quicksort](https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/Quicksort.html) — algorithm walkthrough and complexity.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

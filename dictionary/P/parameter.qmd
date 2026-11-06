@@ -1,0 +1,63 @@
+---
+title: "Parameter"
+description: "A value learned from data during model training, such as a neural network's weight or bias."
+term: "Parameter"
+letter: "P"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A parameter is a value inside a model that training adjusts. Like a set of
+knobs, parameters control how inputs are transformed into predictions.
+
+## Technical explanation
+
+In a parameterized model $f_\theta$, the parameter collection $\theta$
+contains learned values. For a neural network, these commonly include weight
+matrices and bias vectors. Training updates parameters to reduce an objective
+using an optimization algorithm.
+
+## Why it matters in AI engineering
+
+Parameter count affects model capacity, memory requirements, communication
+cost, and inference speed. Engineers need to distinguish trainable
+parameters from fixed settings when estimating resources or selecting a
+fine-tuning method.
+
+## How it works
+
+The model uses its current parameters to compute an output and loss.
+Backpropagation obtains gradients of the loss with respect to the parameters;
+an optimizer then updates them, for example
+$\theta \leftarrow \theta-\eta\nabla_\theta L$.
+
+## Practical example
+
+A linear classifier computes scores using a weight matrix and bias. Training
+changes those two parameter tensors so that examples of each class receive
+more appropriate scores.
+
+## Common misconceptions
+
+- Parameters are learned from training; hyperparameters such as learning
+  rate are choices set by the engineer.
+- A larger parameter count alone does not determine model quality or
+  capability.
+
+## Related terms
+
+- [Hyperparameter](../H/hyperparameter.qmd)
+- [Optimizer](../O/optimizer.qmd)
+- [Model](../M/model.qmd)
+
+## Further reading
+
+- [Dive into Deep Learning: Parameters and Initialization](https://d2l.ai/chapter_builders-guide/parameters.html) — model parameters and their initialization.
+- [PyTorch: Modules](https://pytorch.org/docs/stable/notes/modules.html) — how parameters are registered in models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

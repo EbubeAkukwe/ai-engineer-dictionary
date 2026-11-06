@@ -292,6 +292,39 @@ website:
             - dictionary/O/over-the-air-ota-update.qmd
             - dictionary/O/overfitting.qmd
             - dictionary/O/oversampling.qmd
+        - section: "P"
+          contents:
+            - dictionary/P/index.qmd
+            - dictionary/P/parameter.qmd
+            - dictionary/P/parameter-efficient-fine-tuning-peft.qmd
+            - dictionary/P/perceptron.qmd
+            - dictionary/P/perplexity.qmd
+            - dictionary/P/pipeline.qmd
+            - dictionary/P/policy-gradient.qmd
+            - dictionary/P/pooling.qmd
+            - dictionary/P/positional-encoding.qmd
+            - dictionary/P/precision.qmd
+            - dictionary/P/pretraining.qmd
+            - dictionary/P/principal-component-analysis-pca.qmd
+            - dictionary/P/probability-distribution.qmd
+            - dictionary/P/prompt.qmd
+            - dictionary/P/prompt-engineering.qmd
+            - dictionary/P/prompt-injection.qmd
+            - dictionary/P/pruning.qmd
+            - dictionary/P/pytorch.qmd
+            - dictionary/P/python.qmd
+        - section: "Q"
+          contents:
+            - dictionary/Q/index.qmd
+            - dictionary/Q/q-learning.qmd
+            - dictionary/Q/qlora.qmd
+            - dictionary/Q/q-value.qmd
+            - dictionary/Q/quantization.qmd
+            - dictionary/Q/query-attention.qmd
+            - dictionary/Q/query-expansion.qmd
+            - dictionary/Q/query-key-value-qkv.qmd
+            - dictionary/Q/queue.qmd
+            - dictionary/Q/quicksort.qmd
         - section: "P–Z"
           contents:
             - dictionary/letters.qmd

@@ -1,0 +1,64 @@
+---
+title: "Perplexity"
+description: "A language-model metric derived from the average negative log-likelihood of a sequence."
+term: "Perplexity"
+letter: "P"
+category: "NLP"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Perplexity measures how surprised a language model is by text. Lower
+perplexity means the model assigned higher probability to the observed
+tokens, under the specific evaluation setup.
+
+## Technical explanation
+
+For tokens $x_1,\ldots,x_N$, perplexity is commonly defined as
+$\exp(-\frac{1}{N}\sum_i \log p(x_i\mid x_{<i}))$. It is the exponential of
+average token-level negative log-likelihood, with the log base and
+tokenization convention handled consistently.
+
+## Why it matters in AI engineering
+
+Perplexity is useful for comparing language models on the same corpus and
+tokenization setup. It is not a complete measure of usefulness, factuality,
+or task performance, and scores can be incomparable across differing
+tokenizers or evaluation procedures.
+
+## How it works
+
+The model predicts each next token from its preceding context. Evaluation
+collects the probability assigned to the actual next token, averages the
+negative log probabilities, and exponentiates that average. For long
+sequences, implementations often use a sliding context window.
+
+## Practical example
+
+To compare two versions of the same model, evaluate each on the same
+held-out text, with identical tokenization and context handling. If one
+assigns greater probability to the observed tokens on average, its
+perplexity is lower, but task-specific evaluation is still needed.
+
+## Common misconceptions
+
+- Lower perplexity does not guarantee better answers to user questions.
+- Perplexity values depend on tokenization, data, and evaluation details;
+  scores from different setups should not be compared casually.
+
+## Related terms
+
+- [Negative Log-Likelihood](../N/negative-log-likelihood.qmd)
+- [Large Language Model (LLM)](../L/large-language-model-llm.qmd)
+- [Evaluation Dataset](../E/evaluation-dataset.qmd)
+
+## Further reading
+
+- [Hugging Face: Perplexity of fixed-length models](https://huggingface.co/docs/transformers/perplexity) — evaluation details and context-window caveats.
+- [Jurafsky and Martin: Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) — language modeling and evaluation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

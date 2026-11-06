@@ -1,0 +1,65 @@
+---
+title: "Parameter-Efficient Fine-Tuning (PEFT)"
+description: "A family of methods that adapts a pretrained model while training only a small subset of parameters or added components."
+term: "Parameter-Efficient Fine-Tuning (PEFT)"
+letter: "P"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Parameter-efficient fine-tuning adapts a large pretrained model without
+updating every weight. Instead, it trains a much smaller set of added or
+selected values, reducing the memory and storage needed for adaptation.
+
+## Technical explanation
+
+PEFT methods freeze most pretrained parameters and optimize a compact
+task-specific component. Examples include low-rank updates, adapter layers,
+and learned prompt vectors. The choice determines where the trainable
+parameters are inserted and how they interact with the frozen model.
+
+## Why it matters in AI engineering
+
+It can make adaptation more affordable when full fine-tuning does not fit
+available compute or when many task-specific variants must be stored.
+Trade-offs include task quality, training complexity, and compatibility with
+the target inference stack.
+
+## How it works
+
+The base model's weights remain fixed while gradients update only the PEFT
+parameters. At inference, the trained component is loaded alongside the base
+model or merged into its weights if the method and deployment format support
+merging.
+
+## Practical example
+
+An engineer can keep a pretrained language model frozen and train a low-rank
+weight update for a domain-specific task. The result is a small adapter
+artifact that can be used with the same base model rather than saving a full
+copy of all its parameters.
+
+## Common misconceptions
+
+- PEFT still requires careful data preparation, evaluation, and deployment
+  testing.
+- Fewer trainable parameters do not guarantee lower inference latency;
+  extra adapter operations can affect serving performance.
+
+## Related terms
+
+- [Fine-Tuning](../F/fine-tuning.qmd)
+- [LoRA](../L/lora.qmd)
+- [Adapter](../A/adapter.qmd)
+
+## Further reading
+
+- [Hugging Face PEFT documentation](https://huggingface.co/docs/peft/index) — supported methods and usage.
+- [A Survey of Parameter-Efficient Fine-Tuning Methods](https://arxiv.org/abs/2312.12148) — overview of PEFT approaches.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

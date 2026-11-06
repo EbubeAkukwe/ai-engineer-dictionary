@@ -1,0 +1,64 @@
+---
+title: "PyTorch"
+description: "An open-source framework for building, training, and deploying machine-learning models with tensors and automatic differentiation."
+term: "PyTorch"
+letter: "P"
+category: "AI Frameworks"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+PyTorch is a toolkit for writing programs that learn from data. It supplies
+multidimensional arrays, operations that can run on CPUs or GPUs, and tools
+that calculate how model parameters should change during training.
+
+## Technical explanation
+
+PyTorch is an open-source machine-learning framework. Its tensor library
+provides shape-aware numerical operations, while autograd records operations
+and computes derivatives for gradient-based learning. `torch.nn` provides
+modules and losses, and `torch.optim` provides parameter-update algorithms.
+
+## Why it matters in AI engineering
+
+The framework is widely used to prototype and train neural networks, build
+custom learning systems, and run models in production. Its Python interface
+lets engineers combine model code with the broader Python data and deployment
+ecosystem.
+
+## How it works
+
+An engineer defines a model from tensor operations, computes a prediction and
+loss, then asks autograd to calculate gradients. An optimizer uses those
+gradients to update parameters; devices and distributed tools can scale the
+computation.
+
+## Practical example
+
+For image classification, a PyTorch model maps a batch of image tensors to
+class scores. A training step compares those scores with labels, calls
+`loss.backward()`, updates the model with an optimizer, and clears gradients
+before the next step.
+
+## Common misconceptions
+
+- PyTorch does not choose a good model, dataset, or objective automatically.
+- Moving tensors to a GPU does not guarantee a speedup; small workloads can
+  spend more time on transfer and launch overhead.
+
+## Related terms
+
+- [NumPy](../N/numpy.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Neural Network](../N/neural-network.qmd)
+
+## Further reading
+
+- [PyTorch Tutorials](https://pytorch.org/tutorials/) — official tutorials for tensors, autograd, model building, and training.
+- [PyTorch Documentation](https://pytorch.org/docs/stable/index.html) — API reference and guides.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

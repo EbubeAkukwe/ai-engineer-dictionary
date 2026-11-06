@@ -1,0 +1,66 @@
+---
+title: "Pruning"
+description: "Reducing a model by removing or zeroing selected weights, neurons, or structures."
+term: "Pruning"
+letter: "P"
+category: "Model Optimization"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Pruning removes parts of a model that contribute relatively little, aiming
+to make it smaller or faster while preserving acceptable quality. It is
+similar to trimming a complex structure while keeping its useful behavior.
+
+## Technical explanation
+
+Pruning applies a sparsity pattern to model parameters or structures.
+Unstructured pruning zeros individual weights; structured pruning removes
+groups such as channels or attention heads. Methods may prune by magnitude,
+learned importance, or a task-specific criterion, often followed by
+fine-tuning.
+
+## Why it matters in AI engineering
+
+Smaller models can reduce storage, memory traffic, and sometimes latency.
+Whether pruning yields real deployment benefits depends on hardware and
+runtime support: sparse weights do not necessarily execute faster on dense
+kernels.
+
+## How it works
+
+A method scores parameters or structures, removes those below a chosen
+criterion, and may retrain the remaining model to recover quality. Engineers
+measure the resulting quality, memory footprint, and end-to-end inference
+performance on the intended hardware.
+
+## Practical example
+
+A team can prune low-magnitude weights from a trained network, fine-tune the
+sparse model, and compare its validation accuracy and latency with the
+original. If the deployment runtime lacks sparse acceleration, structured
+pruning may be more useful.
+
+## Common misconceptions
+
+- A model with many zero weights is not automatically smaller in storage;
+  the sparse format itself has overhead.
+- Pruning does not guarantee lower latency or energy use without compatible
+  hardware and kernels.
+
+## Related terms
+
+- [Model Compression](../M/model-compression.qmd)
+- [Quantization](../Q/quantization.qmd)
+- [Fine-Tuning](../F/fine-tuning.qmd)
+
+## Further reading
+
+- [PyTorch: Pruning tutorial](https://pytorch.org/tutorials/intermediate/pruning_tutorial.html) — practical pruning workflow.
+- [The Lottery Ticket Hypothesis](https://arxiv.org/abs/1803.03635) — influential work on sparse subnetworks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

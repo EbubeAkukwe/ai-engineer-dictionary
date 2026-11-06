@@ -1,0 +1,63 @@
+---
+title: "Queue"
+description: "A data structure that processes items in first-in, first-out order."
+term: "Queue"
+letter: "Q"
+category: "Computer Science"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A queue is like a line: the first item added is usually the first one
+removed. This first-in, first-out behavior is useful when work should be
+handled in arrival order.
+
+## Technical explanation
+
+A queue supports insertion at one end (enqueue) and removal at the other
+(dequeue). Implementations may use a circular buffer, linked list, or
+concurrent message service. Typical queue operations can be $O(1)$, though
+the exact guarantees depend on the implementation.
+
+## Why it matters in AI engineering
+
+Queues buffer requests between producers and consumers, help manage
+asynchronous work, and can smooth uneven traffic. In model serving, queue
+policy also affects latency, throughput, fairness, and cancellation.
+
+## How it works
+
+New work is appended, then a worker removes the oldest eligible item.
+Real-world queues may include capacity limits, priorities, retries, or
+multiple consumers. Systems must decide what happens when the queue is full
+or a worker fails.
+
+## Practical example
+
+An inference service can enqueue incoming prediction requests for a worker
+pool. The service may batch compatible requests, but should also enforce a
+maximum wait time so requests do not sit indefinitely.
+
+## Common misconceptions
+
+- A queue is not necessarily durable; an in-memory queue can lose work when
+  its process stops.
+- FIFO ordering may not hold when priorities, retries, or multiple workers
+  are involved.
+
+## Related terms
+
+- [Batching](../B/batch.qmd)
+- [Orchestration](../O/orchestration.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [Python: `queue` — synchronized queue classes](https://docs.python.org/3/library/queue.html) — thread-safe queue primitives.
+- [Python: `collections.deque`](https://docs.python.org/3/library/collections.html#collections.deque) — efficient append and pop operations at both ends.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

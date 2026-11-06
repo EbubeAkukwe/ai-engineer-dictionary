@@ -1,0 +1,64 @@
+---
+title: "Prompt"
+description: "The input text and other context supplied to a language model to guide a particular response or task."
+term: "Prompt"
+letter: "P"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A prompt is what an application gives a language model to work on. It can
+include a question, instructions, examples, conversation history, and
+content retrieved from other sources.
+
+## Technical explanation
+
+In a text-based model, the prompt is typically tokenized and provided as
+conditioning context for generation. In deployed systems it may comprise
+multiple messages with roles, structured data, tool results, or multimodal
+inputs, subject to the model's context and interface constraints.
+
+## Why it matters in AI engineering
+
+The prompt is part of the application interface and influences output
+quality, latency, cost, and safety. Maintaining prompts as versioned,
+testable assets helps teams diagnose changes and compare model behavior.
+
+## How it works
+
+The model conditions its output distribution on the input context. During
+generation it repeatedly predicts a next token or output unit based on the
+prompt and previously generated content. Prompt structure guides the task
+but does not guarantee the model will follow every instruction.
+
+## Practical example
+
+A support application might provide a prompt with the user's question, a
+short instruction to answer using supplied policy excerpts, and the
+retrieved excerpts themselves. The application should still validate
+important outputs and constrain consequential actions.
+
+## Common misconceptions
+
+- A prompt is not always a single sentence; it can include structured
+  messages, examples, data, and tool results.
+- A carefully worded prompt is not a substitute for access control,
+  validation, or safety engineering.
+
+## Related terms
+
+- [Prompt Engineering](prompt-engineering.qmd)
+- [Prompt Injection](prompt-injection.qmd)
+- [Context Window](../C/context-window.qmd)
+
+## Further reading
+
+- [OpenAI: Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering) — practical guidance on structuring model inputs.
+- [Hugging Face: Chat templates](https://huggingface.co/docs/transformers/main/en/chat_templating) — how structured conversations are serialized for models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

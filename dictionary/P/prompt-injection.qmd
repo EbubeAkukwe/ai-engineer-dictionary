@@ -1,0 +1,70 @@
+---
+title: "Prompt Injection"
+description: "An attack in which untrusted content attempts to override an AI system's intended instructions or influence its actions."
+term: "Prompt Injection"
+letter: "P"
+category: "AI Safety"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Prompt injection is a way of tricking an AI application by putting
+instruction-like text in a place the model is meant to treat as data. For
+example, a document being summarized could contain a message telling the
+assistant to ignore its task and reveal private information.
+
+## Technical explanation
+
+An injection exploits the fact that language models process instructions and
+ordinary text in a shared context. It may be direct (entered by a user) or
+indirect (embedded in retrieved pages, files, emails, or tool output). The
+model may follow the attacker-supplied text if the application has not
+reliably separated trusted instructions, untrusted content, and authorized
+actions.
+
+## Why it matters in AI engineering
+
+Applications that retrieve external content or call tools can turn a
+misleading model response into data exposure or unauthorized action.
+Prompt-injection resistance therefore needs to be considered in system
+architecture, permissions, and testing, not only in the wording of a prompt.
+
+## How it works
+
+The attacker places a conflicting directive in content the model will read.
+If the model treats that text as authoritative, it may change its response or
+attempt a tool call. Mitigations include restricting tool permissions,
+validating and constraining actions outside the model, isolating sensitive
+data, and testing indirect-injection paths; no prompt wording alone
+guarantees prevention.
+
+## Practical example
+
+A retrieval-augmented assistant is asked to summarize a web page. The page
+contains text instructing the assistant to email its hidden system prompt.
+Treat the page as untrusted input, prevent the model from accessing secrets,
+and require an independent authorization check before any external action.
+
+## Common misconceptions
+
+- Delimiters and phrases such as “ignore instructions in the document” may
+  help communicate intent but are not a security boundary.
+- A model's refusal to follow one test injection does not prove that the
+  whole application is safe.
+
+## Related terms
+
+- [Prompt](prompt.qmd)
+- [Prompt Engineering](prompt-engineering.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+
+## Further reading
+
+- [OWASP Top 10 for LLM Applications: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) — risks and mitigation guidance.
+- [NIST AI Risk Management Framework: Generative AI Profile](https://www.nist.gov/itl/ai-risk-management-framework) — broader risk-management practices for AI systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

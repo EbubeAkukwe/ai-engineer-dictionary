@@ -1,0 +1,65 @@
+---
+title: "Q-Value"
+description: "An estimate of the expected cumulative reward for taking an action in a state and then following a policy."
+term: "Q-Value"
+letter: "Q"
+category: "Reinforcement Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A Q-value estimates how good it is for an agent to take a particular action
+in a particular situation, considering both the immediate reward and what
+may happen afterward.
+
+## Technical explanation
+
+The action-value function $Q^\pi(s,a)$ is the expected discounted return
+when action $a$ is taken in state $s$ and subsequent actions follow policy
+$\pi$. The optimal action-value function $Q^*(s,a)$ assumes optimal
+decisions thereafter. Q-values may be represented in a table or approximated
+by a neural network.
+
+## Why it matters in AI engineering
+
+Q-values help an agent compare actions and are central to methods such as
+Q-learning and deep Q-networks. Their reliability depends on sufficient,
+representative experience and appropriate learning and exploration choices.
+
+## How it works
+
+An agent estimates values from observed rewards and successor states. A
+temporal-difference target often combines the immediate reward with a
+discounted estimate of future value. Choosing the highest Q-value is greedy
+with respect to the current estimates, but exploration may deliberately
+choose other actions.
+
+## Practical example
+
+In a grid-world, the Q-value for moving right from one cell estimates the
+total discounted reward expected after that move. The agent can compare it
+with values for moving left, up, or down when selecting an action.
+
+## Common misconceptions
+
+- A Q-value is not necessarily a probability and can be negative or greater
+  than one.
+- The estimated value can be wrong or uncertain; selecting the largest
+  estimate does not guarantee the best real outcome.
+
+## Related terms
+
+- [Q-Learning](q-learning.qmd)
+- [Q-Learning](q-learning.qmd)
+- [Exploration vs. Exploitation](../E/exploration-vs-exploitation.qmd)
+
+## Further reading
+
+- [Sutton and Barto: Reinforcement Learning, Chapter 3](http://incompleteideas.net/book/RLbook2020.pdf) — return, value functions, and action values.
+- [David Silver's Reinforcement Learning course](https://www.davidsilver.uk/teaching/) — lectures on value functions and control.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,65 @@
+---
+title: "Principal Component Analysis (PCA)"
+description: "A linear method that projects data onto directions capturing the greatest variance."
+term: "Principal Component Analysis (PCA)"
+letter: "P"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Principal component analysis (PCA) finds new axes that summarize variation
+in a dataset. Keeping only the most informative axes can make data easier to
+visualize or reduce the number of features used by a later model.
+
+## Technical explanation
+
+For centered data, PCA finds orthogonal directions that maximize projected
+variance. These directions are eigenvectors of the covariance matrix, or
+equivalently right singular vectors of the data matrix. Projecting onto the
+first $k$ components gives a rank-$k$ linear approximation.
+
+## Why it matters in AI engineering
+
+PCA is useful for exploratory visualization, compression, and reducing
+redundant features. It is a linear transformation, so it may not preserve
+nonlinear structure; fitting it on all data before evaluation can also leak
+information from held-out examples.
+
+## How it works
+
+Features are centered and, when appropriate, scaled. A singular value
+decomposition or eigendecomposition yields components ordered by explained
+variance. The chosen components transform new observations using the same
+training-set centering, scaling, and projection.
+
+## Practical example
+
+An engineer can standardize measurements, fit PCA on the training partition,
+and project both training and validation rows onto the first two components
+for visualization. The preprocessing is fitted only on training data to
+avoid leakage.
+
+## Common misconceptions
+
+- High explained variance does not necessarily mean a component is
+  predictive of the target.
+- PCA does not select original features; its components are combinations of
+  them.
+
+## Related terms
+
+- [Dimensionality Reduction](../D/dimensionality-reduction.qmd)
+- [Feature](../F/feature.qmd)
+- [Linear Algebra](../L/linear-algebra.qmd)
+
+## Further reading
+
+- [scikit-learn: Decomposition and PCA](https://scikit-learn.org/stable/modules/decomposition.html#pca) — implementation and practical considerations.
+- [StatQuest: Principal Component Analysis](https://statquest.org/video-index/#pca) — visual introduction to PCA.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

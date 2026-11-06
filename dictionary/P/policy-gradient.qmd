@@ -1,0 +1,67 @@
+---
+title: "Policy Gradient"
+description: "A reinforcement-learning method that directly adjusts a policy to increase expected reward."
+term: "Policy Gradient"
+letter: "P"
+category: "Reinforcement Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A policy gradient method improves an agent's decision rule by nudging it
+toward actions that tend to earn more reward. Instead of first learning only
+which action is best, it directly learns how the policy should choose.
+
+## Technical explanation
+
+For a parameterized policy $\pi_\theta(a\mid s)$, policy-gradient methods
+estimate the gradient of expected return with respect to parameters
+$\theta$. A common form uses sampled returns and
+$\nabla_\theta\log\pi_\theta(a_t\mid s_t)$, optionally multiplied by an
+advantage estimate and adjusted with a baseline to reduce variance.
+
+## Why it matters in AI engineering
+
+Direct policy optimization works with stochastic policies and continuous
+actions, and underlies widely used reinforcement-learning algorithms.
+However, gradient estimates can be noisy, and training behavior depends on
+reward design, sampling, and implementation details.
+
+## How it works
+
+The agent collects trajectories under its current policy, calculates
+returns or advantages, and updates policy parameters to increase the
+probability of actions associated with higher-than-expected return.
+Algorithms such as REINFORCE and PPO use different estimators and update
+constraints.
+
+## Practical example
+
+In a simulated robot task, the policy maps sensor observations to a
+distribution over motor commands. After each rollout, the learner uses
+reward and advantage estimates to adjust the policy, then tests the updated
+policy on separate seeds and scenarios.
+
+## Common misconceptions
+
+- A policy gradient is an optimization direction estimate, not a guarantee
+  that every update improves real-world performance.
+- Reward maximization only reflects the reward specification; it does not
+  automatically encode safety or intended behavior.
+
+## Related terms
+
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Q-Learning](../Q/q-learning.qmd)
+- [Exploration vs. Exploitation](../E/exploration-vs-exploitation.qmd)
+
+## Further reading
+
+- [OpenAI Spinning Up: Policy Optimization](https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html) — derivation and practical algorithms.
+- [Policy Gradient Methods for Reinforcement Learning with Function Approximation](https://www.cs.utexas.edu/~shivaram/readings/b2hd-Williams1992.html) — foundational policy-gradient paper.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

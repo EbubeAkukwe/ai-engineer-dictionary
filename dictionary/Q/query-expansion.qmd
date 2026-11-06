@@ -1,0 +1,64 @@
+---
+title: "Query Expansion"
+description: "A retrieval technique that adds related terms to a search query to improve matching with relevant documents."
+term: "Query Expansion"
+letter: "Q"
+category: "Information Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Query expansion adds likely related words or phrases to a search request.
+This can help when a user's wording differs from the words used in useful
+documents.
+
+## Technical explanation
+
+Expansion may use synonyms, domain vocabularies, relevance feedback, or
+language models to produce additional query terms. In lexical retrieval,
+the expanded query is matched against document terms; in hybrid systems,
+expansion can also affect semantic retrieval or reranking.
+
+## Why it matters in AI engineering
+
+Expansion can improve recall when queries are short, ambiguous, or use
+different terminology from the document collection. Poor expansions can
+introduce noise, change intent, and reduce precision, so the method needs
+evaluation on representative queries.
+
+## How it works
+
+The system identifies candidate related terms and combines them with the
+original query, often assigning different weights. Feedback-based methods
+derive terms from initially retrieved documents; model-generated expansions
+should be constrained and tested to avoid unsupported additions.
+
+## Practical example
+
+A search for “car repair” might be expanded with “automotive service” and
+“vehicle maintenance” before retrieval. The original query should remain
+available so the system does not lose the user's intended wording.
+
+## Common misconceptions
+
+- More query terms do not always improve results; irrelevant terms can hurt
+  ranking.
+- Generated expansions are suggestions, not evidence that the added terms
+  reflect the user's intent.
+
+## Related terms
+
+- [Information Retrieval](../I/information-retrieval.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+- [Embedding](../E/embedding.qmd)
+
+## Further reading
+
+- [Stanford Information Retrieval Book: Query Expansion](https://nlp.stanford.edu/IR-book/html/htmledition/query-expansion-1.html) — relevance feedback and expansion methods.
+- [Elastic: Query expansion](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters.html) — practical search suggestion features.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

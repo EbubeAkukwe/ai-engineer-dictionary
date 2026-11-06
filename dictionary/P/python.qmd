@@ -1,0 +1,65 @@
+---
+title: "Python"
+description: "A general-purpose programming language widely used for machine learning, data work, and AI application development."
+term: "Python"
+letter: "P"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Python is a programming language with readable syntax and a large ecosystem
+of libraries. AI engineers use it to explore data, build models, automate
+workflows, and connect AI services to applications.
+
+## Technical explanation
+
+Python is a high-level, dynamically typed language with multiple
+programming paradigms. Its implementations and extension interfaces allow
+performance-critical libraries to use compiled code while exposing
+convenient Python APIs.
+
+## Why it matters in AI engineering
+
+Many data, machine-learning, and model-serving tools provide Python
+interfaces. This makes it practical to move from experimentation to
+production integration, while teams still need to manage dependencies,
+performance, testing, and deployment environments.
+
+## How it works
+
+Python source is typically compiled to bytecode and executed by an
+interpreter. Packages extend the standard library with domain-specific
+functionality. In numerical and deep-learning libraries, substantial
+computation may run in optimized native kernels rather than Python loops.
+
+## Practical example
+
+An engineer can load a dataset, split it into training and validation sets,
+fit a classifier using a Python machine-learning library, and expose
+predictions through an API. A lockfile or pinned environment helps reproduce
+the setup.
+
+## Common misconceptions
+
+- Python is not always slow: numerical work may be delegated to optimized
+  native libraries, though Python-level overhead can still matter.
+- A script that runs on one machine is not automatically reproducible or
+  deployable; dependencies and environment details matter.
+
+## Related terms
+
+- [NumPy](../N/numpy.qmd)
+- [PyTorch](pytorch.qmd)
+- [API](../A/api.qmd)
+
+## Further reading
+
+- [The Python Tutorial](https://docs.python.org/3/tutorial/) — official introduction to Python.
+- [Python Packaging User Guide](https://packaging.python.org/en/latest/) — guidance on packaging and environments.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

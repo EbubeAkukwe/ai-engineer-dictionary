@@ -1,0 +1,66 @@
+---
+title: "Prompt Engineering"
+description: "The practice of designing and testing model inputs to elicit useful, reliable outputs for a task."
+term: "Prompt Engineering"
+letter: "P"
+category: "LLM Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Prompt engineering is the process of shaping what a language model is asked
+to do and how the request is presented. It includes clarifying instructions,
+providing relevant context, and testing outputs against examples.
+
+## Technical explanation
+
+Prompt engineering develops and evaluates input templates, message
+structures, examples, and constraints for a model and task. Techniques
+include zero-shot instructions, few-shot examples, decomposition, and
+structured-output requests. Performance depends on the model, data, and
+evaluation method.
+
+## Why it matters in AI engineering
+
+Prompt design can improve task accuracy without changing model weights, but
+prompt changes can also create regressions. Treating prompts as versioned
+software and evaluating them on representative cases makes behavior changes
+measurable.
+
+## How it works
+
+An engineer defines the desired behavior and provides useful instructions
+and context. They run a set of test inputs, assess outcomes using task
+metrics or human review, and revise the prompt. Production systems should
+also monitor failures and protect against untrusted content.
+
+## Practical example
+
+For classifying customer feedback, a prompt can define the available labels,
+explain how to handle ambiguous cases, and request a structured result.
+Testing should include examples from each label and edge cases that were not
+used while writing the prompt.
+
+## Common misconceptions
+
+- Prompt engineering does not reliably compensate for missing knowledge or
+  unsuitable model capabilities.
+- Few-shot examples can help, but poor, inconsistent, or biased examples
+  can make results worse.
+
+## Related terms
+
+- [Prompt](prompt.qmd)
+- [In-Context Learning](../I/in-context-learning.qmd)
+- [Prompt Injection](prompt-injection.qmd)
+
+## Further reading
+
+- [OpenAI: Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering) — guidance and techniques for model inputs.
+- [Anthropic: Prompt engineering overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — practical workflow for improving prompts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
