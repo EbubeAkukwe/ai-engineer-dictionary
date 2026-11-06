@@ -1,0 +1,72 @@
+---
+title: "Initialization"
+description: "The process of assigning initial parameter values before model training."
+term: "Initialization"
+letter: "I"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Initialization is how a model's parameters, such as neural-network weights,
+are set before training begins. A useful starting point helps learning make
+progress; a poor one can make optimization slow or unstable.
+
+## Technical explanation
+
+Neural-network initialization assigns initial values to trainable parameters.
+For hidden-layer weights, schemes such as Xavier/Glorot or He initialization
+scale random values according to the number of input and output connections
+to help control signal or gradient magnitudes. Biases are often initialized
+to zero, though the appropriate choice depends on the architecture.
+
+## Why it matters in AI engineering
+
+The initial parameter values influence optimization, convergence, and
+reproducibility. Initialization is particularly important in deep networks,
+where activations and gradients can become too small or too large as they
+pass through many layers.
+
+## How it works
+
+An initialization scheme samples or sets each parameter using a rule
+designed for the layer's properties and activation function. For example,
+He initialization uses a weight variance proportional to
+$2/n_{\text{in}}$ for common rectified linear networks, where
+$n_{\text{in}}$ is the number of input connections. The choice is a starting
+point, not a guarantee of successful training.
+
+## Practical example
+
+A framework can initialize linear-layer weights with a He scheme before
+training a ReLU network. Repeating an experiment with a controlled random
+seed can make that initialization reproducible, although other sources of
+nondeterminism may remain.
+
+## Common misconceptions
+
+- Setting all hidden-layer weights to zero can prevent units from learning
+  distinct features because they receive identical updates.
+- Random initialization is not one universal distribution; scale and
+  structure matter.
+- Initialization alone does not fix a poor architecture, data pipeline, or
+  optimization setup.
+
+## Related terms
+
+- [Activation Function](../A/activation-function.qmd)
+- [Backpropagation](../B/backpropagation.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+
+## Further reading
+
+- [PyTorch: torch.nn.init](https://pytorch.org/docs/stable/nn.init.html) —
+  documents common parameter initialization functions.
+- [Deep Learning Book: Numerical Computation](https://www.deeplearningbook.org/contents/numerical.html) —
+  discusses numerical issues relevant to training neural networks.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

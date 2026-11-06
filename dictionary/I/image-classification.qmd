@@ -1,0 +1,70 @@
+---
+title: "Image Classification"
+description: "A computer-vision task that assigns one or more labels to an image."
+term: "Image Classification"
+letter: "I"
+category: "Computer Vision"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Image classification asks a model to identify what an image shows. It might
+label a photograph as a penguin or an ostrich, or assign several tags when
+multiple objects or concepts are present.
+
+## Technical explanation
+
+An image classifier maps an input image to scores over a predefined set of
+classes. A single-label classifier typically chooses the class with the
+highest score; a multi-label classifier can predict several independent
+labels. Scores may be logits or probabilities, and the decision rule can
+include thresholds or other task-specific logic.
+
+## Why it matters in AI engineering
+
+Classification is used for visual search, quality inspection, content
+organization, and triage. Production systems also need to account for
+uncertain predictions, class imbalance, data shifts, and the cost of different
+mistakes.
+
+## How it works
+
+The image is decoded and preprocessed into tensors expected by a model. A
+neural network extracts visual features and produces class scores. During
+training, the scores are compared with labeled examples using a loss function;
+at inference time, the trained model applies a decision rule to new images.
+
+## Practical example
+
+The [Binary Classification notebook](../../notebooks/B/binary-classification.ipynb)
+scaffolds a beginner-friendly fast.ai project to classify penguin and ostrich
+images. It walks through implementing the model, so the
+reader can follow along and learn how to build the classifier.
+
+## Common misconceptions
+
+- A classifier may learn background, image-source, or lighting cues instead
+  of the intended object.
+- A high accuracy score does not guarantee reliable predictions for every
+  class or deployment setting.
+- Image classification assigns labels to an image; locating or outlining
+  objects requires other tasks such as detection or segmentation.
+
+## Related terms
+
+- [Binary Classification](../B/binary-classification.qmd)
+- [Computer Vision](../C/computer-vision.qmd)
+- [Image Segmentation](image-segmentation.qmd)
+
+## Further reading
+
+- [fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/) —
+  hands-on lessons that include image classification.
+- [PyTorch: Transfer Learning for Computer Vision](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html) —
+  demonstrates training an image classifier with transfer learning.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

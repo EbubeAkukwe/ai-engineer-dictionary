@@ -157,7 +157,18 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## I {#i}
 
-Terms beginning with I will appear here as the dictionary grows.
+- [Image Classification](/dictionary/I/image-classification.qmd)
+- [Image Segmentation](/dictionary/I/image-segmentation.qmd)
+- [Imbalanced Dataset](/dictionary/I/imbalanced-dataset.qmd)
+- [Inference](/dictionary/I/inference.qmd)
+- [Information Retrieval](/dictionary/I/information-retrieval.qmd)
+- [Initialization](/dictionary/I/initialization.qmd)
+- [Instruction Tuning](/dictionary/I/instruction-tuning.qmd)
+- [Interpretability](/dictionary/I/interpretability.qmd)
+- [Intersection over Union (IoU)](/dictionary/I/intersection-over-union-iou.qmd)
+- [In-Context Learning](/dictionary/I/in-context-learning.qmd)
+- [Interpolation](/dictionary/I/interpolation.qmd)
+- [Inverse Kinematics](/dictionary/I/inverse-kinematics.qmd)
 
 ## J {#j}
 

@@ -180,7 +180,19 @@ website:
             - dictionary/H/hypothesis-testing.qmd
         - section: "I"
           contents:
-            - dictionary/letters.qmd
+            - dictionary/I/index.qmd
+            - dictionary/I/image-classification.qmd
+            - dictionary/I/image-segmentation.qmd
+            - dictionary/I/imbalanced-dataset.qmd
+            - dictionary/I/inference.qmd
+            - dictionary/I/information-retrieval.qmd
+            - dictionary/I/initialization.qmd
+            - dictionary/I/instruction-tuning.qmd
+            - dictionary/I/interpretability.qmd
+            - dictionary/I/intersection-over-union-iou.qmd
+            - dictionary/I/in-context-learning.qmd
+            - dictionary/I/interpolation.qmd
+            - dictionary/I/inverse-kinematics.qmd
         - section: "J"
           contents:
             - dictionary/J/index.qmd

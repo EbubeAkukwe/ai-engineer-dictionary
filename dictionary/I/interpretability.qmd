@@ -1,0 +1,69 @@
+---
+title: "Interpretability"
+description: "The study of how to understand the internal behavior and outputs of a model."
+term: "Interpretability"
+letter: "I"
+category: "AI Safety"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Interpretability is the effort to understand why a model behaves as it does.
+It can mean examining how a model uses its inputs, which patterns it has
+learned, or what factors contributed to a particular prediction.
+
+## Technical explanation
+
+Interpretability methods include inherently inspectable models and
+post-hoc analyses of more complex models. Explanations may be local, for a
+single prediction, or global, describing behavior across a model or dataset.
+Methods include feature attribution, example-based explanations, and
+mechanistic analysis of internal representations.
+
+## Why it matters in AI engineering
+
+Interpretability can help detect unwanted shortcuts, debug failures, support
+review, and form hypotheses about model behavior. It is especially relevant
+when model decisions have significant consequences, but explanation quality
+and the intended use of an explanation must be evaluated carefully.
+
+## How it works
+
+An analysis starts with a specific question about a model and selects a
+method suited to that question. A feature-attribution method, for example,
+estimates how input features relate to a prediction. Results should be
+checked for stability and against other evidence; an explanation is not
+automatically a faithful account of the model's reasoning.
+
+## Practical example
+
+If a classifier labels images of wolves as dogs, an engineer might inspect
+saliency maps and compare predictions after changing the background. If the
+model relies heavily on snow rather than the animal, that signals a dataset
+or modeling problem to investigate.
+
+## Common misconceptions
+
+- An explanation is not necessarily a causal account of a prediction.
+- A model that is easy to inspect is not automatically fair, safe, or
+  correct.
+- One explanation method rarely answers every question about a model.
+
+## Related terms
+
+- [Explainable AI (XAI)](../E/explainable-ai-xai.qmd)
+- [Black-box Model](../B/black-box-model.qmd)
+- [AI Alignment](../A/ai-alignment.qmd)
+
+## Further reading
+
+- [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/) —
+  an open textbook on model-agnostic and model-specific interpretation methods.
+- [Google PAIR: People + AI Guidebook](https://pair.withgoogle.com/guidebook/) —
+  practical guidance for designing and evaluating human-facing AI systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

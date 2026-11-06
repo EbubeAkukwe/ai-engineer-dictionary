@@ -1,0 +1,18 @@
+---
+title: "I"
+---
+
+# I
+
+- [Image Classification](image-classification.qmd)
+- [Image Segmentation](image-segmentation.qmd)
+- [Imbalanced Dataset](imbalanced-dataset.qmd)
+- [Inference](inference.qmd)
+- [Information Retrieval](information-retrieval.qmd)
+- [Initialization](initialization.qmd)
+- [Instruction Tuning](instruction-tuning.qmd)
+- [Interpretability](interpretability.qmd)
+- [Intersection over Union (IoU)](intersection-over-union-iou.qmd)
+- [In-Context Learning](in-context-learning.qmd)
+- [Interpolation](interpolation.qmd)
+- [Inverse Kinematics](inverse-kinematics.qmd)

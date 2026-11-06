@@ -1,0 +1,68 @@
+---
+title: "Inverse Kinematics"
+description: "Computing joint configurations that place a robot at a desired pose."
+term: "Inverse Kinematics"
+letter: "I"
+category: "Robotics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Inverse kinematics (IK) asks: what joint positions should a robot use to put
+its hand, gripper, or other endpoint at a desired location? It works backward
+from a target pose to possible movements of the robot's joints.
+
+## Technical explanation
+
+For a robot with joint configuration $\mathbf{q}$ and forward-kinematics
+function $f$, IK seeks a configuration such that $f(\mathbf{q})$ matches a
+target pose. Solutions can be non-unique, nonexistent, or constrained by
+joint limits, collisions, and motion requirements. Numerical solvers often
+minimize position and orientation error iteratively.
+
+## Why it matters in AI engineering
+
+IK connects perception and planning to physical action. A robot can use it
+to reach an object or position a sensor, while learning-based systems may
+help predict poses or select targets. A valid mathematical solution must
+still be checked for reachability, collisions, and safe execution.
+
+## How it works
+
+The system receives a target position and often an orientation. An IK solver
+uses the robot's kinematic model to find joint values that produce a close
+matching pose. It may use a closed-form solution for simple mechanisms or an
+iterative numerical method for more complex ones; limits and collision checks
+can constrain the search.
+
+## Practical example
+
+A robot arm is asked to place its gripper at a point above a table. The IK
+solver returns one or more joint configurations that reach the target. A
+planner can then choose a collision-free path to that configuration.
+
+## Common misconceptions
+
+- Inverse kinematics is not always a unique inverse; many joint configurations
+  can produce the same endpoint pose.
+- A target may be unreachable or may violate joint or collision constraints.
+- Reaching the final pose does not guarantee that the path to it is safe.
+
+## Related terms
+
+- [Jacobian](../J/jacobian.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Computer Vision](../C/computer-vision.qmd)
+
+## Further reading
+
+- [Modern Robotics: Robot Kinematics](https://modernrobotics.northwestern.edu/chapters/chapter6/) —
+  lectures and resources on robot kinematics and inverse kinematics.
+- [MoveIt: Kinematics Configuration](https://moveit.picknik.ai/main/doc/examples/kinematics_configuration/kinematics_configuration_tutorial.html) —
+  explains configuring kinematics solvers in a robotics planning system.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

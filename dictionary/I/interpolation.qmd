@@ -1,0 +1,76 @@
+---
+title: "Interpolation"
+description: "Estimating values between known data points."
+term: "Interpolation"
+letter: "I"
+category: "Mathematics"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Interpolation estimates a value between points that are already known. If
+measurements show a system's temperature at 10:00 and 10:10, interpolation
+can estimate its temperature at 10:05.
+
+## Technical explanation
+
+An interpolation method constructs an estimate within the range of supplied
+data points. Linear interpolation connects neighboring points with a straight
+line; spline methods use piecewise polynomials for a smoother curve. The
+choice of method imposes assumptions about how values change between
+observations.
+
+## Why it matters in AI engineering
+
+Interpolation appears in resampling signals and images, aligning time
+series, and filling gaps in measurements. The method can affect downstream
+features and predictions, so engineers should preserve missingness
+information and avoid using future data when constructing time-dependent
+features.
+
+## How it works
+
+For two known points $(x_0,y_0)$ and $(x_1,y_1)$, linear interpolation at
+$x$ between them is
+
+$$
+y(x)=y_0+\frac{x-x_0}{x_1-x_0}(y_1-y_0).
+$$
+
+This assumes a linear change between the endpoints. Extrapolation estimates
+outside the known range and can be much less reliable.
+
+## Practical example
+
+A sensor records a value of 20 at one minute and 24 at the next. Linear
+interpolation estimates 22 halfway between those measurements. For real
+sensor data, the engineer should consider whether a linear trend is
+reasonable and whether the gap itself signals a fault.
+
+## Common misconceptions
+
+- Interpolation estimates within the observed range; extrapolation goes
+  beyond it.
+- The estimate is not necessarily a true measurement of the unobserved
+  value.
+- Filling a missing value before splitting data can leak information from
+  evaluation data.
+
+## Related terms
+
+- [Data Preprocessing](../D/data-preprocessing.qmd)
+- [Data Pipeline](../D/data-pipeline.qmd)
+- [Data Validation](../D/data-validation.qmd)
+
+## Further reading
+
+- [SciPy: Interpolation](https://docs.scipy.org/doc/scipy/tutorial/interpolate.html) —
+  introduces interpolation tools and methods in SciPy.
+- [NumPy: Interpolation](https://numpy.org/doc/stable/reference/generated/numpy.interp.html) —
+  documents one-dimensional linear interpolation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

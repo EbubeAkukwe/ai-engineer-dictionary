@@ -1,0 +1,71 @@
+---
+title: "Instruction Tuning"
+description: "Fine-tuning a model on examples that demonstrate how to follow instructions."
+term: "Instruction Tuning"
+letter: "I"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Instruction tuning trains a language model on examples of instructions and
+helpful responses. It teaches the model to respond to requests in a desired
+format or style, rather than only continuing text in the way its original
+training encouraged.
+
+## Technical explanation
+
+Instruction tuning is commonly implemented as supervised fine-tuning on
+prompt-response examples. The examples can cover tasks, formats, and
+domains; their quality and diversity influence the resulting behavior. It
+is one stage in model adaptation and is distinct from supplying instructions
+in a prompt at inference time.
+
+## Why it matters in AI engineering
+
+Instruction-tuned models are easier to use in assistants and task-oriented
+applications because they are more likely to treat natural-language
+requests as directions. Tuning data, evaluation, and safety testing still
+need to reflect the model's intended users and deployment context.
+
+## How it works
+
+Training examples pair an instruction, sometimes with additional context,
+with a target response. The model generates the response tokens, and a
+training objective adjusts its parameters to increase the likelihood of
+those targets. Some systems follow this stage with preference-based or
+other alignment training.
+
+## Practical example
+
+A model can be fine-tuned on examples that ask it to summarize a passage
+in three bullet points. The resulting model may follow that format more
+reliably, but should still be tested on unseen passages and instructions.
+
+## Common misconceptions
+
+- Instruction tuning changes model parameters; adding an instruction to a
+  prompt does not.
+- Tuning does not guarantee that a model will follow every instruction
+  correctly or safely.
+- More examples are not automatically better if they are low quality,
+  repetitive, or inconsistent.
+
+## Related terms
+
+- [Fine-tuning](../F/fine-tuning.qmd)
+- [In-Context Learning](in-context-learning.qmd)
+- [Foundation Model](../F/foundation-model.qmd)
+
+## Further reading
+
+- [FLAN: Finetuned Language Models Are Zero-Shot Learners](https://arxiv.org/abs/2109.01652) —
+  studies instruction tuning across a range of language tasks.
+- [FLAN Collection](https://arxiv.org/abs/2301.13688) —
+  describes a broad collection of instruction-tuning tasks and methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

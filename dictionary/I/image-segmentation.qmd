@@ -1,0 +1,99 @@
+---
+title: "Image Segmentation"
+description: "A computer-vision task that assigns a class or object identity to image pixels."
+term: "Image Segmentation"
+letter: "I"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Image segmentation divides an image into meaningful regions. Instead of
+assigning one label to the whole image, a segmentation model marks which
+pixels belong to each class or object.
+
+## Technical explanation
+
+A segmentation model predicts a label or object identifier for each pixel.
+Semantic segmentation labels pixels by class, so separate objects of the
+same class share a label. Instance segmentation also distinguishes individual
+objects, while panoptic segmentation combines semantic and instance-level
+outputs.
+
+## Why it matters in AI engineering
+
+Pixel-level outputs are useful when the shape and location of an object
+matter, including medical image analysis, robotics, satellite imagery, and
+scene understanding. Segmentation systems need suitable masks for training
+and evaluation, and can be costly to annotate and compute.
+
+## How it works
+
+An image is processed by a model that produces a score for each class at
+each pixel. A decision rule turns those scores into a mask. Some systems
+predict one mask per object instead. Evaluation compares predicted masks
+with reference annotations, often using measures such as
+[Intersection over Union](intersection-over-union-iou.qmd).
+
+<figure>
+<svg viewBox="0 0 720 300" role="img" aria-labelledby="seg-title seg-desc" style="max-width: 100%; height: auto;">
+<title id="seg-title">Image segmentation maps pixels to class regions</title>
+<desc id="seg-desc">A simple scene with a blue sky, green ground, and orange object is shown beside a pixel-aligned class mask using separate colors for sky, ground, and object.</desc>
+<text x="180" y="28" text-anchor="middle" font-size="17" fill="#0f172a">Input image</text>
+<rect x="35" y="45" width="290" height="205" rx="4" fill="#bfdbfe" stroke="#334155" stroke-width="2"/>
+<path d="M37 178 Q115 157 185 178 T323 174 V248 H37 Z" fill="#86efac"/>
+<circle cx="260" cy="82" r="22" fill="#facc15"/>
+<path d="M116 185 L166 95 L216 185 Z" fill="#94a3b8"/>
+<path d="M173 185 L225 111 L279 185 Z" fill="#64748b"/>
+<rect x="82" y="145" width="34" height="42" rx="5" fill="#c2410c"/>
+<path d="M78 145 L99 127 L120 145 Z" fill="#9a3412"/>
+<text x="360" y="155" text-anchor="middle" font-size="28" fill="#334155">→</text>
+<text x="540" y="28" text-anchor="middle" font-size="17" fill="#0f172a">Pixel class mask</text>
+<rect x="395" y="45" width="290" height="205" rx="4" fill="#60a5fa" stroke="#334155" stroke-width="2"/>
+<path d="M397 178 Q475 157 545 178 T683 174 V248 H397 Z" fill="#22c55e"/>
+<path d="M477 185 L527 95 L577 185 Z" fill="#60a5fa"/>
+<path d="M534 185 L586 111 L640 185 Z" fill="#60a5fa"/>
+<path d="M442 145 H476 V187 H442 Z M438 145 L459 127 L480 145 Z" fill="#f97316"/>
+<g font-size="14" fill="#0f172a">
+<rect x="413" y="263" width="14" height="14" fill="#60a5fa"/><text x="434" y="275">sky</text>
+<rect x="485" y="263" width="14" height="14" fill="#22c55e"/><text x="506" y="275">ground</text>
+<rect x="572" y="263" width="14" height="14" fill="#f97316"/><text x="593" y="275">object</text>
+</g>
+</svg>
+<figcaption>Schematic semantic-segmentation example. Each pixel receives a class label; real systems often use more detailed masks and may distinguish individual instances.</figcaption>
+</figure>
+
+## Practical example
+
+A road-scene model could label every pixel as road, vehicle, pedestrian, or
+background. A robot could then use those regions to estimate where it can
+move and which areas require caution.
+
+## Common misconceptions
+
+- Segmentation is not the same as image classification: it predicts spatial
+  regions, not just a whole-image label.
+- Semantic segmentation does not necessarily separate two adjacent objects
+  of the same class.
+- A visually plausible mask is not necessarily accurate; evaluation should
+  use appropriate pixel- or region-level metrics.
+
+## Related terms
+
+- [Computer Vision](../C/computer-vision.qmd)
+- [Image Classification](image-classification.qmd)
+- [Intersection over Union (IoU)](intersection-over-union-iou.qmd)
+
+## Further reading
+
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) —
+  introduces an influential encoder-decoder architecture for biomedical
+  segmentation.
+- [PyTorch: Semantic Segmentation with Torchvision](https://pytorch.org/vision/stable/models.html#semantic-segmentation) —
+  describes available pretrained semantic-segmentation models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

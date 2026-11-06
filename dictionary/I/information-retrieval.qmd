@@ -1,0 +1,71 @@
+---
+title: "Information Retrieval"
+description: "Finding and ranking relevant information in response to a query."
+term: "Information Retrieval"
+letter: "I"
+category: "Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Information retrieval is the process of finding useful items from a
+collection in response to a question or search query. A search engine, for
+example, ranks pages that may answer a user's request.
+
+## Technical explanation
+
+An information retrieval system represents documents and queries, identifies
+candidate items, and ranks them by estimated relevance. Retrieval can use
+lexical matching, such as term frequency, semantic representations such as
+embeddings, or a combination. The system may return documents, passages,
+images, or other items.
+
+## Why it matters in AI engineering
+
+Retrieval powers search, recommendation, and retrieval-augmented generation.
+A language model connected to retrieval can use selected external material,
+but the quality of the response still depends on finding relevant,
+trustworthy, and current sources.
+
+## How it works
+
+Documents are collected, cleaned, and often split into searchable units.
+The system builds an index, receives a query, retrieves candidates, and
+possibly reranks them using a more detailed model. Engineers evaluate both
+whether relevant items are retrieved and whether they appear near the top
+of the results.
+
+## Practical example
+
+A question-answering assistant can search a collection of technical
+documents, select relevant passages, and provide them as context to a
+language model. The passages should remain traceable so users can inspect
+the evidence behind an answer.
+
+## Common misconceptions
+
+- Retrieval ranks candidate information; it does not guarantee that the
+  returned material is correct or complete.
+- Semantic search does not make exact keyword matching obsolete; hybrid
+  systems can benefit from both.
+- A larger set of retrieved passages is not always better; irrelevant
+  results can distract downstream models.
+
+## Related terms
+
+- [Embedding](../E/embedding.qmd)
+- [Chunking](../C/chunking.qmd)
+- [Grounding](../G/grounding.qmd)
+
+## Further reading
+
+- [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html) —
+  textbook covering retrieval models, ranking, and evaluation.
+- [Google for Developers: Retrieval-Augmented Generation](https://cloud.google.com/use-cases/retrieval-augmented-generation) —
+  explains how retrieval can provide external context to generative systems.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

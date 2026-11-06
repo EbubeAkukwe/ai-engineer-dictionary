@@ -1,0 +1,91 @@
+---
+title: "Intersection over Union (IoU)"
+description: "A measure of overlap between predicted and reference regions."
+term: "Intersection over Union (IoU)"
+letter: "I"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Intersection over Union (IoU) measures how much two regions overlap. In
+object detection or segmentation, it can compare a model's predicted region
+with the reference annotation: larger overlap relative to their combined
+area means a higher IoU.
+
+## Technical explanation
+
+For predicted region $A$ and reference region $B$, IoU is the area of their
+intersection divided by the area of their union:
+
+$$
+\operatorname{IoU}(A,B)=\frac{|A\cap B|}{|A\cup B|}.
+$$
+
+Its value is between 0 and 1 for finite regions with nonzero union. IoU is
+also known as the Jaccard index. In detection benchmarks, an IoU threshold
+may help decide whether a predicted box matches a reference box.
+
+## Why it matters in AI engineering
+
+IoU is used to evaluate predicted bounding boxes and segmentation masks.
+It makes overlap quality explicit, complementing measures such as precision
+and recall that count detection outcomes. Metric thresholds and aggregation
+rules affect benchmark results and should be reported.
+
+## How it works
+
+For boxes or masks, calculate the shared area and divide it by the total area
+covered by either region. Identical regions have IoU 1; disjoint regions
+have IoU 0. For a set of predictions, evaluation may match predictions to
+reference objects and average IoU or use it as part of a matching criterion.
+
+<figure>
+<svg viewBox="0 0 620 310" role="img" aria-labelledby="iou-title iou-desc" style="max-width: 100%; height: auto;">
+<title id="iou-title">Intersection over Union for two predicted regions</title>
+<desc id="iou-desc">Two overlapping rectangles represent a predicted region and a reference region. Their shared center is labeled intersection, while the full covered area is labeled union.</desc>
+<rect x="105" y="60" width="260" height="190" fill="#2563eb" fill-opacity=".35" stroke="#1d4ed8" stroke-width="3"/>
+<rect x="255" y="105" width="260" height="150" fill="#f97316" fill-opacity=".38" stroke="#c2410c" stroke-width="3"/>
+<text x="160" y="88" font-size="17" fill="#1e3a8a">Predicted region</text>
+<text x="365" y="239" font-size="17" fill="#7c2d12">Reference region</text>
+<text x="285" y="157" font-size="16" text-anchor="middle" font-weight="bold" fill="#0f172a">Intersection</text>
+<path d="M65 265 H555" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="310" y="292" text-anchor="middle" font-size="16" fill="#0f172a">Union = all area covered by either region</text>
+</svg>
+<figcaption>The shared area is the intersection; the union includes all area covered by either region. IoU is the intersection area divided by the union area.</figcaption>
+</figure>
+
+## Practical example
+
+If a predicted box covers 60 square pixels of a reference object and the
+combined area of the two boxes is 100 square pixels, their IoU is
+$60/100=0.6$. A benchmark might count this prediction as a match only if
+it meets a specified threshold.
+
+## Common misconceptions
+
+- IoU measures overlap, not whether an object was detected at all; detection
+  evaluation also needs rules for matching predictions and reference objects.
+- The threshold used to count a match is a benchmark choice, not a universal
+  definition of a correct prediction.
+- IoU does not indicate which region is the prediction unless the regions
+  are labeled.
+
+## Related terms
+
+- [Bounding Box](../B/bounding-box.qmd)
+- [Image Segmentation](image-segmentation.qmd)
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+
+## Further reading
+
+- [Scikit-learn: Jaccard score](https://scikit-learn.org/stable/modules/model_evaluation.html#jaccard-score) —
+  documents the Jaccard similarity metric and its classification use.
+- [COCO Evaluation](https://cocodataset.org/#detection-eval) —
+  describes object-detection evaluation using IoU-based matching.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

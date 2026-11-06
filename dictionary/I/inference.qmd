@@ -1,0 +1,69 @@
+---
+title: "Inference"
+description: "Using a trained model to produce outputs for new inputs."
+term: "Inference"
+letter: "I"
+category: "AI Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Inference is when a trained model uses new input to make a prediction or
+generate an output. A spam filter labeling a new email and a language model
+writing a response are both doing inference.
+
+## Technical explanation
+
+During inference, a model applies its learned parameters to input data to
+produce predictions, scores, or generated sequences. Unlike training,
+inference normally does not update those parameters. It may run locally,
+in a server, or on an accelerator, and can process one request at a time
+or a batch of requests.
+
+## Why it matters in AI engineering
+
+Inference is the point where model behavior becomes part of a product or
+workflow. Engineers must manage latency, throughput, memory, hardware cost,
+reliability, and the quality of preprocessing and postprocessing.
+
+## How it works
+
+An inference path typically validates and preprocesses an input, loads or
+calls the trained model, computes its output, and formats the result for
+the application. Deployment choices include batching, quantization, and
+hardware acceleration. Inference does not by itself guarantee that the
+output is correct or safe for its intended use.
+
+## Practical example
+
+A deployed image classifier receives an uploaded photo, resizes and
+normalizes it as expected by the model, computes class scores, and returns
+a label and confidence information to the application.
+
+## Common misconceptions
+
+- Inference is not the same as training: ordinary inference uses learned
+  parameters without updating them.
+- Generative inference may involve many sequential model steps, not just
+  one prediction.
+- A model's confidence score is not automatically a calibrated probability
+  or a guarantee of correctness.
+
+## Related terms
+
+- [Foundation Model](../F/foundation-model.qmd)
+- [Image Classification](image-classification.qmd)
+- [Fine-tuning](../F/fine-tuning.qmd)
+
+## Further reading
+
+- [PyTorch: Saving and Loading Models](https://pytorch.org/tutorials/beginner/saving_loading_models.html) —
+  demonstrates loading a trained model and using it for inference.
+- [Google for Developers: Production ML Systems](https://developers.google.com/machine-learning/crash-course/production-ml-systems) —
+  discusses the systems around deploying and serving machine-learning models.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

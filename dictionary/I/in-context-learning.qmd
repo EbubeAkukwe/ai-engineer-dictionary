@@ -1,0 +1,68 @@
+---
+title: "In-Context Learning"
+description: "Adapting a model's response using examples or instructions in its prompt."
+term: "In-Context Learning"
+letter: "I"
+category: "LLM Engineering"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+In-context learning is when a language model uses instructions or examples
+in the current prompt to shape its response. The examples act like a
+demonstration of the task, without requiring the model's parameters to be
+updated.
+
+## Technical explanation
+
+In-context learning refers to a model's ability to condition its output on
+patterns and demonstrations supplied in its context. A prompt may contain
+zero examples, one example, or several examples. The behavior depends on
+the model, the prompt, the examples, and available context length; it is not
+equivalent to gradient-based training.
+
+## Why it matters in AI engineering
+
+In-context learning enables task adaptation without a fine-tuning workflow.
+It is useful for prototyping, providing output formats, and supplying
+task-specific demonstrations, but prompt length, example quality, and
+consistency affect results.
+
+## How it works
+
+The prompt combines an instruction, optional examples, and the user's input.
+The model predicts the next tokens conditioned on that full context. The
+prompt can influence the current response, but ordinarily does not persistently
+change the model's learned parameters.
+
+## Practical example
+
+A prompt can show two pairs of informal phrases and their formal rewrites,
+then ask the model to rewrite a third phrase. The model uses the examples
+as context for the requested transformation.
+
+## Common misconceptions
+
+- In-context learning does not ordinarily update the model's weights.
+- A model may infer a pattern from examples but still fail on new inputs.
+- Adding more examples can hurt if they are inconsistent, irrelevant, or
+  exceed the useful context budget.
+
+## Related terms
+
+- [Few-shot Learning](../F/few-shot-learning.qmd)
+- [Context Window](../C/context-window.qmd)
+- [Instruction Tuning](instruction-tuning.qmd)
+
+## Further reading
+
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) —
+  studies prompting large language models with task demonstrations.
+- [Google for Developers: Prompt Design](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies) —
+  discusses practical strategies for designing prompts.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

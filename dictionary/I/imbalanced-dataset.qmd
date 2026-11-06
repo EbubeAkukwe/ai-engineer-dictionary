@@ -1,0 +1,73 @@
+---
+title: "Imbalanced Dataset"
+description: "A dataset in which some classes or outcomes occur much more often than others."
+term: "Imbalanced Dataset"
+letter: "I"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+An imbalanced dataset has many more examples of some outcomes than others.
+For example, a dataset might contain thousands of ordinary transactions but
+only a small number of fraudulent ones.
+
+## Technical explanation
+
+Class imbalance describes unequal class frequencies in a classification
+dataset. It can affect learning and evaluation, especially when the minority
+class is important or the model is optimized for an aggregate objective that
+is dominated by the majority class. The impact depends on the task, sample
+size, label quality, and decision costs; imbalance alone does not prove a
+model is biased or unusable.
+
+## Why it matters in AI engineering
+
+A model can achieve high accuracy by predicting the common class while
+missing rare but consequential events. Engineers should understand class
+frequencies, select metrics aligned with the task, and decide how to handle
+mistakes based on operational costs.
+
+## How it works
+
+First, inspect class counts and relevant slices in the training and
+evaluation data. Possible responses include collecting more minority-class
+examples, using class-weighted losses, resampling training data, or changing
+the decision threshold. Evaluate with per-class measures and metrics such as
+precision, recall, or area under the precision-recall curve. Apply sampling
+only to training data, and keep the evaluation distribution representative
+of deployment.
+
+## Practical example
+
+In fraud detection, report how many fraudulent transactions are found and
+how many legitimate transactions are incorrectly flagged, not just the
+overall percentage classified correctly. A
+[confusion matrix](../C/confusion-matrix.qmd) makes those outcomes visible.
+
+## Common misconceptions
+
+- Class imbalance does not always make a model fail; the effect depends on
+  data, the task, and the chosen objective.
+- Accuracy alone can hide poor performance on rare classes.
+- Oversampling or undersampling is not a substitute for checking labels,
+  data leakage, and deployment costs.
+
+## Related terms
+
+- [Confusion Matrix](../C/confusion-matrix.qmd)
+- [F1 Score](../F/f1-score.qmd)
+- [Classification](../C/classification.qmd)
+
+## Further reading
+
+- [Google for Developers: Classification](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall) —
+  explains classification metrics and why accuracy can be misleading.
+- [Scikit-learn: Classification metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics) —
+  documents per-class and aggregate metrics.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-04
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
