@@ -1,0 +1,64 @@
+---
+title: "Weight Decay"
+description: "A regularization technique that discourages large model parameters during optimization."
+term: "Weight Decay"
+letter: "W"
+category: "Model Training"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Weight decay nudges model weights toward smaller values during training. This
+can discourage unnecessarily complex solutions and improve generalization.
+
+## Technical explanation
+
+For ordinary gradient descent, L2 regularization adds a penalty
+$\lambda\lVert\theta\rVert_2^2$ to the loss, producing a gradient term
+proportional to $\theta$. Decoupled weight decay, used by optimizers such as
+AdamW, applies parameter shrinkage separately from the adaptive gradient
+update. These formulations are not equivalent for every optimizer.
+
+## Why it matters in AI engineering
+
+Regularization can reduce overfitting and is a common training control for
+large neural models. Its effects depend on the optimizer, which parameters
+receive decay, learning-rate schedule, and training duration.
+
+## How it works
+
+Choose a decay coefficient and define which parameters it applies to. During
+optimization, shrink eligible weights or include an L2 penalty. Biases and
+normalization parameters are often excluded by convention, but this should be
+validated for the model and framework.
+
+## Practical example
+
+Train two otherwise identical classifiers with different AdamW decay values.
+Compare validation performance and calibration, and confirm the optimizer
+parameter groups apply decay only to intended tensors.
+
+## Common misconceptions
+
+- Weight decay and L2 regularization are often used interchangeably, but
+  decoupled weight decay differs from an L2 loss penalty with adaptive
+  optimizers.
+- Stronger decay is not always better; excessive regularization can cause
+  underfitting.
+
+## Related terms
+
+- [Weight](weight.qmd)
+- [Overfitting](../O/overfitting.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+
+## Further reading
+
+- [Decoupled Weight Decay Regularization](https://arxiv.org/abs/1711.05101) — AdamW and the distinction from L2 regularization.
+- [PyTorch: AdamW](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html) — implementation and parameter groups.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

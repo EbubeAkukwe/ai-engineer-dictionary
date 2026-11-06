@@ -1,0 +1,64 @@
+---
+title: "XGBoost"
+description: "An optimized gradient-boosted decision-tree library with regularization and scalable training."
+term: "XGBoost"
+letter: "X"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+XGBoost is a popular implementation of gradient-boosted decision trees. It
+builds an ensemble of trees in sequence, with each new tree helping reduce
+errors made by the current ensemble.
+
+## Technical explanation
+
+XGBoost optimizes a regularized objective using gradient and, in common
+formulations, second-order information from a differentiable loss. It includes
+tree construction methods, sparsity-aware handling, and systems optimizations.
+Parameters control tree complexity, shrinkage, sampling, and regularization.
+
+## Why it matters in AI engineering
+
+Boosted trees are strong baselines for structured/tabular data and support
+classification, regression, ranking, and other objectives. XGBoost provides
+efficient training and deployment options, but performance still depends on
+valid splits, feature handling, and carefully tuned evaluation.
+
+## How it works
+
+Start with an initial prediction, compute loss gradients for training
+examples, fit a tree to improve the objective, and add its contribution to
+the ensemble. Repeat for the configured number of boosting rounds, optionally
+using early stopping based on validation data.
+
+## Practical example
+
+For a tabular churn model, split data by customer and time if deployment
+requires predicting future churn. Tune tree depth and regularization on
+validation data, then report a final metric on an untouched test set.
+
+## Common misconceptions
+
+- XGBoost is not a neural network and does not inherently require feature
+  scaling for tree splits.
+- High training accuracy does not ensure generalization; leakage and
+  overfitting can still occur.
+
+## Related terms
+
+- [Ensemble Learning](../E/ensemble-learning.qmd)
+- [Decision Tree](../D/decision-tree.qmd)
+- [Feature Engineering](../F/feature-engineering.qmd)
+
+## Further reading
+
+- [XGBoost Documentation](https://xgboost.readthedocs.io/en/stable/) — installation, objectives, parameters, and interfaces.
+- [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754) — system design and algorithm details.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

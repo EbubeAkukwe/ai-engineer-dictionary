@@ -1,0 +1,62 @@
+---
+title: "XML"
+description: "A markup language for representing structured, hierarchical data with named elements."
+term: "XML"
+letter: "X"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+XML is a text format that uses nested tags to describe structured data. It is
+human-readable and can represent hierarchies such as a document with sections
+and items.
+
+## Technical explanation
+
+Extensible Markup Language defines syntax for elements, attributes, and text
+content. XML schemas can describe permitted structure and types. Namespaces
+help avoid naming collisions. Parsers must handle encoding and external
+entities safely; untrusted XML should be parsed with secure settings.
+
+## Why it matters in AI engineering
+
+XML remains common in configuration, data exchange, document formats, and
+legacy systems that AI pipelines may need to ingest. Its explicit structure
+can be useful, but malformed or unsafe parsing can break processing or expose
+systems to attacks.
+
+## How it works
+
+A parser reads a document's tags and builds an element tree or event stream.
+Applications validate that structure, extract needed values, and transform
+the data into an internal representation.
+
+## Practical example
+
+An ingestion service can parse XML product records, validate required fields,
+and convert them into a normalized schema before model feature generation.
+Reject malformed records and disable unsafe external entity resolution.
+
+## Common misconceptions
+
+- XML is a syntax, not a database or a semantic model; the application must
+  define what elements mean.
+- Well-formed XML is not necessarily valid against a schema or safe to parse.
+
+## Related terms
+
+- [JSON](../J/json.qmd)
+- [YAML](../Y/yaml.qmd)
+- [Data Validation](../D/data-validation.qmd)
+
+## Further reading
+
+- [W3C: Extensible Markup Language](https://www.w3.org/XML/) — XML standards and resources.
+- [Python XML security](https://docs.python.org/3/library/xml.html#xml-vulnerabilities) — parser security considerations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,89 @@
+---
+title: "Zero Trust"
+description: "A security approach that continuously verifies access instead of trusting users or systems based on network location."
+term: "Zero Trust"
+letter: "Z"
+category: "AI Security"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Zero trust means a system should not automatically trust a user, device, or
+service just because it is inside a network. Access is checked for each
+request according to identity, context, and policy.
+
+## Technical explanation
+
+Zero-trust architecture applies explicit authentication and authorization,
+least privilege, and continuous monitoring to subjects and resources.
+Policies may consider identity, device posture, resource sensitivity, and
+request context. It is an architectural approach rather than a single product
+or a claim that trust can be eliminated entirely.
+
+## Why it matters in AI engineering
+
+AI workflows connect data stores, model endpoints, notebooks, agents, and
+deployment systems. Fine-grained access controls can limit the impact of
+compromised credentials or unsafe components and help protect sensitive data
+and model artifacts.
+
+## How it works
+
+Authenticate each identity, evaluate access policy for a requested resource,
+grant only the needed permissions, and log decisions for monitoring. Use
+short-lived credentials and segment services so one compromised component
+does not imply broad access.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="zt-title zt-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="zt-title">Zero-trust access decision</title>
+  <desc id="zt-desc">A user or service requests a protected resource. Identity and request context are evaluated against policy, and access is granted with least privilege or denied. Decisions are logged and monitored.</desc>
+  <defs>
+    <marker id="zt-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="24" y="70" width="144" height="62" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="96" y="96" font-size="13">User / service</text><text x="96" y="116" font-size="11">request + identity</text>
+    <rect x="224" y="70" width="150" height="62" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="299" y="96" font-size="13">Policy decision</text><text x="299" y="116" font-size="11">context + least privilege</text>
+    <rect x="430" y="24" width="130" height="54" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="495" y="47" font-size="13">Allow</text><text x="495" y="65" font-size="11">scoped access</text>
+    <rect x="430" y="126" width="130" height="54" rx="8" fill="#f8eaea" stroke="#a44b4b" stroke-width="2"/>
+    <text x="495" y="149" font-size="13">Deny</text><text x="495" y="167" font-size="11">no access</text>
+    <rect x="616" y="24" width="120" height="54" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="676" y="47" font-size="13">Resource</text><text x="676" y="65" font-size="11">protected service</text>
+    <rect x="616" y="126" width="120" height="54" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="676" y="149" font-size="13">Blocked</text><text x="676" y="167" font-size="11">no resource access</text>
+    <path d="M168 101 H216 M374 101 H398 V51 H422 M398 101 V153 H422 M560 51 H608" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#zt-arrow)"/>
+    <path d="M560 153 H608" fill="none" stroke="#a44b4b" stroke-width="2" marker-end="url(#zt-arrow)"/>
+    <text x="376" y="201" font-size="12" fill="#46566d">Log and monitor decisions; reassess access as context changes.</text>
+  </g>
+</svg>
+
+## Practical example
+
+A training job receives short-lived permission to read one approved dataset
+and write to its experiment artifact location. It does not receive broad
+credentials to unrelated production systems.
+
+## Common misconceptions
+
+- Zero trust does not mean “trust nobody” without evidence; it means verify
+  identity and policy explicitly for resource access.
+- Network segmentation alone is not a complete zero-trust architecture.
+
+## Related terms
+
+- Identity verification
+- Least-privilege access
+- [System Design](../S/system-design.qmd)
+
+## Further reading
+
+- [NIST SP 800-207: Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final) — principles and logical components.
+- [CISA: Zero Trust Maturity Model](https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model) — implementation maturity guidance.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

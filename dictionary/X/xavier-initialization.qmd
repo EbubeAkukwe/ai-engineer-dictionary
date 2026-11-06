@@ -1,0 +1,65 @@
+---
+title: "Xavier Initialization"
+description: "A weight initialization scheme designed to help preserve activation and gradient scale across layers."
+term: "Xavier Initialization"
+letter: "X"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Xavier initialization chooses starting neural-network weights based on the
+number of inputs and outputs to a layer, helping signals avoid shrinking or
+growing too quickly as they pass through the network.
+
+## Technical explanation
+
+For a layer with fan-in $n_{\text{in}}$ and fan-out $n_{\text{out}}$, Xavier
+uniform initialization samples weights from
+$[-\sqrt{6/(n_{\text{in}}+n_{\text{out}})},\sqrt{6/(n_{\text{in}}+n_{\text{out}})}]$.
+The normal form uses variance $2/(n_{\text{in}}+n_{\text{out}})$. The scheme is
+motivated by preserving signal variance under assumptions that are not
+universally true for every architecture or activation.
+
+## Why it matters in AI engineering
+
+Poor initialization can make optimization unstable or slow. Xavier is a
+useful default for layers with approximately linear or tanh-like activations,
+while other activations and architectures may benefit from alternatives such
+as He initialization or specialized initializers.
+
+## How it works
+
+Compute each layer's fan-in and fan-out, then sample weights from the
+corresponding uniform or normal distribution. Biases are often initialized to
+zero, though architecture-specific practices may differ.
+
+## Practical example
+
+Initialize a tanh multilayer perceptron with Xavier uniform weights and
+compare activation and gradient magnitudes across layers with a poorly scaled
+initialization.
+
+## Common misconceptions
+
+- Xavier initialization does not guarantee successful training; data scaling,
+  architecture, normalization, and optimizer settings still matter.
+- It is not necessarily the best choice for ReLU-family activations, where
+  fan-in-aware alternatives are often used.
+
+## Related terms
+
+- [Initialization](../I/initialization.qmd)
+- [Activation Function](../A/activation-function.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+
+## Further reading
+
+- [Understanding the difficulty of training deep feedforward neural networks](http://proceedings.mlr.press/v9/glorot10a.html) — the Glorot and Bengio initialization analysis.
+- [PyTorch: Xavier initialization](https://pytorch.org/docs/stable/nn.init.html#torch.nn.init.xavier_uniform_) — framework implementation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

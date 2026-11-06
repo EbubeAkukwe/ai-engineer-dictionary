@@ -1,0 +1,64 @@
+---
+title: "Zero-shot Learning"
+description: "Learning to recognize or perform tasks for classes or situations without task-specific labeled examples."
+term: "Zero-shot Learning"
+letter: "Z"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Zero-shot learning aims to make predictions for a class or task without
+training on labeled examples of that exact class or task.
+
+## Technical explanation
+
+Methods transfer information from seen classes to unseen ones using semantic
+attributes, text descriptions, pretrained representations, or generative
+models. The model relies on relationships learned elsewhere; evaluation must
+separate training classes from unseen test classes according to the intended
+setting. Generalized zero-shot learning also evaluates performance on both
+seen and unseen classes.
+
+## Why it matters in AI engineering
+
+It can extend models to new categories when labeled data is scarce or
+expensive. Claims of zero-shot performance depend on carefully defined data
+separation and may be affected by pretraining overlap or label leakage.
+
+## How it works
+
+Train or pretrain representations that connect inputs to semantic descriptions
+or attributes. At inference, compare a new input with candidate class
+representations or condition a model on a task description. Validate with
+unseen examples and an explicit candidate set.
+
+## Practical example
+
+A vision-language model can rank candidate descriptions for an image class
+that had no examples in the task-specific dataset. Evaluate on classes held
+out from task training and report the prompts or text descriptions used.
+
+## Common misconceptions
+
+- Zero-shot means no task-specific labeled examples, not no prior training or
+  knowledge.
+- Zero-shot learning and zero-shot classification overlap, but the latter
+  specifically describes assigning labels to inputs.
+
+## Related terms
+
+- [Zero-shot Classification](zero-shot-classification.qmd)
+- [Transfer Learning](../T/transfer-learning.qmd)
+- [Few-shot Learning](../F/few-shot-learning.qmd)
+
+## Further reading
+
+- [Zero-Shot Learning—A Comprehensive Evaluation of the Good, the Bad and the Ugly](https://arxiv.org/abs/1707.00600) — evaluation challenges and protocols.
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) — contrastive image-text pretraining and transfer.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

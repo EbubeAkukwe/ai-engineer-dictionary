@@ -1,0 +1,63 @@
+---
+title: "Web API"
+description: "An interface that lets software systems exchange requests and responses over web protocols."
+term: "Web API"
+letter: "W"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A web API lets one application ask another application to perform an operation
+or provide data using a network request.
+
+## Technical explanation
+
+Web APIs commonly use HTTP methods, URLs, headers, and structured payloads
+such as JSON. An API contract defines operations, input and output schemas,
+authentication, error responses, and compatibility expectations. REST-style
+APIs are one common design; other approaches include GraphQL and gRPC over
+HTTP/2.
+
+## Why it matters in AI engineering
+
+Models and data services are often accessed through APIs, making the interface
+part of system reliability and security. Clear schemas, timeouts, rate limits,
+and error semantics help clients handle slow or unavailable dependencies.
+
+## How it works
+
+A client sends an HTTP request to an endpoint. The server validates the
+request, performs the operation, and returns a status code and response body.
+For model inference, the API may accept inputs, invoke a model service, and
+return predictions with metadata.
+
+## Practical example
+
+A text classification endpoint might accept JSON containing `text` and return
+class probabilities and a model version. The API should reject malformed
+inputs explicitly and avoid returning sensitive internal details in errors.
+
+## Common misconceptions
+
+- An API is not necessarily public or RESTful; APIs can be private and use
+  different protocols or interaction patterns.
+- A successful HTTP response does not imply a useful or correct model
+  prediction.
+
+## Related terms
+
+- [API](../A/api.qmd)
+- [JSON](../J/json.qmd)
+- [Webhook](webhook.qmd)
+
+## Further reading
+
+- [MDN: HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) — HTTP requests and responses.
+- [OpenAPI Specification](https://spec.openapis.org/oas/latest.html) — a machine-readable API description format.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

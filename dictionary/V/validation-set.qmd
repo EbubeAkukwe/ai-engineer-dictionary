@@ -1,0 +1,65 @@
+---
+title: "Validation Set"
+description: "A held-out dataset used to guide model selection and tune settings during development."
+term: "Validation Set"
+letter: "V"
+category: "Model Evaluation"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A validation set is practice feedback for a model developer: it helps compare
+candidate models and settings without using the final exam, the test set.
+
+## Technical explanation
+
+The validation set is a portion of labeled data kept separate from parameter
+fitting. Developers use its metrics to select architectures, tune
+hyperparameters, choose decision thresholds, or apply early stopping. Repeated
+adaptation to validation results can overfit the validation set, so it is not
+an unbiased final estimate of generalization.
+
+## Why it matters in AI engineering
+
+Validation results influence many development decisions. A clean split makes
+those decisions measurable while keeping final evaluation independent.
+Time-dependent, grouped, or user-level data may require structured splits to
+prevent leakage between training and validation.
+
+## How it works
+
+Split data according to the deployment setting, fit parameters on the training
+portion, and evaluate candidates on validation data. Freeze the chosen pipeline
+before measuring it on a separate test set. In cross-validation, several
+training/validation folds are used to make model selection less dependent on
+one split.
+
+## Practical example
+
+For next-month demand prediction, train on earlier periods and validate on a
+later period. Compare candidate models on the later period, then reserve a still
+later test period for final reporting.
+
+## Common misconceptions
+
+- The validation set is not interchangeable with the test set; using test
+  results to make iterative choices contaminates the final estimate.
+- A random split is not always appropriate. Related records from the same
+  person or future observations can leak information across partitions.
+
+## Related terms
+
+- [Test Set](../T/test-set.qmd)
+- [Cross-Validation](../C/cross-validation.qmd)
+- [Data Leakage](../D/data-leakage.qmd)
+
+## Further reading
+
+- [Google Machine Learning: Data Splitting](https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets) — dataset partitions and their roles.
+- [scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — validation strategies and their limitations.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

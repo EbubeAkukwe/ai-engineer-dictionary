@@ -1,0 +1,12 @@
+---
+title: "Z Terms"
+description: "AI engineering dictionary terms beginning with Z."
+---
+
+# Z Terms
+
+- [Z-Score Normalization](z-score-normalization.qmd)
+- [ZeRO Optimization](zero-optimization.qmd)
+- [Zero-shot Classification](zero-shot-classification.qmd)
+- [Zero-shot Learning](zero-shot-learning.qmd)
+- [Zero Trust](zero-trust.qmd)

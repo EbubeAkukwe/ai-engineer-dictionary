@@ -1,0 +1,65 @@
+---
+title: "Volumetric Rendering"
+description: "A technique for rendering images by accumulating light contributions along camera rays through a volume."
+term: "Volumetric Rendering"
+letter: "V"
+category: "Computer Vision"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Volumetric rendering creates an image by tracing rays through a 3D scene and
+combining the color and opacity encountered along each ray.
+
+## Technical explanation
+
+For a ray parameterized by position $x(t)$, a volume model provides density
+$\sigma(x)$ and color $c(x,d)$, potentially conditioned on viewing direction
+$d$. The rendered pixel integrates emitted color weighted by accumulated
+transmittance. Numerical implementations approximate this integral with
+discrete samples. NeRF is a learned representation that predicts these
+quantities from position and direction.
+
+## Why it matters in AI engineering
+
+Volumetric rendering underlies neural scene representations and differentiable
+rendering methods used in reconstruction, novel-view synthesis, and robotics.
+Quality and speed depend on sampling, scene representation, and GPU workload.
+
+## How it works
+
+Cast a camera ray per pixel, sample points along the ray, predict density and
+color at each point, and composite samples front to back. Dense sampling can
+be expensive, so systems use acceleration structures, adaptive sampling, or
+compact scene representations.
+
+## Practical example
+
+A NeRF pipeline fits a radiance field to calibrated images and renders a new
+view by sampling rays through the learned field. Held-out camera views can
+measure reconstruction quality without confusing memorization of training
+views with generalization.
+
+## Common misconceptions
+
+- Volumetric rendering is not limited to transparent clouds; it can represent
+  opaque surfaces through sharply concentrated density.
+- A rendered image alone does not establish that the recovered geometry is
+  physically correct.
+
+## Related terms
+
+- [Computer Vision](../C/computer-vision.qmd)
+- [Neural Network](../N/neural-network.qmd)
+- [Diffusion Model](../D/diffusion-model.qmd)
+
+## Further reading
+
+- [NeRF: Representing Scenes as Neural Radiance Fields](https://arxiv.org/abs/2003.08934) — neural radiance fields and volume rendering.
+- [Volume Rendering](https://www.cs.cmu.edu/~ph/869/papers/Levoy-1988.pdf) — classic foundational treatment.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

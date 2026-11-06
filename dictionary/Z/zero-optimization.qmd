@@ -1,0 +1,87 @@
+---
+title: "ZeRO Optimization"
+description: "A family of distributed training techniques that partitions optimizer states, gradients, and model parameters across devices."
+term: "ZeRO Optimization"
+letter: "Z"
+category: "AI Infrastructure"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+ZeRO reduces the memory each training device needs by splitting parts of the
+training state across devices instead of keeping a full copy on every device.
+
+## Technical explanation
+
+ZeRO, or Zero Redundancy Optimizer, partitions data-parallel training state:
+Stage 1 partitions optimizer states, Stage 2 also partitions gradients, and
+Stage 3 also partitions parameters. Sharding reduces memory duplication but
+requires communication and coordination. Implementations may combine ZeRO
+with CPU or NVMe offload and other distributed strategies.
+
+## Why it matters in AI engineering
+
+Optimizer states, gradients, and parameters can exceed a device's memory,
+especially for large models. ZeRO enables larger models or batches on a
+distributed system, but introduces communication, configuration, and
+checkpointing complexity.
+
+## How it works
+
+Assign partitions of training state to workers. During forward and backward
+passes, workers exchange or gather the pieces needed for computation, then
+update their assigned portions. The specific communication pattern depends
+on the ZeRO stage and framework implementation.
+
+<svg viewBox="0 0 760 230" role="img" aria-labelledby="zero-title zero-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="zero-title">ZeRO stages partitioning training state</title>
+  <desc id="zero-desc">Stage 1 partitions optimizer state across devices. Stage 2 additionally partitions gradients. Stage 3 additionally partitions model parameters. Increasing partitioning reduces per-device memory but requires coordination.</desc>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <text x="120" y="34" font-size="14" font-weight="bold">Stage 1</text>
+    <text x="380" y="34" font-size="14" font-weight="bold">Stage 2</text>
+    <text x="640" y="34" font-size="14" font-weight="bold">Stage 3</text>
+    <g stroke-width="1">
+      <rect x="30" y="52" width="180" height="42" fill="#e6ecfa" stroke="#4666a8"/><text x="120" y="78" font-size="12">Parameters replicated</text>
+      <rect x="30" y="94" width="180" height="42" fill="#fff2df" stroke="#b9792e"/><text x="120" y="120" font-size="12">Gradients replicated</text>
+      <rect x="30" y="136" width="180" height="42" fill="#e8f4ec" stroke="#438057"/><text x="120" y="162" font-size="12">Optimizer state sharded</text>
+      <rect x="290" y="52" width="180" height="42" fill="#e6ecfa" stroke="#4666a8"/><text x="380" y="78" font-size="12">Parameters replicated</text>
+      <rect x="290" y="94" width="180" height="42" fill="#fff2df" stroke="#b9792e"/><text x="380" y="120" font-size="12">Gradients sharded</text>
+      <rect x="290" y="136" width="180" height="42" fill="#e8f4ec" stroke="#438057"/><text x="380" y="162" font-size="12">Optimizer state sharded</text>
+      <rect x="550" y="52" width="180" height="42" fill="#e6ecfa" stroke="#4666a8"/><text x="640" y="78" font-size="12">Parameters sharded</text>
+      <rect x="550" y="94" width="180" height="42" fill="#fff2df" stroke="#b9792e"/><text x="640" y="120" font-size="12">Gradients sharded</text>
+      <rect x="550" y="136" width="180" height="42" fill="#e8f4ec" stroke="#438057"/><text x="640" y="162" font-size="12">Optimizer state sharded</text>
+    </g>
+    <text x="380" y="210" font-size="12" fill="#46566d">More sharding saves per-device memory and increases coordination needs.</text>
+  </g>
+</svg>
+
+## Practical example
+
+Train a model that exceeds a single GPU's memory by using ZeRO Stage 3 across
+multiple devices. Measure step time and communication overhead, and confirm
+that checkpoints can be saved and restored with the intended distributed
+configuration.
+
+## Common misconceptions
+
+- ZeRO does not eliminate the memory required for model state; it distributes
+  that state among workers.
+- More aggressive sharding does not always improve throughput; communication
+  and synchronization can become bottlenecks.
+
+## Related terms
+
+- [Distributed Training](../D/distributed-training.qmd)
+- [Training](../T/training.qmd)
+- [GPU](../G/gpu.qmd)
+
+## Further reading
+
+- [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](https://arxiv.org/abs/1910.02054) — ZeRO stages and memory analysis.
+- [DeepSpeed ZeRO documentation](https://deepspeed.readthedocs.io/en/latest/zero3.html) — implementation details and configuration.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

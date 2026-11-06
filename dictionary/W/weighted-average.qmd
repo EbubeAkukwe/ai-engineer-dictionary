@@ -1,0 +1,62 @@
+---
+title: "Weighted Average"
+description: "An average in which each value contributes in proportion to an assigned weight."
+term: "Weighted Average"
+letter: "W"
+category: "Mathematics"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A weighted average gives some values more influence than others. For example,
+the final course grade may give exams more weight than homework.
+
+## Technical explanation
+
+Given values $x_i$ and weights $w_i$, a normalized weighted average is
+$\bar{x}_w=\frac{\sum_i w_i x_i}{\sum_i w_i}$ when the total weight is
+nonzero. Weights may represent importance, frequency, confidence, or sampling
+correction, but those meanings are not interchangeable. Negative weights or
+weights that do not sum to one can change interpretation.
+
+## Why it matters in AI engineering
+
+Weighted averages appear in metrics, ensemble predictions, loss functions, and
+population estimates. Incorrectly chosen or normalized weights can bias
+results, hide subgroup performance, or make comparisons misleading.
+
+## How it works
+
+Specify the meaning of each weight, multiply each value by its weight, sum the
+products, and normalize by total weight if a conventional average is intended.
+For probability mixtures, weights are commonly nonnegative and sum to one.
+
+## Practical example
+
+To aggregate per-class accuracy, weight each class accuracy by its number of
+examples to obtain overall accuracy. The unweighted mean of class accuracies
+answers a different question: performance on an equally weighted class.
+
+## Common misconceptions
+
+- A weighted average is not automatically fairer or more accurate; the
+  weighting scheme defines whose outcomes matter more.
+- Averaging metrics with different denominators may not reproduce the metric
+  computed over all examples.
+
+## Related terms
+
+- [Mean Squared Error (MSE)](../M/mean-squared-error-mse.qmd)
+- [Ensemble Learning](../E/ensemble-learning.qmd)
+- [Probability Distribution](../P/probability-distribution.qmd)
+
+## Further reading
+
+- [NIST: Measures of Location](https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm) — means and related statistics.
+- [scikit-learn: Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html) — metric aggregation and scoring.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

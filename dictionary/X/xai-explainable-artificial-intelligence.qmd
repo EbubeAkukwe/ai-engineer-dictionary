@@ -1,0 +1,87 @@
+---
+title: "XAI (Explainable Artificial Intelligence)"
+description: "Methods and practices that make AI system behavior more understandable to people."
+term: "XAI (Explainable Artificial Intelligence)"
+letter: "X"
+category: "AI Safety"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Explainable AI, or XAI, covers ways to help people understand what an AI
+system is doing, why it produced an output, and where its limitations lie.
+The same topic is also listed as [Explainable AI (XAI)](../E/explainable-ai-xai.qmd)
+under E.
+
+## Technical explanation
+
+XAI includes intrinsically interpretable models, post-hoc explanations,
+feature attribution, example-based explanations, counterfactuals, and
+visualization. Methods may explain an individual prediction or summarize
+behavior across a dataset. Explanations are approximations or representations
+of model behavior and can be unstable, misleading, or mismatched to a user's
+question.
+
+## Why it matters in AI engineering
+
+Explanations can support debugging, audits, human oversight, and
+communication. They should be selected for a defined audience and decision;
+an attractive explanation is not proof of fairness, causality, or correctness.
+
+## How it works
+
+First define what needs to be understood and by whom. Then select an approach
+appropriate to the model and use case, test its fidelity and stability, and
+evaluate whether intended users interpret it correctly. Monitor explanation
+behavior when models or data change.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="xai-title xai-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="xai-title">Explanation as a tested view of model behavior</title>
+  <desc id="xai-desc">An input and model produce a prediction. An explanation method analyzes the model and input to produce an explanation for a user, and the explanation itself is checked for fidelity and usefulness.</desc>
+  <defs>
+    <marker id="xai-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="20" y="46" width="126" height="58" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="83" y="71" font-size="13">Input</text><text x="83" y="90" font-size="11">case + context</text>
+    <rect x="204" y="46" width="126" height="58" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="267" y="71" font-size="13">AI model</text><text x="267" y="90" font-size="11">prediction</text>
+    <rect x="390" y="46" width="142" height="58" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="461" y="71" font-size="13">Explanation</text><text x="461" y="90" font-size="11">method + scope</text>
+    <rect x="592" y="46" width="148" height="58" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="666" y="71" font-size="13">User</text><text x="666" y="90" font-size="11">interpretation</text>
+    <path d="M146 75 H196 M330 75 H382 M532 75 H584" stroke="#455b79" stroke-width="2" marker-end="url(#xai-arrow)"/>
+    <path d="M267 112 V156 H461 V112 M461 164 H666 V112" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#xai-arrow)"/>
+    <text x="465" y="194" font-size="12" fill="#46566d">Test explanation fidelity, stability, and usefulness for the intended decision.</text>
+  </g>
+</svg>
+
+## Practical example
+
+For a loan-risk model, a local explanation can show which input features
+contributed to a score. Validate that the explanation reflects the model's
+behavior, does not expose inappropriate information, and is understandable to
+the people expected to use it.
+
+## Common misconceptions
+
+- Feature importance does not establish that a feature caused the prediction
+  or outcome.
+- A post-hoc explanation can be plausible while failing to faithfully
+  represent the model.
+
+## Related terms
+
+- [Interpretability](../I/interpretability.qmd)
+- [Human-in-the-Loop](../H/human-in-the-loop.qmd)
+
+## Further reading
+
+- [NIST: Four Principles of Explainable Artificial Intelligence](https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence) — principles for explanation systems.
+- [A Unified Approach to Interpreting Model Predictions](https://arxiv.org/abs/1705.07874) — SHAP attribution framework.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

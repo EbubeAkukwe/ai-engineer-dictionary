@@ -1,0 +1,61 @@
+---
+title: "Weight"
+description: "A learnable parameter that scales a connection or feature contribution in a model."
+term: "Weight"
+letter: "W"
+category: "Deep Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A weight is a number a model adjusts during training to control how strongly
+one signal contributes to another.
+
+## Technical explanation
+
+In a linear layer, outputs are computed as $y=Wx+b$, where entries of matrix
+$W$ are weights and $b$ is a bias vector. In neural networks, weights are
+learned parameters updated by an optimizer using gradients of a loss function.
+Their interpretation depends on the architecture and representation.
+
+## Why it matters in AI engineering
+
+Weights contain much of a trained neural network's learned state. Checkpoint
+size, numerical precision, initialization, regularization, and parameter
+updates affect storage, inference, and training behavior.
+
+## How it works
+
+Initialize weights, compute model outputs, calculate a loss, and use
+backpropagation to estimate derivatives with respect to the weights. An
+optimizer updates them to reduce the objective over training examples.
+
+## Practical example
+
+For a dense layer with 128 input features and 10 output units, the weight
+matrix has shape $10\times128$. A shape mismatch between this matrix and input
+features prevents the layer operation from being computed.
+
+## Common misconceptions
+
+- A large weight does not always mean a feature is important; scales,
+  normalization, and interactions affect interpretation.
+- Neural network weights usually cannot be interpreted as independent
+  feature effects.
+
+## Related terms
+
+- [Parameter](../P/parameter.qmd)
+- [Gradient Descent](../G/gradient-descent.qmd)
+- [Weight Decay](weight-decay.qmd)
+
+## Further reading
+
+- [Dive into Deep Learning: Linear Neural Networks](https://d2l.ai/chapter_linear-networks/index.html) — parameters and model computation.
+- [PyTorch: Parameters](https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html) — learnable parameters in a module.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

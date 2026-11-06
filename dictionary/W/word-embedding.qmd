@@ -1,0 +1,63 @@
+---
+title: "Word Embedding"
+description: "A learned vector representation of a word that captures useful patterns from data."
+term: "Word Embedding"
+letter: "W"
+category: "NLP"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A word embedding represents a word as a list of numbers. Words used in
+similar contexts may have vectors that are close to each other.
+
+## Technical explanation
+
+Word embeddings map vocabulary items to dense vectors. They may be learned
+from context-prediction objectives, supervised tasks, or as part of a larger
+language model. Static embeddings assign one vector per word type, whereas
+contextual representations vary with the word's surrounding text.
+
+## Why it matters in AI engineering
+
+Embeddings convert discrete tokens into numerical inputs that models can
+process. They support semantic generalization, but static word-level
+representations can struggle with ambiguity, rare words, and languages with
+complex morphology.
+
+## How it works
+
+An embedding table stores one vector per vocabulary ID. Training updates
+vectors so that the model's objective is improved; for example, word2vec
+learns vectors from context prediction. Modern Transformer models often
+combine token embeddings with positional information and contextual layers.
+
+## Practical example
+
+In a language model, token IDs index an embedding matrix to obtain vectors
+before the first Transformer block. Inspecting nearest neighbors can reveal
+useful structure, but may also expose biases present in training data.
+
+## Common misconceptions
+
+- A word's nearest neighbors reflect the training data and objective, not an
+  objective definition of meaning.
+- A static word embedding and a contextual token representation are related
+  but not identical concepts.
+
+## Related terms
+
+- [Token Embedding](../T/token-embedding.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Natural Language Processing (NLP)](../N/natural-language-processing-nlp.qmd)
+
+## Further reading
+
+- [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) — word2vec methods.
+- [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/) — another widely used word-vector approach.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

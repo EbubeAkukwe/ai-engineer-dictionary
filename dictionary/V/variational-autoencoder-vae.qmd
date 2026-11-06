@@ -1,0 +1,93 @@
+---
+title: "Variational Autoencoder (VAE)"
+description: "A generative model that learns a probability distribution over a compressed latent representation."
+term: "Variational Autoencoder (VAE)"
+letter: "V"
+category: "Deep Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A variational autoencoder learns to compress examples into a space where
+nearby points represent related data, then decode points from that space into
+plausible examples. Unlike an ordinary autoencoder, it learns a distribution
+so new points can be sampled.
+
+## Technical explanation
+
+An encoder predicts parameters of a latent distribution, commonly a Gaussian
+with mean $\mu(x)$ and diagonal variance $\sigma^2(x)$. A latent vector is
+sampled using the reparameterization trick,
+$z=\mu(x)+\sigma(x)\odot\epsilon$ for $\epsilon\sim\mathcal{N}(0,I)$, allowing
+gradient-based training. The decoder models $p_\theta(x\mid z)$. The objective
+maximizes a variational lower bound, balancing reconstruction likelihood and a
+regularizing divergence from a prior such as $\mathcal{N}(0,I)$.
+
+## Why it matters in AI engineering
+
+VAEs provide a principled way to learn generative latent spaces for synthesis,
+representation learning, and anomaly detection. Their explicit latent
+distribution also enables interpolation and controlled sampling, though
+reconstruction quality and sample fidelity can trade off.
+
+## How it works
+
+The encoder maps each input to distribution parameters. Training samples a
+latent point and decodes it; the loss rewards accurate reconstruction while
+keeping the encoded distribution near the prior. At generation time, sample
+$z$ from the prior and pass it through the decoder.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="vae-title vae-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="vae-title">Variational autoencoder training and generation</title>
+  <desc id="vae-desc">An input is encoded into a latent distribution, a latent vector is sampled and decoded into a reconstruction. At generation time a latent vector is sampled from the prior and decoded into a new example.</desc>
+  <defs>
+    <marker id="vae-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="20" y="72" width="112" height="58" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="76" y="97" font-size="14">Input x</text><text x="76" y="116" font-size="11">example</text>
+    <rect x="192" y="72" width="142" height="58" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="263" y="97" font-size="14">Encoder</text><text x="263" y="116" font-size="11">μ(x), σ(x)</text>
+    <rect x="394" y="72" width="128" height="58" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="458" y="97" font-size="14">Sample z</text><text x="458" y="116" font-size="11">latent space</text>
+    <rect x="582" y="72" width="152" height="58" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="658" y="97" font-size="14">Decoder</text><text x="658" y="116" font-size="11">reconstruction x̂</text>
+    <path d="M132 101 H184 M334 101 H386 M522 101 H574" stroke="#455b79" stroke-width="2" marker-end="url(#vae-arrow)"/>
+    <text x="380" y="177" font-size="12" fill="#46566d">Training: reconstruction objective + latent-distribution regularization</text>
+  </g>
+</svg>
+
+The reconstruction objective depends on the data type: for example, a
+Bernoulli likelihood for binary pixels or a Gaussian likelihood for continuous
+values. It should reflect the intended observation model rather than being
+chosen only for convenience.
+
+## Practical example
+
+Train a VAE on images of handwritten digits. To generate a new image, sample a
+latent vector from the learned prior and decode it; moving between two latent
+vectors can produce a smooth visual interpolation.
+
+## Common misconceptions
+
+- A VAE is not simply an autoencoder with random noise added; its probabilistic
+  objective and learned latent distribution are central.
+- A smooth latent space does not guarantee every sampled point decodes to a
+  high-quality example.
+
+## Related terms
+
+- [Autoencoder](../A/autoencoder.qmd)
+- [Latent Space](../L/latent-space.qmd)
+- [Generative Model](../G/generative-model.qmd)
+
+## Further reading
+
+- [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114) — the foundational VAE paper.
+- [Deep Learning, Chapter 20: Deep Generative Models](https://www.deeplearningbook.org/contents/generative_models.html) — background on generative modeling.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

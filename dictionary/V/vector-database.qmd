@@ -1,0 +1,92 @@
+---
+title: "Vector Database"
+description: "A database that stores vector representations and supports similarity-oriented retrieval."
+term: "Vector Database"
+letter: "V"
+category: "Retrieval"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A vector database stores numeric representations of items and helps find items
+whose vectors are similar to a query vector. It is often used to retrieve
+relevant text passages, images, or products.
+
+## Technical explanation
+
+Vector databases store vectors with identifiers and often metadata. A query
+vector is compared with stored vectors using a selected distance or similarity
+function. For large collections, approximate nearest-neighbor indexes trade
+some recall for lower latency and resource use. Filtering, updates, metadata
+semantics, and index configuration affect results as much as the similarity
+metric.
+
+## Why it matters in AI engineering
+
+Similarity search is a common retrieval component in recommendation, semantic
+search, and retrieval-augmented generation. A database can provide persistence,
+indexing, filtering, and operational interfaces, but it does not decide what a
+useful embedding or retrieval policy is.
+
+## How it works
+
+Encode source items into vectors, store each vector with an ID and any
+retrieval metadata, and encode each query using the compatible encoder. Search
+the index for nearest candidates, apply filters or reranking if needed, and
+return the associated records.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="vdb-title vdb-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="vdb-title">Vector database retrieval flow</title>
+  <desc id="vdb-desc">Documents are encoded into vectors and stored with metadata in an index. A query is encoded into a vector, searched against the index, and matching records are returned for downstream use.</desc>
+  <defs>
+    <marker id="vdb-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="20" y="25" width="132" height="54" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="86" y="48" font-size="13">Documents</text><text x="86" y="66" font-size="11">+ metadata</text>
+    <rect x="208" y="25" width="132" height="54" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="274" y="48" font-size="13">Embedding</text><text x="274" y="66" font-size="11">model</text>
+    <rect x="404" y="25" width="150" height="54" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="479" y="48" font-size="13">Vector index</text><text x="479" y="66" font-size="11">vectors + records</text>
+    <rect x="608" y="25" width="132" height="54" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="674" y="48" font-size="13">Candidates</text><text x="674" y="66" font-size="11">nearest matches</text>
+    <path d="M152 52 H200 M340 52 H396 M554 52 H600" stroke="#455b79" stroke-width="2" marker-end="url(#vdb-arrow)"/>
+    <rect x="20" y="140" width="132" height="54" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="86" y="163" font-size="13">User query</text><text x="86" y="181" font-size="11">text or item</text>
+    <rect x="208" y="140" width="132" height="54" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="274" y="163" font-size="13">Query vector</text><text x="274" y="181" font-size="11">same embedding space</text>
+    <path d="M152 167 H200 M340 167 H374 V92 H479 V87 M554 52 H590 V167 H600" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#vdb-arrow)"/>
+    <text x="672" y="163" font-size="12">retrieve associated</text><text x="672" y="181" font-size="12">content</text>
+  </g>
+</svg>
+
+## Practical example
+
+For a documentation search system, split documents into passages, embed them,
+and store the vectors with source URLs and access-control metadata. At query
+time, retrieve similar passages and verify that filtering and permissions are
+applied before returning content.
+
+## Common misconceptions
+
+- A vector database does not guarantee semantic relevance; that depends on
+  embeddings, chunking, metrics, filters, and evaluation.
+- Similarity is not truth or authority. Retrieved results still need suitable
+  ranking and downstream handling.
+
+## Related terms
+
+- [Vector Embedding](vector-embedding.qmd)
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+- [Retrieval-Augmented Generation (RAG)](../R/rag-retrieval-augmented-generation.qmd)
+
+## Further reading
+
+- [FAISS: A library for efficient similarity search](https://github.com/facebookresearch/faiss) — vector indexing and nearest-neighbor search.
+- [Qdrant: Vector search](https://qdrant.tech/documentation/concepts/search/) — practical vector search concepts and filtering.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

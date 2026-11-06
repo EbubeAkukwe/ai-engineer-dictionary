@@ -1,0 +1,64 @@
+---
+title: "Vector"
+description: "An ordered collection of numbers that represents a point, direction, or feature set."
+term: "Vector"
+letter: "V"
+category: "Mathematics"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A vector is a list of numbers treated as one mathematical object. For example,
+the coordinates $(2, 5)$ form a two-dimensional vector that can locate a point
+or describe a direction.
+
+## Technical explanation
+
+An $n$-dimensional vector is an element of a vector space, often written
+$x\in\mathbb{R}^n$. Vectors can be added and scaled, and their components can
+represent coordinates or measured features. A vector's representation depends
+on its basis; its values are not meaningful without knowing the feature order
+and units.
+
+## Why it matters in AI engineering
+
+Models represent inputs, hidden activations, gradients, and outputs as vectors.
+Understanding vector dimensions and operations helps diagnose shape errors,
+choose similarity measures, and interpret embeddings.
+
+## How it works
+
+Common operations include addition, scalar multiplication, dot product, and
+norm. The dot product $x^\top y$ measures alignment in Euclidean coordinates;
+the Euclidean norm $\lVert x\rVert_2$ measures magnitude. Normalizing a
+nonzero vector divides it by its norm.
+
+## Practical example
+
+A text model may encode a sentence as a vector with hundreds of components.
+The vector can be compared with another sentence vector using cosine
+similarity, provided both vectors use a compatible embedding model.
+
+## Common misconceptions
+
+- A vector is not merely any array in code; its dimensional meaning and
+  operations are part of the model's representation.
+- Equal vector dimensions do not guarantee that vectors from different models
+  or embedding versions are comparable.
+
+## Related terms
+
+- [Linear Algebra](../L/linear-algebra.qmd)
+- [Vector Embedding](vector-embedding.qmd)
+- [Cosine Similarity](../C/cosine-similarity.qmd)
+
+## Further reading
+
+- [MIT OpenCourseWare: Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) — vectors, matrices, and linear transformations.
+- [NumPy: Array objects](https://numpy.org/doc/stable/reference/arrays.ndarray.html) — vectors as arrays in numerical code.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,66 @@
+---
+title: "Zero-shot Classification"
+description: "Classifying inputs into candidate labels without task-specific labeled examples for those labels."
+term: "Zero-shot Classification"
+letter: "Z"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Zero-shot classification asks a model to assign an input to one of several
+labels even though it was not trained on labeled examples for that particular
+classification task.
+
+## Technical explanation
+
+In language-model approaches, candidate labels may be rendered as text and
+scored against the input or supplied in a prompt. In embedding-based
+approaches, the input and label descriptions are encoded and compared.
+Performance depends on the pretrained model, candidate wording, label set,
+calibration, and domain match; “zero-shot” does not mean the model learned
+nothing relevant during pretraining.
+
+## Why it matters in AI engineering
+
+Zero-shot classification can bootstrap prototypes, triage new categories, or
+handle changing taxonomies without collecting task-specific training data.
+It should be evaluated on representative labeled examples before being used
+for high-impact decisions.
+
+## How it works
+
+Define mutually understandable candidate labels, encode or prompt the input
+with those labels, and select or score candidate outputs. For open-ended
+deployment, define abstention behavior and measure sensitivity to label
+phrasing and class imbalance.
+
+## Practical example
+
+Classify incoming support requests as billing, account access, or technical
+issues using a pretrained natural-language inference model. Compare results
+against a labeled evaluation set and route low-confidence cases to review.
+
+## Common misconceptions
+
+- Zero-shot does not guarantee accurate performance on unseen domains or
+  labels.
+- Changing candidate labels can change predictions even when the input stays
+  the same.
+
+## Related terms
+
+- [Zero-shot Learning](zero-shot-learning.qmd)
+- [Few-shot Learning](../F/few-shot-learning.qmd)
+- [Text Classification](../T/text-classification.qmd)
+
+## Further reading
+
+- [Hugging Face: Zero-shot classification](https://huggingface.co/tasks/zero-shot-classification) — task overview and model usage.
+- [A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference](https://arxiv.org/abs/1704.05426) — natural-language inference background.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

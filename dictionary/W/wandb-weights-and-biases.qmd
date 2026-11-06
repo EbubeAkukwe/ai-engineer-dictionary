@@ -1,0 +1,65 @@
+---
+title: "W&B (Weights & Biases)"
+description: "A platform for tracking machine-learning experiments, artifacts, and model workflows."
+term: "W&B (Weights & Biases)"
+letter: "W"
+category: "MLOps"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+W&B is a hosted platform and set of tools that helps teams record machine
+learning runs, compare metrics, and share experiment results.
+
+## Technical explanation
+
+The platform can log run configuration, metrics, system information, files,
+and artifacts, and can group runs into projects or sweeps. Logged outputs
+depend on what the training code sends to the service. Teams should understand
+data retention, access controls, and whether prompts, samples, or other
+sensitive data are being logged.
+
+## Why it matters in AI engineering
+
+Experiment tracking makes iterative development more auditable and helps
+identify which code, configuration, and data produced a result. It can reduce
+manual spreadsheet work, but reproducibility still requires deliberate
+versioning and complete run metadata.
+
+## How it works
+
+Initialize a run from training code, log configuration and metrics over time,
+and save important artifacts such as checkpoints or evaluation outputs.
+Compare runs through dashboards or programmatic APIs, and record the versions
+of datasets and model code used.
+
+## Practical example
+
+During hyperparameter tuning, log each run's learning rate, batch size,
+validation metric, and source revision. Compare candidates on the same
+validation protocol, then store the final model artifact with a traceable
+reference.
+
+## Common misconceptions
+
+- Logging a metric does not ensure the metric is computed correctly or that
+  experiments are directly comparable.
+- A tracking service is not a substitute for source control, data governance,
+  or a production model registry.
+
+## Related terms
+
+- [Experiment Tracking](../T/tracking-experiment.qmd)
+- [Machine Learning Operations (MLOps)](../M/machine-learning-operations-mlops.qmd)
+- [Model Monitoring](../M/model-monitoring.qmd)
+
+## Further reading
+
+- [W&B Documentation](https://docs.wandb.ai/) — experiment tracking, artifacts, and sweeps.
+- [W&B: What is experiment tracking?](https://docs.wandb.ai/guides/track/) — logging and comparing runs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

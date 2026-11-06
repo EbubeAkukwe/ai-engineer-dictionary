@@ -1,0 +1,85 @@
+---
+title: "Vision Transformer (ViT)"
+description: "A vision model that processes image patches as tokens using Transformer layers."
+term: "Vision Transformer (ViT)"
+letter: "V"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A Vision Transformer splits an image into small patches, turns each patch into
+a vector, and processes the resulting sequence with Transformer layers.
+
+## Technical explanation
+
+For an image of dimensions $H\times W$ and patch size $P$, non-overlapping
+patches are projected to embeddings, typically producing
+$N=(H/P)(W/P)$ tokens. Positional information is added before self-attention
+layers combine information across patches. Classification models often use a
+special class token or pool patch features.
+
+## Why it matters in AI engineering
+
+ViTs provide a flexible architecture for image classification and broader
+vision tasks, and can scale effectively with large training data. They may
+require substantial data or pretraining to match convolutional inductive
+biases, and high-resolution inputs increase token count and attention cost.
+
+## How it works
+
+Patchify the image, project each flattened patch, add positional embeddings,
+and pass the sequence through Transformer blocks. A task-specific head maps
+the resulting representation to predictions.
+
+<svg viewBox="0 0 760 210" role="img" aria-labelledby="vit-title vit-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="vit-title">Vision Transformer image-to-token pipeline</title>
+  <desc id="vit-desc">An image is divided into patches. Each patch is projected to a token, positional information is added, tokens pass through Transformer blocks, and a task head produces an output.</desc>
+  <defs>
+    <marker id="vit-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="18" y="68" width="112" height="60" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="74" y="94" font-size="14">Image</text><text x="74" y="114" font-size="11">H × W pixels</text>
+    <rect x="174" y="68" width="126" height="60" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="237" y="94" font-size="14">Patchify</text><text x="237" y="114" font-size="11">N image regions</text>
+    <rect x="344" y="68" width="130" height="60" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="409" y="94" font-size="14">Patch tokens</text><text x="409" y="114" font-size="11">+ positions</text>
+    <rect x="518" y="68" width="126" height="60" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="581" y="94" font-size="14">Transformer</text><text x="581" y="114" font-size="11">self-attention</text>
+    <rect x="678" y="68" width="70" height="60" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="713" y="94" font-size="13">Task</text><text x="713" y="114" font-size="11">head</text>
+    <path d="M130 98 H166 M300 98 H336 M474 98 H510 M644 98 H670" stroke="#455b79" stroke-width="2" marker-end="url(#vit-arrow)"/>
+    <text x="380" y="174" font-size="12" fill="#46566d">More patches mean finer spatial detail and more attention computation.</text>
+  </g>
+</svg>
+
+## Practical example
+
+For image classification, resize training and inference images consistently,
+split them into patches, and fine-tune a pretrained ViT. Compare quality and
+latency against a convolutional baseline at the same image resolution.
+
+## Common misconceptions
+
+- A ViT does not process an image as a single undifferentiated vector; it
+  retains a sequence of patch tokens and positional information.
+- Transformers are not automatically superior to convolutional models for
+  every image size, dataset, or deployment budget.
+
+## Related terms
+
+- [Transformer](../T/transformer.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Image Classification](../I/image-classification.qmd)
+
+## Further reading
+
+- [An Image is Worth 16×16 Words](https://arxiv.org/abs/2010.11929) — the Vision Transformer paper.
+- [Hugging Face: Vision Transformer](https://huggingface.co/docs/transformers/model_doc/vit) — implementation and model details.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

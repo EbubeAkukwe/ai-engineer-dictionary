@@ -404,6 +404,56 @@ website:
             - dictionary/U/unit-testing.qmd
             - dictionary/U/uplift-modeling.qmd
             - dictionary/U/user-simulation.qmd
+        - section: "V"
+          contents:
+            - dictionary/V/index.qmd
+            - dictionary/V/validation-set.qmd
+            - dictionary/V/variational-autoencoder-vae.qmd
+            - dictionary/V/vector.qmd
+            - dictionary/V/vector-database.qmd
+            - dictionary/V/vector-embedding.qmd
+            - dictionary/V/vector-quantization.qmd
+            - dictionary/V/version-control.qmd
+            - dictionary/V/vision-transformer-vit.qmd
+            - dictionary/V/visual-slam.qmd
+            - dictionary/V/vllm.qmd
+            - dictionary/V/volumetric-rendering.qmd
+        - section: "W"
+          contents:
+            - dictionary/W/index.qmd
+            - dictionary/W/wandb-weights-and-biases.qmd
+            - dictionary/W/warmup.qmd
+            - dictionary/W/wasserstein-distance.qmd
+            - dictionary/W/weight.qmd
+            - dictionary/W/weight-decay.qmd
+            - dictionary/W/web-api.qmd
+            - dictionary/W/webhook.qmd
+            - dictionary/W/weighted-average.qmd
+            - dictionary/W/workflow-orchestration.qmd
+            - dictionary/W/word-embedding.qmd
+            - dictionary/W/world-model.qmd
+        - section: "X"
+          contents:
+            - dictionary/X/index.qmd
+            - dictionary/X/xai-explainable-artificial-intelligence.qmd
+            - dictionary/X/xavier-initialization.qmd
+            - dictionary/X/xgboost.qmd
+            - dictionary/X/xml.qmd
+            - dictionary/X/xor-exclusive-or.qmd
+        - section: "Y"
+          contents:
+            - dictionary/Y/index.qmd
+            - dictionary/Y/yaml.qmd
+            - dictionary/Y/yolo-you-only-look-once.qmd
+            - dictionary/Y/yottabyte.qmd
+        - section: "Z"
+          contents:
+            - dictionary/Z/index.qmd
+            - dictionary/Z/z-score-normalization.qmd
+            - dictionary/Z/zero-optimization.qmd
+            - dictionary/Z/zero-shot-classification.qmd
+            - dictionary/Z/zero-shot-learning.qmd
+            - dictionary/Z/zero-trust.qmd
         - section: "P–Z"
           contents:
             - dictionary/letters.qmd

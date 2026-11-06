@@ -1,0 +1,66 @@
+---
+title: "Vector Embedding"
+description: "A learned numeric representation that maps an item into a vector space."
+term: "Vector Embedding"
+letter: "V"
+category: "Retrieval"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A vector embedding turns an item such as a word, image, or passage into a list
+of numbers. A model learns these numbers so that useful relationships between
+items can be represented geometrically.
+
+## Technical explanation
+
+An embedding is a mapping from discrete or structured inputs to a continuous
+vector space. Its training objective determines which relationships the
+geometry captures: a text embedding trained for semantic similarity may place
+paraphrases close together, while a recommendation embedding may encode
+user-item preference patterns.
+
+## Why it matters in AI engineering
+
+Embeddings make unstructured or categorical information usable by models and
+similarity-search systems. Their quality depends on the training objective,
+data, model version, and intended use; embedding drift can affect retrieval
+quality after model or corpus updates.
+
+## How it works
+
+An encoder processes an input and emits a fixed-length vector. Downstream
+systems may normalize it, compare it with other vectors, or use it as model
+input. Production systems should record the encoder version and keep query and
+indexed vectors compatible.
+
+## Practical example
+
+Encode each support article into a vector, then compare a user question with
+those vectors to find candidate articles. Evaluate retrieved results on real
+queries rather than assuming that a high similarity score means the article is
+correct.
+
+## Common misconceptions
+
+- Embeddings do not have universally meaningful dimensions; individual
+  coordinates are usually not interpretable on their own.
+- Similarity between vectors is only meaningful within a compatible space and
+  under an appropriate metric.
+
+## Related terms
+
+- [Vector](vector.qmd)
+- [Embedding](../E/embedding.qmd)
+- [Vector Database](vector-database.qmd)
+
+## Further reading
+
+- [Sentence Transformers: Semantic Textual Similarity](https://www.sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html) — producing and comparing sentence embeddings.
+- [Word2Vec: Efficient Estimation of Word Representations](https://arxiv.org/abs/1301.3781) — a foundational learned word representation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

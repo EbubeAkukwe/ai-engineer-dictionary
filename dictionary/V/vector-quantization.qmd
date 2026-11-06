@@ -1,0 +1,66 @@
+---
+title: "Vector Quantization"
+description: "A method that maps continuous vectors to a finite set of learned representative codes."
+term: "Vector Quantization"
+letter: "V"
+category: "Model Optimization"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Vector quantization replaces a vector with the ID of a nearby representative
+vector from a finite collection, called a codebook. Instead of storing every
+number precisely, a system can store a compact code.
+
+## Technical explanation
+
+Given a codebook $C=\{c_1,\dots,c_K\}$, nearest-neighbor quantization assigns
+$x$ to an index such as $k^*=\arg\min_k d(x,c_k)$. A quantized representation
+uses the corresponding code vector $c_{k^*}$. In neural systems, codebooks may
+be learned jointly with an encoder and decoder; training commonly needs
+careful handling of the non-differentiable assignment.
+
+## Why it matters in AI engineering
+
+Quantization can reduce memory and bandwidth in compression, generative
+models, and efficient inference. It introduces approximation error and may
+create codebook utilization problems, so compression ratio and task quality
+should be measured together.
+
+## How it works
+
+Learn a finite codebook from representative vectors, assign each input to a
+code, and store or transmit code indices. A decoder looks up code vectors and
+reconstructs an approximation. Multi-stage or product quantization can encode
+high-dimensional vectors using several smaller codebooks.
+
+## Practical example
+
+A nearest-neighbor index can compress stored embeddings by representing each
+vector with compact code indices. Benchmark recall at the intended latency and
+memory budget, because quantized retrieval may miss neighbors found by exact
+search.
+
+## Common misconceptions
+
+- Vector quantization is not simply rounding every scalar independently; it
+  can quantize groups of dimensions jointly.
+- A smaller representation does not guarantee faster end-to-end inference if
+  decoding, memory access, or hardware support becomes the bottleneck.
+
+## Related terms
+
+- [Model Quantization](../M/model-quantization.qmd)
+- [Vector](vector.qmd)
+- [Approximate Nearest Neighbors](../A/approximate-nearest-neighbors.qmd)
+
+## Further reading
+
+- [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) — vector quantization in the VQ-VAE.
+- [FAISS: Product Quantization](https://github.com/facebookresearch/faiss/wiki/FAQ) — quantization for efficient similarity search.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

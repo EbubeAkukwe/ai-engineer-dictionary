@@ -383,20 +383,50 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## V {#v}
 
-Terms beginning with V will appear here as the dictionary grows.
+- [Validation Set](/dictionary/V/validation-set.qmd)
+- [Variational Autoencoder (VAE)](/dictionary/V/variational-autoencoder-vae.qmd)
+- [Vector](/dictionary/V/vector.qmd)
+- [Vector Database](/dictionary/V/vector-database.qmd)
+- [Vector Embedding](/dictionary/V/vector-embedding.qmd)
+- [Vector Quantization](/dictionary/V/vector-quantization.qmd)
+- [Version Control](/dictionary/V/version-control.qmd)
+- [Vision Transformer (ViT)](/dictionary/V/vision-transformer-vit.qmd)
+- [Visual SLAM](/dictionary/V/visual-slam.qmd)
+- [vLLM](/dictionary/V/vllm.qmd)
+- [Volumetric Rendering](/dictionary/V/volumetric-rendering.qmd)
 
 ## W {#w}
 
-Terms beginning with W will appear here as the dictionary grows.
+- [W&B (Weights & Biases)](/dictionary/W/wandb-weights-and-biases.qmd)
+- [Warmup](/dictionary/W/warmup.qmd)
+- [Wasserstein Distance](/dictionary/W/wasserstein-distance.qmd)
+- [Weight](/dictionary/W/weight.qmd)
+- [Weight Decay](/dictionary/W/weight-decay.qmd)
+- [Web API](/dictionary/W/web-api.qmd)
+- [Webhook](/dictionary/W/webhook.qmd)
+- [Weighted Average](/dictionary/W/weighted-average.qmd)
+- [Workflow Orchestration](/dictionary/W/workflow-orchestration.qmd)
+- [Word Embedding](/dictionary/W/word-embedding.qmd)
+- [World Model](/dictionary/W/world-model.qmd)
 
 ## X {#x}
 
-Terms beginning with X will appear here as the dictionary grows.
+- [XAI (Explainable Artificial Intelligence)](/dictionary/X/xai-explainable-artificial-intelligence.qmd)
+- [Xavier Initialization](/dictionary/X/xavier-initialization.qmd)
+- [XGBoost](/dictionary/X/xgboost.qmd)
+- [XML](/dictionary/X/xml.qmd)
+- [XOR (Exclusive OR)](/dictionary/X/xor-exclusive-or.qmd)
 
 ## Y {#y}
 
-Terms beginning with Y will appear here as the dictionary grows.
+- [YAML](/dictionary/Y/yaml.qmd)
+- [YOLO (You Only Look Once)](/dictionary/Y/yolo-you-only-look-once.qmd)
+- [Yottabyte](/dictionary/Y/yottabyte.qmd)
 
 ## Z {#z}
 
-Terms beginning with Z will appear here as the dictionary grows.
+- [Z-Score Normalization](/dictionary/Z/z-score-normalization.qmd)
+- [ZeRO Optimization](/dictionary/Z/zero-optimization.qmd)
+- [Zero-shot Classification](/dictionary/Z/zero-shot-classification.qmd)
+- [Zero-shot Learning](/dictionary/Z/zero-shot-learning.qmd)
+- [Zero Trust](/dictionary/Z/zero-trust.qmd)

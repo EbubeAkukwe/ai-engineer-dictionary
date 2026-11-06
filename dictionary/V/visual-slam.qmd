@@ -1,0 +1,85 @@
+---
+title: "Visual SLAM"
+description: "A robotics method that estimates a camera's motion while building a map from visual observations."
+term: "Visual SLAM"
+letter: "V"
+category: "Robotics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Visual SLAM lets a moving camera work out where it is while simultaneously
+building a map of its surroundings from images.
+
+## Technical explanation
+
+Visual simultaneous localization and mapping estimates camera poses and map
+structure from a sequence of images. Systems may use feature points or direct
+pixel alignment, and may be monocular, stereo, or RGB-D. Estimation often
+combines visual measurements with motion models and loop-closure constraints;
+monocular systems have scale ambiguity without additional information.
+
+## Why it matters in AI engineering
+
+Visual SLAM supports navigation and spatial understanding in robots, AR/VR
+devices, and autonomous systems. Reliability depends on camera calibration,
+lighting, motion blur, scene texture, dynamic objects, and compute budgets.
+
+## How it works
+
+Detect or track visual features, estimate camera motion between frames, and
+triangulate landmarks where geometry permits. A backend optimizes poses and
+map points; loop closure recognizes a revisited place and reduces accumulated
+drift.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="slam-title slam-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="slam-title">Visual SLAM estimation loop</title>
+  <desc id="slam-desc">A camera sequence supplies images for visual feature tracking. Motion and landmark estimates build a map, and loop closure recognizes a previously visited place to refine the trajectory.</desc>
+  <defs>
+    <marker id="slam-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="20" y="68" width="130" height="62" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="85" y="94" font-size="14">Camera frames</text><text x="85" y="114" font-size="11">image sequence</text>
+    <rect x="210" y="68" width="142" height="62" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="281" y="94" font-size="14">Track features</text><text x="281" y="114" font-size="11">across frames</text>
+    <rect x="412" y="68" width="142" height="62" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="483" y="94" font-size="14">Estimate</text><text x="483" y="114" font-size="11">poses + landmarks</text>
+    <rect x="614" y="68" width="132" height="62" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="680" y="94" font-size="14">Optimize map</text><text x="680" y="114" font-size="11">loop closure</text>
+    <path d="M150 99 H202 M352 99 H404 M554 99 H606" stroke="#455b79" stroke-width="2" marker-end="url(#slam-arrow)"/>
+    <path d="M680 138 C650 193 300 193 281 138" fill="none" stroke="#b9792e" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#slam-arrow)"/>
+    <text x="470" y="194" font-size="12" fill="#46566d">Revisited places add constraints that can correct accumulated drift.</text>
+  </g>
+</svg>
+
+## Practical example
+
+A mobile robot can use stereo camera frames to estimate its trajectory through
+a building and map obstacles. The map and pose estimates should be checked
+against ground truth or independent sensors before relying on them for
+safety-critical navigation.
+
+## Common misconceptions
+
+- SLAM does not produce a perfect global position automatically; estimates can
+  drift and may have scale or coordinate-frame ambiguities.
+- Visual SLAM is not the same as visual object recognition: it estimates
+  geometry and motion, though learned perception may be part of a system.
+
+## Related terms
+
+- [Autonomous Systems](../A/autonomous-systems.qmd)
+- [Computer Vision](../C/computer-vision.qmd)
+- [Kalman Filter](../K/kalman-filter.qmd)
+
+## Further reading
+
+- [ORB-SLAM3](https://arxiv.org/abs/2007.11898) — visual, visual-inertial, and multi-map SLAM.
+- [OpenVSLAM](https://github.com/xdspacelab/openvslam) — open-source visual SLAM system.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

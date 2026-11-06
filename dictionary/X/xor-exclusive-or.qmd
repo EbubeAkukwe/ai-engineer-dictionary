@@ -1,0 +1,61 @@
+---
+title: "XOR (Exclusive OR)"
+description: "A logical operation that is true when its two binary inputs differ."
+term: "XOR (Exclusive OR)"
+letter: "X"
+category: "Computer Science"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+XOR, or exclusive OR, outputs true when exactly one of two inputs is true.
+For example, $0\oplus1=1$, while $1\oplus1=0$.
+
+## Technical explanation
+
+For binary values, XOR is addition modulo two: $a\oplus b=(a+b)\bmod 2$.
+It is a Boolean operation used in digital circuits, checksums, and
+cryptographic constructions. XOR is associative and commutative and satisfies
+$a\oplus a=0$.
+
+## Why it matters in AI engineering
+
+XOR is a foundational example in machine learning: a single linear
+threshold unit cannot represent the XOR truth table, while a network with a
+hidden layer and nonlinear activation can. It also appears in low-level
+systems and data transformations.
+
+## How it works
+
+Evaluate the two inputs and return one when they differ, zero when they match.
+For bit strings, apply the operation independently to each corresponding bit.
+
+## Practical example
+
+The XOR function can test whether two binary flags disagree. As a learning
+problem, it illustrates why nonlinear representations are necessary for some
+decision boundaries.
+
+## Common misconceptions
+
+- XOR is not ordinary OR: OR returns true when both inputs are true, whereas
+  XOR does not.
+- The classic XOR limitation applies to a single linear decision unit, not to
+  all neural networks.
+
+## Related terms
+
+- [Perceptron](../P/perceptron.qmd)
+- [Artificial Neural Network](../A/artificial-neural-network.qmd)
+- [Activation Function](../A/activation-function.qmd)
+
+## Further reading
+
+- [Deep Learning, Chapter 6: Deep Feedforward Networks](https://www.deeplearningbook.org/contents/mlp.html) — nonlinear representations and XOR.
+- [NIST Dictionary of Algorithms and Data Structures: XOR](https://xlinux.nist.gov/dads/HTML/xor.html) — a concise definition.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

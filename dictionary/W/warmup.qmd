@@ -1,0 +1,64 @@
+---
+title: "Warmup"
+description: "A training schedule that gradually increases the learning rate at the start of optimization."
+term: "Warmup"
+letter: "W"
+category: "Model Training"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Learning-rate warmup starts training with small parameter updates and
+gradually increases their size. This can make early optimization more stable.
+
+## Technical explanation
+
+Warmup is a learning-rate schedule over an initial number of steps. A common
+linear schedule sets $\eta_t=\eta_{\max}\min(t/T_w,1)$ for warmup length $T_w$,
+possibly followed by decay. The schedule changes the optimizer step size; it
+does not change the optimizer's objective or guarantee convergence.
+
+## Why it matters in AI engineering
+
+Large-batch training, Transformer optimization, and fine-tuning can be
+sensitive to early update magnitudes. Warmup is a useful stabilization
+technique, but its duration and peak rate must be evaluated for the model,
+dataset, and total training budget.
+
+## How it works
+
+Choose a warmup duration or fraction of total training steps. Increase the
+learning rate from a small initial value to the target, then transition to a
+schedule such as cosine decay or a constant rate. Ensure scheduler step counts
+match the actual optimizer updates.
+
+## Practical example
+
+If a model trains for 10,000 optimizer steps and uses 500 warmup steps, a
+linear warmup reaches the configured peak learning rate after step 500. Log
+the realized learning rate to verify gradient accumulation and resuming do not
+shift the schedule unexpectedly.
+
+## Common misconceptions
+
+- Warmup is not the same as learning-rate decay; it describes the initial
+  increase and may be paired with a later schedule.
+- More warmup is not always safer; excessive warmup can waste training budget
+  or impair convergence.
+
+## Related terms
+
+- [Learning Rate](../L/learning-rate.qmd)
+- [Learning Rate Scheduler](../L/learning-rate-scheduler.qmd)
+- [Training](../T/training.qmd)
+
+## Further reading
+
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) — an example of a warmup-and-decay schedule.
+- [PyTorch: Learning rate scheduling](https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate) — scheduler usage and step timing.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

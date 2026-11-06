@@ -1,0 +1,67 @@
+---
+title: "Wasserstein Distance"
+description: "A distance between probability distributions based on the minimum cost of transporting mass between them."
+term: "Wasserstein Distance"
+letter: "W"
+category: "Mathematics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Wasserstein distance measures how much work it takes to reshape one
+probability distribution into another by moving probability mass.
+
+## Technical explanation
+
+For distributions $P$ and $Q$ on a metric space with ground cost $d$, the
+$p$-Wasserstein distance is
+$W_p(P,Q)=\left(\inf_{\gamma\in\Pi(P,Q)}\mathbb{E}_{(x,y)\sim\gamma}[d(x,y)^p]\right)^{1/p}$.
+Here, $\Pi(P,Q)$ is the set of joint distributions whose marginals are $P$
+and $Q$. Unlike divergences that may be infinite for disjoint supports,
+Wasserstein distance can reflect how far apart the supports are, given the
+chosen geometry and moment conditions.
+
+## Why it matters in AI engineering
+
+It is used in optimal transport, generative modeling, and comparing
+distributions. The ground metric and computational approximation shape the
+result; practical implementations may use regularization or specialized
+estimators.
+
+## How it works
+
+Consider all possible couplings that move mass from samples of $P$ to samples
+of $Q$. Measure transport cost under each coupling and select the minimum.
+Exact optimization can be expensive, especially for large empirical
+distributions.
+
+## Practical example
+
+Compare generated and real one-dimensional distributions by computing a
+transport cost over their samples. A low value only indicates similarity under
+the selected metric and sampling procedure; it is not a complete evaluation of
+generative quality.
+
+## Common misconceptions
+
+- Wasserstein distance is not a universal measure of distribution quality; it
+  depends on the ground metric and data representation.
+- The optimal transport plan is not necessarily a one-to-one pairing of
+  samples.
+
+## Related terms
+
+- [Probability Distribution](../P/probability-distribution.qmd)
+- [Generative Model](../G/generative-model.qmd)
+- [Kullback-Leibler Divergence](../K/kullback-leibler-divergence.qmd)
+
+## Further reading
+
+- [Optimal Transport: Old and New](https://www.springer.com/gp/book/9783540710509) — mathematical foundations of optimal transport.
+- [Wasserstein GAN](https://arxiv.org/abs/1701.07875) — use of the Wasserstein-1 objective in generative modeling.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

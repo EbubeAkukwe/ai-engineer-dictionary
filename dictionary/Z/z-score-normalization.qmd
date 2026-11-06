@@ -1,0 +1,64 @@
+---
+title: "Z-Score Normalization"
+description: "A feature transformation that expresses values in standard-deviation units relative to a mean."
+term: "Z-Score Normalization"
+letter: "Z"
+category: "Statistics"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Z-score normalization subtracts a feature's mean and divides by its standard
+deviation, expressing each value in units of typical variation.
+
+## Technical explanation
+
+For a value $x$, mean $\mu$, and standard deviation $\sigma>0$, its z-score is
+$z=(x-\mu)/\sigma$. In machine learning, estimate $\mu$ and $\sigma$ using the
+training data only, then reuse those values to transform validation, test, and
+production data. This prevents information leakage and ensures consistent
+scaling.
+
+## Why it matters in AI engineering
+
+Scaling can improve optimization for models sensitive to feature magnitude
+and makes different numerical ranges easier to compare. It does not make
+features normally distributed, remove outliers, or guarantee improved
+performance for every model.
+
+## How it works
+
+Compute per-feature means and standard deviations on the training partition.
+Transform values using those statistics. Handle constant or near-constant
+features explicitly, and consider robust scaling when outliers dominate the
+mean and standard deviation.
+
+## Practical example
+
+Fit a standard scaler on the training rows of a dataset, then use the fitted
+scaler to transform validation and test rows. Do not independently recompute
+the mean and standard deviation on each split.
+
+## Common misconceptions
+
+- Z-score scaling does not clip outliers; extreme values remain extreme in
+  standardized units.
+- A z-score is not automatically a probability or a percentile unless
+  distributional assumptions are justified.
+
+## Related terms
+
+- [Data Preprocessing](../D/data-preprocessing.qmd)
+- [Feature Engineering](../F/feature-engineering.qmd)
+- [Sampling](../S/sampling.qmd)
+
+## Further reading
+
+- [scikit-learn: StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) — fitting and applying standardization.
+- [NIST: Measures of Scale](https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm) — standard deviation and related measures.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

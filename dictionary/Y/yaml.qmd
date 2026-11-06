@@ -1,0 +1,61 @@
+---
+title: "YAML"
+description: "A human-readable data serialization format often used for configuration."
+term: "YAML"
+letter: "Y"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+YAML is a text format for writing structured data and configuration in a
+readable way, commonly using indentation to show nested values.
+
+## Technical explanation
+
+YAML supports mappings, sequences, scalars, and other features. Indentation
+is syntactic, so spaces and nesting matter. Different YAML versions and
+parser behaviors can affect values such as booleans and numbers; configuration
+systems may impose their own schema and restrictions.
+
+## Why it matters in AI engineering
+
+AI projects often use YAML to configure training jobs, data pipelines,
+deployment, and CI. A malformed or ambiguous configuration can change
+behavior, so configurations should be validated and reviewed like code.
+
+## How it works
+
+A YAML parser converts the document into structured values. Applications
+then validate those values against expected fields, types, and constraints
+before using them.
+
+## Practical example
+
+A training configuration can specify a dataset path, batch size, learning
+rate, and random seed. Validate required fields and record the exact
+configuration alongside the resulting model artifact.
+
+## Common misconceptions
+
+- YAML is not merely JSON with different punctuation; its indentation and
+  scalar rules can introduce subtle parsing errors.
+- A syntactically valid YAML file may still be invalid for the application
+  that consumes it.
+
+## Related terms
+
+- [JSON](../J/json.qmd)
+- [XML](../X/xml.qmd)
+- [Data Validation](../D/data-validation.qmd)
+
+## Further reading
+
+- [YAML 1.2.2 Specification](https://yaml.org/spec/1.2.2/) — syntax and data model.
+- [PyYAML documentation](https://pyyaml.org/wiki/PyYAMLDocumentation) — parsing and emitting YAML in Python.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -2,7 +2,7 @@
 
 > Status: Proposed vocabulary for V1. This is a curated starting scope, not a claim that every term is already written or reviewed.
 
-**Current proposed terms: 343**
+**Current proposed terms: 345**
 
 ## Editorial rules
 

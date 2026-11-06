@@ -1,0 +1,87 @@
+---
+title: "Workflow Orchestration"
+description: "Coordinating dependent tasks, retries, schedules, and resources across an automated workflow."
+term: "Workflow Orchestration"
+letter: "W"
+category: "AI Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Workflow orchestration coordinates a sequence of automated jobs, making sure
+each step runs at the right time and that failures can be handled.
+
+## Technical explanation
+
+An orchestrator represents work as tasks or steps with dependencies and
+execution policies. It may provide scheduling, retries, timeouts, state
+tracking, resource allocation, and event triggers. Orchestration systems
+usually coordinate work rather than perform every computation themselves.
+
+## Why it matters in AI engineering
+
+AI pipelines often combine data validation, training, evaluation, approval,
+and deployment. Orchestration makes these dependencies explicit and helps
+teams monitor long-running jobs, recover from transient errors, and avoid
+unsafe transitions.
+
+## How it works
+
+Define tasks and dependency edges, configure triggers and retry policies, then
+submit a run. The orchestrator schedules eligible tasks, records status, and
+surfaces failures. Idempotency and durable outputs are important when a task
+may be retried.
+
+<svg viewBox="0 0 760 220" role="img" aria-labelledby="orch-title orch-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="orch-title">Machine-learning workflow orchestration</title>
+  <desc id="orch-desc">A workflow runs data validation before training. Training leads to evaluation, and only a passing evaluation proceeds to approval and deployment. Failures are reported and can be retried according to policy.</desc>
+  <defs>
+    <marker id="orch-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/></marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle" fill="#202b3c">
+    <rect x="18" y="58" width="128" height="62" rx="8" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="82" y="84" font-size="13">Validate data</text><text x="82" y="104" font-size="11">schema + quality</text>
+    <rect x="174" y="58" width="112" height="62" rx="8" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="230" y="84" font-size="13">Train</text><text x="230" y="104" font-size="11">versioned inputs</text>
+    <rect x="314" y="58" width="124" height="62" rx="8" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="376" y="84" font-size="13">Evaluate</text><text x="376" y="104" font-size="11">quality gates</text>
+    <rect x="466" y="58" width="110" height="62" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="521" y="84" font-size="13">Approve</text><text x="521" y="104" font-size="11">human review</text>
+    <rect x="604" y="58" width="138" height="62" rx="8" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="673" y="84" font-size="13">Deploy</text><text x="673" y="104" font-size="11">controlled release</text>
+    <path d="M146 89 H166 M286 89 H306 M438 89 H458 M576 89 H596" stroke="#455b79" stroke-width="2" marker-end="url(#orch-arrow)"/>
+    <path d="M376 126 V169 H225 V126" fill="none" stroke="#a44b4b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#orch-arrow)"/>
+    <text x="376" y="194" font-size="12" fill="#46566d">Failures follow explicit retry, alert, or stop policies.</text>
+  </g>
+</svg>
+
+## Practical example
+
+Schedule a daily training pipeline that validates incoming data, trains a
+candidate model, evaluates it against fixed criteria, and requests approval
+before deployment. Store each task's inputs and outputs so a retry does not
+silently use different data.
+
+## Common misconceptions
+
+- Orchestration does not make tasks correct or idempotent; those properties
+  must be designed into the tasks.
+- A workflow succeeding only means its configured steps completed, not that
+  the model meets product or safety requirements.
+
+## Related terms
+
+- [Pipeline](../P/pipeline.qmd)
+- [Machine Learning Operations (MLOps)](../M/machine-learning-operations-mlops.qmd)
+- [Continuous Integration](../C/continuous-integration.qmd)
+
+## Further reading
+
+- [Apache Airflow documentation](https://airflow.apache.org/docs/) — DAG-based workflow orchestration.
+- [Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/) — machine-learning workflow pipelines.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

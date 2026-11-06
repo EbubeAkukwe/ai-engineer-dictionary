@@ -1,0 +1,65 @@
+---
+title: "YOLO (You Only Look Once)"
+description: "A family of object-detection models designed to predict object locations and classes in one network evaluation."
+term: "YOLO (You Only Look Once)"
+letter: "Y"
+category: "Computer Vision"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+YOLO is a family of object detectors that predict object locations and labels
+from an image in a single model pass, making the approach suitable for
+real-time use cases.
+
+## Technical explanation
+
+YOLO refers to a sequence of object-detection architectures rather than one
+fixed model. Implementations typically produce box coordinates, class scores,
+and confidence-related outputs at one or more feature-map scales. Training
+assignments, heads, losses, and post-processing differ across versions;
+non-maximum suppression is common but not universal.
+
+## Why it matters in AI engineering
+
+One-pass detectors can offer a useful speed-accuracy trade-off for video,
+robotics, and edge deployments. Selection should use a representative
+benchmark, including image size, hardware, class imbalance, latency, and
+post-processing costs.
+
+## How it works
+
+The model extracts image features and predicts candidate boxes and class
+scores. Training compares predictions with labeled objects. At inference,
+confidence thresholds and, in many implementations, non-maximum suppression
+filter overlapping candidates.
+
+## Practical example
+
+For warehouse package detection, evaluate on images from different cameras,
+lighting, and package sizes. Measure per-class precision and recall and actual
+throughput on the target device, not only a benchmark score from a different
+hardware setup.
+
+## Common misconceptions
+
+- YOLO is a family of models whose details vary by version and implementation.
+- “Single pass” does not mean there is no post-processing or that inference
+  latency is independent of image size and hardware.
+
+## Related terms
+
+- [Object Detection](../O/object-detection.qmd)
+- [Bounding Box](../B/bounding-box.qmd)
+- [Non-Maximum Suppression (NMS)](../N/non-maximum-suppression-nms.qmd)
+
+## Further reading
+
+- [Ultralytics YOLO documentation](https://docs.ultralytics.com/) — current implementation and deployment guidance.
+- [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640) — original YOLO paper.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

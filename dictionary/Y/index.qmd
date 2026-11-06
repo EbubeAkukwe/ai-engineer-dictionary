@@ -1,0 +1,10 @@
+---
+title: "Y Terms"
+description: "AI engineering dictionary terms beginning with Y."
+---
+
+# Y Terms
+
+- [YAML](yaml.qmd)
+- [YOLO (You Only Look Once)](yolo-you-only-look-once.qmd)
+- [Yottabyte](yottabyte.qmd)

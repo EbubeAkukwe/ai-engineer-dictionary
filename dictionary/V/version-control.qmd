@@ -1,0 +1,63 @@
+---
+title: "Version Control"
+description: "A system for recording, comparing, and coordinating changes to files over time."
+term: "Version Control"
+letter: "V"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+Version control keeps a history of project changes so a team can see what
+changed, compare versions, and safely collaborate.
+
+## Technical explanation
+
+Distributed version control systems such as Git store snapshots and metadata
+in a repository. Branches allow independent work; commits record changes; and
+merges integrate histories. Version control tracks text and other files, but
+large model artifacts and datasets often need specialized storage or registry
+systems.
+
+## Why it matters in AI engineering
+
+Reproducible AI work depends on more than model code. Versioning code,
+configuration, data references, and evaluation procedures helps explain how
+results were produced and supports rollback when a change degrades behavior.
+
+## How it works
+
+Developers edit files, review diffs, stage relevant changes, and create commits.
+Branches isolate work until it is reviewed and merged. Tags or release
+references can mark source states associated with deployed models or
+experiments.
+
+## Practical example
+
+When changing a feature pipeline, create a branch, commit the transformation
+and its tests, and record the dataset and model versions used in evaluation.
+This makes it possible to compare the new pipeline with the previous one.
+
+## Common misconceptions
+
+- A Git commit does not automatically version data stored outside the
+  repository.
+- A commit alone does not ensure a run is reproducible; dependencies,
+  configuration, randomness, and data must also be tracked.
+
+## Related terms
+
+- [Git](../G/git.qmd)
+- [Experiment Tracking](../T/tracking-experiment.qmd)
+- [Experiment Tracking](../T/tracking-experiment.qmd)
+
+## Further reading
+
+- [Pro Git](https://git-scm.com/book/en/v2) — Git concepts and workflows.
+- [DVC: Get Started](https://dvc.org/doc/start) — versioning data and machine-learning pipelines.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

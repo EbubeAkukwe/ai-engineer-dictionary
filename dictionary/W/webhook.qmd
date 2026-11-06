@@ -1,0 +1,64 @@
+---
+title: "Webhook"
+description: "An HTTP callback that sends event data from one service to another when something happens."
+term: "Webhook"
+letter: "W"
+category: "Software Engineering"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A webhook is an automatic message one service sends to another when an event
+occurs, instead of the receiver repeatedly checking for updates.
+
+## Technical explanation
+
+A webhook provider sends an HTTP request, usually with a payload describing
+an event, to a configured receiver endpoint. Reliable implementations
+authenticate requests, validate signatures and timestamps, handle retries and
+duplicate deliveries, and return a response promptly. Delivery is commonly
+at-least-once, so consumers should be idempotent.
+
+## Why it matters in AI engineering
+
+Webhooks connect model pipelines to data ingestion, job completion,
+human-review, and deployment workflows. They enable event-driven integration
+but also create an externally reachable surface that must be validated and
+monitored.
+
+## How it works
+
+Register a receiver URL with an event provider. On an event, the provider
+posts a signed payload; the receiver verifies it, records or queues the event,
+and responds with an appropriate status. Longer processing should usually be
+handled asynchronously after durable receipt.
+
+## Practical example
+
+When a model evaluation job completes, a pipeline can send a webhook to a
+deployment service. The receiver verifies the signature, checks the run ID,
+and queues a deployment review rather than trusting the incoming message to
+deploy immediately.
+
+## Common misconceptions
+
+- A webhook is not a guarantee of exactly-once delivery; retries can cause
+  duplicates.
+- HTTPS alone does not authenticate the sender or validate event contents.
+
+## Related terms
+
+- [Web API](web-api.qmd)
+- [Workflow Orchestration](../W/workflow-orchestration.qmd)
+- [Continuous Integration](../C/continuous-integration.qmd)
+
+## Further reading
+
+- [GitHub: Webhooks](https://docs.github.com/en/webhooks/about-webhooks) — event delivery and signature verification.
+- [Stripe: Webhooks](https://docs.stripe.com/webhooks) — retries, signatures, and event handling patterns.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

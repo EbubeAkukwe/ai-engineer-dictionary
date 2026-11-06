@@ -1,0 +1,64 @@
+---
+title: "vLLM"
+description: "An open-source inference and serving engine for large language models."
+term: "vLLM"
+letter: "V"
+category: "Inference Systems"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+vLLM is software for running and serving large language models efficiently,
+especially when many requests or long sequences must share GPU memory.
+
+## Technical explanation
+
+vLLM is an inference and serving framework whose techniques include
+PagedAttention, continuous batching, and optimized kernels. Its memory
+management allows key-value cache blocks to be allocated flexibly, helping
+improve throughput under suitable workloads. Performance depends on hardware,
+model architecture, sequence lengths, batch composition, and runtime settings.
+
+## Why it matters in AI engineering
+
+Serving cost and latency can dominate production LLM systems. An inference
+engine can improve utilization and expose APIs, but engineers still need to
+measure request-level latency, throughput, memory use, quality, and failure
+behavior on the actual deployment workload.
+
+## How it works
+
+The engine loads model weights, schedules incoming requests, batches token
+generation steps, and manages per-request key-value state. Continuous
+batching can admit or finish requests while other sequences continue decoding.
+
+## Practical example
+
+Serve a supported instruction model through vLLM's OpenAI-compatible API.
+Benchmark representative prompt and output lengths under realistic concurrent
+load, and compare tail latency and throughput rather than relying on a single
+tokens-per-second number.
+
+## Common misconceptions
+
+- An inference engine does not improve the model's underlying correctness or
+  safety by itself.
+- A benchmark on one GPU or request mix does not predict production performance
+  on another model, hardware, or concurrency level.
+
+## Related terms
+
+- [Inference](../I/inference.qmd)
+- [KV Cache](../K/kv-cache.qmd)
+- [Dynamic Batching](../D/dynamic-batching.qmd)
+
+## Further reading
+
+- [vLLM documentation](https://docs.vllm.ai/) — installation, serving, and configuration.
+- [PagedAttention paper](https://arxiv.org/abs/2309.06180) — memory management for LLM serving.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

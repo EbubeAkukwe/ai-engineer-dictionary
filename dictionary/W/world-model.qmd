@@ -1,0 +1,65 @@
+---
+title: "World Model"
+description: "A learned model of environment dynamics used to predict possible future states."
+term: "World Model"
+letter: "W"
+category: "AI Agents"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A world model is an internal model an agent uses to imagine what might happen
+after an action, rather than learning only by acting in the real environment.
+
+## Technical explanation
+
+A world model approximates environment dynamics, often in a compressed latent
+state space. It may predict next observations, rewards, or termination given a
+state and action, and can be stochastic to represent uncertainty. The model
+is imperfect; planning with it can amplify errors when imagined trajectories
+move beyond the training distribution.
+
+## Why it matters in AI engineering
+
+World models can reduce costly or risky environment interaction and enable
+planning or policy learning from simulated rollouts. Their value depends on
+predictive accuracy over the decisions the agent will make, not just average
+one-step prediction quality.
+
+## How it works
+
+Train a representation and dynamics model from trajectories. During planning
+or policy optimization, initialize from the current observation, predict
+possible future latent states under candidate actions, and select actions
+using predicted outcomes. Validate plans against real transitions.
+
+## Practical example
+
+A robot can learn a predictive model of how its movements affect camera
+observations and use that model to compare candidate motions before execution.
+Limit rollout horizons or incorporate uncertainty when predictions become
+unreliable.
+
+## Common misconceptions
+
+- A world model is not necessarily a complete, physically faithful simulation
+  of reality.
+- Better next-frame prediction does not guarantee better decisions; errors
+  relevant to the policy matter most.
+
+## Related terms
+
+- [Reinforcement Learning](../R/reinforcement-learning.qmd)
+- [Agent](../A/agent.qmd)
+- [Trajectory Optimization](../T/trajectory-optimization.qmd)
+
+## Further reading
+
+- [World Models](https://arxiv.org/abs/1803.10122) — a learned latent world model for control.
+- [DreamerV3](https://arxiv.org/abs/2301.04104) — learning and behavior from imagined trajectories.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,12 @@
+---
+title: "X Terms"
+description: "AI engineering dictionary terms beginning with X."
+---
+
+# X Terms
+
+- [XAI (Explainable Artificial Intelligence)](xai-explainable-artificial-intelligence.qmd)
+- [Xavier Initialization](xavier-initialization.qmd)
+- [XGBoost](xgboost.qmd)
+- [XML](xml.qmd)
+- [XOR (Exclusive OR)](xor-exclusive-or.qmd)

@@ -1,0 +1,60 @@
+---
+title: "Yottabyte"
+description: "A decimal data-size unit equal to 10^24 bytes."
+term: "Yottabyte"
+letter: "Y"
+category: "Computer Systems"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+A yottabyte is an extremely large unit of digital information: one yottabyte
+equals one septillion bytes in the decimal system.
+
+## Technical explanation
+
+In the International System of Units, the prefix yotta denotes $10^{24}$, so
+1 YB = $10^{24}$ bytes. The binary prefix yobi denotes $2^{80}$ bytes, written
+YiB, and is slightly larger. These units should not be confused in storage
+capacity and data-volume calculations.
+
+## Why it matters in AI engineering
+
+Data scale affects storage architecture, movement, retention, and compute
+cost. AI practitioners are more likely to handle terabytes or petabytes, but
+clear unit conventions prevent substantial estimation errors at large scale.
+
+## How it works
+
+Convert using powers of ten for decimal SI units (kB, MB, GB, TB, PB, EB, ZB,
+YB) and powers of two for IEC binary units (KiB, MiB, GiB, TiB, PiB, EiB,
+ZiB, YiB). State which convention a reported size uses.
+
+## Practical example
+
+If a data-transfer estimate uses decimal units, a sustained rate of one
+terabyte per second would take about one million seconds to transfer one
+yottabyte, ignoring protocol overhead and other bottlenecks.
+
+## Common misconceptions
+
+- Yottabyte (YB) and yobibyte (YiB) are distinct units.
+- Decimal unit conversions do not describe the real time to transfer data;
+  network limits and storage throughput matter.
+
+## Related terms
+
+- [Data Engineering](../D/data-engineering.qmd)
+- [GPU](../G/gpu.qmd)
+- [Distributed Training](../D/distributed-training.qmd)
+
+## Further reading
+
+- [NIST: Prefixes for binary multiples](https://physics.nist.gov/cuu/Units/binary.html) — distinction between SI and binary prefixes.
+- [BIPM: SI Prefixes](https://www.bipm.org/en/measurement-units/si-prefixes) — official decimal prefixes.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)
