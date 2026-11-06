@@ -1,0 +1,73 @@
+---
+title: "K-Means"
+description: "A clustering algorithm that groups data points into K clusters by repeatedly updating centroids."
+term: "K-Means"
+letter: "K"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+K-means groups data into $K$ clusters by finding cluster centers that minimize
+how far points are from their assigned center. It is one of the most common
+unsupervised learning algorithms.
+
+## Technical explanation
+
+Given a dataset $\{x_i\}_{i=1}^n$ and a chosen number of clusters $K$, the
+algorithm initializes $K$ centroids, assigns each point to the nearest
+centroid, and then updates each centroid to the mean of its assigned points.
+This repeats until assignments stabilize or a stopping criterion is reached.
+
+The objective is to minimize the within-cluster sum of squared distances:
+
+$$
+\sum_{k=1}^{K} \sum_{x_i \in C_k} \|x_i - \mu_k\|^2,
+$$
+
+where $\mu_k$ is the centroid of cluster $C_k$.
+
+## Why it matters in AI engineering
+
+K-means is used for customer segmentation, topic discovery, image grouping,
+and feature learning. It is simple, fast, and easy to explain, but its success
+depends on the number of clusters, initialization, and the geometry of the data.
+
+## How it works
+
+1. Choose $K$ initial centroids.
+2. Assign each point to the nearest centroid.
+3. Recompute each centroid as the mean of its cluster.
+4. Repeat until the centroids or assignments no longer change much.
+
+Because the algorithm is sensitive to initialization, practitioners often run
+several random starts and keep the best result.
+
+## Practical example
+
+A product team might cluster customer behavior vectors into $K=5$ groups to
+identify common purchasing patterns. The resulting clusters can inform
+personalization and recommendation strategies.
+
+## Common misconceptions
+
+- K-means requires choosing $K$ in advance; the best value is often task-specific.
+- It assumes roughly spherical clusters and may perform poorly on elongated or non-convex groups.
+- It is unsupervised and does not automatically assign semantic labels to clusters.
+
+## Related terms
+
+- [Clustering](../C/clustering.qmd)
+- [Kernel](kernel.qmd)
+- [K-Nearest Neighbors (KNN)](k-nearest-neighbors-knn.qmd)
+
+## Further reading
+
+- [Scikit-learn: K-Means](https://scikit-learn.org/stable/modules/clustering.html#k-means) — practical overview and implementation guidance.
+- [Google for Developers: Clustering](https://developers.google.com/machine-learning/clustering) — introductory coverage of clustering ideas and methods.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

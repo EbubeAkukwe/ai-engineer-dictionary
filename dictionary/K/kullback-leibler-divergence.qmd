@@ -1,0 +1,69 @@
+---
+title: "Kullback-Leibler Divergence"
+description: "A measure of how one probability distribution differs from another."
+term: "Kullback-Leibler Divergence"
+letter: "K"
+category: "Statistics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Kullback-Leibler (KL) divergence measures how much one probability
+distribution differs from a reference distribution. It is often used to
+compare a model's predicted distribution with a target distribution.
+
+## Technical explanation
+
+For distributions $P$ and $Q$, the KL divergence is
+
+$$
+D_{\mathrm{KL}}(P\|Q) = \sum_x P(x)\log\frac{P(x)}{Q(x)}.
+$$
+
+It is not symmetric: in general, $D_{\mathrm{KL}}(P\|Q) \neq
+D_{\mathrm{KL}}(Q\|P)$. This makes it useful when one distribution is treated
+as the reference or target and the other is an approximation to it.
+
+## Why it matters in AI engineering
+
+KL divergence appears in variational inference, model compression, and
+loss functions such as cross-entropy. It quantifies mismatch between
+predicted and target distributions, and it underlies several training and
+evaluation objectives.
+
+## How it works
+
+The divergence is large when the model assigns probability mass to events that
+are unlikely under the reference distribution. It is zero only when the two
+distributions are identical where $P$ has support. In practice, smoothing and
+numerical care are important when probabilities are close to zero.
+
+## Practical example
+
+A model predicts a probability distribution over next-token options. If its
+predicted distribution differs substantially from the true distribution of the
+ground-truth label, KL divergence becomes large. It can be used as part of a
+training objective or for evaluation.
+
+## Common misconceptions
+
+- KL divergence is not a distance metric because it is asymmetric.
+- A small KL value does not necessarily mean the distributions look similar to a human observer in every way.
+- It is not defined in all cases without careful handling of zeros and support.
+
+## Related terms
+
+- [Cross-Entropy Loss](../C/cross-entropy-loss.qmd)
+- [Jensen-Shannon Divergence](../J/jensen-shannon-divergence.qmd)
+- [Probability](../P/probability.qmd)
+
+## Further reading
+
+- [Wikipedia: Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) — concise mathematical explanation and examples.
+- [Deep Learning Book: Information Theory](https://www.deeplearningbook.org/contents/information_theory.html) — broader treatment of information-theoretic concepts in ML.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

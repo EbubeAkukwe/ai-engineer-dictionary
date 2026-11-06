@@ -1,0 +1,64 @@
+---
+title: "KV Cache"
+description: "A memory structure that stores recent key and value activations for efficient autoregressive generation."
+term: "KV Cache"
+letter: "K"
+category: "Inference Systems"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A KV cache stores the key and value vectors computed for earlier tokens in a
+sequence so the model does not need to recalculate them every time it generates
+a new token. It is a common optimization in large language models.
+
+## Technical explanation
+
+During autoregressive generation, a transformer processes tokens one by one.
+For each layer, the model computes key and value vectors for the current token.
+Rather than recomputing all previous keys and values at every step, inference
+systems store them in a cache and append new ones as generation proceeds. This
+reduces repeated computation and improves throughput.
+
+## Why it matters in AI engineering
+
+KV caching is essential for efficient serving of LLMs. Without it, generating a
+long response would repeatedly reprocess the entire prompt, increasing time and
+cost. The cache is also a major factor in memory usage during inference.
+
+## How it works
+
+When a sequence is processed, each transformer layer stores its computed keys
+and values for that sequence. As the model continues generating, it reads the
+cached keys and values for prior tokens and only computes the new token's key
+and value. The model then performs attention over the combined set.
+
+## Practical example
+
+A chat model receives a long prompt and then generates a long answer token by
+token. The KV cache holds the intermediate attention context from earlier tokens,
+so later tokens can attend to the whole prompt without recomputing everything
+from scratch.
+
+## Common misconceptions
+
+- KV cache is not a database; it is a temporary inference optimization.
+- It is not the same as storing the whole conversation history in a human-readable form.
+- Larger caches can improve speed but consume more memory and must be managed carefully.
+
+## Related terms
+
+- [Context Window](../C/context-window.qmd)
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — base transformer formulation and attention computation.
+- [VLLM / KV Cache optimization notes](https://vllm.ai/) — practical system-level discussions of serving and caching for LLMs.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

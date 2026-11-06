@@ -1,0 +1,67 @@
+---
+title: "K-Nearest Neighbors (KNN)"
+description: "A simple supervised learning method that predicts using the K closest labeled examples."
+term: "K-Nearest Neighbors (KNN)"
+letter: "K"
+category: "Machine Learning"
+difficulty: "Beginner"
+---
+
+## Simple explanation
+
+K-nearest neighbors predicts the label of a new example by looking at the
+closest labeled examples in the training data. The prediction is based on the
+majority class among the nearest $K$ neighbors.
+
+## Technical explanation
+
+Given a training set and a distance metric such as Euclidean distance,
+KNN stores the examples and compares the new input to all training samples.
+The model then selects the $K$ nearest neighbors and combines their labels.
+For regression, it may average their target values; for classification, it may
+use a majority vote or weighted vote.
+
+## Why it matters in AI engineering
+
+KNN is easy to understand and implement, which makes it useful for learning,
+baselines, and small datasets. It also highlights the tradeoff between model
+simplicity and later prediction cost, because predictions can require scanning a
+large training set.
+
+## How it works
+
+1. Store the training data and labels.
+2. Compute the distance from a new example to every training sample.
+3. Pick the $K$ nearest examples.
+4. Aggregate their labels to produce a prediction.
+
+The value of $K$ matters: larger $K$ smooths predictions but can blur class
+boundaries, while smaller $K$ can be more sensitive to noise.
+
+## Practical example
+
+A recommender or classifier might compare a new customer profile to the $K$
+nearest customer profiles in a database and then predict the most likely
+segment or purchase category.
+
+## Common misconceptions
+
+- KNN is not a deep learning model; it is a very simple instance-based method.
+- It does not learn a compact parametric representation of the data.
+- Distance metric choice matters, especially for high-dimensional inputs.
+
+## Related terms
+
+- [Classification](../C/classification.qmd)
+- [Kernel](kernel.qmd)
+- [K-Means](k-means.qmd)
+
+## Further reading
+
+- [Scikit-learn: Nearest Neighbors](https://scikit-learn.org/stable/modules/neighbors.html) — comprehensive documentation on KNN and related algorithms.
+- [Wikipedia: k-nearest neighbors algorithm](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) — concise explanation and examples.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

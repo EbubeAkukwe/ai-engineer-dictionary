@@ -1,0 +1,65 @@
+---
+title: "Knowledge Graph"
+description: "A structured representation of entities and the relationships between them."
+term: "Knowledge Graph"
+letter: "K"
+category: "Data Systems"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A knowledge graph stores facts as connected entities and relationships. It can
+represent how things relate to each other in a way that is easier to query and
+reason about than raw text alone.
+
+## Technical explanation
+
+Knowledge graphs are often modeled as directed labeled graphs, where nodes are
+entities such as people, places, products, or concepts, and edges represent
+relationships such as “works at,” “located in,” or “is a subtype of.” Graph
+queries can retrieve paths, neighbors, and related nodes, making them useful
+for structured knowledge and reasoning.
+
+## Why it matters in AI engineering
+
+Knowledge graphs support search, recommendation, fact grounding, and RAG
+pipelines by providing structured context. They are useful when the system
+needs reliable relationships between entities, not just similarity between
+embedded vectors.
+
+## How it works
+
+The graph is built from source data, schemas, or extracted statements. It can
+be stored in a graph database or represented in a relational system with
+relationships. Queries traverse the graph to retrieve related facts, which may
+then be passed to downstream models or business logic.
+
+## Practical example
+
+A product knowledge graph might connect a product, its category, manufacturer,
+compatibility rules, and customer reviews. A recommendation system or agent can
+query the graph to answer a question like, “Which headphones work with this
+device?”
+
+## Common misconceptions
+
+- A knowledge graph is not automatically the same as a vector database.
+- Graph structure is useful for relationships, but the quality of the graph depends on the data and schema.
+- Large graphs still require indexing, query planning, and maintenance.
+
+## Related terms
+
+- [Knowledge Representation](knowledge-representation.qmd)
+- [Grounding](../G/grounding.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+
+## Further reading
+
+- [Google: What is a Knowledge Graph?](https://developers.google.com/knowledge-graph) — overview of knowledge graphs and their use in search.
+- [Linked Data and Knowledge Graphs](https://www.w3.org/standards/semanticweb/ontology) — standards and concepts for structured semantic data.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

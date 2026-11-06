@@ -1,0 +1,64 @@
+---
+title: "Key (Attention)"
+description: "In attention mechanisms, the representation used to match and retrieve relevant information from a sequence."
+term: "Key (Attention)"
+letter: "K"
+category: "Deep Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+In an attention mechanism, every item in a sequence can be turned into a key,
+a value, and a query. The key tells the model what information an item contains,
+while the query asks, “which items should I pay attention to?”
+
+## Technical explanation
+
+Transformer attention computes scores between a query vector and key vectors.
+The attention score for a key $k_i$ and query $q$ is often a dot product or a
+scaled dot product, followed by a softmax normalization. The resulting weights
+are then applied to the value vectors, allowing the model to focus on the most
+relevant parts of the input sequence.
+
+## Why it matters in AI engineering
+
+The key/value/query formulation is central to transformer models. It allows a
+model to condition each output on the most relevant inputs, which is essential
+for long-range dependencies, retrieval, and contextual reasoning across tokens.
+
+## How it works
+
+For a token representation, a model creates a query, a key, and a value using
+learned projection matrices. It then evaluates similarity between the query and
+all keys, normalizes those similarities, and combines the matching values.
+This is the central mechanism behind self-attention and cross-attention.
+
+## Practical example
+
+In a sentence, when the model processes the word “it,” the query for “it” is
+compared with the keys of previous tokens. If the model identifies that the
+relevant token is “cat,” the value for “cat” contributes most strongly to the
+updated representation of “it.”
+
+## Common misconceptions
+
+- Keys and values are not the same conceptual role; keys are used for matching, values hold content.
+- Attention scores are not a memory lookup in a literal database sense, though the analogy is useful.
+- The model learns these projections, so their meaning is not fixed by humans.
+
+## Related terms
+
+- [Attention Mechanism](../A/attention-mechanism.qmd)
+- [Transformer](../T/transformer.qmd)
+- [Context Window](../C/context-window.qmd)
+
+## Further reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — foundational paper describing the key-value-query formulation in transformers.
+- [Google AI Blog: Transformers](https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html) — clear introduction to the attention mechanism.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

@@ -1,0 +1,68 @@
+---
+title: "Kernel Trick"
+description: "A technique that allows a linear algorithm to learn nonlinear decision boundaries using a similarity function."
+term: "Kernel Trick"
+letter: "K"
+category: "Machine Learning"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+The kernel trick lets a linear model behave as if it were working in a much
+richer feature space, without explicitly constructing that space. This makes it
+possible to model nonlinear patterns with algorithms that are still easy to
+analyze and optimize.
+
+## Technical explanation
+
+Instead of computing explicit feature expansions $\phi(x)$, a kernel method uses
+only similarity values $K(x, x') = \phi(x)^T \phi(x')$. Algorithms such as
+support vector machines can be rewritten so that they depend on these inner
+products rather than the feature vectors themselves. This is the essence of the
+kernel trick.
+
+## Why it matters in AI engineering
+
+The kernel trick provides an elegant path to nonlinear modeling in classical
+machine learning. It remains relevant for problems where a kernel can capture
+structure well, especially with modest data sizes or when a simple model is
+preferred.
+
+## How it works
+
+A linear algorithm can be expressed in terms of dot products between instances.
+If the dot product in a higher-dimensional feature space is available via a
+kernel, the algorithm can operate in that space without ever materializing the
+transformed features. The resulting decision boundary may be nonlinear in the
+original input space, even though the optimization itself stays linear in the
+kernelized representation.
+
+## Practical example
+
+A support vector machine can separate nonlinearly separable classes by using an
+RBF kernel. The model uses distances between points in input space to compute
+similarity in the transformed feature space, producing curved decision
+boundaries without needing to explicitly enumerate the transformed features.
+
+## Common misconceptions
+
+- The kernel trick is not a deep learning concept; it is a classical ML technique.
+- It does not eliminate the need to choose a good kernel or tune parameters.
+- It does not automatically guarantee good generalization for every dataset.
+
+## Related terms
+
+- [Kernel](kernel.qmd)
+- [Support Vector Machine](../S/support-vector-machine.qmd)
+- [K-Nearest Neighbors (KNN)](k-nearest-neighbors-knn.qmd)
+
+## Further reading
+
+- [Scikit-learn: Kernel methods](https://scikit-learn.org/stable/modules/kernel_methods.html) — practical guide to kernel methods and kernels.
+- [Wikipedia: Kernel trick](https://en.wikipedia.org/wiki/Kernel_trick) — concise technical explanation and examples.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

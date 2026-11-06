@@ -1,0 +1,64 @@
+---
+title: "Knowledge Distillation"
+description: "Training a smaller student model to imitate a larger teacher model's behavior."
+term: "Knowledge Distillation"
+letter: "K"
+category: "Model Optimization"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+Knowledge distillation transfers knowledge from a large, often expensive model
+into a smaller or faster model. The student learns to reproduce the teacher's
+outputs or soft probabilities, rather than starting from scratch.
+
+## Technical explanation
+
+A teacher model is trained on a task and then used to generate outputs, often
+soft probabilities, for examples in a dataset. The student model is trained
+with a loss that combines the task loss and a distillation loss that encourages
+it to match the teacher's soft targets. This can improve compact models by
+exposing them to richer supervision than hard labels alone.
+
+## Why it matters in AI engineering
+
+Distillation is useful when deploying models under memory, latency, or
+cost constraints. It enables a smaller model to capture much of the teacher's
+performance while reducing inference expense and resource use.
+
+## How it works
+
+The teacher produces soft targets, often by taking a temperature-scaled
+softmax over logits. The student is trained to match those targets and the true
+labels. This encourages the student to learn information about relative class
+confidence that may be lost when only one label is used for supervision.
+
+## Practical example
+
+A large language model can serve as a teacher for a smaller student model that
+must run on a mobile device. The student is trained to match the teacher's
+responses or distribution over next-token options, while still being efficient
+enough for deployment.
+
+## Common misconceptions
+
+- Distillation is not just a smaller copy of the teacher; the student still needs appropriate training and evaluation.
+- Soft targets are helpful, but they do not guarantee the student will generalize well.
+- A compact student may still fail if the data or task is poorly matched to the teacher's strengths.
+
+## Related terms
+
+- [Model Compression](../M/model-compression.qmd)
+- [Fine-tuning](../F/fine-tuning.qmd)
+- [Inference](../I/inference.qmd)
+
+## Further reading
+
+- [Hinton, Vinyals, and Dean: Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) — foundational paper on knowledge distillation.
+- [Meta AI: Distillation](https://ai.meta.com/blog/knowledge-distillation/) — practical overview and examples.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

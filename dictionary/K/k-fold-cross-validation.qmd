@@ -1,0 +1,71 @@
+---
+title: "K-Fold Cross-Validation"
+description: "A model-evaluation method that partitions data into K folds and rotates which fold is used for validation."
+term: "K-Fold Cross-Validation"
+letter: "K"
+category: "Model Evaluation"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+K-fold cross-validation checks how well a model generalizes by repeatedly
+training on most of the data and validating on a different held-out subset.
+This helps reduce the risk that one lucky split creates a misleading result.
+
+## Technical explanation
+
+The dataset is divided into $K$ roughly equal subsets, or folds. For each
+iteration, one fold is reserved for validation and the remaining $K-1$ folds
+are used for training. The model is trained and evaluated $K$ times, and the
+final score is often the mean or median of the validation scores. This yields
+an estimate of average expected performance under data variation.
+
+## Why it matters in AI engineering
+
+Cross-validation is a standard way to estimate model quality and tune
+hyperparameters without using the final evaluation data too early. It is
+particularly useful when the dataset is limited and small fluctuations in the
+holdout split could otherwise distort conclusions.
+
+## How it works
+
+1. Shuffle and split the data into $K$ folds.
+2. Train on $K-1$ folds.
+3. Validate on the held-out fold.
+4. Repeat until each fold has served as validation once.
+5. Aggregate the validation scores.
+
+If the fold sizes are balanced and the data distribution is representative,
+this yields a stronger estimate than a single train/test split.
+
+## Practical example
+
+Suppose a team has 1,000 labeled customer-support tickets and wants to test a
+text classifier. They use 5-fold cross-validation, training on 4 folds and
+validating on the 5th, then repeat the process 5 times. The average F1 score
+helps estimate real-world performance more reliably than one single split.
+
+## Common misconceptions
+
+- Cross-validation does not replace a final holdout test set for the final
+  model claim.
+- A random split is not always enough: time-based or group-based splits may
+  be required for some tasks.
+- More folds can reduce variance but increase computational cost.
+
+## Related terms
+
+- [Cross-Validation](../C/cross-validation.qmd)
+- [Classification](../C/classification.qmd)
+- [Bias-Variance Tradeoff](../B/bias-variance-tradeoff.qmd)
+
+## Further reading
+
+- [Google for Developers: Cross-validation](https://developers.google.com/machine-learning/crash-course/validation) — overview of validation and model evaluation.
+- [Scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — practical guidance and implementation details.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

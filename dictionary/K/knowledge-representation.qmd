@@ -1,0 +1,64 @@
+---
+title: "Knowledge Representation"
+description: "The way information is encoded so that a system can reason about it."
+term: "Knowledge Representation"
+letter: "K"
+category: "AI Fundamentals"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+Knowledge representation is how a system stores facts, concepts, and rules so
+that they can be processed, retrieved, or reasoned over. The representation may
+be symbolic, probabilistic, or learned in embeddings.
+
+## Technical explanation
+
+A representation defines the formal structure used to encode knowledge. Examples
+include propositional rules, graph structures, semantic networks, frames,
+ontologies, and vector embeddings. The representation determines what kinds of
+reasoning and retrieval are straightforward and what kinds require additional
+procedures.
+
+## Why it matters in AI engineering
+
+A system's representation affects its ability to answer questions, combine
+information, and maintain consistency. Good representations help support
+grounding, search, and reliability in production AI systems, while poor ones can
+make important facts hard to retrieve or interpret.
+
+## How it works
+
+An engineer chooses a representation based on the task: symbolic rules for
+logic, tables for structured records, graphs for relationships, or embeddings
+for similarity and retrieval. The best choice depends on how the system will
+consume the information and how much formal reasoning is needed.
+
+## Practical example
+
+A customer support assistant may store product features in a structured schema,
+while a search engine may use embeddings to capture semantic similarity. An
+agent can combine both to answer a user in a grounded and useful way.
+
+## Common misconceptions
+
+- Knowledge representation is not only about logic rules or databases.
+- Vector embeddings are a valid representation even though they are not symbolic.
+- Representations do not guarantee correctness; they must be maintained and evaluated.
+
+## Related terms
+
+- [Knowledge Graph](knowledge-graph.qmd)
+- [Grounding](../G/grounding.qmd)
+- [Information Retrieval](../I/information-retrieval.qmd)
+
+## Further reading
+
+- [Semantic Web: Ontologies](https://www.w3.org/standards/semanticweb/ontology) — explanation of formal representations for concepts and relationships.
+- [AI Dissertation / Knowledge Representation](https://www.amazon.com/Knowledge-Representation-Logical-Philosophical-Foundations/dp/0071592764) — classical treatment of symbolic representation.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

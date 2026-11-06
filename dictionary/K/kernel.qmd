@@ -1,0 +1,70 @@
+---
+title: "Kernel"
+description: "A function that measures similarity between data points in a transformed feature space."
+term: "Kernel"
+letter: "K"
+category: "Machine Learning"
+difficulty: "Intermediate"
+---
+
+## Simple explanation
+
+A kernel is a way to compare two inputs in a richer mathematical space without
+explicitly transforming every data point. It is a central idea behind support
+vector machines and many kernel methods.
+
+## Technical explanation
+
+A kernel function $K(x, x')$ computes similarity between examples $x$ and $x'$.
+Examples include the linear kernel $K(x,x') = x^T x'$, the polynomial kernel,
+and the radial basis function (RBF) kernel
+
+$$
+K(x,x') = \exp\left(-\gamma \|x-x'\|^2\right).
+$$
+
+This lets algorithms work with nonlinear patterns by implicitly evaluating
+inner products in a high-dimensional feature space. The actual transformation
+is not necessarily computed explicitly.
+
+## Why it matters in AI engineering
+
+Kernels enable nonlinear classification and regression while preserving some
+computational structure. They are important for classical ML models, feature
+engineering, and similarity-based approaches when a linear separator is not
+sufficient.
+
+## How it works
+
+Instead of writing out transformed features, the algorithm uses a kernel matrix
+that contains pairwise similarities between inputs. This allows it to model
+complex relationships while keeping the computation manageable for many
+classical methods.
+
+## Practical example
+
+A support vector machine may use an RBF kernel to separate two classes that are
+not linearly separable in the original feature space. The kernel allows the
+classifier to shape boundaries that capture nonlinear structure.
+
+## Common misconceptions
+
+- A kernel is not the same as a neural-network layer or a learned embedding.
+- The kernel function does not always require a human-specified feature map.
+- A kernel choice can strongly affect performance, so it should be validated.
+
+## Related terms
+
+- [Kernel Trick](kernel-trick.qmd)
+- [K-Nearest Neighbors (KNN)](k-nearest-neighbors-knn.qmd)
+- [Support Vector Machine](../S/support-vector-machine.qmd)
+
+## Further reading
+
+- [Scikit-learn: Kernel methods](https://scikit-learn.org/stable/modules/kernel_methods.html) — overview of kernel functions and kernel-based learning.
+- [Wikipedia: Kernel method](https://en.wikipedia.org/wiki/Kernel_method) — accessible summary of the concept and its role in ML.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

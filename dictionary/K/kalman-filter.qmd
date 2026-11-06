@@ -1,0 +1,86 @@
+---
+title: "Kalman Filter"
+description: "A recursive estimator that combines a model prediction with noisy measurements to track an evolving state."
+term: "Kalman Filter"
+letter: "K"
+category: "Robotics"
+difficulty: "Advanced"
+---
+
+## Simple explanation
+
+A Kalman filter keeps a running estimate of a changing state, such as a robot's
+position or a sensor reading, by blending the model's prediction with new noisy
+measurements. It is widely used when uncertainty is important.
+
+## Technical explanation
+
+The filter maintains a state estimate $\hat{x}_t$ and covariance $P_t$. At each
+step it predicts the next state using a system model, then updates the estimate
+using a measurement $z_t$ and its uncertainty. The update is weighted by the
+Kalman gain, which balances trust in the model versus trust in the noisy
+observation.
+
+The core steps are:
+
+$$
+\hat{x}_{t|t-1} = F\hat{x}_{t-1|t-1} + Bu_t
+$$
+
+$$
+P_{t|t-1} = FP_{t-1|t-1}F^T + Q
+$$
+
+$$
+K_t = P_{t|t-1}H^T(HP_{t|t-1}H^T + R)^{-1}
+$$
+
+$$
+\hat{x}_{t|t} = \hat{x}_{t|t-1} + K_t(z_t - H\hat{x}_{t|t-1})
+$$
+
+where $F$ is the motion model, $H$ maps state to observations, $Q$ is process
+noise, and $R$ is measurement noise.
+
+## Why it matters in AI engineering
+
+Kalman filters are central in navigation, tracking, signal processing, and
+robotics. They are useful when a system evolves over time and its sensors are
+noisy or partial. The same idea is extended in many modern filters, including
+variants for nonlinear systems.
+
+## How it works
+
+The filter assumes linear Gaussian dynamics and measurement models. It keeps a
+state estimate and uncertainty, then uses the Kalman gain to decide how much to
+trust each new measurement. In robotics, this allows smoothing noisy sensor
+inputs into more stable estimates of position, velocity, and orientation.
+
+## Practical example
+
+A drone estimates its position using an inertial measurement unit and GPS. The
+Kalman filter combines the motion model with GPS readings, weighting each one
+according to its reliability. This produces a smoother and more accurate pose
+estimate than relying on either signal alone.
+
+## Common misconceptions
+
+- A Kalman filter is not magic: it is only as good as the model and noise estimates.
+- It is designed for linear-Gaussian systems; nonlinear variants are more complex.
+- The filter is not a general-purpose replacement for machine learning or planning.
+
+## Related terms
+
+- [Inference](../I/inference.qmd)
+- [Optimization](../O/optimization.qmd)
+- [Robotics](../R/robotics.qmd)
+
+## Further reading
+
+- [Welch and Bishop: An Introduction to the Kalman Filter](https://www.cs.unc.edu/~welch/kalman/) — classic tutorial on the filter and its intuition.
+- [MathWorks: Kalman Filter](https://www.mathworks.com/help/control/ug/kalman-filter.html) — engineering-oriented introduction with practical details.
+
+## Contribution notes
+
+- **Last reviewed:** 2026-11-06
+- **Contributor(s):** [Ebube Akukwe](https://github.com/EbubeAkukwe)

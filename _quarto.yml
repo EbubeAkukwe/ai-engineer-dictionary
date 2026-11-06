@@ -205,6 +205,21 @@ website:
             - dictionary/J/json-schema.qmd
             - dictionary/J/jupyter-notebook.qmd
             - dictionary/J/just-in-time-compilation.qmd
+        - section: "K"
+          contents:
+            - dictionary/K/index.qmd
+            - dictionary/K/k-fold-cross-validation.qmd
+            - dictionary/K/k-means.qmd
+            - dictionary/K/k-nearest-neighbors-knn.qmd
+            - dictionary/K/kalman-filter.qmd
+            - dictionary/K/kernel.qmd
+            - dictionary/K/kernel-trick.qmd
+            - dictionary/K/key-attention.qmd
+            - dictionary/K/knowledge-distillation.qmd
+            - dictionary/K/knowledge-graph.qmd
+            - dictionary/K/knowledge-representation.qmd
+            - dictionary/K/kullback-leibler-divergence.qmd
+            - dictionary/K/kv-cache.qmd
         - section: "K–Z"
           contents:
             - dictionary/letters.qmd

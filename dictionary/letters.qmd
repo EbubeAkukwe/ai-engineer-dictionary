@@ -184,7 +184,18 @@ Terms beginning with A will appear here as the dictionary grows.
 
 ## K {#k}
 
-Terms beginning with K will appear here as the dictionary grows.
+- [K-Fold Cross-Validation](/dictionary/K/k-fold-cross-validation.qmd)
+- [K-Means](/dictionary/K/k-means.qmd)
+- [K-Nearest Neighbors (KNN)](/dictionary/K/k-nearest-neighbors-knn.qmd)
+- [Kalman Filter](/dictionary/K/kalman-filter.qmd)
+- [Kernel](/dictionary/K/kernel.qmd)
+- [Kernel Trick](/dictionary/K/kernel-trick.qmd)
+- [Key (Attention)](/dictionary/K/key-attention.qmd)
+- [Knowledge Distillation](/dictionary/K/knowledge-distillation.qmd)
+- [Knowledge Graph](/dictionary/K/knowledge-graph.qmd)
+- [Knowledge Representation](/dictionary/K/knowledge-representation.qmd)
+- [Kullback-Leibler Divergence](/dictionary/K/kullback-leibler-divergence.qmd)
+- [KV Cache](/dictionary/K/kv-cache.qmd)
 
 ## L {#l}
 
