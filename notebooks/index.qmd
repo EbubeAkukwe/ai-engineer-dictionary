@@ -14,5 +14,5 @@ each important step, and include expected outputs or observations.
 
 ## B
 
-- [Penguin or Ostrich? Image Binary Classification](B/binary-classification.ipynb) — Markdown-only fast.ai scaffold; add the code as you build the classifier.
+- [Penguin or Ostrich? Image Binary Classification](B/binary-classification.ipynb) — a small image classification example with fastai.
 - [Backpropagation with a Tiny Network](B/backpropagation.ipynb) — a small Python example that calculates gradients by applying the chain rule.
