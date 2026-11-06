@@ -454,9 +454,8 @@ website:
             - dictionary/Z/zero-shot-classification.qmd
             - dictionary/Z/zero-shot-learning.qmd
             - dictionary/Z/zero-trust.qmd
-        - section: "P–Z"
-          contents:
-            - dictionary/letters.qmd
+        - text: "Browse by letter"
+          href: dictionary/letters.qmd
     - title: "Notebooks"
       contents:
         - notebooks/index.qmd
