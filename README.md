@@ -67,8 +67,8 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) or the website's
 - [x] Add example A entries
 - [x] Add an example Jupyter notebook
 - [x] Draft the A–Z master vocabulary (343 proposed terms)
-- [ ] Editorially review and approve the vocabulary
-- [ ] Add entry validation and duplicate detection
+- [x] Editorially review and approve the vocabulary
+- [x] Add entry validation and duplicate detection
 - [ ] Add GitHub issue and pull-request templates
 - [ ] Enable automated GitHub Pages deployment
 - [ ] Publish the first public release
