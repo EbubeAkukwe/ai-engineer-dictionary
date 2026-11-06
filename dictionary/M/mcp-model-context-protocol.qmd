@@ -39,6 +39,52 @@ retrieve prompts according to the protocol. The host application decides
 which capabilities to expose to a model and how to handle approvals and
 results.
 
+<svg viewBox="0 0 900 300" role="img" aria-labelledby="mcp-title mcp-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="mcp-title">MCP host, client, server, and capabilities</title>
+  <desc id="mcp-desc">A host application contains the model and an MCP client. The client communicates with an MCP server over the protocol to discover and use tools, resources, or prompts. The server may connect to external systems, while the host controls which operations are available and approved.</desc>
+  <defs>
+    <marker id="mcp-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="mcp-return-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#438057"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="18" y="34" width="340" height="208" rx="12" fill="#f7f8fb" stroke="#4666a8" stroke-width="2"/>
+    <text x="188" y="59" font-size="15" fill="#202b3c">Host application</text>
+    <rect x="42" y="88" width="130" height="68" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="107" y="117" font-size="15" fill="#202b3c">AI model</text>
+    <text x="107" y="139" font-size="11" fill="#46566d">uses approved context</text>
+    <rect x="206" y="88" width="128" height="68" rx="9" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="270" y="117" font-size="15" fill="#202b3c">MCP client</text>
+    <text x="270" y="139" font-size="11" fill="#46566d">connects to server</text>
+    <path d="M172 112 H198" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#mcp-arrow)"/>
+    <path d="M198 140 H180" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#mcp-return-arrow)"/>
+    <text x="188" y="195" font-size="11" fill="#46566d">Host controls access and approval.</text>
+    <rect x="442" y="54" width="220" height="166" rx="12" fill="#fffaf1" stroke="#b9792e" stroke-width="2"/>
+    <text x="552" y="80" font-size="15" fill="#202b3c">MCP server</text>
+    <rect x="462" y="96" width="180" height="30" rx="6" fill="#eaf0fb" stroke="#8c9aab"/>
+    <rect x="462" y="137" width="180" height="30" rx="6" fill="#eaf0fb" stroke="#8c9aab"/>
+    <rect x="462" y="178" width="180" height="30" rx="6" fill="#eaf0fb" stroke="#8c9aab"/>
+    <text x="552" y="116" font-size="12" fill="#202b3c">Tools: callable operations</text>
+    <text x="552" y="157" font-size="12" fill="#202b3c">Resources: readable context</text>
+    <text x="552" y="198" font-size="12" fill="#202b3c">Prompts: reusable templates</text>
+    <rect x="742" y="92" width="140" height="86" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="812" y="124" font-size="13" fill="#202b3c">External systems</text>
+    <text x="812" y="147" font-size="11" fill="#46566d">data or services</text>
+    <path d="M334 106 H434" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#mcp-arrow)"/>
+    <path d="M434 151 H342" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#mcp-return-arrow)"/>
+    <text x="385" y="96" font-size="11" fill="#46566d">MCP requests</text>
+    <text x="396" y="174" font-size="11" fill="#276b3c">results</text>
+    <path d="M662 136 H734" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#mcp-arrow)"/>
+    <path d="M734 158 H670" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#mcp-return-arrow)"/>
+  </g>
+</svg>
+
+The protocol standardizes client-server communication; it does not itself
+decide which capabilities the host should trust or expose.
+
 ## Practical example
 
 A development assistant can connect to an MCP server that provides

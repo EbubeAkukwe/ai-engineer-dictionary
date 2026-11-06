@@ -50,6 +50,50 @@ For example, an agent's reasoning and tool-execution logic can remain
 stable while a context service supplies the current project's style
 preferences, reference material, and production state for each request.
 
+<svg viewBox="0 0 860 300" role="img" aria-labelledby="decouple-title decouple-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="decouple-title">Separating agent behavior from task context</title>
+  <desc id="decouple-desc">A task is sent to reusable agent logic. The agent requests task-relevant context from a separate context service. That service reads or updates external sources such as preferences, documents, and task state, then returns selected context to the agent.</desc>
+  <defs>
+    <marker id="decouple-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="decouple-return-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#438057"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="20" y="86" width="132" height="68" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="86" y="113" font-size="15" fill="#202b3c">Task</text>
+    <text x="86" y="135" font-size="12" fill="#46566d">request</text>
+    <rect x="218" y="72" width="196" height="96" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="316" y="109" font-size="16" fill="#202b3c">Agent core</text>
+    <text x="316" y="133" font-size="12" fill="#46566d">instructions + tools</text>
+    <rect x="484" y="72" width="196" height="96" rx="9" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="582" y="109" font-size="16" fill="#202b3c">Context service</text>
+    <text x="582" y="133" font-size="12" fill="#46566d">selects task-relevant data</text>
+    <rect x="744" y="42" width="104" height="48" rx="8" fill="#fff2df" stroke="#b9792e"/>
+    <rect x="744" y="100" width="104" height="48" rx="8" fill="#fff2df" stroke="#b9792e"/>
+    <rect x="744" y="158" width="104" height="48" rx="8" fill="#fff2df" stroke="#b9792e"/>
+    <text x="796" y="71" font-size="12" fill="#202b3c">Preferences</text>
+    <text x="796" y="129" font-size="12" fill="#202b3c">Documents</text>
+    <text x="796" y="187" font-size="12" fill="#202b3c">Task state</text>
+    <path d="M152 120 H210" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#decouple-arrow)"/>
+    <path d="M414 101 H476" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#decouple-arrow)"/>
+    <text x="445" y="91" font-size="11" fill="#46566d">request context</text>
+    <path d="M484 140 H422" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#decouple-return-arrow)"/>
+    <text x="453" y="160" font-size="11" fill="#276b3c">selected context</text>
+    <path d="M680 95 H736" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#decouple-arrow)"/>
+    <path d="M736 174 H688 V155" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#decouple-return-arrow)"/>
+    <rect x="218" y="224" width="196" height="48" rx="9" fill="#f3f5f8" stroke="#8c9aab"/>
+    <text x="316" y="253" font-size="13" fill="#202b3c">Plan and act</text>
+    <path d="M316 168 V216" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#decouple-arrow)"/>
+    <text x="540" y="252" font-size="12" fill="#46566d">Each component can evolve independently.</text>
+  </g>
+</svg>
+
+The context service could use a database, configuration store, document
+index, or another source; decoupling does not require RAG.
+
 ## Practical example
 
 A video-production agent can keep its core instructions and available

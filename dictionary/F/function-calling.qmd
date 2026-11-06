@@ -36,6 +36,48 @@ specifications. The model may return a structured call. Application code
 validates and executes that call, then optionally sends the result back
 to the model to produce a final response.
 
+<svg viewBox="0 0 860 250" role="img" aria-labelledby="fc-title fc-desc" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <title id="fc-title">Application-mediated function calling</title>
+  <desc id="fc-desc">A user request goes to a model, which proposes a structured function call. The application validates and authorizes it before execution. The result returns through the application to the model, which creates the final response.</desc>
+  <defs>
+    <marker id="fc-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#455b79"/>
+    </marker>
+    <marker id="fc-return-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#438057"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="18" y="52" width="146" height="74" rx="9" fill="#f3f5f8" stroke="#8c9aab" stroke-width="2"/>
+    <text x="91" y="82" font-size="16" fill="#202b3c">User</text>
+    <text x="91" y="105" font-size="12" fill="#46566d">request</text>
+    <rect x="226" y="52" width="162" height="74" rx="9" fill="#e6ecfa" stroke="#4666a8" stroke-width="2"/>
+    <text x="307" y="82" font-size="16" fill="#202b3c">Model</text>
+    <text x="307" y="105" font-size="12" fill="#46566d">proposes a call</text>
+    <rect x="454" y="52" width="186" height="74" rx="9" fill="#fff2df" stroke="#b9792e" stroke-width="2"/>
+    <text x="547" y="82" font-size="16" fill="#202b3c">Application</text>
+    <text x="547" y="105" font-size="12" fill="#46566d">validates + authorizes</text>
+    <rect x="704" y="52" width="138" height="74" rx="9" fill="#e8f4ec" stroke="#438057" stroke-width="2"/>
+    <text x="773" y="82" font-size="16" fill="#202b3c">Function</text>
+    <text x="773" y="105" font-size="12" fill="#46566d">executes</text>
+    <text x="195" y="44" font-size="12" fill="#46566d">user input</text>
+    <text x="420" y="44" font-size="12" fill="#46566d">structured call</text>
+    <text x="672" y="44" font-size="12" fill="#46566d">approved call</text>
+    <path d="M164 89 H218" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#fc-arrow)"/>
+    <path d="M388 89 H446" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#fc-arrow)"/>
+    <path d="M640 89 H696" fill="none" stroke="#455b79" stroke-width="2" marker-end="url(#fc-arrow)"/>
+    <path d="M773 126 V172 H547 V134" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#fc-return-arrow)"/>
+    <text x="662" y="166" font-size="12" fill="#276b3c">tool result</text>
+    <path d="M547 172 H307 V134" fill="none" stroke="#438057" stroke-width="2" marker-end="url(#fc-return-arrow)"/>
+    <text x="427" y="194" font-size="12" fill="#276b3c">application returns result to model</text>
+    <path d="M307 126 V222 H91 V134" fill="none" stroke="#4666a8" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#fc-arrow)"/>
+    <text x="196" y="217" font-size="12" fill="#3c5791">final response</text>
+  </g>
+</svg>
+
+The model requests an operation; application code remains the authority
+that validates, permits, and executes it.
+
 ## Practical example
 
 A travel assistant can request an availability lookup using a declared
